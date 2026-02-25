@@ -1,0 +1,449 @@
+{
+  "metadata": {
+    "siteName": "NanoImage",
+    "title": "Outils d'Image en Ligne Gratuits — Compresser, Redimensionner et Recadrer | NanoImage",
+    "description": "Outils d'image en ligne gratuits — compressez, redimensionnez, recadrez, faites pivoter et plus encore. 100% privé : sans téléchargement, sans compte. 13 outils, résultats instantanés."
+  },
+  "nav": {
+    "home": "Accueil",
+    "tools": "Outils",
+    "allTools": "Tous les outils",
+    "blog": "Blog"
+  },
+  "home": {
+    "hero": {
+      "title": "Outils d'image en ligne gratuits",
+      "subtitle": "Compressez, redimensionnez, recadrez, pivotez et modifiez vos images directement dans le navigateur. Aucun téléversement requis — rapide, gratuit et 100 % confidentiel.",
+      "cta": "Commencer"
+    },
+    "features": {
+      "title": "Pourquoi NanoImage ?",
+      "privacy": {
+        "title": "100 % confidentiel",
+        "description": "Tout le traitement se fait localement dans votre navigateur. Vos images ne quittent jamais votre appareil."
+      },
+      "fast": {
+        "title": "Ultra rapide",
+        "description": "Aucun envoi vers un serveur. Traitez vos images instantanément, sans aucun temps d'attente."
+      },
+      "free": {
+        "title": "Entièrement gratuit",
+        "description": "Tous les outils sont gratuits, sans limite, sans inscription et sans filigrane."
+      }
+    },
+    "toolsSection": {
+      "title": "Outils d'image",
+      "subtitle": "Tout ce dont vous avez besoin pour éditer vos images en ligne"
+    },
+    "about": {
+      "title": "Qu'est-ce que NanoImage ?",
+      "text": "NanoImage est une suite gratuite d'outils d'édition d'images fonctionnant dans le navigateur, conçue pour la rapidité, la simplicité et la confidentialité. Que vous ayez besoin de compresser des images pour accélérer le chargement de votre site web, de redimensionner des photos pour les réseaux sociaux, de recadrer des captures d'écran, de convertir des PNG en JPG, d'ajouter des filigranes pour protéger votre travail ou de générer des mèmes — NanoImage gère tout directement dans votre navigateur. Contrairement aux éditeurs d'images traditionnels, rien n'est jamais envoyé vers un serveur. Vos fichiers restent sur votre appareil, le traitement s'effectue instantanément via l'API Canvas, et il n'y a ni compte, ni abonnement, ni filigrane. NanoImage est conçu pour les designers, les développeurs, les marketeurs, les créateurs de contenu et tous ceux qui ont besoin de retouches rapides sans la complexité des logiciels lourds."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "NanoImage est-il vraiment gratuit ?",
+      "a1": "Oui, 100 % gratuit. Les 13 outils d'image sont disponibles sans aucune limite, inscription ou frais cachés. Il n'y a pas d'offre premium ni de filigrane ajouté à vos images.",
+      "q2": "Mes images sont-elles envoyées vers un serveur ?",
+      "a2": "Non. Tout le traitement se fait localement dans votre navigateur grâce à l'API Canvas HTML5. Vos images ne quittent jamais votre appareil, garantissant une confidentialité et une sécurité totales.",
+      "q3": "Quels formats d'image sont pris en charge ?",
+      "a3": "NanoImage prend en charge les formats JPG, PNG, WebP, GIF et BMP pour tous les outils. L'outil de conversion en JPG peut convertir n'importe lequel de ces formats en JPEG.",
+      "q4": "Puis-je utiliser NanoImage sur mobile ?",
+      "a4": "Oui ! NanoImage est entièrement responsive et fonctionne sur tout navigateur moderne — ordinateur, tablette ou mobile. Tous les outils sont optimisés pour l'interaction tactile.",
+      "q5": "Quels outils sont disponibles ?",
+      "a5": "NanoImage propose 13 outils : Compresser une image, Compresser à 100 Ko, Redimensionner, Recadrer, Pivoter, Retourner, Inverser les couleurs, Noir et blanc, Flouter, Ajouter une bordure, Ajouter un filigrane, Convertir en JPG et Générateur de mèmes."
+    }
+  },
+  "common": {
+    "uploadImage": "Importer une image",
+    "dragDrop": "Glissez-déposez votre image ici, ou cliquez pour parcourir",
+    "supportedFormats": "Formats pris en charge : JPG, PNG, WebP, GIF, BMP",
+    "errorNotImage": "Ce fichier n'est pas une image. Veuillez importer un fichier JPG, PNG, WebP, GIF ou BMP.",
+    "errorLoadFailed": "Impossible de charger l'image. Le fichier est peut-être corrompu ou non pris en charge.",
+    "errorReadFailed": "Impossible de lire le fichier. Veuillez réessayer.",
+    "download": "Télécharger",
+    "downloadAll": "Tout télécharger",
+    "reset": "Réinitialiser",
+    "apply": "Appliquer",
+    "processing": "Traitement en cours...",
+    "original": "Original",
+    "result": "Résultat",
+    "width": "Largeur",
+    "height": "Hauteur",
+    "quality": "Qualité",
+    "preview": "Aperçu",
+    "howToUse": "Comment utiliser",
+    "faq": "Questions fréquentes",
+    "relatedTools": "Outils associés",
+    "uploadNew": "Nouvelle image",
+    "tryTool": "Essayer {tool}",
+    "fileSize": "Taille du fichier",
+    "dimensions": "Dimensions",
+    "format": "Format",
+    "batchUpload": "Importez jusqu'à {max} images à la fois",
+    "removeImage": "Supprimer",
+    "addMore": "Ajouter d'autres images"
+  },
+  "tools": {
+    "compress-image": {
+      "name": "Compresser une image",
+      "metaTitle": "Compresser une Image en Ligne Gratuitement — Réduire la Taille | NanoImage",
+      "metaDescription": "Compressez JPG, PNG, WebP à n'importe quelle taille cible en ligne. Sans téléchargement — 100% privé, résultats instantanés dans votre navigateur.",
+      "h1": "Compresser une image en ligne — Réduire la taille gratuitement",
+      "description": "Compressez facilement vos images à une taille cible sans perte de qualité visible. Notre compresseur d'images en ligne gratuit fonctionne entièrement dans votre navigateur — aucun téléversement, aucun serveur, totalement confidentiel. Que vous ayez besoin de compresser des images pour des pièces jointes d'e-mail, l'optimisation de sites web ou les réseaux sociaux, NanoImage simplifie tout. Importez simplement votre image, définissez votre taille cible (200 Ko par défaut) et téléchargez le résultat optimisé instantanément. Compatible avec les formats JPG, PNG et WebP, avec un ajustement intelligent de la qualité pour obtenir le meilleur équilibre entre taille de fichier et qualité d'image.",
+      "targetSize": "Taille cible (Ko)",
+      "currentSize": "Taille actuelle",
+      "compressedSize": "Taille compressée",
+      "reduction": "Réduction",
+      "compressing": "Compression en cours...",
+      "alreadySmall": "L'image est déjà dans la taille cible — aucune compression nécessaire.",
+      "qualityHint": "Le fichier est bien en dessous de la taille cible. Vous pouvez augmenter le curseur de qualité pour une meilleure qualité d'image.",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir vos fichiers.",
+        "step2": "Définissez la taille cible souhaitée en Ko (200 Ko par défaut). Ajustez le curseur de qualité si nécessaire.",
+        "step3": "Cliquez sur « Appliquer » et téléchargez votre image optimisée instantanément."
+      },
+      "faq": {
+        "q1": "Comment fonctionne la compression d'image ?",
+        "a1": "NanoImage utilise un ajustement intelligent de la qualité via l'API Canvas de votre navigateur. Il réduit progressivement le paramètre de qualité JPEG/WebP jusqu'à ce que l'image atteigne votre taille cible, en conservant la meilleure qualité visuelle possible.",
+        "q2": "Mon image est-elle envoyée vers un serveur ?",
+        "a2": "Non ! Tout le traitement s'effectue à 100 % localement dans votre navigateur. Vos images ne quittent jamais votre appareil, garantissant une confidentialité et une sécurité totales.",
+        "q3": "Quels formats d'image sont pris en charge ?",
+        "a3": "NanoImage prend en charge les formats d'entrée JPG/JPEG, PNG, WebP, GIF et BMP. Le format de sortie est généralement JPEG ou WebP pour une compression optimale.",
+        "q4": "Puis-je compresser plusieurs images à la fois ?",
+        "a4": "Oui ! Vous pouvez importer et compresser jusqu'à 10 images simultanément. Chaque image sera compressée à la taille cible spécifiée."
+      }
+    },
+    "compress-image-to-100kb": {
+      "name": "Compresser à 100 Ko",
+      "metaTitle": "Compresser une image à 100 Ko - Outil en ligne gratuit | NanoImage",
+      "metaDescription": "Compressez une image à 100 Ko en ligne gratuitement. Réduisez la taille de vos images à moins de 100 Ko sans perte de qualité. Aucun téléversement, aucune inscription — fonctionne dans votre navigateur.",
+      "h1": "Compresser une image à 100 Ko — Compresseur en ligne gratuit",
+      "description": "Besoin de réduire une image à exactement 100 Ko ou moins ? Le compresseur en ligne gratuit de NanoImage vous simplifie la tâche. Idéal pour les photos d'identité, les soumissions de documents, les candidatures en ligne et les forums imposant une limite stricte de 100 Ko. Notre outil utilise une optimisation intelligente de la qualité pour compresser vos images à moins de 100 Ko tout en préservant une clarté visuelle maximale. Tout fonctionne localement dans votre navigateur — aucun envoi vers un serveur, aucune inscription, aucune limite. Importez n'importe quelle image JPG, PNG ou WebP et obtenez une version optimisée de moins de 100 Ko en quelques secondes.",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "La taille cible est prédéfinie à 100 Ko. Ajustez si nécessaire, ou conservez la valeur par défaut pour un résultat de 100 Ko.",
+        "step3": "Cliquez sur « Appliquer » et téléchargez votre image, désormais inférieure à 100 Ko."
+      },
+      "faq": {
+        "q1": "Pourquoi aurais-je besoin de compresser une image à 100 Ko ?",
+        "a1": "De nombreuses candidatures en ligne, portails gouvernementaux et forums exigent des images de moins de 100 Ko. Les soumissions de photos d'identité, les demandes de visa et les photos de profil ont souvent des limites de taille strictes.",
+        "q2": "Mon image sera-t-elle floue après la compression ?",
+        "a2": "NanoImage utilise une compression intelligente qui trouve le niveau de qualité optimal. Pour la plupart des images, la différence visuelle est à peine perceptible, même à 100 Ko.",
+        "q3": "Puis-je compresser un PNG à 100 Ko ?",
+        "a3": "Oui ! Les fichiers PNG sont automatiquement convertis en JPEG lors de la compression pour obtenir des tailles de fichier plus petites. Vous pouvez également choisir le format WebP pour une qualité encore meilleure à petite taille.",
+        "q4": "Quelle est la différence entre la compression à 200 Ko et à 100 Ko ?",
+        "a4": "La cible de 200 Ko convient à la plupart des usages web et pièces jointes par e-mail. La cible de 100 Ko est plus stricte et idéale pour les portails gouvernementaux, les demandes de visa et les plateformes avec des limites de taille de fichier rigoureuses."
+      }
+    },
+    "rotate-image": {
+      "name": "Pivoter une image",
+      "metaTitle": "Faire Pivoter une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Faites pivoter des photos à 90°, 180°, 270° ou tout angle personnalisé en ligne gratuitement. Sans téléchargement — rotation instantanée dans le navigateur.",
+      "h1": "Pivoter une image en ligne gratuitement",
+      "description": "Pivotez rapidement vos images sous n'importe quel angle avec l'outil de rotation en ligne gratuit de NanoImage. Que vous ayez besoin de corriger une photo de travers, de pivoter exactement de 90 degrés ou d'appliquer un angle de rotation personnalisé, notre outil gère tout. La rotation s'effectue instantanément dans votre navigateur avec un aperçu en temps réel, pour voir exactement le rendu de votre image avant le téléchargement. Aucune installation logicielle, aucun envoi vers un serveur — juste une rotation d'image rapide et gratuite. Idéal pour corriger l'orientation des photos, créer des effets artistiques ou préparer des images pour les réseaux sociaux. Compatible JPG, PNG, WebP et plus.",
+      "angle": "Angle de rotation",
+      "preset90": "90°",
+      "preset180": "180°",
+      "preset270": "270°",
+      "custom": "Angle personnalisé",
+      "clockwise": "Sens horaire",
+      "counterclockwise": "Sens antihoraire",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Choisissez une rotation prédéfinie (90°, 180°, 270°) ou définissez un angle personnalisé avec le curseur.",
+        "step3": "Prévisualisez le résultat et cliquez sur « Télécharger » pour enregistrer votre image pivotée."
+      },
+      "faq": {
+        "q1": "Puis-je pivoter une image d'un angle précis ?",
+        "a1": "Oui ! Utilisez le curseur d'angle personnalisé pour pivoter votre image de n'importe quel angle de -180° à 180°. Vous pouvez également saisir une valeur exacte.",
+        "q2": "La rotation réduit-elle la qualité de l'image ?",
+        "a2": "Pour les rotations de 90°, 180° et 270°, la qualité est parfaitement préservée. Les angles personnalisés peuvent introduire de minimes artefacts d'interpolation, mais le résultat reste de haute qualité.",
+        "q3": "Puis-je pivoter plusieurs images à la fois ?",
+        "a3": "Actuellement, l'outil de rotation traite une image à la fois pour offrir la meilleure précision et expérience d'aperçu.",
+        "q4": "Quels formats d'image sont pris en charge pour la rotation ?",
+        "a4": "NanoImage prend en charge tous les formats courants, y compris JPG, PNG, WebP, GIF et BMP. Le résultat est enregistré en PNG pour préserver la qualité."
+      }
+    },
+    "crop-image": {
+      "name": "Recadrer une image",
+      "metaTitle": "Recadrer une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Recadrez des images en ligne avec des ratios prédéfinis (1:1, 16:9, 4:3) ou une sélection personnalisée. Sans téléchargement — gratuit et 100% privé.",
+      "h1": "Recadrer une image en ligne — Gratuit et facile",
+      "description": "Recadrez vos images avec précision grâce à l'outil de recadrage en ligne gratuit de NanoImage. Sélectionnez la zone de votre image à conserver, ou utilisez des rapports d'aspect prédéfinis pour des résultats parfaits à chaque fois. Choisissez parmi les rapports populaires comme 1:1 (carré, parfait pour Instagram), 4:3 (photo standard), 16:9 (écran large) ou 2:3 (portrait). Glissez simplement sur l'image pour définir votre zone de recadrage — la sélection affiche les dimensions exactes en pixels. Tout se passe dans votre navigateur avec un aperçu en temps réel — aucun téléversement, aucune installation. Idéal pour les publications sur les réseaux sociaux, les photos de profil, les bannières de sites web et la retouche photo.",
+      "aspectRatio": "Rapport d'aspect",
+      "freeform": "Libre",
+      "square": "1:1 Carré",
+      "landscape43": "4:3 Paysage",
+      "landscape169": "16:9 Écran large",
+      "portrait23": "2:3 Portrait",
+      "cropArea": "Zone de recadrage",
+      "dragToSelect": "Glissez sur l'image ci-dessous pour sélectionner une zone de recadrage, ou choisissez un rapport prédéfini.",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Sélectionnez un rapport d'aspect prédéfini ou glissez sur l'image pour définir une zone de recadrage personnalisée.",
+        "step3": "Ajustez la sélection, puis cliquez sur « Appliquer » pour recadrer. Prévisualisez le résultat et cliquez sur « Télécharger » pour enregistrer."
+      },
+      "faq": {
+        "q1": "Comment fonctionne la sélection de recadrage ?",
+        "a1": "Glissez simplement sur l'image pour définir une zone de recadrage. La sélection affiche les dimensions exactes en pixels. Choisissez un rapport d'aspect prédéfini pour contraindre la forme, ou utilisez le mode Libre pour toute proportion.",
+        "q2": "Quels rapports d'aspect sont disponibles ?",
+        "a2": "Nous proposons le recadrage libre ainsi que des rapports prédéfinis : 1:1 (carré), 4:3, 16:9 et 3:2. Ils couvrent la plupart des cas d'usage courants pour les réseaux sociaux, le web et l'impression.",
+        "q3": "Le recadrage réduit-il la qualité de l'image ?",
+        "a3": "Non ! Le recadrage supprime simplement la zone indésirable et conserve la qualité originale de la zone sélectionnée.",
+        "q4": "Puis-je recadrer des images pour les profils de réseaux sociaux ?",
+        "a4": "Oui ! Utilisez le rapport carré 1:1 pour Instagram et les photos de profil, 16:9 pour les miniatures YouTube et les photos de couverture, ou 4:3 pour les publications standard sur les réseaux sociaux."
+      }
+    },
+    "resize-image": {
+      "name": "Redimensionner une image",
+      "metaTitle": "Redimensionner une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Redimensionnez des images par pixels ou pourcentage en ligne gratuitement. Verrouillez le ratio, sans téléchargement — résultats instantanés dans le navigateur.",
+      "h1": "Redimensionner une image en ligne — Modifier les dimensions gratuitement",
+      "description": "Redimensionnez vos images à n'importe quelle dimension avec l'outil en ligne gratuit de NanoImage. Modifiez la largeur et la hauteur en pixels précis ou en pourcentage — avec une option de verrouillage du rapport d'aspect pour éviter l'étirement ou la déformation. Choisissez parmi des tailles prédéfinies populaires comme 1920×1080, 1280×720, 800×600, ou saisissez vos propres dimensions personnalisées. Vous pouvez également redimensionner par pourcentage : 25 %, 50 %, 75 % ou 200 %. Idéal pour préparer des images pour les sites web, les réseaux sociaux, les e-mails, les présentations et plus encore. Tout le traitement se fait localement dans votre navigateur pour des résultats instantanés.",
+      "lockAspectRatio": "Verrouiller le rapport d'aspect",
+      "byPixels": "Par pixels",
+      "byPercentage": "Par pourcentage",
+      "presetSizes": "Tailles prédéfinies",
+      "percentage": "Pourcentage",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Saisissez la nouvelle largeur et hauteur en pixels, choisissez un pourcentage ou sélectionnez une taille prédéfinie. Activez ou désactivez le verrouillage du rapport d'aspect selon vos besoins.",
+        "step3": "Cliquez sur « Redimensionner » et téléchargez votre image redimensionnée."
+      },
+      "faq": {
+        "q1": "Le redimensionnement rendra-t-il mon image floue ?",
+        "a1": "La réduction (rendre plus petit) conserve généralement la netteté. L'agrandissement (rendre plus grand) peut introduire un léger flou, car l'outil doit interpoler de nouveaux pixels.",
+        "q2": "Que signifie « Verrouiller le rapport d'aspect » ?",
+        "a2": "Lorsque le verrouillage est activé, modifier la largeur ajuste automatiquement la hauteur (et vice versa) pour conserver les proportions originales, évitant ainsi toute déformation.",
+        "q3": "Quelles tailles prédéfinies sont disponibles ?",
+        "a3": "Nous proposons les tailles courantes : 1920×1080 (Full HD), 1280×720 (HD), 800×600, 640×480, et le redimensionnement par pourcentage à 25 %, 50 %, 75 % et 200 %.",
+        "q4": "Puis-je redimensionner des images sans perte de qualité ?",
+        "a4": "La réduction conserve bien la qualité car les pixels sont fusionnés. L'agrandissement peut introduire un léger flou car de nouveaux pixels doivent être interpolés. Pour de meilleurs résultats lors de l'agrandissement, utilisez un redimensionnement modéré (jusqu'à 200 %)."
+      }
+    },
+    "flip-image": {
+      "name": "Retourner une image",
+      "metaTitle": "Retourner une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Retournez des images horizontalement ou verticalement en ligne gratuitement. Miroir en un clic — sans téléchargement, 100% privé.",
+      "h1": "Retourner une image en ligne — Miroir horizontal ou vertical",
+      "description": "Retournez et miroitez vos images instantanément avec l'outil en ligne gratuit de NanoImage. Choisissez le retournement horizontal (miroir gauche-droite), le retournement vertical (miroir haut-bas), ou appliquez les deux pour un effet miroir à 180°. Idéal pour corriger les selfies inversés, créer des designs symétriques ou préparer des images pour l'impression. Le retournement est appliqué instantanément avec un aperçu en temps réel pour voir le résultat immédiatement. Aucun logiciel nécessaire, aucun envoi vers un serveur — tout fonctionne dans votre navigateur pour une rapidité et une confidentialité maximales. Compatible avec tous les formats courants, y compris JPG, PNG et WebP.",
+      "horizontal": "Retourner horizontalement",
+      "vertical": "Retourner verticalement",
+      "both": "Retourner les deux",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Choisissez la direction du retournement : horizontal (miroir), vertical ou les deux.",
+        "step3": "Prévisualisez le résultat et cliquez sur « Télécharger » pour enregistrer votre image retournée."
+      },
+      "faq": {
+        "q1": "Quelle est la différence entre retourner et pivoter ?",
+        "a1": "Retourner crée un effet miroir de l'image le long d'un axe (horizontal ou vertical). Pivoter fait tourner l'image autour de son point central d'un angle spécifié.",
+        "q2": "Puis-je annuler un retournement ?",
+        "a2": "Oui ! Il suffit de retourner l'image à nouveau dans la même direction pour restaurer l'orientation originale. Vous pouvez également cliquer sur Réinitialiser pour recommencer.",
+        "q3": "Le retournement affecte-t-il la qualité de l'image ?",
+        "a3": "Non ! Le retournement est une opération sans perte qui réorganise simplement les positions des pixels sans aucune perte de qualité.",
+        "q4": "Quand aurais-je besoin de retourner une image ?",
+        "a4": "Usages courants : corriger les selfies inversés, créer des designs symétriques, préparer des images pour l'impression (notamment les transferts thermocollants) et corriger les photos prises avec la caméra frontale."
+      }
+    },
+    "invert-image": {
+      "name": "Inverser les couleurs",
+      "metaTitle": "Inverser les Couleurs d'une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Inversez les couleurs des images en ligne gratuitement. Créez des effets photo négatif instantanément en un clic — sans téléchargement, 100% privé.",
+      "h1": "Inverser les couleurs d'une image en ligne gratuitement",
+      "description": "Créez de superbes effets négatifs en inversant les couleurs de vos images avec l'outil en ligne gratuit de NanoImage. L'inversion des couleurs remplace la couleur de chaque pixel par sa couleur complémentaire — le blanc devient noir, le rouge devient cyan, le bleu devient jaune, et ainsi de suite. Cela crée un effet classique de négatif photographique très apprécié pour la photographie artistique, les projets de design et les effets visuels. L'inversion est appliquée instantanément avec un aperçu en temps réel. Fonctionne avec tous les formats d'image, y compris JPG, PNG et WebP. Tout le traitement se fait localement dans votre navigateur — vos images restent confidentielles.",
+      "invertColors": "Inverser les couleurs",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Cliquez sur « Inverser les couleurs » pour appliquer l'effet d'inversion instantanément.",
+        "step3": "Prévisualisez le résultat et cliquez sur « Télécharger » pour enregistrer votre image inversée."
+      },
+      "faq": {
+        "q1": "Que fait l'inversion des couleurs ?",
+        "a1": "L'inversion des couleurs remplace chaque couleur par son opposé dans le spectre chromatique. Les valeurs RGB de chaque pixel sont soustraites de 255, créant un effet de négatif photographique.",
+        "q2": "Puis-je inverser uniquement certaines couleurs ?",
+        "a2": "L'outil actuel inverse toutes les couleurs de l'image de manière uniforme. Pour des ajustements de couleurs sélectifs, vous aurez besoin d'un éditeur photo plus avancé.",
+        "q3": "L'inversion est-elle réversible ?",
+        "a3": "Oui ! Inverser une image déjà inversée restaure les couleurs originales. Vous pouvez également cliquer sur Réinitialiser pour revenir à l'original.",
+        "q4": "Quels sont les usages créatifs de l'inversion des couleurs ?",
+        "a4": "L'inversion des couleurs est populaire pour créer des effets photo artistiques, des images style radiographie, améliorer la visibilité de certains détails et générer du contenu unique pour les réseaux sociaux avec un impact visuel saisissant."
+      }
+    },
+    "black-and-white": {
+      "name": "Noir et blanc",
+      "metaTitle": "Convertir Photo en Noir et Blanc en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Convertissez des photos en noir et blanc en ligne gratuitement. Intensité des niveaux de gris réglable, sans téléchargement — résultats instantanés dans le navigateur.",
+      "h1": "Convertir une image en noir et blanc en ligne",
+      "description": "Convertissez vos photos couleur en de magnifiques images noir et blanc avec l'outil en ligne gratuit de NanoImage. Notre convertisseur en niveaux de gris utilise des algorithmes pondérés par luminance pour produire des images monochromes d'aspect naturel qui préservent la gamme tonale et la profondeur de votre photo originale. Ajustez l'intensité des niveaux de gris pour trouver le rendu parfait — d'une désaturation subtile au monochrome complet. La photographie en noir et blanc possède un charme intemporel qui fonctionne merveilleusement pour les portraits, les paysages, la photographie de rue et les projets artistiques. Tout le traitement se fait dans votre navigateur avec un aperçu instantané. Aucun téléversement, aucune installation, entièrement gratuit.",
+      "intensity": "Intensité des niveaux de gris",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Ajustez le curseur d'intensité des niveaux de gris pour contrôler la quantité de couleur supprimée (100 % pour un noir et blanc complet).",
+        "step3": "Prévisualisez le résultat et cliquez sur « Télécharger » pour enregistrer votre image en noir et blanc."
+      },
+      "faq": {
+        "q1": "Quel algorithme est utilisé pour la conversion ?",
+        "a1": "Nous utilisons la méthode pondérée par luminance (0.299R + 0.587G + 0.114B) qui produit des niveaux de gris d'aspect naturel, correspondant à la façon dont l'œil humain perçoit la luminosité.",
+        "q2": "Puis-je ajuster l'intensité du noir et blanc ?",
+        "a2": "Oui ! Utilisez le curseur d'intensité pour passer d'une désaturation subtile au monochrome complet. À 50 %, vous obtenez un bel effet de couleurs atténuées.",
+        "q3": "L'image en noir et blanc aura-t-elle la même taille ?",
+        "a3": "Les dimensions restent les mêmes. La taille du fichier peut être légèrement inférieure car les images en niveaux de gris contiennent moins d'informations de couleur.",
+        "q4": "Quelle est la différence entre niveaux de gris et désaturation ?",
+        "a4": "Notre outil utilise les niveaux de gris pondérés par luminance (0.299R + 0.587G + 0.114B) qui imitent la perception humaine de la luminosité. La désaturation simple fait la moyenne des canaux RGB de manière égale, ce qui peut donner un résultat moins naturel."
+      }
+    },
+    "blur-image": {
+      "name": "Flouter une image",
+      "metaTitle": "Flouter une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Appliquez un flou gaussien aux images en ligne gratuitement. Intensité réglable, sans téléchargement — parfait pour les arrière-plans et la confidentialité.",
+      "h1": "Flouter une image en ligne — Outil de flou gaussien gratuit",
+      "description": "Appliquez un flou gaussien professionnel à vos images avec l'outil en ligne gratuit de NanoImage. Ajustez le rayon de flou, d'un léger adoucissement à un flou intense, pour obtenir l'effet souhaité. Idéal pour créer des arrière-plans doux, masquer des informations sensibles, ajouter des effets de profondeur de champ ou préparer des images comme fonds d'écran. Le flou est appliqué en temps réel pour voir exactement le rendu en ajustant l'intensité. Tout le traitement se fait localement dans votre navigateur — aucun téléversement, aucun serveur, confidentialité totale. Parfait pour la protection de la vie privée, le design et les effets photographiques créatifs.",
+      "blurRadius": "Rayon de flou",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Ajustez le curseur de rayon de flou (1-20 px) pour contrôler l'intensité du flou.",
+        "step3": "Prévisualisez le résultat flouté et cliquez sur « Télécharger » pour enregistrer."
+      },
+      "faq": {
+        "q1": "Quel type de flou est appliqué ?",
+        "a1": "NanoImage utilise le flou gaussien, qui produit un effet de flou naturel et lisse. C'est le même algorithme utilisé dans les logiciels de retouche photo professionnels.",
+        "q2": "Puis-je flouter seulement une partie de l'image ?",
+        "a2": "L'outil actuel applique le flou à l'image entière. Pour un flou sélectif (par exemple, flouter un visage ou un arrière-plan uniquement), restez à l'écoute des futures mises à jour.",
+        "q3": "Quel rayon de flou dois-je utiliser ?",
+        "a3": "Pour un léger adoucissement, essayez 1-3 px. Pour un flou modéré, 5-10 px convient bien. Pour un flou intense ou à des fins de confidentialité, utilisez 15-20 px.",
+        "q4": "Le flou est-il appliqué à l'image entière ?",
+        "a4": "Oui, l'outil actuel applique le flou gaussien uniformément sur l'ensemble de l'image. C'est idéal pour créer des arrière-plans, protéger la vie privée et produire des effets artistiques. Le flou sélectif par zone est prévu pour une future mise à jour."
+      }
+    },
+    "add-border-to-image": {
+      "name": "Ajouter une bordure",
+      "metaTitle": "Ajouter une Bordure à une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Ajoutez une bordure aux images en ligne gratuitement. Choisissez la largeur et la couleur de la bordure. Parfait pour encadrer vos photos — sans téléchargement, 100% privé.",
+      "h1": "Ajouter une bordure à une image en ligne gratuitement",
+      "description": "Encadrez vos photos avec élégance grâce à l'outil de bordure en ligne gratuit de NanoImage. Ajoutez des bordures personnalisables à n'importe quelle image avec un contrôle total sur l'épaisseur et la couleur. Choisissez n'importe quelle couleur avec le sélecteur de couleurs ou les boutons prédéfinis, réglez l'épaisseur de 1 à 100 pixels avec le curseur ou le champ de saisie, et prévisualisez le résultat en temps réel. Idéal pour créer des cadres photo, ajouter des bordures blanches pour les publications Instagram, préparer des images pour l'impression ou rehausser vos photos avec une touche professionnelle. Compatible avec tous les formats d'image courants, tout est traité localement dans votre navigateur pour des résultats instantanés et une confidentialité totale.",
+      "borderWidth": "Épaisseur de la bordure (px)",
+      "borderColor": "Couleur de la bordure",
+      "borderStyle": "Style de la bordure",
+      "solid": "Plein",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Réglez l'épaisseur de la bordure avec le curseur ou le champ de saisie, et choisissez une couleur avec le sélecteur ou les boutons prédéfinis.",
+        "step3": "Prévisualisez l'image avec bordure et cliquez sur « Télécharger » pour enregistrer."
+      },
+      "faq": {
+        "q1": "Quelles épaisseurs de bordure sont disponibles ?",
+        "a1": "Vous pouvez régler l'épaisseur de la bordure de 1 à 100 pixels à l'aide du curseur ou du champ de saisie numérique.",
+        "q2": "Puis-je mettre des couleurs différentes sur chaque côté ?",
+        "a2": "Actuellement, la couleur de la bordure est uniforme sur tous les côtés. Cela simplifie l'outil et couvre la plupart des cas d'usage courants.",
+        "q3": "La bordure augmente-t-elle les dimensions de l'image ?",
+        "a3": "Oui ! La bordure est ajoutée à l'extérieur de l'image originale, donc les dimensions finales augmentent du double de l'épaisseur de la bordure dans chaque direction.",
+        "q4": "Puis-je utiliser l'outil de bordure pour les bordures blanches Instagram ?",
+        "a4": "Absolument ! Réglez la couleur de la bordure sur blanc (#ffffff) et choisissez l'épaisseur souhaitée. C'est parfait pour créer l'esthétique populaire de bordure blanche Instagram pour vos photos."
+      }
+    },
+    "watermark-image": {
+      "name": "Ajouter un filigrane",
+      "metaTitle": "Ajouter un Filigrane à une Image en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Ajoutez un filigrane texte ou image en ligne gratuitement. Position, taille et opacité personnalisables. Sans téléchargement — protégez vos photos 100% privé.",
+      "h1": "Ajouter un filigrane à une image en ligne gratuitement",
+      "description": "Protégez vos images avec des filigranes professionnels grâce à l'outil en ligne gratuit de NanoImage. Ajoutez des filigranes texte avec une taille de police, une couleur et une opacité personnalisables, et positionnez-les n'importe où grâce à notre système intuitif de placement en grille 9 positions ou en mode mosaïque. Idéal pour les photographes, les designers et les créateurs de contenu qui souhaitent protéger leur travail contre l'utilisation non autorisée. Ajustez la transparence de 10 % à 100 % pour trouver l'équilibre parfait entre visibilité et discrétion. Tout le traitement se fait localement dans votre navigateur — vos images ne quittent jamais votre appareil. Compatible JPG, PNG, WebP et plus.",
+      "watermarkType": "Type de filigrane",
+      "textWatermark": "Filigrane texte",
+      "imageWatermark": "Filigrane image",
+      "watermarkText": "Texte du filigrane",
+      "fontSize": "Taille de la police",
+      "fontColor": "Couleur de la police",
+      "opacity": "Opacité",
+      "position": "Position",
+      "tiled": "Mosaïque",
+      "topLeft": "Haut gauche",
+      "topCenter": "Haut centre",
+      "topRight": "Haut droite",
+      "middleLeft": "Milieu gauche",
+      "center": "Centre",
+      "middleRight": "Milieu droite",
+      "bottomLeft": "Bas gauche",
+      "bottomCenter": "Bas centre",
+      "bottomRight": "Bas droite",
+      "howToUse": {
+        "step1": "Importez votre image en la glissant dans la zone d'import ou en cliquant pour parcourir.",
+        "step2": "Saisissez votre texte de filigrane, définissez la taille de police, la couleur et l'opacité. Choisissez une position dans le sélecteur en grille ou activez le mode mosaïque.",
+        "step3": "Prévisualisez l'image filigranée et cliquez sur « Télécharger » pour enregistrer."
+      },
+      "faq": {
+        "q1": "Puis-je ajouter un filigrane image au lieu d'un texte ?",
+        "a1": "Oui ! Passez en mode « Filigrane image » et importez un logo ou une image à utiliser comme filigrane.",
+        "q2": "Comment rendre le filigrane plus discret ?",
+        "a2": "Réduisez le curseur d'opacité. Une valeur de 20-30 % crée un filigrane discret, visible mais qui ne détourne pas l'attention de l'image.",
+        "q3": "Puis-je répéter le filigrane sur toute l'image ?",
+        "a3": "Oui ! Activez l'option de position « Mosaïque » pour répéter votre filigrane sur toute l'image en motif de grille.",
+        "q4": "Le filigrane sera-t-il permanent ?",
+        "a4": "Oui, une fois appliqué et téléchargé, le filigrane est intégré de façon permanente dans les pixels de l'image. Conservez votre fichier original si vous avez besoin d'une version sans filigrane."
+      }
+    },
+    "convert-to-jpg": {
+      "name": "Convertir en JPG",
+      "metaTitle": "Convertir PNG en JPG en Ligne Gratuitement | NanoImage",
+      "metaDescription": "Convertissez PNG, WebP, GIF, BMP en JPG en ligne gratuitement. Qualité réglable, sans téléchargement — conversion instantanée dans le navigateur.",
+      "h1": "Convertir PNG en JPG en ligne gratuitement",
+      "description": "Convertissez instantanément vos images PNG, WebP, GIF ou BMP au format JPG avec le convertisseur en ligne gratuit de NanoImage. Le JPG est le format d'image le plus largement pris en charge, offrant une excellente compression pour les photographies tout en maintenant une bonne qualité visuelle. Notre convertisseur vous permet d'ajuster la qualité de sortie de 10 % à 100 % (90 % par défaut) pour trouver l'équilibre parfait entre taille de fichier et qualité d'image. Les arrière-plans transparents des fichiers PNG sont automatiquement remplis en blanc (ou la couleur de votre choix). Traitez jusqu'à 10 images à la fois avec la conversion par lots. Tout fonctionne localement dans votre navigateur — rapide, confidentiel et gratuit.",
+      "outputQuality": "Qualité de sortie",
+      "backgroundColor": "Couleur de remplissage de l'arrière-plan",
+      "transparent": "Pour les PNG transparents",
+      "howToUse": {
+        "step1": "Importez vos fichiers PNG, WebP ou autres images en les glissant dans la zone d'import.",
+        "step2": "Ajustez le curseur de qualité de sortie (90 % par défaut). Choisissez une couleur de remplissage pour les images transparentes.",
+        "step3": "Vos images sont converties automatiquement. Cliquez sur « Télécharger » pour enregistrer chaque fichier JPG, ou ajoutez d'autres images."
+      },
+      "faq": {
+        "q1": "Pourquoi convertir PNG en JPG ?",
+        "a1": "Les fichiers JPG sont généralement beaucoup plus petits que les fichiers PNG, ce qui les rend idéaux pour le web, les e-mails et le stockage. Le JPG est également universellement pris en charge sur tous les appareils et plateformes.",
+        "q2": "Que deviennent les arrière-plans transparents ?",
+        "a2": "Le JPG ne prend pas en charge la transparence. Les zones transparentes des fichiers PNG sont remplies en blanc par défaut. Vous pouvez changer la couleur de remplissage à l'aide du sélecteur de couleur d'arrière-plan.",
+        "q3": "Puis-je convertir plusieurs images à la fois ?",
+        "a3": "Oui ! Vous pouvez importer et convertir jusqu'à 10 images simultanément. Chaque image est traitée individuellement avec les paramètres de qualité choisis.",
+        "q4": "La conversion en JPG réduira-t-elle la qualité de mon image ?",
+        "a4": "Le JPG utilise une compression avec perte, il y a donc un léger compromis sur la qualité en échange de fichiers beaucoup plus petits. À 90 % de qualité (par défaut), la différence est pratiquement imperceptible. Des valeurs de qualité plus basses produisent des fichiers plus petits avec des artefacts de compression plus visibles."
+      }
+    },
+    "meme-generator": {
+      "name": "Générateur de mèmes",
+      "metaTitle": "Générateur de Mèmes en Ligne Gratuit | NanoImage",
+      "metaDescription": "Créez des mèmes en ligne gratuitement. Ajoutez du texte en haut et en bas avec des polices, couleurs et styles personnalisables. Sans téléchargement — 100% privé.",
+      "h1": "Générateur de mèmes — Créez des mèmes en ligne gratuitement",
+      "description": "Créez des mèmes hilarants en quelques secondes avec le générateur de mèmes en ligne gratuit de NanoImage. Ajoutez du texte gras en haut et en bas de n'importe quelle image avec un contrôle total sur la taille de police, la couleur du texte, la couleur du contour et l'épaisseur du contour. Le style classique de texte de mème présente du texte blanc avec un contour noir, lisible sur n'importe quel arrière-plan. Le verrouillage en majuscules est activé par défaut pour un look de mème authentique. Voyez votre création prendre vie avec un aperçu en temps réel pendant la saisie. Aucun filigrane, aucune inscription, aucune limite. Parfait pour les réseaux sociaux, les discussions de groupe et la culture internet. Fonctionne sur tout appareil — ordinateur, tablette ou mobile.",
+      "topText": "Texte du haut",
+      "bottomText": "Texte du bas",
+      "fontSize": "Taille de la police",
+      "textColor": "Couleur du texte",
+      "strokeColor": "Couleur du contour",
+      "strokeWidth": "Épaisseur du contour",
+      "uppercase": "MAJUSCULES",
+      "howToUse": {
+        "step1": "Importez une image de base ou un modèle de mème en le glissant dans la zone d'import.",
+        "step2": "Saisissez votre texte du haut et du bas. Personnalisez la taille de police, les couleurs et le contour à votre guise.",
+        "step3": "Prévisualisez votre mème et cliquez sur « Télécharger » pour l'enregistrer. Partagez-le avec le monde entier !"
+      },
+      "faq": {
+        "q1": "Puis-je utiliser n'importe quelle image comme modèle de mème ?",
+        "a1": "Oui ! Importez n'importe quelle image — photos, captures d'écran, illustrations ou modèles de mèmes classiques. Tous les formats d'image fonctionnent.",
+        "q2": "Y a-t-il un filigrane sur les mèmes ?",
+        "a2": "Non ! NanoImage n'ajoute jamais de filigrane à vos mèmes créés. Le résultat est propre et prêt à être partagé.",
+        "q3": "Puis-je personnaliser le style du texte ?",
+        "a3": "Absolument ! Ajustez la taille de police (20-100 px), la couleur du texte, la couleur du contour, l'épaisseur du contour et le mode majuscules pour obtenir le look parfait pour votre mème.",
+        "q4": "Puis-je utiliser le générateur de mèmes sur mobile ?",
+        "a4": "Oui ! NanoImage fonctionne sur tout appareil avec un navigateur moderne — ordinateur, tablette ou mobile. Importez votre image, ajoutez du texte et téléchargez votre mème directement sur votre téléphone."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Outils d'image en ligne gratuits — rapides, confidentiels, aucun téléversement requis.",
+    "tools": "Outils",
+    "effects": "Effets",
+    "more": "Plus",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "copyright": "© {year} NanoImage. Tous droits réservés."
+  }
+}

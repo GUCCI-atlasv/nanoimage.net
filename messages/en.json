@@ -1,0 +1,449 @@
+{
+  "metadata": {
+    "siteName": "NanoImage",
+    "title": "Free Online Image Tools — Compress, Resize & Crop | NanoImage",
+    "description": "Free online image tools — compress, resize, crop, rotate, blur & more. 100% private: no upload, no account needed. 13 tools, instant results, all in your browser."
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "allTools": "All Tools",
+    "blog": "Blog"
+  },
+  "home": {
+    "hero": {
+      "title": "Free Online Image Tools",
+      "subtitle": "Compress, resize, crop, rotate and edit your images directly in the browser. No upload required — fast, free, and 100% private.",
+      "cta": "Get Started"
+    },
+    "features": {
+      "title": "Why NanoImage?",
+      "privacy": {
+        "title": "100% Private",
+        "description": "All processing happens locally in your browser. Your images never leave your device."
+      },
+      "fast": {
+        "title": "Lightning Fast",
+        "description": "No server uploads needed. Process images instantly with zero waiting time."
+      },
+      "free": {
+        "title": "Completely Free",
+        "description": "All tools are free to use with no limits, no sign-up, and no watermarks."
+      }
+    },
+    "toolsSection": {
+      "title": "Image Tools",
+      "subtitle": "Everything you need to edit your images online"
+    },
+    "about": {
+      "title": "What is NanoImage?",
+      "text": "NanoImage is a free suite of browser-based image editing tools designed for speed, simplicity, and privacy. Whether you need to compress images for faster website loading, resize photos for social media, crop screenshots, convert PNG to JPG, add watermarks to protect your work, or generate memes — NanoImage handles it all directly in your browser. Unlike traditional image editors, nothing is ever uploaded to a server. Your files stay on your device, processing happens instantly via the Canvas API, and there are no accounts, no subscriptions, and no watermarks. NanoImage is built for designers, developers, marketers, content creators, and anyone who needs quick image edits without the hassle of heavy software."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is NanoImage really free?",
+      "a1": "Yes, 100% free. All 13 image tools are available without any limits, sign-ups, or hidden fees. There are no premium tiers or watermarks added to your images.",
+      "q2": "Are my images uploaded to a server?",
+      "a2": "No. All processing happens locally in your browser using the HTML5 Canvas API. Your images never leave your device, ensuring complete privacy and security.",
+      "q3": "What image formats are supported?",
+      "a3": "NanoImage supports JPG, PNG, WebP, GIF, and BMP formats across all tools. The Convert to JPG tool can convert any of these formats to JPEG.",
+      "q4": "Can I use NanoImage on mobile devices?",
+      "a4": "Yes! NanoImage is fully responsive and works on any modern browser — desktop, tablet, or mobile. All tools are optimized for touch interaction.",
+      "q5": "What tools are available?",
+      "a5": "NanoImage offers 13 tools: Compress Image, Compress to 100KB, Resize, Crop, Rotate, Flip, Invert Colors, Black & White, Blur, Add Border, Add Watermark, Convert to JPG, and Meme Generator."
+    }
+  },
+  "common": {
+    "uploadImage": "Upload Image",
+    "dragDrop": "Drag & drop your image here, or click to browse",
+    "supportedFormats": "Supports JPG, PNG, WebP, GIF, BMP",
+    "errorNotImage": "This file is not an image. Please upload a JPG, PNG, WebP, GIF, or BMP file.",
+    "errorLoadFailed": "Failed to load the image. The file may be corrupted or unsupported.",
+    "errorReadFailed": "Failed to read the file. Please try again.",
+    "download": "Download",
+    "downloadAll": "Download All",
+    "reset": "Reset",
+    "apply": "Apply",
+    "processing": "Processing...",
+    "original": "Original",
+    "result": "Result",
+    "width": "Width",
+    "height": "Height",
+    "quality": "Quality",
+    "preview": "Preview",
+    "howToUse": "How to Use",
+    "faq": "Frequently Asked Questions",
+    "relatedTools": "Related Tools",
+    "uploadNew": "Upload New",
+    "tryTool": "Try {tool}",
+    "fileSize": "File Size",
+    "dimensions": "Dimensions",
+    "format": "Format",
+    "batchUpload": "Upload up to {max} images at once",
+    "removeImage": "Remove",
+    "addMore": "Add More Images"
+  },
+  "tools": {
+    "compress-image": {
+      "name": "Compress Image",
+      "metaTitle": "Compress Image Online Free — Reduce File Size | NanoImage",
+      "metaDescription": "Compress JPG, PNG, WebP to any target size online. No upload needed — 100% private, instant results in your browser.",
+      "h1": "Compress Image Online — Reduce File Size for Free",
+      "description": "Easily compress your images to a target file size without losing visible quality. Our free online image compressor works entirely in your browser — no uploads, no servers, completely private. Whether you need to compress images for email attachments, website optimization, or social media uploads, NanoImage makes it simple. Just upload your image, set your target size (default 200KB), and download the optimized result instantly. Supports JPG, PNG, and WebP formats with smart quality adjustment to achieve the best balance between file size and image quality.",
+      "targetSize": "Target Size (KB)",
+      "currentSize": "Current Size",
+      "compressedSize": "Compressed Size",
+      "reduction": "Reduction",
+      "compressing": "Compressing...",
+      "alreadySmall": "Image is already within the target size — no compression needed.",
+      "qualityHint": "Output is well below target size. You can increase the quality slider for better image quality.",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse your files.",
+        "step2": "Set your desired target file size in KB (default is 200KB). Adjust the quality slider if needed.",
+        "step3": "Click \"Apply\" and download your optimized image instantly."
+      },
+      "faq": {
+        "q1": "How does the image compression work?",
+        "a1": "NanoImage uses smart quality adjustment via your browser's Canvas API. It iteratively reduces the JPEG/WebP quality parameter until the image reaches your target file size, maintaining the best possible visual quality.",
+        "q2": "Is my image uploaded to any server?",
+        "a2": "No! All processing happens 100% locally in your browser. Your images never leave your device, ensuring complete privacy and security.",
+        "q3": "What image formats are supported?",
+        "a3": "NanoImage supports JPG/JPEG, PNG, WebP, GIF, and BMP input formats. Output is typically JPEG or WebP for optimal compression.",
+        "q4": "Can I compress multiple images at once?",
+        "a4": "Yes! You can upload and compress up to 10 images simultaneously. Each image will be compressed to your specified target size."
+      }
+    },
+    "compress-image-to-100kb": {
+      "name": "Compress Image to 100KB",
+      "metaTitle": "Compress Image to 100KB - Free Online Tool | NanoImage",
+      "metaDescription": "Compress image to 100KB online for free. Reduce image file size to under 100KB without losing quality. No upload, no registration — works in your browser.",
+      "h1": "Compress Image to 100KB — Free Online Compressor",
+      "description": "Need to reduce an image to exactly 100KB or less? NanoImage's free online compressor makes it effortless. Perfect for passport photos, ID submissions, online applications, and forums that enforce strict 100KB file size limits. Our tool uses intelligent quality optimization to compress your images to under 100KB while preserving maximum visual clarity. Everything runs locally in your browser — no server uploads, no registration, no limits. Upload any JPG, PNG, or WebP image and get an optimized version under 100KB in seconds.",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "The target size is pre-set to 100KB. Adjust if needed, or keep the default for 100KB output.",
+        "step3": "Click \"Apply\" and download your image, now under 100KB."
+      },
+      "faq": {
+        "q1": "Why would I need to compress an image to 100KB?",
+        "a1": "Many online applications, government portals, and forums require images under 100KB. Passport photo submissions, visa applications, and profile pictures often have strict size limits.",
+        "q2": "Will my image look blurry after compression?",
+        "a2": "NanoImage uses smart compression that finds the optimal quality level. For most images, the visual difference is barely noticeable even at 100KB.",
+        "q3": "Can I compress a PNG to 100KB?",
+        "a3": "Yes! PNG files are automatically converted to JPEG during compression to achieve smaller file sizes. You can also choose WebP format for even better quality at small sizes.",
+        "q4": "What's the difference between 200KB and 100KB compression?",
+        "a4": "The 200KB target works well for most web uses and email attachments. The 100KB target is stricter and ideal for government portals, visa applications, and platforms with tight file size limits."
+      }
+    },
+    "rotate-image": {
+      "name": "Rotate Image",
+      "metaTitle": "Rotate Image Online Free | NanoImage",
+      "metaDescription": "Rotate photos 90°, 180°, 270° or any custom angle online for free. No upload needed — instant rotation in your browser.",
+      "h1": "Rotate Image Online for Free",
+      "description": "Quickly rotate your images to any angle with NanoImage's free online rotation tool. Whether you need to fix a sideways photo, rotate by exactly 90 degrees, or apply a custom rotation angle, our tool handles it all. The rotation happens instantly in your browser with a real-time preview, so you can see exactly how your image will look before downloading. No software installation, no server uploads — just fast, free image rotation. Perfect for correcting photo orientation, creating artistic effects, or preparing images for social media. Supports JPG, PNG, WebP and more.",
+      "angle": "Rotation Angle",
+      "preset90": "90°",
+      "preset180": "180°",
+      "preset270": "270°",
+      "custom": "Custom Angle",
+      "clockwise": "Clockwise",
+      "counterclockwise": "Counter-clockwise",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Choose a preset rotation (90°, 180°, 270°) or set a custom angle using the slider.",
+        "step3": "Preview the result and click \"Download\" to save your rotated image."
+      },
+      "faq": {
+        "q1": "Can I rotate an image by a specific angle?",
+        "a1": "Yes! Use the custom angle slider to rotate your image by any angle from -180° to 180°. You can also type in an exact value.",
+        "q2": "Does rotation reduce image quality?",
+        "a2": "For 90°, 180°, and 270° rotations, quality is perfectly preserved. Custom angles may introduce minimal interpolation artifacts, but the result is still high quality.",
+        "q3": "Can I rotate multiple images at once?",
+        "a3": "Currently, the rotation tool processes one image at a time for the best precision and preview experience.",
+        "q4": "What image formats are supported for rotation?",
+        "a4": "NanoImage supports all common formats including JPG, PNG, WebP, GIF, and BMP. The output is saved as PNG to preserve quality."
+      }
+    },
+    "crop-image": {
+      "name": "Crop Image",
+      "metaTitle": "Crop Image Online Free | NanoImage",
+      "metaDescription": "Crop images online with preset ratios (1:1, 16:9, 4:3) or custom selection. No upload needed — free and 100% private.",
+      "h1": "Crop Image Online — Free & Easy",
+      "description": "Crop your images with precision using NanoImage's free online cropping tool. Select any area of your image to keep, or use preset aspect ratios for perfect results every time. Choose from popular ratios like 1:1 (square, perfect for Instagram), 4:3 (standard photo), 16:9 (widescreen), or 2:3 (portrait). Simply drag on the image to define your crop area — the selection shows the exact output dimensions in pixels. Everything happens in your browser with a real-time preview — no uploads, no installs. Great for social media posts, profile pictures, website banners, and photo editing.",
+      "aspectRatio": "Aspect Ratio",
+      "freeform": "Freeform",
+      "square": "1:1 Square",
+      "landscape43": "4:3 Landscape",
+      "landscape169": "16:9 Widescreen",
+      "portrait23": "2:3 Portrait",
+      "cropArea": "Crop Area",
+      "dragToSelect": "Drag on the image below to select a crop area, or choose a preset ratio.",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Select a preset aspect ratio or drag on the image to define a custom crop area.",
+        "step3": "Adjust the selection, then click \"Apply\" to crop. Preview the result and click \"Download\" to save."
+      },
+      "faq": {
+        "q1": "How does the crop selection work?",
+        "a1": "Simply drag on the image to define a crop area. The selection shows the exact output dimensions in pixels. Choose a preset aspect ratio to constrain the shape, or use Freeform for any proportion.",
+        "q2": "What aspect ratios are available?",
+        "a2": "We offer freeform cropping plus presets: 1:1 (square), 4:3, 16:9, and 3:2. These cover most common use cases for social media, web, and print.",
+        "q3": "Does cropping reduce image quality?",
+        "a3": "No! Cropping simply removes the unwanted area and keeps the original quality of the selected region.",
+        "q4": "Can I crop images for social media profiles?",
+        "a4": "Yes! Use the 1:1 square preset for Instagram and profile pictures, 16:9 for YouTube thumbnails and cover photos, or 4:3 for standard social media posts."
+      }
+    },
+    "resize-image": {
+      "name": "Resize Image",
+      "metaTitle": "Resize Image Online Free | NanoImage",
+      "metaDescription": "Resize images by pixels or percentage online for free. Lock aspect ratio, no upload needed — instant results in your browser.",
+      "h1": "Resize Image Online — Change Dimensions for Free",
+      "description": "Resize your images to any dimension with NanoImage's free online resizer. Change width and height by exact pixels or by percentage — with an option to lock the aspect ratio to prevent stretching or distortion. Choose from popular preset sizes like 1920×1080, 1280×720, 800×600, or enter your own custom dimensions. You can also scale images by percentage: 25%, 50%, 75%, or 200%. Ideal for preparing images for websites, social media, email, presentations, and more. All processing happens locally in your browser for instant results.",
+      "lockAspectRatio": "Lock Aspect Ratio",
+      "byPixels": "By Pixels",
+      "byPercentage": "By Percentage",
+      "presetSizes": "Preset Sizes",
+      "percentage": "Percentage",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Enter new width and height in pixels, choose a percentage, or select a preset size. Toggle aspect ratio lock as needed.",
+        "step3": "Click \"Resize\" and download your resized image."
+      },
+      "faq": {
+        "q1": "Will resizing make my image blurry?",
+        "a1": "Downsizing (making smaller) generally maintains clarity. Upsizing (making larger) may introduce some softness, as the tool needs to interpolate new pixels.",
+        "q2": "What does 'Lock Aspect Ratio' mean?",
+        "a2": "When locked, changing the width automatically adjusts the height (and vice versa) to maintain the original proportions, preventing distortion.",
+        "q3": "What preset sizes are available?",
+        "a3": "We offer common sizes: 1920×1080 (Full HD), 1280×720 (HD), 800×600, 640×480, and percentage-based scaling at 25%, 50%, 75%, and 200%.",
+        "q4": "Can I resize images without losing quality?",
+        "a4": "Downsizing preserves quality well since pixels are merged. Upsizing may introduce slight softness as new pixels must be interpolated. For best results when enlarging, use moderate scaling (up to 200%)."
+      }
+    },
+    "flip-image": {
+      "name": "Flip Image",
+      "metaTitle": "Flip Image Online Free | NanoImage",
+      "metaDescription": "Flip images horizontally or vertically online for free. Mirror photos instantly with one click — no upload needed, 100% private.",
+      "h1": "Flip Image Online — Mirror Horizontally or Vertically",
+      "description": "Flip and mirror your images instantly with NanoImage's free online tool. Choose horizontal flip (mirror left to right), vertical flip (mirror top to bottom), or apply both for a 180° mirror effect. Perfect for fixing mirrored selfies, creating symmetrical designs, or preparing images for print. The flip is applied instantly with a real-time preview so you can see the result immediately. No software needed, no server uploads — everything runs in your browser for maximum speed and privacy. Supports all common image formats including JPG, PNG, and WebP.",
+      "horizontal": "Flip Horizontal",
+      "vertical": "Flip Vertical",
+      "both": "Flip Both",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Choose your flip direction: horizontal (mirror), vertical, or both.",
+        "step3": "Preview the result and click \"Download\" to save your flipped image."
+      },
+      "faq": {
+        "q1": "What's the difference between flip and rotate?",
+        "a1": "Flipping mirrors the image along an axis (horizontal or vertical), creating a mirror image. Rotating turns the image around its center point by a specified angle.",
+        "q2": "Can I undo a flip?",
+        "a2": "Yes! Simply flip the image again in the same direction to restore the original orientation. You can also click Reset to start over.",
+        "q3": "Does flipping affect image quality?",
+        "a3": "No! Flipping is a lossless operation that simply rearranges pixel positions without any quality loss.",
+        "q4": "When would I need to flip an image?",
+        "a4": "Common uses include fixing mirrored selfies, creating symmetrical designs, preparing images for printing (especially iron-on transfers), and correcting photos taken with front-facing cameras."
+      }
+    },
+    "invert-image": {
+      "name": "Invert Colors",
+      "metaTitle": "Invert Image Colors Online Free | NanoImage",
+      "metaDescription": "Invert image colors online for free. Create negative photo effects instantly with one click — no upload needed, 100% private.",
+      "h1": "Invert Image Colors Online for Free",
+      "description": "Create stunning negative effects by inverting the colors of your images with NanoImage's free online tool. Color inversion replaces each pixel's color with its complementary color — white becomes black, red becomes cyan, blue becomes yellow, and so on. This creates a classic photographic negative effect that's popular for artistic photography, design projects, and visual effects. The inversion is applied instantly with a real-time preview. Works on any image format including JPG, PNG, and WebP. All processing happens locally in your browser — your images stay private.",
+      "invertColors": "Invert Colors",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Click \"Invert Colors\" to apply the color inversion effect instantly.",
+        "step3": "Preview the result and click \"Download\" to save your inverted image."
+      },
+      "faq": {
+        "q1": "What does inverting colors do?",
+        "a1": "Inverting colors replaces each color with its opposite on the color spectrum. Every pixel's RGB values are subtracted from 255, creating a photographic negative effect.",
+        "q2": "Can I invert only specific colors?",
+        "a2": "The current tool inverts all colors in the image uniformly. For selective color adjustments, you may need a more advanced photo editor.",
+        "q3": "Is the inversion reversible?",
+        "a3": "Yes! Inverting an already inverted image restores the original colors. You can also click Reset to go back to the original.",
+        "q4": "What are creative uses for color inversion?",
+        "a4": "Color inversion is popular for creating artistic photo effects, making X-ray style images, improving visibility of certain details, and generating unique social media content with a striking visual impact."
+      }
+    },
+    "black-and-white": {
+      "name": "Black & White",
+      "metaTitle": "Black and White Photo Converter Online Free | NanoImage",
+      "metaDescription": "Convert photos to black and white online for free. Adjustable grayscale intensity, no upload needed — instant results in your browser.",
+      "h1": "Make Image Black and White Online",
+      "description": "Convert your color photos to beautiful black and white with NanoImage's free online tool. Our grayscale converter uses luminance-weighted algorithms to produce natural-looking monochrome images that preserve the tonal range and depth of your original photo. Adjust the grayscale intensity to find the perfect look — from subtle desaturation to full monochrome. Black and white photography has a timeless appeal that works beautifully for portraits, landscapes, street photography, and artistic projects. All processing happens in your browser with instant preview. No uploads, no installs, completely free.",
+      "intensity": "Grayscale Intensity",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Adjust the grayscale intensity slider to control how much color is removed (100% for full B&W).",
+        "step3": "Preview the result and click \"Download\" to save your black and white image."
+      },
+      "faq": {
+        "q1": "What algorithm is used for the conversion?",
+        "a1": "We use the luminance-weighted method (0.299R + 0.587G + 0.114B) which produces natural-looking grayscale that matches how the human eye perceives brightness.",
+        "q2": "Can I adjust the black and white intensity?",
+        "a2": "Yes! Use the intensity slider to go from subtle desaturation to full monochrome. At 50%, you get a nice muted color effect.",
+        "q3": "Will the black and white image be the same size?",
+        "a3": "The dimensions remain the same. The file size may be slightly smaller since grayscale images have less color information.",
+        "q4": "What's the difference between grayscale and desaturation?",
+        "a4": "Our tool uses luminance-weighted grayscale (0.299R + 0.587G + 0.114B) which mimics human perception of brightness. Simple desaturation averages RGB channels equally, which can look less natural."
+      }
+    },
+    "blur-image": {
+      "name": "Blur Image",
+      "metaTitle": "Blur Image Online Free | NanoImage",
+      "metaDescription": "Apply Gaussian blur to images online for free. Adjustable intensity, no upload needed — perfect for backgrounds and privacy protection.",
+      "h1": "Blur Image Online — Free Gaussian Blur Tool",
+      "description": "Apply professional Gaussian blur to your images with NanoImage's free online tool. Adjust the blur radius from subtle softening to heavy blur to achieve your desired effect. Perfect for creating soft backgrounds, obscuring sensitive information, adding depth-of-field effects, or preparing images for use as wallpapers and backgrounds. The blur is applied in real-time so you can see exactly how your image will look as you adjust the intensity. All processing happens locally in your browser — no uploads, no servers, complete privacy. Great for privacy protection, design work, and creative photography effects.",
+      "blurRadius": "Blur Radius",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Adjust the blur radius slider (1-20px) to control the blur intensity.",
+        "step3": "Preview the blurred result and click \"Download\" to save."
+      },
+      "faq": {
+        "q1": "What type of blur is applied?",
+        "a1": "NanoImage uses Gaussian blur, which produces a natural, smooth blurring effect. It's the same algorithm used in professional photo editing software.",
+        "q2": "Can I blur only part of the image?",
+        "a2": "The current tool applies blur to the entire image. For selective blur (e.g., blurring a face or background only), stay tuned for future updates.",
+        "q3": "What blur radius should I use?",
+        "a3": "For subtle softening, try 1-3px. For moderate blur, 5-10px works well. For heavy blur or privacy purposes, use 15-20px.",
+        "q4": "Is the blur applied to the entire image?",
+        "a4": "Yes, the current tool applies Gaussian blur uniformly across the entire image. This is ideal for creating backgrounds, privacy protection, and artistic effects. Selective area blur is planned for a future update."
+      }
+    },
+    "add-border-to-image": {
+      "name": "Add Border",
+      "metaTitle": "Add Border to Image Online Free | NanoImage",
+      "metaDescription": "Add a border to images online for free. Choose border width and color. Perfect for framing photos — no upload needed, 100% private.",
+      "h1": "Add Border to Image Online for Free",
+      "description": "Frame your photos beautifully with NanoImage's free online border tool. Add customizable borders to any image with full control over width and color. Choose any border color with the color picker or preset buttons, set the width from 1 to 100 pixels using the slider or number input, and preview the result in real-time. Perfect for creating photo frames, adding white borders for Instagram posts, preparing images for printing, or enhancing your photos with a professional finishing touch. Supports all common image formats and processes everything locally in your browser for instant results and complete privacy.",
+      "borderWidth": "Border Width (px)",
+      "borderColor": "Border Color",
+      "borderStyle": "Border Style",
+      "solid": "Solid",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Set the border width using the slider or number input, and choose a color with the color picker or preset buttons.",
+        "step3": "Preview the bordered image and click \"Download\" to save."
+      },
+      "faq": {
+        "q1": "What border widths are available?",
+        "a1": "You can set the border width from 1 to 100 pixels using the slider or the number input field.",
+        "q2": "Can I add different colors on each side?",
+        "a2": "Currently, the border color is uniform on all sides. This keeps the tool simple and covers most common use cases.",
+        "q3": "Does the border increase the image dimensions?",
+        "a3": "Yes! The border is added outside the original image, so the final dimensions increase by twice the border width in each direction.",
+        "q4": "Can I use the border tool for Instagram white borders?",
+        "a4": "Absolutely! Set the border color to white (#ffffff) and choose your desired width. This is perfect for creating the popular white-border Instagram aesthetic for your photos."
+      }
+    },
+    "watermark-image": {
+      "name": "Add Watermark",
+      "metaTitle": "Add Watermark to Image Online Free | NanoImage",
+      "metaDescription": "Add text or image watermark online for free. Custom position, size and opacity. No upload needed — protect your photos 100% privately.",
+      "h1": "Add Watermark to Image Online for Free",
+      "description": "Protect your images with professional watermarks using NanoImage's free online tool. Add text watermarks with customizable font size, color, and opacity, and position them anywhere using our intuitive 9-grid placement system or tiled pattern mode. Perfect for photographers, designers, and content creators who want to protect their work from unauthorized use. Adjust the transparency from 10% to 100% to find the perfect balance between visibility and subtlety. All processing happens locally in your browser — your images never leave your device. Supports JPG, PNG, WebP and more.",
+      "watermarkType": "Watermark Type",
+      "textWatermark": "Text Watermark",
+      "imageWatermark": "Image Watermark",
+      "watermarkText": "Watermark Text",
+      "fontSize": "Font Size",
+      "fontColor": "Font Color",
+      "opacity": "Opacity",
+      "position": "Position",
+      "tiled": "Tiled",
+      "topLeft": "Top Left",
+      "topCenter": "Top Center",
+      "topRight": "Top Right",
+      "middleLeft": "Middle Left",
+      "center": "Center",
+      "middleRight": "Middle Right",
+      "bottomLeft": "Bottom Left",
+      "bottomCenter": "Bottom Center",
+      "bottomRight": "Bottom Right",
+      "howToUse": {
+        "step1": "Upload your image by dragging it into the upload area or clicking to browse.",
+        "step2": "Enter your watermark text, set the font size, color, and opacity. Choose a position from the 9-grid selector or enable tiled mode.",
+        "step3": "Preview the watermarked image and click \"Download\" to save."
+      },
+      "faq": {
+        "q1": "Can I add an image watermark instead of text?",
+        "a1": "Yes! Switch to \"Image Watermark\" mode and upload a logo or image to use as your watermark.",
+        "q2": "How do I make the watermark more subtle?",
+        "a2": "Reduce the opacity slider. A value of 20-30% creates a subtle watermark that's visible but doesn't distract from the image.",
+        "q3": "Can I tile the watermark across the entire image?",
+        "a3": "Yes! Enable the \"Tiled\" position option to repeat your watermark across the entire image in a grid pattern.",
+        "q4": "Will the watermark be permanent?",
+        "a4": "Yes, once applied and downloaded, the watermark is permanently embedded in the image pixels. Keep your original file if you need an unwatermarked version."
+      }
+    },
+    "convert-to-jpg": {
+      "name": "Convert to JPG",
+      "metaTitle": "Convert PNG to JPG Online Free | NanoImage",
+      "metaDescription": "Convert PNG, WebP, GIF, BMP to JPG online for free. Adjustable quality, no upload needed — instant conversion in your browser.",
+      "h1": "Convert PNG to JPG Online for Free",
+      "description": "Convert your PNG, WebP, GIF, or BMP images to JPG format instantly with NanoImage's free online converter. JPG is the most widely supported image format, offering excellent compression for photographs while maintaining good visual quality. Our converter lets you adjust the output quality from 10% to 100% (default 90%) to find the perfect balance between file size and image quality. Transparent backgrounds in PNG files are automatically filled with white (or your chosen color). Process up to 10 images at once with batch conversion. Everything runs locally in your browser — fast, private, and free.",
+      "outputQuality": "Output Quality",
+      "backgroundColor": "Background Fill Color",
+      "transparent": "For transparent PNGs",
+      "howToUse": {
+        "step1": "Upload your PNG, WebP, or other image files by dragging them into the upload area.",
+        "step2": "Adjust the output quality slider (default 90%). Choose a background fill color for transparent images.",
+        "step3": "Your images are converted automatically. Click \"Download\" to save each JPG file, or add more images."
+      },
+      "faq": {
+        "q1": "Why convert PNG to JPG?",
+        "a1": "JPG files are typically much smaller than PNG files, making them ideal for web use, email, and storage. JPG is also universally supported across all devices and platforms.",
+        "q2": "What happens to transparent backgrounds?",
+        "a2": "JPG doesn't support transparency. Transparent areas in PNG files are filled with white by default. You can change the fill color using the background color picker.",
+        "q3": "Can I convert multiple images at once?",
+        "a3": "Yes! You can upload and convert up to 10 images simultaneously. Each image is processed individually with your chosen quality settings.",
+        "q4": "Will converting to JPG reduce my image quality?",
+        "a4": "JPG uses lossy compression, so there's a small quality trade-off for much smaller file sizes. At 90% quality (default), the difference is virtually imperceptible. Lower quality values produce smaller files with more visible compression artifacts."
+      }
+    },
+    "meme-generator": {
+      "name": "Meme Generator",
+      "metaTitle": "Meme Generator Online Free | NanoImage",
+      "metaDescription": "Create memes online for free. Add top and bottom text with customizable fonts, colors and styles. No upload needed — 100% private.",
+      "h1": "Meme Generator — Create Memes Online for Free",
+      "description": "Create hilarious memes in seconds with NanoImage's free online meme generator. Add bold top and bottom text to any image with full control over font size, text color, stroke color, and stroke width. The classic meme text style features white text with a black outline that's readable on any background. Uppercase lock is enabled by default for that authentic meme look. See your creation come to life with real-time preview as you type. No watermarks, no registration, no limits. Perfect for social media, group chats, and internet culture. Works on any device — desktop, tablet, or mobile.",
+      "topText": "Top Text",
+      "bottomText": "Bottom Text",
+      "fontSize": "Font Size",
+      "textColor": "Text Color",
+      "strokeColor": "Stroke Color",
+      "strokeWidth": "Stroke Width",
+      "uppercase": "UPPERCASE",
+      "howToUse": {
+        "step1": "Upload a base image or meme template by dragging it into the upload area.",
+        "step2": "Type your top and bottom text. Customize font size, colors, and stroke as desired.",
+        "step3": "Preview your meme and click \"Download\" to save it. Share it with the world!"
+      },
+      "faq": {
+        "q1": "Can I use any image as a meme template?",
+        "a1": "Yes! Upload any image you want — photos, screenshots, illustrations, or classic meme templates. Any image format works.",
+        "q2": "Is there a watermark on the memes?",
+        "a2": "No! NanoImage never adds watermarks to your created memes. The output is clean and ready to share.",
+        "q3": "Can I customize the text style?",
+        "a3": "Absolutely! Adjust font size (20-100px), text color, stroke color, stroke width, and toggle uppercase mode to get your perfect meme look.",
+        "q4": "Can I use the meme generator on mobile?",
+        "a4": "Yes! NanoImage works on any device with a modern browser — desktop, tablet, or mobile. Upload your image, add text, and download your meme directly on your phone."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Free online image tools — fast, private, no upload required.",
+    "tools": "Tools",
+    "effects": "Effects",
+    "more": "More",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© {year} NanoImage. All rights reserved."
+  }
+}

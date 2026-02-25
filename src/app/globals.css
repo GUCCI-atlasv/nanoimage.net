@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --border: #222222;
+    --accent: #e8ff47;
+    --accent2: #ff4757;
+    --accent3: #47c8ff;
+    --text: #f0f0f0;
+    --muted: #666;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  html[lang="ru"] body {
+    font-family: 'PT Sans', 'Syne', sans-serif;
+  }
+
+  /* Subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(232,255,71,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,255,71,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+@layer components {
+  .tool-card {
+    @apply bg-surface border border-border rounded-lg p-5 transition-all duration-200 cursor-pointer;
+  }
+  .tool-card:hover {
+    border-color: #333;
+  }
+
+  .btn-primary {
+    @apply px-7 py-3 bg-accent text-black font-display font-bold text-[13px] tracking-wider uppercase rounded cursor-pointer transition-opacity duration-200;
+  }
+  .btn-primary:hover {
+    @apply opacity-85;
+  }
+  .btn-primary:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .btn-primary.red {
+    @apply bg-accent2 text-white;
+  }
+  .btn-primary.blue {
+    @apply bg-accent3 text-black;
+  }
+
+  .btn-secondary {
+    @apply px-5 py-2.5 bg-transparent border border-border text-text font-display font-bold text-[13px] rounded cursor-pointer transition-all duration-150;
+  }
+  .btn-secondary:hover {
+    @apply bg-white/5 border-border-hover;
+  }
+
+  .btn-tool {
+    @apply px-4 py-2.5 bg-transparent border border-border rounded text-text font-display text-[13px] font-bold cursor-pointer transition-all duration-150 flex items-center justify-center gap-1.5;
+  }
+  .btn-tool:hover {
+    @apply bg-white/5 border-border-hover;
+  }
+  .btn-tool.active {
+    @apply border-accent text-accent bg-accent-dim;
+  }
+
+  .upload-zone {
+    @apply border-2 border-dashed border-border rounded-lg p-14 text-center cursor-pointer transition-all duration-200 bg-surface;
+  }
+  .upload-zone:hover,
+  .upload-zone.drag-over {
+    @apply border-accent;
+    background: rgba(232,255,71,0.04);
+  }
+
+  .input-dark {
+    @apply w-full px-4 py-2.5 bg-surface-hover border border-border rounded text-text font-mono text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/30 transition-colors;
+  }
+
+  .slider-accent {
+    @apply w-full cursor-pointer;
+    accent-color: var(--accent);
+  }
+  .slider-blue {
+    @apply w-full cursor-pointer;
+    accent-color: var(--accent3);
+  }
+
+  .label-mono {
+    @apply font-mono text-[11px] text-muted uppercase tracking-wider;
+  }
+
+  .value-accent {
+    @apply font-mono text-[11px] text-accent min-w-[36px] text-right;
+  }
+
+  .panel-card {
+    @apply bg-surface border border-border rounded-lg p-5 transition-colors duration-200;
+  }
+  .panel-card:hover {
+    @apply border-border-hover;
+  }
+
+  .dot {
+    @apply w-1.5 h-1.5 rounded-full inline-block;
+  }
+  .dot-yellow { @apply bg-accent; }
+  .dot-red { @apply bg-accent2; }
+  .dot-blue { @apply bg-accent3; }
+}
