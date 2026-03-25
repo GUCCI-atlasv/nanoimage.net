@@ -51,6 +51,14 @@
       "a4": "Oui ! NanoImage est entièrement responsive et fonctionne sur tout navigateur moderne — ordinateur, tablette ou mobile. Tous les outils sont optimisés pour l'interaction tactile.",
       "q5": "Quels outils sont disponibles ?",
       "a5": "NanoImage propose 13 outils : Compresser une image, Compresser à 100 Ko, Redimensionner, Recadrer, Pivoter, Retourner, Inverser les couleurs, Noir et blanc, Flouter, Ajouter une bordure, Ajouter un filigrane, Convertir en JPG et Générateur de mèmes."
+    },
+    "meta": {
+      "title": "Outils d'Image en Ligne Gratuits | NanoImage",
+      "description": "Outils d'image en ligne gratuits — compressez, redimensionnez, recadrez et plus. 100% privé, sans téléchargement. 13 outils, résultats instantanés.",
+      "ogTitle": "Outils d'Image en Ligne Gratuits | NanoImage",
+      "ogDescription": "Éditez vos images directement dans le navigateur — sans téléchargement, sans compte, 100% privé. Compressez, redimensionnez, recadrez et plus. Gratuit pour toujours.",
+      "twitterTitle": "Outils d'Image en Ligne Gratuits | NanoImage",
+      "twitterDescription": "Compressez, redimensionnez, recadrez et éditez des images dans le navigateur. Gratuit, rapide et 100% privé."
     }
   },
   "common": {
@@ -86,7 +94,7 @@
   "tools": {
     "compress-image": {
       "name": "Compresser une image",
-      "metaTitle": "Compresser une Image en Ligne Gratuitement — Réduire la Taille | NanoImage",
+      "metaTitle": "Compresser une Image en Ligne Gratuit | NanoImage",
       "metaDescription": "Compressez JPG, PNG, WebP à n'importe quelle taille cible en ligne. Sans téléchargement — 100% privé, résultats instantanés dans votre navigateur.",
       "h1": "Compresser une image en ligne — Réduire la taille gratuitement",
       "description": "Compressez facilement vos images à une taille cible sans perte de qualité visible. Notre compresseur d'images en ligne gratuit fonctionne entièrement dans votre navigateur — aucun téléversement, aucun serveur, totalement confidentiel. Que vous ayez besoin de compresser des images pour des pièces jointes d'e-mail, l'optimisation de sites web ou les réseaux sociaux, NanoImage simplifie tout. Importez simplement votre image, définissez votre taille cible (200 Ko par défaut) et téléchargez le résultat optimisé instantanément. Compatible avec les formats JPG, PNG et WebP, avec un ajustement intelligent de la qualité pour obtenir le meilleur équilibre entre taille de fichier et qualité d'image.",
@@ -224,7 +232,7 @@
     "flip-image": {
       "name": "Retourner une image",
       "metaTitle": "Retourner une Image en Ligne Gratuitement | NanoImage",
-      "metaDescription": "Retournez des images horizontalement ou verticalement en ligne gratuitement. Miroir en un clic — sans téléchargement, 100% privé.",
+      "metaDescription": "Retournez des images horizontalement ou verticalement en ligne. Miroir en un clic — sans téléchargement, 100% privé. JPG, PNG, WebP. Gratuit et rapide.",
       "h1": "Retourner une image en ligne — Miroir horizontal ou vertical",
       "description": "Retournez et miroitez vos images instantanément avec l'outil en ligne gratuit de NanoImage. Choisissez le retournement horizontal (miroir gauche-droite), le retournement vertical (miroir haut-bas), ou appliquez les deux pour un effet miroir à 180°. Idéal pour corriger les selfies inversés, créer des designs symétriques ou préparer des images pour l'impression. Le retournement est appliqué instantanément avec un aperçu en temps réel pour voir le résultat immédiatement. Aucun logiciel nécessaire, aucun envoi vers un serveur — tout fonctionne dans votre navigateur pour une rapidité et une confidentialité maximales. Compatible avec tous les formats courants, y compris JPG, PNG et WebP.",
       "horizontal": "Retourner horizontalement",
@@ -248,7 +256,7 @@
     },
     "invert-image": {
       "name": "Inverser les couleurs",
-      "metaTitle": "Inverser les Couleurs d'une Image en Ligne Gratuitement | NanoImage",
+      "metaTitle": "Inverser les Couleurs d'Image en Ligne | NanoImage",
       "metaDescription": "Inversez les couleurs des images en ligne gratuitement. Créez des effets photo négatif instantanément en un clic — sans téléchargement, 100% privé.",
       "h1": "Inverser les couleurs d'une image en ligne gratuitement",
       "description": "Créez de superbes effets négatifs en inversant les couleurs de vos images avec l'outil en ligne gratuit de NanoImage. L'inversion des couleurs remplace la couleur de chaque pixel par sa couleur complémentaire — le blanc devient noir, le rouge devient cyan, le bleu devient jaune, et ainsi de suite. Cela crée un effet classique de négatif photographique très apprécié pour la photographie artistique, les projets de design et les effets visuels. L'inversion est appliquée instantanément avec un aperçu en temps réel. Fonctionne avec tous les formats d'image, y compris JPG, PNG et WebP. Tout le traitement se fait localement dans votre navigateur — vos images restent confidentielles.",
@@ -271,8 +279,8 @@
     },
     "black-and-white": {
       "name": "Noir et blanc",
-      "metaTitle": "Convertir Photo en Noir et Blanc en Ligne Gratuitement | NanoImage",
-      "metaDescription": "Convertissez des photos en noir et blanc en ligne gratuitement. Intensité des niveaux de gris réglable, sans téléchargement — résultats instantanés dans le navigateur.",
+      "metaTitle": "Convertir Photo Noir et Blanc en Ligne | NanoImage",
+      "metaDescription": "Convertissez des photos en noir et blanc en ligne. Intensité des niveaux de gris réglable, sans téléchargement — résultats instantanés dans le navigateur.",
       "h1": "Convertir une image en noir et blanc en ligne",
       "description": "Convertissez vos photos couleur en de magnifiques images noir et blanc avec l'outil en ligne gratuit de NanoImage. Notre convertisseur en niveaux de gris utilise des algorithmes pondérés par luminance pour produire des images monochromes d'aspect naturel qui préservent la gamme tonale et la profondeur de votre photo originale. Ajustez l'intensité des niveaux de gris pour trouver le rendu parfait — d'une désaturation subtile au monochrome complet. La photographie en noir et blanc possède un charme intemporel qui fonctionne merveilleusement pour les portraits, les paysages, la photographie de rue et les projets artistiques. Tout le traitement se fait dans votre navigateur avec un aperçu instantané. Aucun téléversement, aucune installation, entièrement gratuit.",
       "intensity": "Intensité des niveaux de gris",
@@ -317,8 +325,8 @@
     },
     "add-border-to-image": {
       "name": "Ajouter une bordure",
-      "metaTitle": "Ajouter une Bordure à une Image en Ligne Gratuitement | NanoImage",
-      "metaDescription": "Ajoutez une bordure aux images en ligne gratuitement. Choisissez la largeur et la couleur de la bordure. Parfait pour encadrer vos photos — sans téléchargement, 100% privé.",
+      "metaTitle": "Ajouter une Bordure à une Image en Ligne | NanoImage",
+      "metaDescription": "Ajoutez une bordure aux images en ligne. Choisissez la largeur et la couleur. Parfait pour encadrer vos photos — sans téléchargement, 100% privé. Gratuit.",
       "h1": "Ajouter une bordure à une image en ligne gratuitement",
       "description": "Encadrez vos photos avec élégance grâce à l'outil de bordure en ligne gratuit de NanoImage. Ajoutez des bordures personnalisables à n'importe quelle image avec un contrôle total sur l'épaisseur et la couleur. Choisissez n'importe quelle couleur avec le sélecteur de couleurs ou les boutons prédéfinis, réglez l'épaisseur de 1 à 100 pixels avec le curseur ou le champ de saisie, et prévisualisez le résultat en temps réel. Idéal pour créer des cadres photo, ajouter des bordures blanches pour les publications Instagram, préparer des images pour l'impression ou rehausser vos photos avec une touche professionnelle. Compatible avec tous les formats d'image courants, tout est traité localement dans votre navigateur pour des résultats instantanés et une confidentialité totale.",
       "borderWidth": "Épaisseur de la bordure (px)",
@@ -343,7 +351,7 @@
     },
     "watermark-image": {
       "name": "Ajouter un filigrane",
-      "metaTitle": "Ajouter un Filigrane à une Image en Ligne Gratuitement | NanoImage",
+      "metaTitle": "Ajouter un Filigrane à une Image en Ligne | NanoImage",
       "metaDescription": "Ajoutez un filigrane texte ou image en ligne gratuitement. Position, taille et opacité personnalisables. Sans téléchargement — protégez vos photos 100% privé.",
       "h1": "Ajouter un filigrane à une image en ligne gratuitement",
       "description": "Protégez vos images avec des filigranes professionnels grâce à l'outil en ligne gratuit de NanoImage. Ajoutez des filigranes texte avec une taille de police, une couleur et une opacité personnalisables, et positionnez-les n'importe où grâce à notre système intuitif de placement en grille 9 positions ou en mode mosaïque. Idéal pour les photographes, les designers et les créateurs de contenu qui souhaitent protéger leur travail contre l'utilisation non autorisée. Ajustez la transparence de 10 % à 100 % pour trouver l'équilibre parfait entre visibilité et discrétion. Tout le traitement se fait localement dans votre navigateur — vos images ne quittent jamais votre appareil. Compatible JPG, PNG, WebP et plus.",
@@ -409,7 +417,7 @@
     "meme-generator": {
       "name": "Générateur de mèmes",
       "metaTitle": "Générateur de Mèmes en Ligne Gratuit | NanoImage",
-      "metaDescription": "Créez des mèmes en ligne gratuitement. Ajoutez du texte en haut et en bas avec des polices, couleurs et styles personnalisables. Sans téléchargement — 100% privé.",
+      "metaDescription": "Créez des mèmes en ligne gratuitement. Ajoutez du texte en haut et en bas avec des polices et couleurs personnalisables. Sans téléchargement — 100% privé.",
       "h1": "Générateur de mèmes — Créez des mèmes en ligne gratuitement",
       "description": "Créez des mèmes hilarants en quelques secondes avec le générateur de mèmes en ligne gratuit de NanoImage. Ajoutez du texte gras en haut et en bas de n'importe quelle image avec un contrôle total sur la taille de police, la couleur du texte, la couleur du contour et l'épaisseur du contour. Le style classique de texte de mème présente du texte blanc avec un contour noir, lisible sur n'importe quel arrière-plan. Le verrouillage en majuscules est activé par défaut pour un look de mème authentique. Voyez votre création prendre vie avec un aperçu en temps réel pendant la saisie. Aucun filigrane, aucune inscription, aucune limite. Parfait pour les réseaux sociaux, les discussions de groupe et la culture internet. Fonctionne sur tout appareil — ordinateur, tablette ou mobile.",
       "topText": "Texte du haut",
@@ -442,8 +450,60 @@
     "effects": "Effets",
     "more": "Plus",
     "about": "À propos",
-    "privacy": "Confidentialité",
-    "terms": "Conditions",
-    "copyright": "© {year} NanoImage. Tous droits réservés."
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "© {year} NanoImage. Tous droits réservés.",
+    "feedback": "Feedback",
+    "support": "support@nanoimage.net"
+  },
+  "feedback": {
+    "title": "Envoyez-nous votre avis",
+    "subtitle": "Nous lisons chaque message",
+    "type": {
+      "label": "Quel type d'avis ?",
+      "bug": "Signaler un bug",
+      "feature": "Suggestion de fonctionnalité",
+      "other": "Autre"
+    },
+    "tool": {
+      "label": "Quel outil ? (optionnel)",
+      "general": "Général / Autre"
+    },
+    "description": {
+      "label": "Dites-nous en plus",
+      "placeholder": "Décrivez le problème ou la suggestion... (min. 10 caractères)",
+      "counter": "{count} / 2000"
+    },
+    "email": {
+      "label": "Votre e-mail (optionnel)",
+      "placeholder": "Nous vous répondrons ici (optionnel)"
+    },
+    "screenshot": {
+      "label": "Capture d'écran (optionnel)",
+      "hint": "JPG, PNG ou WebP, max. 5 Mo",
+      "upload": "Télécharger une image"
+    },
+    "submit": "Envoyer",
+    "submitting": "Envoi...",
+    "success": {
+      "title": "Merci !",
+      "body": "Nous avons reçu votre avis.",
+      "reply": "Si vous avez laissé un e-mail, nous vous répondrons sous 2 jours ouvrables.",
+      "again": "Envoyer un autre"
+    },
+    "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire à support@nanoimage.net",
+    "direct": "Ou écrivez-nous directement :"
+  },
+  "bar": {
+    "question": "Cet outil vous a-t-il aidé ?",
+    "yes": "Oui",
+    "no": "Non",
+    "cta": "Donner un avis",
+    "thanks": "Merci ! ✓",
+    "negative": {
+      "placeholder": "Qu'est-ce qui pourrait être amélioré ? (optionnel)",
+      "skip": "Ignorer",
+      "send": "Envoyer"
+    }
   }
 }

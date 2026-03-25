@@ -30,6 +30,21 @@
     font-family: 'PT Sans', 'Syne', sans-serif;
   }
 
+  html[lang="ja"] body {
+    font-family: 'Noto Sans JP', 'Syne', sans-serif;
+    line-height: 1.8;
+  }
+
+  html[lang="zh-CN"] body {
+    font-family: 'Noto Sans SC', 'Syne', sans-serif;
+    line-height: 1.8;
+  }
+
+  html[lang="zh-TW"] body {
+    font-family: 'Noto Sans TC', 'Syne', sans-serif;
+    line-height: 1.8;
+  }
+
   /* Subtle grid background */
   body::before {
     content: '';
@@ -128,4 +143,58 @@
   .dot-yellow { @apply bg-accent; }
   .dot-red { @apply bg-accent2; }
   .dot-blue { @apply bg-accent3; }
+
+  /* Legal pages (Privacy Policy / Terms of Service) */
+  .prose-legal {
+    @apply text-text;
+  }
+  .prose-legal h1 {
+    @apply font-display text-3xl md:text-4xl font-extrabold text-text mb-2 tracking-tight;
+  }
+  .prose-legal .meta {
+    @apply font-mono text-[11px] text-muted mb-8 tracking-wide;
+  }
+  .prose-legal h2 {
+    @apply font-display text-lg font-bold text-text mt-10 mb-4 uppercase tracking-[2px];
+  }
+  .prose-legal h3 {
+    @apply font-display text-[13px] font-bold text-text mt-6 mb-3 uppercase tracking-[1px];
+  }
+  .prose-legal p {
+    @apply font-mono text-[13px] text-muted leading-relaxed mb-4;
+  }
+  .prose-legal ul {
+    @apply font-mono text-[13px] text-muted space-y-2 mb-4 list-none pl-0;
+  }
+  .prose-legal ul li {
+    @apply pl-4 relative;
+  }
+  .prose-legal ul li::before {
+    content: '—';
+    @apply absolute left-0 text-accent;
+  }
+  .prose-legal table {
+    @apply w-full border-collapse mb-6 font-mono text-[12px];
+  }
+  .prose-legal th {
+    @apply text-left text-muted uppercase tracking-[1px] border-b border-border pb-2 pr-4 font-bold;
+  }
+  .prose-legal td {
+    @apply text-muted border-b border-border/50 py-2.5 pr-4 align-top leading-relaxed;
+  }
+  .prose-legal a {
+    @apply text-accent hover:underline;
+  }
+  .prose-legal code {
+    @apply bg-surface px-1.5 py-0.5 rounded text-accent text-[11px] font-mono;
+  }
+  .prose-legal strong {
+    @apply text-text font-bold;
+  }
+  .prose-legal .highlight-box {
+    @apply bg-accent/10 border border-accent/30 rounded-lg p-4 font-mono text-[12px] text-muted mb-8 leading-relaxed;
+  }
+  .prose-legal .footer-note {
+    @apply mt-12 pt-6 border-t border-border font-mono text-[11px] text-muted;
+  }
 }

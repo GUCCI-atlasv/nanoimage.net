@@ -2,13 +2,20 @@ import type { MetadataRoute } from 'next';
 import { tools } from '@/lib/tools';
 import { blogPosts } from '@/lib/blog';
 
-const baseUrl = 'https://www.nanoimage.net';
-const locales = ['en', 'pt-BR', 'pt-PT', 'es', 'fr', 'ru'] as const;
+const baseUrl = 'https://nanoimage.net';
+const locales = ['en', 'pt-BR', 'pt-PT', 'es', 'fr', 'ru', 'ja', 'zh-CN', 'zh-TW'] as const;
+
+// hreflang mapping: zh-CN → zh-Hans, zh-TW → zh-Hant per Google standard
+const hreflangMap: Record<string, string> = {
+  'zh-CN': 'zh-Hans',
+  'zh-TW': 'zh-Hant',
+};
 
 function buildAlternates(path: string): Record<string, string> {
   const languages: Record<string, string> = {};
   for (const locale of locales) {
-    languages[locale] = locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`;
+    const hreflang = hreflangMap[locale] ?? locale;
+    languages[hreflang] = locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`;
   }
   languages['x-default'] = `${baseUrl}${path}`;
   return languages;

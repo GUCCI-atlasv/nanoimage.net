@@ -46,7 +46,7 @@ Pour la plupart des images — une photo de produit, un mème, une capture d'éc
 
 Une catégorie plus récente d'outils d'image traite tout directement dans votre navigateur, grâce à une technologie appelée Canvas API. Ces outils n'ont jamais besoin d'envoyer votre image où que ce soit.
 
-Quand vous utilisez un outil basé sur le navigateur comme [NanoImage](https://www.nanoimage.net) :
+Quand vous utilisez un outil basé sur le navigateur comme [NanoImage](https://nanoimage.net) :
 
 1. Vous sélectionnez votre photo
 2. Le traitement se fait entièrement dans votre navigateur, sur votre propre appareil

@@ -51,6 +51,14 @@
       "a4": "¡Sí! NanoImage es totalmente responsivo y funciona en cualquier navegador moderno — computadora, tableta o celular. Todas las herramientas están optimizadas para interacción táctil.",
       "q5": "¿Qué herramientas están disponibles?",
       "a5": "NanoImage ofrece 13 herramientas: Comprimir Imagen, Comprimir a 100KB, Redimensionar, Recortar, Rotar, Voltear, Invertir Colores, Blanco y Negro, Difuminar, Agregar Borde, Agregar Marca de Agua, Convertir a JPG y Generador de Memes."
+    },
+    "meta": {
+      "title": "Herramientas de Imagen Online Gratis | NanoImage",
+      "description": "Herramientas de imagen online gratis — comprime, redimensiona, recorta y más. 100% privado, sin subir archivos. 13 herramientas, resultados ya.",
+      "ogTitle": "Herramientas de Imagen Online Gratis | NanoImage",
+      "ogDescription": "Edita imágenes directamente en tu navegador — sin subir archivos, sin cuenta, 100% privado. Comprime, redimensiona, recorta y más. Gratis para siempre.",
+      "twitterTitle": "Herramientas de Imagen Online Gratis | NanoImage",
+      "twitterDescription": "Comprime, redimensiona, recorta y edita imágenes en el navegador. Gratis, rápido y 100% privado."
     }
   },
   "common": {
@@ -86,8 +94,8 @@
   "tools": {
     "compress-image": {
       "name": "Comprimir Imagen",
-      "metaTitle": "Comprimir Imagen Online Gratis — Reducir Tamaño de Archivo | NanoImage",
-      "metaDescription": "Comprime JPG, PNG, WebP a cualquier tamaño objetivo online. Sin subir archivos — 100% privado, resultados instantáneos en tu navegador.",
+      "metaTitle": "Comprimir Imagen Online Gratis | NanoImage",
+      "metaDescription": "Comprime JPG, PNG, WebP a cualquier tamaño objetivo online. Sin subir archivos — 100% privado, resultados instantáneos en tu navegador. Gratis.",
       "h1": "Comprimir Imagen Online — Reduce el Tamaño Gratis",
       "description": "Comprime fácilmente tus imágenes a un tamaño de archivo objetivo sin perder calidad visible. Nuestro compresor de imágenes online gratuito funciona completamente en tu navegador — sin subir archivos, sin servidores, completamente privado. Ya sea que necesites comprimir imágenes para adjuntos de correo electrónico, optimización de sitios web o publicaciones en redes sociales, NanoImage lo hace simple. Solo sube tu imagen, establece el tamaño objetivo (por defecto 200KB) y descarga el resultado optimizado al instante. Compatible con formatos JPG, PNG y WebP con ajuste inteligente de calidad para lograr el mejor equilibrio entre tamaño de archivo y calidad de imagen.",
       "targetSize": "Tamaño Objetivo (KB)",
@@ -137,8 +145,8 @@
     },
     "rotate-image": {
       "name": "Rotar Imagen",
-      "metaTitle": "Rotar Imagen Online Gratis | NanoImage",
-      "metaDescription": "Rota fotos 90°, 180°, 270° o cualquier ángulo personalizado online gratis. Sin subir archivos — rotación instantánea en tu navegador.",
+      "metaTitle": "Rotar Imagen Online Gratis — 90, 180, 270° | NanoImage",
+      "metaDescription": "Rota fotos 90°, 180°, 270° o cualquier ángulo personalizado online. Sin subir archivos — rotación instantánea en tu navegador. JPG, PNG y WebP. Gratis.",
       "h1": "Rotar Imagen Online Gratis",
       "description": "Rota rápidamente tus imágenes a cualquier ángulo con la herramienta de rotación online gratuita de NanoImage. Ya sea que necesites corregir una foto de lado, rotar exactamente 90 grados o aplicar un ángulo de rotación personalizado, nuestra herramienta lo maneja todo. La rotación ocurre instantáneamente en tu navegador con una vista previa en tiempo real, para que puedas ver exactamente cómo quedará tu imagen antes de descargarla. Sin instalar software, sin subir archivos al servidor — solo rotación de imágenes rápida y gratuita. Perfecto para corregir la orientación de fotos, crear efectos artísticos o preparar imágenes para redes sociales. Compatible con JPG, PNG, WebP y más.",
       "angle": "Ángulo de Rotación",
@@ -224,7 +232,7 @@
     "flip-image": {
       "name": "Voltear Imagen",
       "metaTitle": "Voltear Imagen Online Gratis | NanoImage",
-      "metaDescription": "Voltea imágenes horizontal o verticalmente online gratis. Refleja fotos instantáneamente con un clic — sin subir archivos, 100% privado.",
+      "metaDescription": "Voltea imágenes horizontal o verticalmente online. Refleja fotos con un clic — sin subir archivos, 100% privado. Resultados instantáneos. JPG, PNG, WebP.",
       "h1": "Voltear Imagen Online — Reflejar Horizontal o Verticalmente",
       "description": "Voltea y refleja tus imágenes al instante con la herramienta online gratuita de NanoImage. Elige volteo horizontal (reflejar de izquierda a derecha), volteo vertical (reflejar de arriba a abajo), o aplica ambos para un efecto de reflejo a 180°. Perfecto para corregir selfies reflejadas, crear diseños simétricos o preparar imágenes para impresión. El volteo se aplica instantáneamente con una vista previa en tiempo real para que puedas ver el resultado de inmediato. Sin necesidad de software, sin subir archivos al servidor — todo se ejecuta en tu navegador para máxima velocidad y privacidad. Compatible con todos los formatos de imagen comunes incluyendo JPG, PNG y WebP.",
       "horizontal": "Voltear Horizontal",
@@ -384,7 +392,7 @@
     "convert-to-jpg": {
       "name": "Convertir a JPG",
       "metaTitle": "Convertir PNG a JPG Online Gratis | NanoImage",
-      "metaDescription": "Convierte PNG, WebP, GIF, BMP a JPG online gratis. Calidad ajustable, sin subir archivos — conversión instantánea en tu navegador.",
+      "metaDescription": "Convierte PNG, WebP, GIF, BMP a JPG online gratis. Calidad ajustable, sin subir archivos — conversión instantánea en tu navegador. 100% privado.",
       "h1": "Convertir PNG a JPG Online Gratis",
       "description": "Convierte tus imágenes PNG, WebP, GIF o BMP a formato JPG al instante con el conversor online gratuito de NanoImage. JPG es el formato de imagen más ampliamente compatible, ofreciendo excelente compresión para fotografías mientras mantiene buena calidad visual. Nuestro conversor te permite ajustar la calidad de salida del 10% al 100% (por defecto 90%) para encontrar el equilibrio perfecto entre tamaño de archivo y calidad de imagen. Los fondos transparentes en archivos PNG se rellenan automáticamente con blanco (o el color que elijas). Procesa hasta 10 imágenes a la vez con la conversión por lotes. Todo se ejecuta localmente en tu navegador — rápido, privado y gratis.",
       "outputQuality": "Calidad de Salida",
@@ -442,8 +450,60 @@
     "effects": "Efectos",
     "more": "Más",
     "about": "Acerca de",
-    "privacy": "Privacidad",
-    "terms": "Términos",
-    "copyright": "© {year} NanoImage. Todos los derechos reservados."
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "copyright": "© {year} NanoImage. Todos los derechos reservados.",
+    "feedback": "Feedback",
+    "support": "support@nanoimage.net"
+  },
+  "feedback": {
+    "title": "Envíanos tu Feedback",
+    "subtitle": "Leemos cada mensaje",
+    "type": {
+      "label": "¿Qué tipo de feedback?",
+      "bug": "Reporte de Error",
+      "feature": "Solicitud de Función",
+      "other": "Otro"
+    },
+    "tool": {
+      "label": "¿Qué herramienta? (opcional)",
+      "general": "General / Otro"
+    },
+    "description": {
+      "label": "Cuéntanos más",
+      "placeholder": "Describe el problema o sugerencia... (mín. 10 caracteres)",
+      "counter": "{count} / 2000"
+    },
+    "email": {
+      "label": "Tu correo (opcional)",
+      "placeholder": "Te responderemos aquí (opcional)"
+    },
+    "screenshot": {
+      "label": "Captura de pantalla (opcional)",
+      "hint": "JPG, PNG o WebP, máx. 5MB",
+      "upload": "Subir imagen"
+    },
+    "submit": "Enviar Feedback",
+    "submitting": "Enviando...",
+    "success": {
+      "title": "¡Gracias!",
+      "body": "Hemos recibido tu feedback.",
+      "reply": "Si dejaste un correo, te responderemos en 2 días hábiles.",
+      "again": "Enviar Otro"
+    },
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo o escríbenos a support@nanoimage.net",
+    "direct": "O escríbenos directamente:"
+  },
+  "bar": {
+    "question": "¿Esta herramienta fue útil?",
+    "yes": "Sí",
+    "no": "No",
+    "cta": "Enviar Feedback",
+    "thanks": "¡Gracias! ✓",
+    "negative": {
+      "placeholder": "¿Qué podría mejorar? (opcional)",
+      "skip": "Omitir",
+      "send": "Enviar"
+    }
   }
 }

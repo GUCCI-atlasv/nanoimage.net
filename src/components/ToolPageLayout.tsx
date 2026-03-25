@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { getRelatedTools } from '@/lib/tools';
 import { FAQJsonLd, HowToJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import FeedbackBar from '@/components/FeedbackBar';
 
 interface ToolPageLayoutProps {
   toolId: string;
@@ -96,7 +97,7 @@ export default function ToolPageLayout({ toolId, children }: ToolPageLayoutProps
       </section>
 
       {/* Related Tools */}
-      <section>
+      <section className="mb-20">
         <h2 className="font-display text-xl font-bold text-text mb-6 uppercase tracking-[2px] flex items-center gap-2">
           <span className="dot dot-red" />
           {t('common.relatedTools')}
@@ -116,6 +117,9 @@ export default function ToolPageLayout({ toolId, children }: ToolPageLayoutProps
           ))}
         </div>
       </section>
+
+      {/* Fixed bottom feedback bar */}
+      <FeedbackBar toolSlug={toolId} />
     </div>
   );
 }

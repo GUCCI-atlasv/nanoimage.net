@@ -2,8 +2,7 @@ import { useTranslations } from 'next-intl';
 import ToolCard from '@/components/ToolCard';
 import { tools } from '@/lib/tools';
 import { blogPosts } from '@/lib/blog';
-import { WebApplicationJsonLd } from '@/components/JsonLd';
-import { HomeFAQJsonLd } from '@/components/JsonLd';
+import { WebApplicationJsonLd, HomeFAQJsonLd, WebSiteJsonLd } from '@/components/JsonLd';
 import { Link } from '@/i18n/routing';
 
 export default function HomePage() {
@@ -17,6 +16,7 @@ function HomePageContent() {
   return (
     <>
       <WebApplicationJsonLd />
+      <WebSiteJsonLd />
       <HomeFAQJsonLd />
 
       {/* Hero Section */}

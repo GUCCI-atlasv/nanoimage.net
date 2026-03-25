@@ -87,13 +87,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="font-mono text-[11px] text-muted">
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
-          <p className="font-mono text-[11px] text-muted">
-            100% client-side · no uploads · no tracking
-          </p>
+          <div className="flex flex-wrap items-center gap-3 font-mono text-[11px] text-muted">
+            <Link href="/privacy-policy" className="hover:text-accent transition-colors">
+              {t('footer.privacy')}
+            </Link>
+            <span className="text-border">|</span>
+            <Link href="/terms-of-service" className="hover:text-accent transition-colors">
+              {t('footer.terms')}
+            </Link>
+            <span className="text-border">|</span>
+            <Link href="/feedback" className="hover:text-accent transition-colors">
+              {t('footer.feedback')}
+            </Link>
+            <span className="text-border">|</span>
+            <a href="mailto:support@nanoimage.net" className="hover:text-accent transition-colors">
+              support@nanoimage.net
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { blogPosts, getBlogPost } from '@/lib/blog';
 import { routing } from '@/i18n/routing';
 import BlogArticleClient from './BlogArticleClient';
+import { buildAlternates } from '@/lib/metadata';
 
 export const runtime = 'edge';
 
@@ -12,17 +13,18 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
 
+  const path = `/blog/${post.slug}`;
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: buildAlternates(path, locale),
     openGraph: {
-      url: `/blog/${post.slug}`,
+      url: locale === 'en' ? path : `/${locale}${path}`,
       type: 'article',
       title: post.metaTitle,
       description: post.metaDescription,

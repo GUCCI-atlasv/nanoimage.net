@@ -51,6 +51,14 @@
       "a4": "Sim! O NanoImage é totalmente responsivo e funciona em qualquer navegador moderno — desktop, tablet ou celular. Todas as ferramentas são otimizadas para interação por toque.",
       "q5": "Quais ferramentas estão disponíveis?",
       "a5": "O NanoImage oferece 13 ferramentas: Comprimir Imagem, Comprimir para 100KB, Redimensionar, Cortar, Girar, Espelhar, Inverter Cores, Preto e Branco, Desfocar, Adicionar Borda, Adicionar Marca d'Água, Converter para JPG e Gerador de Memes."
+    },
+    "meta": {
+      "title": "Ferramentas de Imagem Online Grátis | NanoImage",
+      "description": "Ferramentas de imagem online grátis — comprima, redimensione, corte e mais. 100% privado, sem upload. 13 ferramentas, resultados instantâneos.",
+      "ogTitle": "Ferramentas de Imagem Online Grátis | NanoImage",
+      "ogDescription": "Edite imagens diretamente no navegador — sem upload, sem cadastro, 100% privado. Comprima, redimensione, corte e muito mais. Grátis para sempre.",
+      "twitterTitle": "Ferramentas de Imagem Online Grátis | NanoImage",
+      "twitterDescription": "Comprima, redimensione, corte e edite imagens no navegador. Grátis, rápido e 100% privado."
     }
   },
   "common": {
@@ -86,8 +94,8 @@
   "tools": {
     "compress-image": {
       "name": "Comprimir Imagem",
-      "metaTitle": "Comprimir Imagem Online Grátis — Reduzir Tamanho do Arquivo | NanoImage",
-      "metaDescription": "Comprima JPG, PNG, WebP para qualquer tamanho alvo online. Sem upload — 100% privado, resultados instantâneos no navegador.",
+      "metaTitle": "Comprimir Imagem Online Grátis | NanoImage",
+      "metaDescription": "Comprima JPG, PNG, WebP para qualquer tamanho alvo online. Sem upload — 100% privado, resultados instantâneos no navegador. Todos os formatos.",
       "h1": "Comprimir Imagem Online — Reduza o Tamanho Gratuitamente",
       "description": "Comprima suas imagens facilmente para um tamanho de arquivo desejado sem perder qualidade visível. Nosso compressor de imagem online grátis funciona inteiramente no seu navegador — sem uploads, sem servidores, totalmente privado. Seja para comprimir imagens para anexos de e-mail, otimização de sites ou uploads em redes sociais, o NanoImage torna tudo simples. Basta fazer upload da sua imagem, definir o tamanho desejado (padrão 200KB) e baixar o resultado otimizado instantaneamente. Suporta formatos JPG, PNG e WebP com ajuste inteligente de qualidade para alcançar o melhor equilíbrio entre tamanho de arquivo e qualidade de imagem.",
       "targetSize": "Tamanho Desejado (KB)",
@@ -137,8 +145,8 @@
     },
     "rotate-image": {
       "name": "Girar Imagem",
-      "metaTitle": "Girar Imagem Online Grátis | NanoImage",
-      "metaDescription": "Gire fotos 90°, 180°, 270° ou qualquer ângulo personalizado online gratuitamente. Sem upload — rotação instantânea no navegador.",
+      "metaTitle": "Girar Imagem Online Grátis — 90, 180, 270° | NanoImage",
+      "metaDescription": "Gire fotos 90°, 180°, 270° ou qualquer ângulo personalizado online. Sem upload — rotação instantânea no navegador. Suporta JPG, PNG e WebP. Grátis.",
       "h1": "Girar Imagem Online Gratuitamente",
       "description": "Gire suas imagens rapidamente para qualquer ângulo com a ferramenta de rotação online grátis do NanoImage. Seja para corrigir uma foto de lado, girar exatamente 90 graus ou aplicar um ângulo de rotação personalizado, nossa ferramenta resolve tudo. A rotação acontece instantaneamente no seu navegador com pré-visualização em tempo real, para que você veja exatamente como sua imagem ficará antes de baixar. Sem instalação de software, sem upload para servidores — apenas rotação de imagem rápida e gratuita. Perfeito para corrigir orientação de fotos, criar efeitos artísticos ou preparar imagens para redes sociais. Suporta JPG, PNG, WebP e mais.",
       "angle": "Ângulo de Rotação",
@@ -166,8 +174,8 @@
     },
     "crop-image": {
       "name": "Cortar Imagem",
-      "metaTitle": "Cortar Imagem Online Grátis | NanoImage",
-      "metaDescription": "Corte imagens online com proporções predefinidas (1:1, 16:9, 4:3) ou seleção personalizada. Sem upload — grátis e 100% privado.",
+      "metaTitle": "Cortar Imagem Grátis — Proporções Personalizadas | NanoImage",
+      "metaDescription": "Corte imagens online com proporções predefinidas (1:1, 16:9, 4:3) ou seleção personalizada. Sem upload — grátis, 100% privado, resultados instantâneos.",
       "h1": "Cortar Imagem Online — Grátis e Fácil",
       "description": "Corte suas imagens com precisão usando a ferramenta de corte online grátis do NanoImage. Selecione qualquer área da sua imagem para manter, ou use proporções predefinidas para resultados perfeitos sempre. Escolha entre proporções populares como 1:1 (quadrado, perfeito para Instagram), 4:3 (foto padrão), 16:9 (widescreen) ou 2:3 (retrato). Basta arrastar sobre a imagem para definir a área de corte — a seleção mostra as dimensões exatas de saída em pixels. Tudo acontece no seu navegador com pré-visualização em tempo real — sem uploads, sem instalações. Ótimo para posts em redes sociais, fotos de perfil, banners de sites e edição de fotos.",
       "aspectRatio": "Proporção",
@@ -224,7 +232,7 @@
     "flip-image": {
       "name": "Espelhar Imagem",
       "metaTitle": "Espelhar Imagem Online Grátis | NanoImage",
-      "metaDescription": "Espelhe imagens horizontal ou verticalmente online gratuitamente. Reflita fotos instantaneamente com um clique — sem upload, 100% privado.",
+      "metaDescription": "Espelhe imagens horizontal ou verticalmente online. Reflita fotos instantaneamente com um clique — sem upload, 100% privado. JPG, PNG e WebP. Grátis.",
       "h1": "Espelhar Imagem Online — Horizontal ou Verticalmente",
       "description": "Espelhe suas imagens instantaneamente com a ferramenta online grátis do NanoImage. Escolha espelhamento horizontal (inverter da esquerda para a direita), espelhamento vertical (inverter de cima para baixo) ou aplique ambos para um efeito de espelho de 180°. Perfeito para corrigir selfies espelhadas, criar designs simétricos ou preparar imagens para impressão. O espelhamento é aplicado instantaneamente com pré-visualização em tempo real para que você veja o resultado imediatamente. Sem software necessário, sem upload para servidores — tudo roda no seu navegador para máxima velocidade e privacidade. Suporta todos os formatos comuns de imagem incluindo JPG, PNG e WebP.",
       "horizontal": "Espelhar Horizontal",
@@ -249,7 +257,7 @@
     "invert-image": {
       "name": "Inverter Cores",
       "metaTitle": "Inverter Cores da Imagem Online Grátis | NanoImage",
-      "metaDescription": "Inverta as cores de imagens online gratuitamente. Crie efeitos de foto negativa instantaneamente com um clique — sem upload, 100% privado.",
+      "metaDescription": "Inverta as cores de imagens online gratuitamente. Crie efeitos de foto negativa com um clique — sem upload, 100% privado. Funciona com JPG, PNG, WebP.",
       "h1": "Inverter Cores da Imagem Online Gratuitamente",
       "description": "Crie efeitos negativos impressionantes invertendo as cores das suas imagens com a ferramenta online grátis do NanoImage. A inversão de cores substitui a cor de cada pixel pela sua cor complementar — branco vira preto, vermelho vira ciano, azul vira amarelo, e assim por diante. Isso cria um efeito clássico de negativo fotográfico que é popular para fotografia artística, projetos de design e efeitos visuais. A inversão é aplicada instantaneamente com pré-visualização em tempo real. Funciona em qualquer formato de imagem incluindo JPG, PNG e WebP. Todo o processamento acontece localmente no seu navegador — suas imagens permanecem privadas.",
       "invertColors": "Inverter Cores",
@@ -384,7 +392,7 @@
     "convert-to-jpg": {
       "name": "Converter para JPG",
       "metaTitle": "Converter PNG para JPG Online Grátis | NanoImage",
-      "metaDescription": "Converta PNG, WebP, GIF, BMP para JPG online gratuitamente. Qualidade ajustável, sem upload — conversão instantânea no navegador.",
+      "metaDescription": "Converta PNG, WebP, GIF, BMP para JPG online gratuitamente. Qualidade ajustável, sem upload — conversão instantânea no navegador. Todos os formatos.",
       "h1": "Converter PNG para JPG Online Gratuitamente",
       "description": "Converta suas imagens PNG, WebP, GIF ou BMP para o formato JPG instantaneamente com o conversor online grátis do NanoImage. JPG é o formato de imagem mais amplamente suportado, oferecendo excelente compressão para fotografias mantendo boa qualidade visual. Nosso conversor permite ajustar a qualidade de saída de 10% a 100% (padrão 90%) para encontrar o equilíbrio perfeito entre tamanho de arquivo e qualidade de imagem. Fundos transparentes em arquivos PNG são automaticamente preenchidos com branco (ou a cor de sua escolha). Processe até 10 imagens de uma vez com conversão em lote. Tudo roda localmente no seu navegador — rápido, privado e gratuito.",
       "outputQuality": "Qualidade de Saída",
@@ -409,7 +417,7 @@
     "meme-generator": {
       "name": "Gerador de Memes",
       "metaTitle": "Gerador de Meme Online Grátis | NanoImage",
-      "metaDescription": "Crie memes online gratuitamente. Adicione texto superior e inferior com fontes, cores e estilos personalizáveis. Sem upload — 100% privado.",
+      "metaDescription": "Crie memes online gratuitamente. Adicione texto superior e inferior com fontes, cores e estilos personalizáveis. Sem upload — 100% privado. Instantâneo.",
       "h1": "Gerador de Memes — Crie Memes Online Gratuitamente",
       "description": "Crie memes hilários em segundos com o gerador de memes online grátis do NanoImage. Adicione texto em negrito no topo e na base de qualquer imagem com controle total sobre tamanho da fonte, cor do texto, cor do contorno e espessura do contorno. O estilo clássico de texto de meme apresenta texto branco com contorno preto que é legível em qualquer fundo. O modo maiúsculas está ativado por padrão para aquele visual autêntico de meme. Veja sua criação ganhar vida com pré-visualização em tempo real enquanto digita. Sem marcas d'água, sem cadastro, sem limites. Perfeito para redes sociais, grupos de chat e cultura da internet. Funciona em qualquer dispositivo — desktop, tablet ou celular.",
       "topText": "Texto Superior",
@@ -442,8 +450,60 @@
     "effects": "Efeitos",
     "more": "Mais",
     "about": "Sobre",
-    "privacy": "Privacidade",
-    "terms": "Termos",
-    "copyright": "© {year} NanoImage. Todos os direitos reservados."
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "copyright": "© {year} NanoImage. Todos os direitos reservados.",
+    "feedback": "Feedback",
+    "support": "support@nanoimage.net"
+  },
+  "feedback": {
+    "title": "Envie seu Feedback",
+    "subtitle": "Lemos cada mensagem",
+    "type": {
+      "label": "Que tipo de feedback?",
+      "bug": "Relatório de Bug",
+      "feature": "Sugestão de Recurso",
+      "other": "Outro"
+    },
+    "tool": {
+      "label": "Qual ferramenta? (opcional)",
+      "general": "Geral / Outro"
+    },
+    "description": {
+      "label": "Conta mais",
+      "placeholder": "Descreva o problema ou sugestão... (mín. 10 caracteres)",
+      "counter": "{count} / 2000"
+    },
+    "email": {
+      "label": "Seu e-mail (opcional)",
+      "placeholder": "Responderemos aqui (opcional)"
+    },
+    "screenshot": {
+      "label": "Captura de tela (opcional)",
+      "hint": "JPG, PNG ou WebP, máx. 5MB",
+      "upload": "Enviar imagem"
+    },
+    "submit": "Enviar Feedback",
+    "submitting": "Enviando...",
+    "success": {
+      "title": "Obrigado!",
+      "body": "Recebemos seu feedback.",
+      "reply": "Se você deixou um e-mail, retornaremos em até 2 dias úteis.",
+      "again": "Enviar Outro"
+    },
+    "error": "Algo deu errado. Por favor, tente novamente ou envie um e-mail para support@nanoimage.net",
+    "direct": "Ou nos envie um e-mail diretamente:"
+  },
+  "bar": {
+    "question": "Esta ferramenta foi útil?",
+    "yes": "Sim",
+    "no": "Não",
+    "cta": "Enviar Feedback",
+    "thanks": "Obrigado! ✓",
+    "negative": {
+      "placeholder": "O que poderia melhorar? (opcional)",
+      "skip": "Pular",
+      "send": "Enviar"
+    }
   }
 }

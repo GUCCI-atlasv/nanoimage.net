@@ -10,6 +10,7 @@ const categoryColors: Record<string, string> = {
   Privacy: 'text-accent2',
   Tips: 'text-accent3',
   Comparisons: 'text-muted',
+  'Platform Guide': 'text-accent',
 };
 
 export default function BlogListClient({ posts }: { posts: BlogPost[] }) {

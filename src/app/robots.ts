@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.nanoimage.net/sitemap.xml',
+    sitemap: 'https://nanoimage.net/sitemap.xml',
   };
 }

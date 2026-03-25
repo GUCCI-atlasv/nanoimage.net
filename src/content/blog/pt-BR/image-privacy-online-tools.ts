@@ -46,7 +46,7 @@ Para a maioria das imagens — uma foto de produto, um meme, uma captura de tela
 
 Uma categoria mais recente de ferramentas de imagem processa tudo diretamente no seu navegador, usando uma tecnologia chamada Canvas API. Essas ferramentas nunca precisam enviar sua imagem para lugar nenhum.
 
-Quando você usa uma ferramenta baseada em navegador como o [NanoImage](https://www.nanoimage.net):
+Quando você usa uma ferramenta baseada em navegador como o [NanoImage](https://nanoimage.net):
 
 1. Você seleciona sua foto
 2. O processamento acontece inteiramente dentro do seu navegador, no seu próprio dispositivo

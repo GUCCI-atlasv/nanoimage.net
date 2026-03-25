@@ -133,13 +133,13 @@ export function BreadcrumbJsonLd({ toolId }: { toolId: string }) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.nanoimage.net',
+        item: 'https://nanoimage.net',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: t('name'),
-        item: `https://www.nanoimage.net/${slug}`,
+        item: `https://nanoimage.net/${slug}`,
       },
     ],
   };
@@ -157,7 +157,7 @@ export function WebApplicationJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'NanoImage',
-    url: 'https://www.nanoimage.net',
+    url: 'https://nanoimage.net',
     applicationCategory: 'MultimediaApplication',
     operatingSystem: 'All',
     offers: {
@@ -166,6 +166,44 @@ export function WebApplicationJsonLd() {
       priceCurrency: 'USD',
     },
     description: 'Free online image tools: compress, resize, crop, rotate, flip, blur, and more. All processing happens in your browser.',
+    featureList: [
+      'Compress images',
+      'Resize images',
+      'Crop images',
+      'Rotate images',
+      'Flip images',
+      'Blur images',
+      'Convert to JPG',
+      'Convert to WebP',
+      'Convert to PNG',
+      'Add watermark',
+      'Grayscale images',
+      'Invert colors',
+      'Make image meme',
+    ],
+    screenshot: 'https://nanoimage.net/og-image.png',
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function WebSiteJsonLd() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'NanoImage',
+    url: 'https://nanoimage.net',
+    description: 'Free online image tools — compress, resize, crop, rotate, blur & more. 100% private, no upload needed.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://nanoimage.net/?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   return (

@@ -12,6 +12,9 @@ const LANGUAGES: { code: Locale; flag: string; label: string; short: string }[] 
   { code: 'es', flag: '\u{1F1EA}\u{1F1F8}', label: 'Espa\u00f1ol', short: 'ES' },
   { code: 'fr', flag: '\u{1F1EB}\u{1F1F7}', label: 'Fran\u00e7ais', short: 'FR' },
   { code: 'ru', flag: '\u{1F1F7}\u{1F1FA}', label: '\u0420\u0443\u0441\u0441\u043a\u0438\u0439', short: 'RU' },
+  { code: 'ja', flag: '\u{1F1EF}\u{1F1F5}', label: '\u65E5\u672C\u8A9E', short: 'JA' },
+  { code: 'zh-CN', flag: '\u{1F1E8}\u{1F1F3}', label: '\u7B80\u4F53\u4E2D\u6587', short: 'ZH-CN' },
+  { code: 'zh-TW', flag: '\u{1F1F9}\u{1F1FC}', label: '\u7E41\u9AD4\u4E2D\u6587', short: 'ZH-TW' },
 ];
 
 function setLangPreference(locale: string) {
@@ -172,22 +175,24 @@ export default function Navbar() {
             </Link>
 
             {/* Mobile Language Switcher */}
-            <div className="flex items-center gap-2 pt-3 border-t border-border">
-              {LANGUAGES.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => switchLocale(lang.code)}
-                  className={`flex items-center gap-1 px-2.5 py-1.5 rounded-md text-xs font-mono transition-colors ${
-                    locale === lang.code
-                      ? 'bg-accent/20 text-accent'
-                      : 'text-muted hover:text-text hover:bg-border/30'
-                  }`}
-                  title={lang.label}
-                >
-                  <span>{lang.flag}</span>
-                  <span className="tracking-wider">{lang.short}</span>
-                </button>
-              ))}
+            <div className="pt-3 border-t border-border">
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+                {LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => switchLocale(lang.code)}
+                    className={`flex-shrink-0 flex items-center gap-1 px-2 py-1.5 rounded-md text-[10px] font-mono transition-colors ${
+                      locale === lang.code
+                        ? 'bg-accent/20 text-accent'
+                        : 'text-muted hover:text-text hover:bg-border/30'
+                    }`}
+                    title={lang.label}
+                  >
+                    <span>{lang.flag}</span>
+                    <span className="tracking-wider">{lang.short}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}

@@ -51,6 +51,14 @@
       "a4": "Sim! O NanoImage é totalmente responsivo e funciona em qualquer navegador moderno — computador, tablet ou telemóvel. Todas as ferramentas estão otimizadas para interação por toque.",
       "q5": "Que ferramentas estão disponíveis?",
       "a5": "O NanoImage oferece 13 ferramentas: Comprimir Imagem, Comprimir para 100KB, Redimensionar, Recortar, Rodar, Espelhar, Inverter Cores, Preto e Branco, Desfocar, Adicionar Moldura, Adicionar Marca de Água, Converter para JPG e Gerador de Memes."
+    },
+    "meta": {
+      "title": "Ferramentas de Imagem Online Grátis | NanoImage",
+      "description": "Ferramentas de imagem online grátis — comprima, redimensione, recorte e mais. 100% privado, sem carregar ficheiros. 13 ferramentas disponíveis.",
+      "ogTitle": "Ferramentas de Imagem Online Grátis | NanoImage",
+      "ogDescription": "Edite imagens directamente no navegador — sem carregar, sem conta, 100% privado. Comprima, redimensione, recorte e mais. Gratuito para sempre.",
+      "twitterTitle": "Ferramentas de Imagem Online Grátis | NanoImage",
+      "twitterDescription": "Comprima, redimensione, recorte e edite imagens no navegador. Grátis, rápido e 100% privado."
     }
   },
   "common": {
@@ -86,8 +94,8 @@
   "tools": {
     "compress-image": {
       "name": "Comprimir Imagem",
-      "metaTitle": "Comprimir Imagem Online Grátis — Reduzir Tamanho do Ficheiro | NanoImage",
-      "metaDescription": "Comprima JPG, PNG, WebP para qualquer tamanho alvo online. Sem carregar ficheiros — 100% privado, resultados imediatos no navegador.",
+      "metaTitle": "Comprimir Imagem Online Grátis | NanoImage",
+      "metaDescription": "Comprima JPG, PNG, WebP para qualquer tamanho alvo online. Sem carregar ficheiros — 100% privado, resultados imediatos no navegador. Gratuito.",
       "h1": "Comprimir Imagem Online — Reduza o Tamanho Gratuitamente",
       "description": "Comprima facilmente as suas imagens para um tamanho de ficheiro alvo sem perder qualidade visível. O nosso compressor de imagem online gratuito funciona inteiramente no seu navegador — sem carregamentos, sem servidores, totalmente privado. Quer precise de comprimir imagens para anexos de e-mail, otimização de websites ou publicações em redes sociais, o NanoImage torna tudo simples. Basta carregar a sua imagem, definir o tamanho alvo (predefinição 200KB) e descarregar o resultado otimizado instantaneamente. Suporta os formatos JPG, PNG e WebP com ajuste inteligente de qualidade para alcançar o melhor equilíbrio entre tamanho do ficheiro e qualidade da imagem.",
       "targetSize": "Tamanho Alvo (KB)",
@@ -137,8 +145,8 @@
     },
     "rotate-image": {
       "name": "Rodar Imagem",
-      "metaTitle": "Rodar Imagem Online Grátis | NanoImage",
-      "metaDescription": "Rode fotos 90°, 180°, 270° ou qualquer ângulo personalizado online gratuitamente. Sem carregar ficheiros — rotação imediata no navegador.",
+      "metaTitle": "Rodar Imagem Online Grátis — 90, 180, 270° | NanoImage",
+      "metaDescription": "Rode fotos 90°, 180°, 270° ou qualquer ângulo personalizado online. Sem carregar ficheiros — rotação imediata no navegador. JPG, PNG e WebP. Gratuito.",
       "h1": "Rodar Imagem Online Gratuitamente",
       "description": "Rode rapidamente as suas imagens para qualquer ângulo com a ferramenta de rotação online gratuita do NanoImage. Quer precise de corrigir uma fotografia de lado, rodar exatamente 90 graus ou aplicar um ângulo de rotação personalizado, a nossa ferramenta trata de tudo. A rotação acontece instantaneamente no seu navegador com pré-visualização em tempo real, para que possa ver exatamente como a sua imagem ficará antes de descarregar. Sem instalação de software, sem carregamentos para servidores — apenas rotação de imagem rápida e gratuita. Perfeita para corrigir a orientação de fotografias, criar efeitos artísticos ou preparar imagens para redes sociais. Suporta JPG, PNG, WebP e mais.",
       "angle": "Ângulo de Rotação",
@@ -167,7 +175,7 @@
     "crop-image": {
       "name": "Recortar Imagem",
       "metaTitle": "Recortar Imagem Online Grátis | NanoImage",
-      "metaDescription": "Recorte imagens online com proporções predefinidas (1:1, 16:9, 4:3) ou seleção personalizada. Sem carregar — grátis e 100% privado.",
+      "metaDescription": "Recorte imagens online com proporções predefinidas (1:1, 16:9, 4:3) ou seleção personalizada. Sem carregar ficheiros — grátis e 100% privado. Gratuito.",
       "h1": "Recortar Imagem Online — Gratuito e Fácil",
       "description": "Recorte as suas imagens com precisão utilizando a ferramenta de recorte online gratuita do NanoImage. Selecione qualquer área da sua imagem para manter, ou utilize proporções predefinidas para resultados perfeitos de cada vez. Escolha entre proporções populares como 1:1 (quadrado, perfeito para Instagram), 4:3 (fotografia padrão), 16:9 (panorâmico) ou 2:3 (retrato). Basta arrastar sobre a imagem para definir a área de recorte — a seleção mostra as dimensões exatas de saída em píxeis. Tudo acontece no seu navegador com pré-visualização em tempo real — sem carregamentos, sem instalações. Excelente para publicações em redes sociais, fotografias de perfil, banners de websites e edição de fotografias.",
       "aspectRatio": "Proporção",
@@ -384,7 +392,7 @@
     "convert-to-jpg": {
       "name": "Converter para JPG",
       "metaTitle": "Converter PNG para JPG Online Grátis | NanoImage",
-      "metaDescription": "Converta PNG, WebP, GIF, BMP para JPG online gratuitamente. Qualidade ajustável, sem carregar ficheiros — conversão imediata no navegador.",
+      "metaDescription": "Converta PNG, WebP, GIF, BMP para JPG online. Qualidade ajustável, sem carregar ficheiros — conversão imediata no navegador. Gratuito e 100% privado.",
       "h1": "Converter PNG para JPG Online Gratuitamente",
       "description": "Converta as suas imagens PNG, WebP, GIF ou BMP para o formato JPG instantaneamente com o conversor online gratuito do NanoImage. O JPG é o formato de imagem mais amplamente suportado, oferecendo excelente compressão para fotografias enquanto mantém boa qualidade visual. O nosso conversor permite-lhe ajustar a qualidade de saída de 10% a 100% (predefinição 90%) para encontrar o equilíbrio perfeito entre tamanho do ficheiro e qualidade da imagem. Fundos transparentes em ficheiros PNG são automaticamente preenchidos com branco (ou a cor à sua escolha). Processe até 10 imagens de uma vez com conversão em lote. Tudo funciona localmente no seu navegador — rápido, privado e gratuito.",
       "outputQuality": "Qualidade de Saída",
@@ -442,8 +450,60 @@
     "effects": "Efeitos",
     "more": "Mais",
     "about": "Sobre",
-    "privacy": "Privacidade",
-    "terms": "Termos",
-    "copyright": "© {year} NanoImage. Todos os direitos reservados."
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "copyright": "© {year} NanoImage. Todos os direitos reservados.",
+    "feedback": "Feedback",
+    "support": "support@nanoimage.net"
+  },
+  "feedback": {
+    "title": "Envie o seu Feedback",
+    "subtitle": "Lemos cada mensagem",
+    "type": {
+      "label": "Que tipo de feedback?",
+      "bug": "Relatório de Erro",
+      "feature": "Sugestão de Funcionalidade",
+      "other": "Outro"
+    },
+    "tool": {
+      "label": "Qual ferramenta? (opcional)",
+      "general": "Geral / Outro"
+    },
+    "description": {
+      "label": "Conte-nos mais",
+      "placeholder": "Descreva o problema ou sugestão... (mín. 10 caracteres)",
+      "counter": "{count} / 2000"
+    },
+    "email": {
+      "label": "O seu e-mail (opcional)",
+      "placeholder": "Responderemos aqui (opcional)"
+    },
+    "screenshot": {
+      "label": "Captura de ecrã (opcional)",
+      "hint": "JPG, PNG ou WebP, máx. 5MB",
+      "upload": "Carregar imagem"
+    },
+    "submit": "Enviar Feedback",
+    "submitting": "A enviar...",
+    "success": {
+      "title": "Obrigado!",
+      "body": "Recebemos o seu feedback.",
+      "reply": "Se deixou um e-mail, responderemos em até 2 dias úteis.",
+      "again": "Enviar Outro"
+    },
+    "error": "Algo correu mal. Por favor, tente novamente ou envie-nos um e-mail para support@nanoimage.net",
+    "direct": "Ou envie-nos um e-mail diretamente:"
+  },
+  "bar": {
+    "question": "Esta ferramenta foi útil?",
+    "yes": "Sim",
+    "no": "Não",
+    "cta": "Enviar Feedback",
+    "thanks": "Obrigado! ✓",
+    "negative": {
+      "placeholder": "O que poderia melhorar? (opcional)",
+      "skip": "Ignorar",
+      "send": "Enviar"
+    }
   }
 }

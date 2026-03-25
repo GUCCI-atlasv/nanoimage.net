@@ -46,7 +46,7 @@ For most images â€” a product photo, a meme, a screenshot of something public â€
 
 A newer category of image tools processes everything directly in your browser, using a browser technology called the Canvas API. These tools never need to send your image anywhere.
 
-When you use a browser-based tool like [NanoImage](https://www.nanoimage.net):
+When you use a browser-based tool like [NanoImage](https://nanoimage.net):
 
 1. You select your photo
 2. The processing happens entirely within your browser on your own device
