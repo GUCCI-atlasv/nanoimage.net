@@ -43,7 +43,7 @@ Arraste ou clique para fazer upload da sua foto. JPEG, PNG e WebP são todos sup
 
 ### Passo 3: Defina a Largura e a Cor da Borda
 
-- **Cor:** Defina como branco (`#FFFFFF`)
+- **Cor:** Defina como branco (\`#FFFFFF\`)
 - **Largura:** Comece com **40–60px** para um frame sutil em uma imagem de 1080px. Vá até **100–150px** para uma borda bold estilo Polaroid
 
 O NanoImage permite definir a largura da borda de forma independente para cada lado — útil para formatos Polaroid ou letterbox.
@@ -76,7 +76,7 @@ Para um visual consistente em todo o seu perfil, escolha um estilo e mantenha. U
 
 **Corte para 1:1 antes de adicionar a borda.** Comece com sua imagem cortada em quadrado, depois adicione a borda. Isso garante uma saída quadrada consistente toda vez. Use o [NanoImage Cortar](/crop-image/) para esse passo.
 
-**Mantenha o fundo branco puro, não off-white.** `#FFFFFF` é o branco puro. Se você usar `#F5F5F5` em algumas fotos e `#FFFFFF` em outras, a diferença fica visível no grid.
+**Mantenha o fundo branco puro, não off-white.** \`#FFFFFF\` é o branco puro. Se você usar \`#F5F5F5\` em algumas fotos e \`#FFFFFF\` em outras, a diferença fica visível no grid.
 
 **Processe fotos retrato e paisagem de forma consistente.** Se você usar pillarboxing para fotos retrato e letterboxing para fotos paisagem, o tamanho quadrado de saída será consistente.
 
@@ -106,7 +106,7 @@ Faça upload da foto paisagem no [NanoImage Adicionar Borda](/add-border-to-imag
 Defina as bordas de cima, esquerda e direita com a mesma largura (ex.: 60px), e defina a borda de baixo com 2–3× essa largura (ex.: 160px). Isso imita a margem inferior maior de uma impressão física de Polaroid.
 
 **Posso adicionar uma borda colorida em vez de branca?**
-Sim — o NanoImage permite definir qualquer cor hexadecimal para a borda. Bordas pretas (`#000000`) criam um visual editorial escuro. Bordas pastel podem combinar com as cores da marca. O branco é simplesmente o mais popular para o Instagram.
+Sim — o NanoImage permite definir qualquer cor hexadecimal para a borda. Bordas pretas (\`#000000\`) criam um visual editorial escuro. Bordas pastel podem combinar com as cores da marca. O branco é simplesmente o mais popular para o Instagram.
 
 **O arquivo fica maior depois de adicionar uma borda?**
 Sim — um pouco, porque você está adicionando pixels. Uma foto de 1080×1080px se torna 1200×1200px depois de bordas de 60px em cada lado. Se precisar manter o tamanho do arquivo pequeno, passe pelo [NanoImage Comprimir](/compress-image/) depois de adicionar a borda.
@@ -119,7 +119,7 @@ Adicionar uma borda branca às fotos do Instagram leva menos de um minuto:
 
 1. Abra o [NanoImage Adicionar Borda](/add-border-to-image/)
 2. Faça upload da sua foto
-3. Defina a cor como `#FFFFFF` e escolha a largura da borda
+3. Defina a cor como \`#FFFFFF\` e escolha a largura da borda
 4. Visualize e baixe
 
 **[Adicione uma borda branca à sua foto — grátis, sem upload →](/add-border-to-image/)**

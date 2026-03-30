@@ -43,7 +43,7 @@ Faites glisser ou cliquez pour téléverser votre photo. JPEG, PNG et WebP sont 
 
 ### Étape 3 : Définissez la Largeur et la Couleur de la Bordure
 
-- **Couleur :** Réglez sur blanc (`#FFFFFF`)
+- **Couleur :** Réglez sur blanc (\`#FFFFFF\`)
 - **Largeur :** Commencez avec **40–60px** pour un cadre subtil sur une image de 1080px. Montez jusqu'à **100–150px** pour une bordure marquée style Polaroid
 
 NanoImage vous permet de définir la largeur de la bordure indépendamment pour chaque côté — utile pour les formats Polaroid ou letterbox.
@@ -76,7 +76,7 @@ Pour un rendu cohérent sur toute votre grille, choisissez un style et tenez-vou
 
 **Recadrez en 1:1 avant d'ajouter la bordure.** Commencez avec votre image recadrée en carré, puis ajoutez la bordure. Cela vous donne une sortie carrée cohérente à chaque fois. Utilisez [NanoImage Rogner](/crop-image/) pour cette étape.
 
-**Gardez le fond blanc pur, pas cassé.** `#FFFFFF` est le blanc pur. Si vous utilisez `#F5F5F5` sur certaines photos et `#FFFFFF` sur d'autres, la différence est visible dans la grille.
+**Gardez le fond blanc pur, pas cassé.** \`#FFFFFF\` est le blanc pur. Si vous utilisez \`#F5F5F5\` sur certaines photos et \`#FFFFFF\` sur d'autres, la différence est visible dans la grille.
 
 **Traitez les photos portrait et paysage de manière cohérente.** Si vous utilisez le pillarboxing pour les photos portrait et le letterboxing pour les photos paysage, la taille carrée de sortie sera cohérente.
 
@@ -106,7 +106,7 @@ Téléversez la photo paysage sur [NanoImage Ajouter une Bordure](/add-border-to
 Réglez les bordures du haut, de gauche et de droite à la même largeur (ex. 60px), et réglez la bordure du bas à 2–3× cette largeur (ex. 160px). Cela imite la grande marge inférieure d'un tirage Polaroid physique.
 
 **Puis-je ajouter une bordure colorée plutôt que blanche ?**
-Oui — NanoImage vous permet de définir n'importe quelle couleur hexadécimale pour la bordure. Les bordures noires (`#000000`) créent un rendu éditorial sombre. Les bordures pastel peuvent correspondre aux couleurs de votre marque. Le blanc est simplement le plus populaire pour Instagram.
+Oui — NanoImage vous permet de définir n'importe quelle couleur hexadécimale pour la bordure. Les bordures noires (\`#000000\`) créent un rendu éditorial sombre. Les bordures pastel peuvent correspondre aux couleurs de votre marque. Le blanc est simplement le plus populaire pour Instagram.
 
 **Le fichier devient-il plus volumineux après l'ajout d'une bordure ?**
 Oui — légèrement, car vous ajoutez des pixels. Une photo de 1080×1080px devient 1200×1200px après des bordures de 60px de chaque côté. Si vous avez besoin de maintenir la taille du fichier basse, passez-la par [NanoImage Compresser](/compress-image/) après avoir ajouté la bordure.
@@ -119,7 +119,7 @@ Ajouter une bordure blanche aux photos Instagram prend moins d'une minute :
 
 1. Ouvrez [NanoImage Ajouter une Bordure](/add-border-to-image/)
 2. Téléversez votre photo
-3. Réglez la couleur sur `#FFFFFF` et choisissez la largeur de la bordure
+3. Réglez la couleur sur \`#FFFFFF\` et choisissez la largeur de la bordure
 4. Prévisualisez et téléchargez
 
 **[Ajoutez une bordure blanche à votre photo — gratuit, sans téléversement →](/add-border-to-image/)**

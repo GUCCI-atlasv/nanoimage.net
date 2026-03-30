@@ -43,7 +43,7 @@ Arrastra o haz clic para subir tu foto. Se admiten JPEG, PNG y WebP.
 
 ### Paso 3: Establece el Ancho y Color del Borde
 
-- **Color:** Establece en blanco (`#FFFFFF`)
+- **Color:** Establece en blanco (\`#FFFFFF\`)
 - **Ancho:** Empieza con **40–60px** para un marco sutil en una imagen de 1080px. Sube hasta **100–150px** para un borde bold estilo Polaroid
 
 NanoImage te permite establecer el ancho del borde de forma independiente para cada lado — útil para formatos Polaroid o letterbox.
@@ -76,7 +76,7 @@ Para un aspecto uniforme en toda tu cuadrícula, elige un estilo y mantenlo. Una
 
 **Recorta a 1:1 antes de añadir el borde.** Comienza con tu imagen recortada a cuadrado, luego añade el borde. Esto te da una salida cuadrada consistente cada vez. Usa [NanoImage Recortar](/crop-image/) para este paso.
 
-**Mantén el fondo blanco puro, no blanquecino.** `#FFFFFF` es blanco puro. Si usas `#F5F5F5` en algunas fotos y `#FFFFFF` en otras, la diferencia es visible en la cuadrícula.
+**Mantén el fondo blanco puro, no blanquecino.** \`#FFFFFF\` es blanco puro. Si usas \`#F5F5F5\` en algunas fotos y \`#FFFFFF\` en otras, la diferencia es visible en la cuadrícula.
 
 **Procesa fotos verticales y horizontales de forma consistente.** Si usas pillarbox para fotos verticales y letterbox para fotos horizontales, el tamaño cuadrado de salida será consistente.
 
@@ -106,7 +106,7 @@ Sube la foto horizontal a [NanoImage Añadir Borde](/add-border-to-image/) y añ
 Establece los bordes superior, izquierdo y derecho al mismo ancho (por ejemplo, 60px), y establece el borde inferior a 2–3× ese ancho (por ejemplo, 160px). Esto imita el margen inferior más grande de una impresión física de Polaroid.
 
 **¿Puedo añadir un borde de color en lugar de blanco?**
-Sí — NanoImage te permite establecer cualquier color hexadecimal para el borde. Los bordes negros (`#000000`) crean un aspecto editorial oscuro. Los bordes en colores pastel pueden coincidir con los colores de marca. El blanco es simplemente el más popular para Instagram.
+Sí — NanoImage te permite establecer cualquier color hexadecimal para el borde. Los bordes negros (\`#000000\`) crean un aspecto editorial oscuro. Los bordes en colores pastel pueden coincidir con los colores de marca. El blanco es simplemente el más popular para Instagram.
 
 **¿El archivo se hace más grande al añadir un borde?**
 Sí — ligeramente, porque estás añadiendo píxeles. Una foto de 1080×1080px se convierte en 1200×1200px después de bordes de 60px en cada lado. Si necesitas mantener el tamaño del archivo bajo, pásalo por [NanoImage Comprimir](/compress-image/) después de añadir el borde.
@@ -119,7 +119,7 @@ Añadir un borde blanco a las fotos de Instagram tarda menos de un minuto:
 
 1. Abre [NanoImage Añadir Borde](/add-border-to-image/)
 2. Sube tu foto
-3. Establece el color en `#FFFFFF` y elige el ancho del borde
+3. Establece el color en \`#FFFFFF\` y elige el ancho del borde
 4. Previsualiza y descarga
 
 **[Añade un borde blanco a tu foto — gratis, sin subir →](/add-border-to-image/)**

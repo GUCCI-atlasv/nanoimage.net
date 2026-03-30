@@ -108,7 +108,7 @@ O GIF é o formato de animação da internet desde 1987, e seu papel cultural em
 
 **Para imagens estáticas, PNG é sempre melhor que GIF.** Para animações, considere:
 - **WebP animado** — 64–70% menor que GIF, com os 16,7 milhões de cores completos e transparência total. Use quando você controla o ambiente de exibição e pode confirmar o suporte a animações WebP.
-- **Vídeo MP4** — mais de 90% menor que GIF, qualidade completa, aceita áudio. Ideal para web (`<video autoplay muted loop>`), redes sociais e qualquer coisa com mais de 3–4 segundos.
+- **Vídeo MP4** — mais de 90% menor que GIF, qualidade completa, aceita áudio. Ideal para web (<video autoplay muted loop>), redes sociais e qualquer coisa com mais de 3–4 segundos.
 
 **Use GIF quando:**
 - ✅ Compatibilidade máxima é necessária (clientes de e-mail antigos, plataformas legadas)

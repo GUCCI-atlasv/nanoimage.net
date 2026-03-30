@@ -43,7 +43,7 @@ Arraste ou clique para carregar a sua fotografia. JPEG, PNG e WebP são todos su
 
 ### Passo 3: Defina a Largura e a Cor da Moldura
 
-- **Cor:** Defina como branco (`#FFFFFF`)
+- **Cor:** Defina como branco (\`#FFFFFF\`)
 - **Largura:** Comece com **40–60px** para uma moldura subtil numa imagem de 1080px. Aumente até **100–150px** para uma moldura marcada estilo Polaroid
 
 O NanoImage permite definir a largura da moldura de forma independente para cada lado — útil para formatos Polaroid ou letterbox.
@@ -76,7 +76,7 @@ Para um aspeto uniforme em todo o seu perfil, escolha um estilo e mantenha-o. Um
 
 **Recorte para 1:1 antes de adicionar a moldura.** Comece com a sua imagem recortada em quadrado, depois adicione a moldura. Isso garante uma saída quadrada consistente em todas as vezes. Utilize o [NanoImage Recortar](/crop-image/) para este passo.
 
-**Mantenha o fundo branco puro, não branco sujo.** `#FFFFFF` é o branco puro. Se utilizar `#F5F5F5` em algumas fotografias e `#FFFFFF` noutras, a diferença é visível na grelha.
+**Mantenha o fundo branco puro, não branco sujo.** \`#FFFFFF\` é o branco puro. Se utilizar \`#F5F5F5\` em algumas fotografias e \`#FFFFFF\` noutras, a diferença é visível na grelha.
 
 **Processe fotografias retrato e paisagem de forma consistente.** Se utilizar pillarboxing para fotografias retrato e letterboxing para fotografias paisagem, o tamanho quadrado de saída será consistente.
 
@@ -106,7 +106,7 @@ Carregue a fotografia paisagem para o [NanoImage Adicionar Moldura](/add-border-
 Defina as molduras de cima, esquerda e direita com a mesma largura (ex.: 60px), e defina a moldura de baixo com 2–3× essa largura (ex.: 160px). Isto imita a margem inferior maior de uma impressão física de Polaroid.
 
 **Posso adicionar uma moldura colorida em vez de branca?**
-Sim — o NanoImage permite definir qualquer cor hexadecimal para a moldura. As molduras pretas (`#000000`) criam um aspeto editorial escuro. As molduras em tons pastel podem combinar com as cores da marca. O branco é simplesmente o mais popular para Instagram.
+Sim — o NanoImage permite definir qualquer cor hexadecimal para a moldura. As molduras pretas (\`#000000\`) criam um aspeto editorial escuro. As molduras em tons pastel podem combinar com as cores da marca. O branco é simplesmente o mais popular para Instagram.
 
 **O ficheiro fica maior depois de adicionar uma moldura?**
 Sim — ligeiramente, porque está a adicionar píxeis. Uma fotografia de 1080×1080px torna-se 1200×1200px depois de molduras de 60px em cada lado. Se precisar de manter o tamanho do ficheiro reduzido, passe-o pelo [NanoImage Comprimir](/compress-image/) depois de adicionar a moldura.
@@ -119,7 +119,7 @@ Adicionar uma moldura branca às fotografias do Instagram demora menos de um min
 
 1. Abra o [NanoImage Adicionar Moldura](/add-border-to-image/)
 2. Carregue a sua fotografia
-3. Defina a cor como `#FFFFFF` e escolha a largura da moldura
+3. Defina a cor como \`#FFFFFF\` e escolha a largura da moldura
 4. Pré-visualize e descarregue
 
 **[Adicione uma moldura branca à sua fotografia — gratuito, sem carregamento →](/add-border-to-image/)**
