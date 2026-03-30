@@ -8,16 +8,18 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Enforce trailing slash on all URLs for SEO consistency
+  trailingSlash: true,
   async redirects() {
     const locales = ['pt-BR', 'pt-PT', 'es', 'fr', 'ru', 'ja', 'zh-CN', 'zh-TW'];
 
     // Short-form URLs Google discovered that 404 — redirect to canonical slugs
     const shortSlugRedirects = [
-      { from: '/compress', to: '/compress-image' },
-      { from: '/crop', to: '/crop-image' },
-      { from: '/resize', to: '/resize-image' },
-      { from: '/blur', to: '/blur-image' },
-      { from: '/watermark', to: '/watermark-image' },
+      { from: '/compress', to: '/compress-image/' },
+      { from: '/crop', to: '/crop-image/' },
+      { from: '/resize', to: '/resize-image/' },
+      { from: '/blur', to: '/blur-image/' },
+      { from: '/watermark', to: '/watermark-image/' },
     ];
 
     const redirects = [];

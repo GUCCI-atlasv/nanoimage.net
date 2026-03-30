@@ -12,12 +12,14 @@ const hreflangMap: Record<string, string> = {
 };
 
 function buildAlternates(path: string): Record<string, string> {
+  // Normalize: ensure path ends with '/'
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
   const languages: Record<string, string> = {};
   for (const locale of locales) {
     const hreflang = hreflangMap[locale] ?? locale;
-    languages[hreflang] = locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`;
+    languages[hreflang] = locale === 'en' ? `${baseUrl}${normalizedPath}` : `${baseUrl}/${locale}${normalizedPath}`;
   }
-  languages['x-default'] = `${baseUrl}${path}`;
+  languages['x-default'] = `${baseUrl}${normalizedPath}`;
   return languages;
 }
 
@@ -25,9 +27,11 @@ function buildMultiLocaleEntries(
   path: string,
   opts: { lastModified: Date; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number },
 ): MetadataRoute.Sitemap {
-  const alternates = { languages: buildAlternates(path) };
+  // Normalize: ensure path ends with '/'
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
+  const alternates = { languages: buildAlternates(normalizedPath) };
   return locales.map((locale) => ({
-    url: locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`,
+    url: locale === 'en' ? `${baseUrl}${normalizedPath}` : `${baseUrl}/${locale}${normalizedPath}`,
     lastModified: opts.lastModified,
     changeFrequency: opts.changeFrequency,
     priority: opts.priority,
