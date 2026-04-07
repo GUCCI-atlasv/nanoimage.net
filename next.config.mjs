@@ -40,14 +40,20 @@ const nextConfig = {
 
     const redirects = [];
 
-    // Short-form tool slug redirects
+    // Short-form tool slug redirects (both with and without trailing slash)
     for (const { from, to } of shortSlugRedirects) {
-      // EN (no prefix)
+      // EN (no prefix) — without and with trailing slash
       redirects.push({ source: from, destination: to, permanent: true });
+      redirects.push({ source: `${from}/`, destination: to, permanent: true });
       // All other locales
       for (const locale of locales) {
         redirects.push({
           source: `/${locale}${from}`,
+          destination: `/${locale}${to}`,
+          permanent: true,
+        });
+        redirects.push({
+          source: `/${locale}${from}/`,
           destination: `/${locale}${to}`,
           permanent: true,
         });
