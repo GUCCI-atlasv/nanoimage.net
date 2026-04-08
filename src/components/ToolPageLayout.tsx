@@ -15,7 +15,7 @@ export default function ToolPageLayout({ toolId, children }: ToolPageLayoutProps
   const t = useTranslations();
   const relatedTools = getRelatedTools(toolId);
 
-  const faqKeys = ['q1', 'q2', 'q3', 'q4'] as const;
+  const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'] as const;
   const howToSteps = ['step1', 'step2', 'step3'] as const;
 
   return (

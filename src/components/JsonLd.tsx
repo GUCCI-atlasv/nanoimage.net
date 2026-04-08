@@ -10,14 +10,17 @@ interface FAQItem {
 export function FAQJsonLd({ toolId }: { toolId: string }) {
   const t = useTranslations(`tools.${toolId}`);
 
-  const faqKeys = ['q1', 'q2', 'q3', 'q4'];
   const faqs: FAQItem[] = [];
 
-  for (const key of faqKeys) {
+  for (let i = 1; i <= 12; i++) {
+    const key = `q${i}`;
     try {
       const q = t(`faq.${key}`);
-      const a = t(`faq.${key.replace('q', 'a')}`);
-      if (q && a) faqs.push({ question: q, answer: a });
+      const a = t(`faq.a${i}`);
+      const prefix = `tools.${toolId}.faq.${key}`;
+      const looksMissing = (s: string) => s === prefix || (s.startsWith('tools.') && s.includes('.faq.'));
+      if (!q || !a || looksMissing(q) || looksMissing(a)) break;
+      faqs.push({ question: q, answer: a });
     } catch {
       break;
     }
@@ -173,6 +176,7 @@ export function WebApplicationJsonLd() {
       'Rotate images',
       'Flip images',
       'Blur images',
+      'Merge images',
       'Convert to JPG',
       'Convert to WebP',
       'Convert to PNG',

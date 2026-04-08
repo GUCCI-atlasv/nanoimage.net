@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "NanoImage",
     "title": "Outils d'Image en Ligne Gratuits — Compresser, Redimensionner et Recadrer | NanoImage",
-    "description": "Outils d'image en ligne gratuits — compressez, redimensionnez, recadrez, faites pivoter et plus encore. 100% privé : sans téléchargement, sans compte. 13 outils, résultats instantanés."
+    "description": "Outils d'image en ligne gratuits — compressez, redimensionnez, recadrez, faites pivoter et plus encore. 100% privé : sans téléchargement, sans compte. 14 outils, résultats instantanés."
   },
   "nav": {
     "home": "Accueil",
@@ -42,7 +42,7 @@
     "faq": {
       "title": "Questions fréquentes",
       "q1": "NanoImage est-il vraiment gratuit ?",
-      "a1": "Oui, 100 % gratuit. Les 13 outils d'image sont disponibles sans aucune limite, inscription ou frais cachés. Il n'y a pas d'offre premium ni de filigrane ajouté à vos images.",
+      "a1": "Oui, 100 % gratuit. Les 14 outils d'image sont disponibles sans aucune limite, inscription ou frais cachés. Il n'y a pas d'offre premium ni de filigrane ajouté à vos images.",
       "q2": "Mes images sont-elles envoyées vers un serveur ?",
       "a2": "Non. Tout le traitement se fait localement dans votre navigateur grâce à l'API Canvas HTML5. Vos images ne quittent jamais votre appareil, garantissant une confidentialité et une sécurité totales.",
       "q3": "Quels formats d'image sont pris en charge ?",
@@ -50,11 +50,11 @@
       "q4": "Puis-je utiliser NanoImage sur mobile ?",
       "a4": "Oui ! NanoImage est entièrement responsive et fonctionne sur tout navigateur moderne — ordinateur, tablette ou mobile. Tous les outils sont optimisés pour l'interaction tactile.",
       "q5": "Quels outils sont disponibles ?",
-      "a5": "NanoImage propose 13 outils : Compresser une image, Compresser à 100 Ko, Redimensionner, Recadrer, Pivoter, Retourner, Inverser les couleurs, Noir et blanc, Flouter, Ajouter une bordure, Ajouter un filigrane, Convertir en JPG et Générateur de mèmes."
+      "a5": "NanoImage propose 14 outils : Compresser une image, Compresser à 100 Ko, Redimensionner, Recadrer, Pivoter, Retourner, Inverser les couleurs, Noir et blanc, Flouter, Ajouter une bordure, Ajouter un filigrane, Convertir en JPG, Générateur de mèmes et Fusionner des images."
     },
     "meta": {
       "title": "Outils d'Image en Ligne Gratuits | NanoImage",
-      "description": "Outils d'image en ligne gratuits — compressez, redimensionnez, recadrez et plus. 100% privé, sans téléchargement. 13 outils, résultats instantanés.",
+      "description": "Outils d'image en ligne gratuits — compressez, redimensionnez, recadrez et plus. 100% privé, sans téléchargement. 14 outils, résultats instantanés.",
       "ogTitle": "Outils d'Image en Ligne Gratuits | NanoImage",
       "ogDescription": "Éditez vos images directement dans le navigateur — sans téléchargement, sans compte, 100% privé. Compressez, redimensionnez, recadrez et plus. Gratuit pour toujours.",
       "twitterTitle": "Outils d'Image en Ligne Gratuits | NanoImage",
@@ -441,6 +441,62 @@
         "a3": "Absolument ! Ajustez la taille de police (20-100 px), la couleur du texte, la couleur du contour, l'épaisseur du contour et le mode majuscules pour obtenir le look parfait pour votre mème.",
         "q4": "Puis-je utiliser le générateur de mèmes sur mobile ?",
         "a4": "Oui ! NanoImage fonctionne sur tout appareil avec un navigateur moderne — ordinateur, tablette ou mobile. Importez votre image, ajoutez du texte et téléchargez votre mème directement sur votre téléphone."
+      }
+    },
+    "merge-images": {
+      "name": "Fusionner des images",
+      "metaTitle": "Fusionner des images en ligne gratuitement — sans envoi | NanoImage",
+      "metaDescription": "Fusionnez 2 à 10 images horizontalement ou verticalement dans le navigateur. Gratuit, sans compte ni filigrane. Bordures et format de sortie.",
+      "h1": "Fusionner des images en ligne — combinez des photos gratuitement",
+      "description": "Combinez plusieurs photos en une seule image dans le navigateur. Choisissez horizontal ou vertical, ajustez tailles, bordures et arrière-plan, exportez en PNG, JPG ou WebP. Jusqu'à 10 images, 20 Mo chacune — traitement local, privé.",
+      "upload_label": "Déposez des images ici ou cliquez pour importer",
+      "upload_limit": "Jusqu'à 10 images, 20 Mo max chacune",
+      "direction": "Direction",
+      "direction_horizontal": "Horizontal",
+      "direction_vertical": "Vertical",
+      "resize_strategy": "Ajustement de taille",
+      "resize_none": "Ne pas ajuster",
+      "resize_smallest": "Redimensionner à la plus petite",
+      "resize_largest": "Redimensionner à la plus grande",
+      "resize_first": "Redimensionner sur la première image",
+      "keep_ratio": "Conserver les proportions",
+      "border_thickness": "Épaisseur de bordure (px)",
+      "border_color": "Couleur de bordure",
+      "bg_color": "Couleur d'arrière-plan",
+      "transparent_bg": "Arrière-plan transparent (PNG, zones vides)",
+      "output_format": "Format de sortie",
+      "quality": "Qualité",
+      "btn_merge": "Fusionner et télécharger",
+      "btn_clear": "Tout effacer",
+      "preview_empty": "Importez au moins 2 images pour l'aperçu",
+      "processing": "Fusion des images...",
+      "error_min": "Importez au moins 2 images",
+      "error_max": "10 images maximum",
+      "error_size": "Le fichier dépasse 20 Mo",
+      "error_format": "Format non pris en charge",
+      "drag_reorder": "Glissez les miniatures pour réordonner",
+      "howToUse": {
+        "step1": "Ajoutez 2 à 10 images par glisser-déposer ou sélecteur de fichiers. Réordonnez en faisant glisser les miniatures.",
+        "step2": "Choisissez direction, taille, bordures, fond et format. L'aperçu se met à jour automatiquement.",
+        "step3": "Cliquez sur « Fusionner et télécharger » pour enregistrer en PNG, JPG ou WebP."
+      },
+      "faq": {
+        "q1": "Comment fusionner des images en ligne ?",
+        "a1": "Importez 2 images ou plus, choisissez horizontal ou vertical, ajustez bordures et tailles, puis cliquez sur « Fusionner et télécharger ». Tout se passe dans le navigateur.",
+        "q2": "C'est gratuit ?",
+        "a2": "Oui. Pas de compte ni de filigrane. Traitement local.",
+        "q3": "Mes images sont-elles en sécurité ?",
+        "a3": "Oui. Elles ne quittent pas votre appareil. Canvas en local — pas de stockage serveur.",
+        "q4": "Combien d'images puis-je joindre ?",
+        "a4": "De 2 à 10 par opération. Au-delà, en plusieurs étapes.",
+        "q5": "Quels formats sont pris en charge ?",
+        "a5": "Entrée : JPG, PNG, WebP, BMP, GIF. Sortie : PNG, JPG ou WebP.",
+        "q6": "Des tailles différentes ?",
+        "a6": "Oui. Redimensionnez à la plus petite, la plus grande ou la première, ou gardez la taille d'origine avec remplissage.",
+        "q7": "Une bordure entre les photos ?",
+        "a7": "Oui. Épaisseur 0–100 px et couleur. Espaces et cadre extérieur utilisent cette couleur.",
+        "q8": "Sur mobile ?",
+        "a8": "Oui. Interface responsive ; traitement toujours local."
       }
     }
   },

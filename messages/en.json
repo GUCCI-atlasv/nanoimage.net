@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "NanoImage",
     "title": "Free Online Image Tools — Compress, Resize & Crop | NanoImage",
-    "description": "Free online image tools — compress, resize, crop, rotate, blur & more. 100% private: no upload, no account needed. 13 tools, instant results, all in your browser."
+    "description": "Free online image tools — compress, resize, crop, rotate, blur & more. 100% private: no upload, no account needed. 14 tools, instant results, all in your browser."
   },
   "nav": {
     "home": "Home",
@@ -42,7 +42,7 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "q1": "Is NanoImage really free?",
-      "a1": "Yes, 100% free. All 13 image tools are available without any limits, sign-ups, or hidden fees. There are no premium tiers or watermarks added to your images.",
+      "a1": "Yes, 100% free. All 14 image tools are available without any limits, sign-ups, or hidden fees. There are no premium tiers or watermarks added to your images.",
       "q2": "Are my images uploaded to a server?",
       "a2": "No. All processing happens locally in your browser using the HTML5 Canvas API. Your images never leave your device, ensuring complete privacy and security.",
       "q3": "What image formats are supported?",
@@ -50,11 +50,11 @@
       "q4": "Can I use NanoImage on mobile devices?",
       "a4": "Yes! NanoImage is fully responsive and works on any modern browser — desktop, tablet, or mobile. All tools are optimized for touch interaction.",
       "q5": "What tools are available?",
-      "a5": "NanoImage offers 13 tools: Compress Image, Compress to 100KB, Resize, Crop, Rotate, Flip, Invert Colors, Black & White, Blur, Add Border, Add Watermark, Convert to JPG, and Meme Generator."
+      "a5": "NanoImage offers 14 tools: Compress Image, Compress to 100KB, Resize, Crop, Rotate, Flip, Invert Colors, Black & White, Blur, Add Border, Add Watermark, Convert to JPG, Meme Generator, and Merge Images."
     },
     "meta": {
       "title": "Free Image Tools — Compress, Resize & Crop | NanoImage",
-      "description": "Free online image tools: compress, resize, crop, rotate & more. 100% private, no upload needed. 13 tools with instant results in your browser.",
+      "description": "Free online image tools: compress, resize, crop, rotate & more. 100% private, no upload needed. 14 tools with instant results in your browser.",
       "ogTitle": "Free Online Image Tools — Compress, Resize & Crop | NanoImage",
       "ogDescription": "Edit images directly in your browser — no upload, no account, 100% private. Compress, resize, crop, rotate & more. Free forever.",
       "twitterTitle": "Free Online Image Tools — Compress, Resize & Crop | NanoImage",
@@ -441,6 +441,62 @@
         "a3": "Absolutely! Adjust font size (20-100px), text color, stroke color, stroke width, and toggle uppercase mode to get your perfect meme look.",
         "q4": "Can I use the meme generator on mobile?",
         "a4": "Yes! NanoImage works on any device with a modern browser — desktop, tablet, or mobile. Upload your image, add text, and download your meme directly on your phone."
+      }
+    },
+    "merge-images": {
+      "name": "Merge Images",
+      "metaTitle": "Merge Images Online Free — Combine Photos, No Upload | NanoImage",
+      "metaDescription": "Merge 2-10 images horizontally or vertically in your browser. Free image joiner — no upload, no account, no watermark. Adjust borders, spacing, and output format.",
+      "h1": "Merge Images Online — Combine Photos Free",
+      "description": "Combine multiple photos into one image directly in your browser. Choose horizontal or vertical layout, match sizes with flexible resize options, add borders and custom backgrounds, and export as PNG, JPG, or WebP. Up to 10 images, 20MB each — no uploads, no watermarks, completely private.",
+      "upload_label": "Drop images here or click to upload",
+      "upload_limit": "Up to 10 images, max 20MB each",
+      "direction": "Direction",
+      "direction_horizontal": "Horizontal",
+      "direction_vertical": "Vertical",
+      "resize_strategy": "Size adjustment",
+      "resize_none": "Do not adjust",
+      "resize_smallest": "Resize to smallest",
+      "resize_largest": "Resize to largest",
+      "resize_first": "Resize to first image",
+      "keep_ratio": "Constrain proportions",
+      "border_thickness": "Border thickness (px)",
+      "border_color": "Border color",
+      "bg_color": "Background color",
+      "transparent_bg": "Transparent background (letterbox)",
+      "output_format": "Output format",
+      "quality": "Quality",
+      "btn_merge": "Merge & Download",
+      "btn_clear": "Clear All",
+      "preview_empty": "Upload at least 2 images to preview",
+      "processing": "Merging images...",
+      "error_min": "Please upload at least 2 images",
+      "error_max": "Maximum 10 images allowed",
+      "error_size": "File exceeds 20MB limit",
+      "error_format": "Unsupported format",
+      "drag_reorder": "Drag thumbnails to reorder",
+      "howToUse": {
+        "step1": "Add 2–10 images via drag-and-drop or file picker. Drag thumbnails to change the order.",
+        "step2": "Choose direction, size adjustment, borders, background, and output format. Preview updates as you adjust.",
+        "step3": "Click \"Merge & Download\" to save the merged image as PNG, JPG, or WebP."
+      },
+      "faq": {
+        "q1": "How do I merge images online?",
+        "a1": "Upload 2 or more images, choose horizontal or vertical direction, adjust border and sizing options, then click \"Merge & Download.\" Everything runs in your browser — no files are uploaded.",
+        "q2": "Is this image joiner free?",
+        "a2": "Yes. No account, no watermark, no hidden limits. The joiner works entirely in your browser.",
+        "q3": "Are my images safe when I combine photos?",
+        "a3": "Yes. Images never leave your device. Processing uses the Canvas API locally — no server upload or storage.",
+        "q4": "How many images can I join at once?",
+        "a4": "You can merge 2 to 10 images per run. For more, merge in batches and combine the results.",
+        "q5": "What image formats are supported?",
+        "a5": "Input: JPG, PNG, WebP, BMP, GIF. Output: PNG, JPG, or WebP.",
+        "q6": "Can I merge images of different sizes?",
+        "a6": "Yes. Use size adjustment: resize to smallest, largest, or first image, or keep original sizes with background fill.",
+        "q7": "Can I add a border between combined photos?",
+        "a7": "Yes. Set border thickness (0–100px) and pick a color. Gaps and outer frame use that color.",
+        "q8": "Does this photo joiner work on mobile?",
+        "a8": "Yes. The tool is responsive; processing still runs locally in your browser."
       }
     }
   },

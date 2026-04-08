@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "NanoImage",
     "title": "Herramientas de Imagen Online Gratis — Comprimir, Redimensionar y Recortar | NanoImage",
-    "description": "Herramientas de imagen online gratis — comprime, redimensiona, recorta, rota y mucho más. 100% privado: sin subir archivos, sin registro. 13 herramientas, resultados instantáneos."
+    "description": "Herramientas de imagen online gratis — comprime, redimensiona, recorta, rota y mucho más. 100% privado: sin subir archivos, sin registro. 14 herramientas, resultados instantáneos."
   },
   "nav": {
     "home": "Inicio",
@@ -42,7 +42,7 @@
     "faq": {
       "title": "Preguntas Frecuentes",
       "q1": "¿NanoImage es realmente gratis?",
-      "a1": "Sí, 100% gratis. Las 13 herramientas de imagen están disponibles sin límites, registros ni tarifas ocultas. No hay niveles premium ni marcas de agua en tus imágenes.",
+      "a1": "Sí, 100% gratis. Las 14 herramientas de imagen están disponibles sin límites, registros ni tarifas ocultas. No hay niveles premium ni marcas de agua en tus imágenes.",
       "q2": "¿Mis imágenes se suben a un servidor?",
       "a2": "No. Todo el procesamiento ocurre localmente en tu navegador usando la HTML5 Canvas API. Tus imágenes nunca salen de tu dispositivo, garantizando total privacidad y seguridad.",
       "q3": "¿Qué formatos de imagen son compatibles?",
@@ -50,11 +50,11 @@
       "q4": "¿Puedo usar NanoImage en dispositivos móviles?",
       "a4": "¡Sí! NanoImage es totalmente responsivo y funciona en cualquier navegador moderno — computadora, tableta o celular. Todas las herramientas están optimizadas para interacción táctil.",
       "q5": "¿Qué herramientas están disponibles?",
-      "a5": "NanoImage ofrece 13 herramientas: Comprimir Imagen, Comprimir a 100KB, Redimensionar, Recortar, Rotar, Voltear, Invertir Colores, Blanco y Negro, Difuminar, Agregar Borde, Agregar Marca de Agua, Convertir a JPG y Generador de Memes."
+      "a5": "NanoImage ofrece 14 herramientas: Comprimir Imagen, Comprimir a 100KB, Redimensionar, Recortar, Rotar, Voltear, Invertir Colores, Blanco y Negro, Difuminar, Agregar Borde, Agregar Marca de Agua, Convertir a JPG, Generador de Memes y Fusionar Imágenes."
     },
     "meta": {
       "title": "Herramientas de Imagen Online Gratis | NanoImage",
-      "description": "Herramientas de imagen online gratis — comprime, redimensiona, recorta y más. 100% privado, sin subir archivos. 13 herramientas, resultados ya.",
+      "description": "Herramientas de imagen online gratis — comprime, redimensiona, recorta y más. 100% privado, sin subir archivos. 14 herramientas, resultados ya.",
       "ogTitle": "Herramientas de Imagen Online Gratis | NanoImage",
       "ogDescription": "Edita imágenes directamente en tu navegador — sin subir archivos, sin cuenta, 100% privado. Comprime, redimensiona, recorta y más. Gratis para siempre.",
       "twitterTitle": "Herramientas de Imagen Online Gratis | NanoImage",
@@ -441,6 +441,62 @@
         "a3": "¡Por supuesto! Ajusta el tamaño de fuente (20-100px), el color del texto, el color del contorno, el grosor del contorno y activa o desactiva el modo de mayúsculas para obtener el aspecto perfecto para tu meme.",
         "q4": "¿Puedo usar el generador de memes en el celular?",
         "a4": "¡Sí! NanoImage funciona en cualquier dispositivo con un navegador moderno — computadora, tableta o celular. Sube tu imagen, agrega texto y descarga tu meme directamente en tu teléfono."
+      }
+    },
+    "merge-images": {
+      "name": "Fusionar imágenes",
+      "metaTitle": "Fusionar imágenes online gratis — sin subir archivos | NanoImage",
+      "metaDescription": "Une de 2 a 10 imágenes en horizontal o vertical en el navegador. Gratis, sin cuenta ni marca de agua. Bordes y formato de salida.",
+      "h1": "Fusionar imágenes online — combina fotos gratis",
+      "description": "Combina varias fotos en una sola imagen en el navegador. Elige horizontal o vertical, ajusta tamaños, bordes y fondo, y exporta en PNG, JPG o WebP. Hasta 10 imágenes, 20 MB cada una — privado, sin subidas al servidor.",
+      "upload_label": "Suelta imágenes aquí o haz clic para subir",
+      "upload_limit": "Hasta 10 imágenes, máx. 20 MB cada una",
+      "direction": "Dirección",
+      "direction_horizontal": "Horizontal",
+      "direction_vertical": "Vertical",
+      "resize_strategy": "Ajuste de tamaño",
+      "resize_none": "No ajustar",
+      "resize_smallest": "Redimensionar a la más pequeña",
+      "resize_largest": "Redimensionar a la más grande",
+      "resize_first": "Redimensionar a la primera imagen",
+      "keep_ratio": "Mantener proporciones",
+      "border_thickness": "Grosor del borde (px)",
+      "border_color": "Color del borde",
+      "bg_color": "Color de fondo",
+      "transparent_bg": "Fondo transparente (PNG, huecos)",
+      "output_format": "Formato de salida",
+      "quality": "Calidad",
+      "btn_merge": "Fusionar y descargar",
+      "btn_clear": "Borrar todo",
+      "preview_empty": "Sube al menos 2 imágenes para previsualizar",
+      "processing": "Fusionando imágenes...",
+      "error_min": "Sube al menos 2 imágenes",
+      "error_max": "Máximo 10 imágenes",
+      "error_size": "El archivo supera 20 MB",
+      "error_format": "Formato no compatible",
+      "drag_reorder": "Arrastra las miniaturas para reordenar",
+      "howToUse": {
+        "step1": "Añade de 2 a 10 imágenes arrastrando o con el selector. Reordena arrastrando miniaturas.",
+        "step2": "Elige dirección, tamaño, bordes, fondo y formato. La vista previa se actualiza sola.",
+        "step3": "Pulsa \"Fusionar y descargar\" para guardar en PNG, JPG o WebP."
+      },
+      "faq": {
+        "q1": "¿Cómo fusiono imágenes online?",
+        "a1": "Sube 2 o más imágenes, elige horizontal o vertical, ajusta bordes y tamaños y pulsa \"Fusionar y descargar\". Todo en el navegador.",
+        "q2": "¿Es gratis?",
+        "a2": "Sí. Sin cuenta ni marca de agua. Procesamiento local.",
+        "q3": "¿Mis imágenes están seguras?",
+        "a3": "Sí. No salen de tu dispositivo. Canvas en local — sin almacenamiento en servidor.",
+        "q4": "¿Cuántas imágenes puedo unir?",
+        "a4": "De 2 a 10 por vez. Para más, hazlo por pasos.",
+        "q5": "¿Qué formatos admite?",
+        "a5": "Entrada: JPG, PNG, WebP, BMP, GIF. Salida: PNG, JPG o WebP.",
+        "q6": "¿Tamaños distintos?",
+        "a6": "Sí. Redimensiona a la menor, mayor o primera, o conserva tamaño con relleno de fondo.",
+        "q7": "¿Borde entre fotos?",
+        "a7": "Sí. Grosor 0–100 px y color. Huecos y marco exterior usan ese color.",
+        "q8": "¿Funciona en el móvil?",
+        "a8": "Sí. Diseño adaptable; sigue siendo local en el navegador."
       }
     }
   },
