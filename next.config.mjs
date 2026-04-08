@@ -20,6 +20,13 @@ const nextConfig = {
       { from: '/resize', to: '/resize-image/' },
       { from: '/blur', to: '/blur-image/' },
       { from: '/watermark', to: '/watermark-image/' },
+      { from: '/bw', to: '/black-and-white/' },
+      { from: '/invert', to: '/invert-image/' },
+      { from: '/convert-jpg', to: '/convert-to-jpg/' },
+      { from: '/rotate', to: '/rotate-image/' },
+      { from: '/flip', to: '/flip-image/' },
+      { from: '/border', to: '/add-border-to-image/' },
+      { from: '/meme', to: '/meme-generator/' },
     ];
 
     // Blog consolidation: merged format guide (replaces 3 overlapping format articles)
