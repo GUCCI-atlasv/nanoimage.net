@@ -1,0 +1,2 @@
+# Next.js static export generates individual HTML files per route.
+# No SPA redirect needed.

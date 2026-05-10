@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 88" role="img" aria-label="NanoImage symbol">
+  <g opacity=".16" transform="translate(2 5) rotate(-7 44 40)">
+    <rect x="13" y="13" width="62" height="50" rx="9" fill="#111111"/>
+  </g>
+  <g transform="rotate(-7 44 40)">
+    <rect x="13" y="12" width="62" height="50" rx="9" fill="#FFF7E6" stroke="#111111" stroke-width="5.2"/>
+    <path d="M22 51 36 33l13 15 8-10 13 14" fill="#7C5CFF" stroke="#111111" stroke-width="4.2" stroke-linejoin="round"/>
+    <circle cx="62" cy="26" r="7.2" fill="#FFCB3D" stroke="#111111" stroke-width="4"/>
+    <path d="M52 18.5 47 16M44 25h-5" stroke="#111111" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+  <path d="M75 45c4.3 10.9 5.9 12.5 16.8 16.8C80.9 66.1 79.3 67.7 75 78.6 70.7 67.7 69.1 66.1 58.2 61.8 69.1 57.5 70.7 55.9 75 45Z" fill="#FFCB3D" stroke="#111111" stroke-width="5.1" stroke-linejoin="round"/>
+  <path d="M91 22 96.5 14.8M96 30l7.2-2.2M84.5 17l1.5-6" stroke="#FFCB3D" stroke-width="4.8" stroke-linecap="round"/>
+  <path d="M91 47.5 98 43M95 56l7.4 1" stroke="#7C5CFF" stroke-width="3.8" stroke-linecap="round"/>
+</svg>
