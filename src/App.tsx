@@ -4,12 +4,21 @@ import type { CSSProperties, ChangeEvent, DragEvent, FormEvent, PointerEvent as 
 import JSZip from 'jszip'
 import { PDFDocument, PageSizes } from 'pdf-lib'
 import * as exifr from 'exifr'
-import { blogPosts, categories, tools, type Tool } from './data'
+import { blogPosts, categories, tools, type BlogPost, type Tool } from './data'
 import { useI18n, LANGS, type LangCode } from './i18n'
 
 
 type OutputFormat = 'image/png' | 'image/jpeg' | 'image/webp'
 type BackgroundMode = 'color' | 'image' | 'gradient' | 'transparent'
+
+function localizeBlogPost(post: BlogPost, lang: LangCode): BlogPost {
+  const localized = post.localizations?.[lang]
+  return localized ? { ...post, ...localized } : post
+}
+
+function sortBlogPostsByDateDesc(posts: BlogPost[]): BlogPost[] {
+  return [...posts].sort((a, b) => b.date.localeCompare(a.date))
+}
 
 type ToolSettingsState = {
   format: OutputFormat
@@ -7773,7 +7782,7 @@ const CLI_FAQS = [
   { q: 'Does NanoImage CLI upload my images?', a: 'No. CLI processing happens entirely on your local machine. Files are never sent to any server.' },
   { q: 'Can I use it in CI/CD?', a: 'Yes. Use commands in npm scripts, build pipelines, or GitHub Actions. The --json flag gives machine-readable output for automation.' },
   { q: 'Which image formats are supported?', a: 'CLI v1 focuses on JPG, PNG, and WebP. More formats may be added in future versions.' },
-  { q: 'Can I process entire folders?', a: 'Yes. Pass a directory as input and an output directory. Use --recursive to include subfolders.' },
+  { q: 'Can I process entire folders?', a: 'Yes. Pass a directory as input and an output directory. Directories are processed recursively by default.' },
 ]
 
 export function CliPage({ navigate: _navigate }: { navigate: (to: string) => void }) {
@@ -7930,7 +7939,7 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
             <li><code>webp</code> — Convert to WebP</li>
             <li><code>remove-exif</code> — Strip metadata</li>
           </ul>
-          <p>All commands support single files and directories. Use <code>--recursive</code> to process subfolders.</p>
+          <p>All commands support single files and directories. For one file, <code>--output</code> can be a file path. For a folder, <code>--output</code> should be an output directory.</p>
         </section>
 
         {/* Installation */}
@@ -7964,7 +7973,6 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
           <pre className="docs-code-block"><code>nanoimage compress {'<input>'} [options]</code></pre>
           <h3>Examples</h3>
           <pre className="docs-code-block"><code>nanoimage compress photo.jpg --quality 75 --output photo-compressed.jpg</code></pre>
-          <pre className="docs-code-block"><code>nanoimage compress photo.jpg --target-kb 100 --output photo-100kb.jpg</code></pre>
           <pre className="docs-code-block"><code>nanoimage compress ./images --quality 75 --output ./compressed</code></pre>
           <h3>Options</h3>
           <div className="docs-table-wrap">
@@ -7973,30 +7981,24 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
               <tbody>
                 <tr><td><code>--quality, -q</code></td><td>Output quality from 1 to 100</td></tr>
                 <tr><td><code>--output, -o</code></td><td>Output file or directory</td></tr>
-                <tr><td><code>--format</code></td><td>Output format: jpg, png, webp, or same</td></tr>
-                <tr><td><code>--target-kb</code></td><td>Try to compress under a target size (best-effort)</td></tr>
-                <tr><td><code>--recursive</code></td><td>Process folders recursively</td></tr>
-                <tr><td><code>--overwrite</code></td><td>Replace existing output files</td></tr>
-                <tr><td><code>--suffix</code></td><td>Output suffix, default <code>-compressed</code></td></tr>
               </tbody>
             </table>
           </div>
           <div className="docs-note">
-            <strong>Notes:</strong> <code>--target-kb</code> is best-effort. JPG and WebP give the best results with quality control. PNG compression may have smaller savings in v1.
+            <strong>Notes:</strong> JPG and WebP give the best results with quality control. PNG compression may have smaller savings in v1.
           </div>
         </section>
 
         {/* resize */}
         <section id="resize" className="docs-section">
           <h2>resize</h2>
-          <p>Resize images by width, height, percentage, or max dimension. Aspect ratio is kept by default.</p>
+          <p>Resize images by width or height. Aspect ratio is kept by default when only one dimension is provided.</p>
           <h3>Usage</h3>
           <pre className="docs-code-block"><code>nanoimage resize {'<input>'} [options]</code></pre>
           <h3>Examples</h3>
           <pre className="docs-code-block"><code>nanoimage resize photo.jpg --width 1200 --output photo-1200.jpg</code></pre>
           <pre className="docs-code-block"><code>nanoimage resize photo.jpg --height 800 --output photo-800h.jpg</code></pre>
-          <pre className="docs-code-block"><code>nanoimage resize photo.jpg --percent 50 --output photo-half.jpg</code></pre>
-          <pre className="docs-code-block"><code>nanoimage resize ./images --max-width 1600 --output ./resized</code></pre>
+          <pre className="docs-code-block"><code>nanoimage resize ./images --width 1600 --output ./resized</code></pre>
           <h3>Options</h3>
           <div className="docs-table-wrap">
             <table className="docs-table">
@@ -8004,19 +8006,14 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
               <tbody>
                 <tr><td><code>--width, -w</code></td><td>Target width in px</td></tr>
                 <tr><td><code>--height, -h</code></td><td>Target height in px</td></tr>
-                <tr><td><code>--percent</code></td><td>Resize by percentage</td></tr>
-                <tr><td><code>--max-width</code></td><td>Resize only if wider than value</td></tr>
-                <tr><td><code>--max-height</code></td><td>Resize only if taller than value</td></tr>
-                <tr><td><code>--fit</code></td><td>contain, cover, or fill</td></tr>
-                <tr><td><code>--no-aspect</code></td><td>Disable aspect ratio lock (use carefully)</td></tr>
+                <tr><td><code>--fit</code></td><td>Sharp fit mode: inside, contain, cover, fill, or outside</td></tr>
+                <tr><td><code>--enlarge</code></td><td>Allow enlarging images smaller than the target size</td></tr>
                 <tr><td><code>--output, -o</code></td><td>Output file or directory</td></tr>
-                <tr><td><code>--quality</code></td><td>Output quality for JPG/WebP</td></tr>
-                <tr><td><code>--recursive</code></td><td>Process folders recursively</td></tr>
               </tbody>
             </table>
           </div>
           <div className="docs-note">
-            <strong>Notes:</strong> If only width is provided, height is calculated automatically. If only height is provided, width is calculated automatically. <code>--no-aspect</code> may distort images.
+            <strong>Notes:</strong> If only width is provided, height is calculated automatically. If only height is provided, width is calculated automatically.
           </div>
         </section>
 
@@ -8035,12 +8032,10 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
             <table className="docs-table">
               <thead><tr><th>Option</th><th>Description</th></tr></thead>
               <tbody>
-                <tr><td><code>--to</code></td><td>Target format: jpg, png, or webp</td></tr>
+                <tr><td><code>--to</code></td><td>Target format: jpg, png, webp, or avif</td></tr>
                 <tr><td><code>--output, -o</code></td><td>Output file or directory</td></tr>
                 <tr><td><code>--quality, -q</code></td><td>Quality for JPG/WebP</td></tr>
                 <tr><td><code>--background</code></td><td>Background color when converting transparency to JPG</td></tr>
-                <tr><td><code>--recursive</code></td><td>Process folders recursively</td></tr>
-                <tr><td><code>--overwrite</code></td><td>Replace existing output files</td></tr>
               </tbody>
             </table>
           </div>
@@ -8052,13 +8047,12 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
         {/* webp */}
         <section id="webp" className="docs-section">
           <h2>webp</h2>
-          <p>Convert images to WebP. A shortcut for <code>convert --to webp</code> with extra options.</p>
+          <p>Convert images to WebP. This is a shortcut for a common web optimization workflow.</p>
           <h3>Usage</h3>
           <pre className="docs-code-block"><code>nanoimage webp {'<input>'} [options]</code></pre>
           <h3>Examples</h3>
           <pre className="docs-code-block"><code>nanoimage webp hero.jpg --quality 80 --output hero.webp</code></pre>
           <pre className="docs-code-block"><code>nanoimage webp ./images --quality 82 --output ./webp</code></pre>
-          <pre className="docs-code-block"><code>nanoimage webp input.png --lossless --output output.webp</code></pre>
           <pre className="docs-code-block"><code>nanoimage webp ./public/images --quality 82 --remove-exif --output ./public/images-webp</code></pre>
           <h3>Options</h3>
           <div className="docs-table-wrap">
@@ -8067,16 +8061,12 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
               <tbody>
                 <tr><td><code>--quality, -q</code></td><td>WebP quality from 1 to 100</td></tr>
                 <tr><td><code>--output, -o</code></td><td>Output file or directory</td></tr>
-                <tr><td><code>--lossless</code></td><td>Use lossless WebP</td></tr>
-                <tr><td><code>--resize-width</code></td><td>Optional resize before conversion</td></tr>
-                <tr><td><code>--resize-height</code></td><td>Optional resize before conversion</td></tr>
                 <tr><td><code>--remove-exif</code></td><td>Remove metadata during conversion</td></tr>
-                <tr><td><code>--recursive</code></td><td>Process folders recursively</td></tr>
               </tbody>
             </table>
           </div>
           <div className="docs-note">
-            <strong>Notes:</strong> Lossless WebP may produce larger files than lossy WebP. WebP is recommended for websites and blogs.
+            <strong>Notes:</strong> WebP is recommended for websites and blogs. Use <code>--quality</code> to balance visual quality and output size.
           </div>
         </section>
 
@@ -8088,17 +8078,13 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
           <pre className="docs-code-block"><code>nanoimage remove-exif {'<input>'} [options]</code></pre>
           <h3>Examples</h3>
           <pre className="docs-code-block"><code>nanoimage remove-exif photo.jpg --output photo-clean.jpg</code></pre>
-          <pre className="docs-code-block"><code>nanoimage remove-exif ./uploads --output ./uploads-clean --recursive</code></pre>
+          <pre className="docs-code-block"><code>nanoimage remove-exif ./uploads --output ./uploads-clean</code></pre>
           <h3>Options</h3>
           <div className="docs-table-wrap">
             <table className="docs-table">
               <thead><tr><th>Option</th><th>Description</th></tr></thead>
               <tbody>
                 <tr><td><code>--output, -o</code></td><td>Output file or directory</td></tr>
-                <tr><td><code>--recursive</code></td><td>Process folders recursively</td></tr>
-                <tr><td><code>--overwrite</code></td><td>Replace existing output files</td></tr>
-                <tr><td><code>--suffix</code></td><td>Output suffix, default <code>-clean</code></td></tr>
-                <tr><td><code>--keep-color-profile</code></td><td>Try to preserve color profile</td></tr>
               </tbody>
             </table>
           </div>
@@ -8112,16 +8098,11 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
           <h2>Batch processing</h2>
           <p>All commands accept a directory as input. Pass a folder path and an output folder.</p>
           <pre className="docs-code-block"><code>nanoimage compress ./images --quality 75 --output ./compressed</code></pre>
-          <pre className="docs-code-block"><code>nanoimage resize ./images --max-width 1200 --output ./resized</code></pre>
+          <pre className="docs-code-block"><code>nanoimage resize ./images --width 1200 --output ./resized</code></pre>
           <pre className="docs-code-block"><code>nanoimage webp ./images --quality 80 --output ./webp</code></pre>
-          <p>Use <code>--recursive</code> to include subfolders:</p>
-          <pre className="docs-code-block"><code>nanoimage compress ./images --quality 75 --output ./compressed --recursive</code></pre>
-          <p>If no output is specified, a suffix is added by default:</p>
-          <pre className="docs-code-block"><code>{`photo.jpg → photo-compressed.jpg
-photo.jpg → photo.webp
-photo.jpg → photo-clean.jpg`}</code></pre>
+          <p>Directory inputs are processed recursively by default.</p>
           <div className="docs-note">
-            By default, the CLI will not overwrite existing files. Use <code>--overwrite</code> to replace them.
+            For single-file inputs, <code>--output</code> can be a file path such as <code>photo-compressed.jpg</code>. For folder inputs, use an output directory such as <code>./compressed</code>.
           </div>
         </section>
 
@@ -8131,16 +8112,14 @@ photo.jpg → photo-clean.jpg`}</code></pre>
           <p>Add <code>--json</code> to any command for machine-readable output. Useful for CI/CD, build scripts, logs, and AI agent workflows.</p>
           <pre className="docs-code-block"><code>nanoimage compress photo.jpg --quality 75 --json</code></pre>
           <p>Example output:</p>
-          <pre className="docs-code-block"><code>{`{
-  "success": true,
-  "command": "compress",
-  "input": "photo.jpg",
-  "output": "photo-compressed.jpg",
-  "originalSize": 2457600,
-  "outputSize": 524288,
-  "savedBytes": 1933312,
-  "savedPercent": 78.7
-}`}</code></pre>
+          <pre className="docs-code-block"><code>{`[
+  {
+    "input": "photo.jpg",
+    "output": "photo-compressed.jpg",
+    "inputSize": 2457600,
+    "outputSize": 524288
+  }
+]`}</code></pre>
         </section>
 
         {/* CI/CD */}
@@ -8177,8 +8156,6 @@ jobs:
               <thead><tr><th>Error</th><th>Meaning</th><th>Fix</th></tr></thead>
               <tbody>
                 <tr><td><code>Unsupported format</code></td><td>Input format not supported</td><td>Use JPG, PNG, or WebP</td></tr>
-                <tr><td><code>Output already exists</code></td><td>File already exists</td><td>Use a new output path or <code>--overwrite</code></td></tr>
-                <tr><td><code>Target size not reached</code></td><td>Target KB is too small</td><td>Resize image or lower quality</td></tr>
                 <tr><td><code>Cannot write output</code></td><td>Permission or path issue</td><td>Check folder permissions</td></tr>
                 <tr><td><code>Input not found</code></td><td>File path is wrong</td><td>Check the input path</td></tr>
                 <tr><td><code>Processing failed</code></td><td>Image decode/encode failed</td><td>Try another file or format</td></tr>
@@ -8306,20 +8283,21 @@ export function HowItWorksPage({ navigate: _navigate }: { navigate: (to: string)
 }
 
 export function BlogPage({ navigate }: { navigate: (to: string) => void }) {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const postsPerPage = 3
   const [activeFilter, setActiveFilter] = useState(t.blog.filters[0])
   const [searchQuery, setSearchQuery] = useState('')
   const [page, setPage] = useState(1)
+  const localizedPosts = useMemo(() => sortBlogPostsByDateDesc(blogPosts.map((post) => localizeBlogPost(post, lang))), [lang])
   const filteredPosts = useMemo(() => {
     const text = searchQuery.trim().toLowerCase()
-    return blogPosts.filter((post) => {
+    return localizedPosts.filter((post) => {
       const category = post.category.toLowerCase()
       const matchesFilter = activeFilter === t.blog.filters[0] || category.includes(activeFilter.toLowerCase())
       const matchesSearch = !text || [post.title, post.excerpt, post.category].some((value) => value.toLowerCase().includes(text))
       return matchesFilter && matchesSearch
     })
-  }, [activeFilter, searchQuery, t.blog.filters])
+  }, [activeFilter, localizedPosts, searchQuery, t.blog.filters])
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / postsPerPage))
   const currentPage = Math.min(page, totalPages)
   const visiblePosts = filteredPosts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
@@ -8351,7 +8329,7 @@ export function BlogPage({ navigate }: { navigate: (to: string) => void }) {
               </div>
             )}
             {visiblePosts.map((post) => {
-              const postIndex = blogPosts.findIndex((item) => item.slug === post.slug)
+              const postIndex = localizedPosts.findIndex((item) => item.slug === post.slug)
               return (
               <article className="blog-list-item" key={post.slug}>
                 <a className="blog-thumb-button" href={`/blog/${post.slug}`} aria-label={`Open ${post.title}`}>
@@ -8384,11 +8362,12 @@ export function BlogPage({ navigate }: { navigate: (to: string) => void }) {
 }
 
 export function BlogPostPage({ navigate, slug }: { navigate: (to: string) => void; slug: string }) {
-  const { t } = useI18n()
-  const post = blogPosts.find((item) => item.slug === slug)!
-  const postIndex = Math.max(0, blogPosts.findIndex((item) => item.slug === slug))
-  const previousPost = blogPosts[(postIndex - 1 + blogPosts.length) % blogPosts.length]
-  const nextPost = blogPosts[(postIndex + 1) % blogPosts.length]
+  const { t, lang } = useI18n()
+  const localizedPosts = useMemo(() => sortBlogPostsByDateDesc(blogPosts.map((item) => localizeBlogPost(item, lang))), [lang])
+  const post = localizedPosts.find((item) => item.slug === slug)!
+  const postIndex = Math.max(0, localizedPosts.findIndex((item) => item.slug === slug))
+  const previousPost = localizedPosts[(postIndex - 1 + localizedPosts.length) % localizedPosts.length]
+  const nextPost = localizedPosts[(postIndex + 1) % localizedPosts.length]
 
   return (
     <section className="article-page">
@@ -8429,8 +8408,10 @@ export function BlogPostPage({ navigate, slug }: { navigate: (to: string) => voi
 }
 
 export function BlogSidebar({ navigate: _navigate, currentSlug }: { navigate: (to: string) => void; currentSlug?: string }) {
-  const { t } = useI18n()
-  const popularPosts = blogPosts.filter((post) => post.slug !== currentSlug).slice(0, 5)
+  const { t, lang } = useI18n()
+  const popularPosts = sortBlogPostsByDateDesc(blogPosts.map((post) => localizeBlogPost(post, lang)))
+    .filter((post) => post.slug !== currentSlug)
+    .slice(0, 5)
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
   const submitSubscription = () => {
@@ -8490,10 +8471,41 @@ export function BlogThumb({ index, imageSrc, large, small }: { index: number; im
 }
 
 export function BlogMarkdown({ markdown }: { markdown: string }) {
+  const blocks = useMemo(() => {
+    const parsed: { type: 'code' | 'line'; content: string; lang?: string }[] = []
+    const lines = markdown.split('\n')
+    let codeLang = ''
+    let codeLines: string[] | null = null
+
+    for (const line of lines) {
+      const fence = line.trim().match(/^```(.*)$/)
+      if (fence) {
+        if (codeLines) {
+          parsed.push({ type: 'code', content: codeLines.join('\n'), lang: codeLang })
+          codeLines = null
+          codeLang = ''
+        } else {
+          codeLang = fence[1].trim()
+          codeLines = []
+        }
+        continue
+      }
+      if (codeLines) codeLines.push(line)
+      else parsed.push({ type: 'line', content: line })
+    }
+
+    if (codeLines) parsed.push({ type: 'code', content: codeLines.join('\n'), lang: codeLang })
+    return parsed
+  }, [markdown])
+
   return (
     <div className="article-body">
-      {markdown.split('\n').map((line, index) => {
-        const key = `${index}-${line}`
+      {blocks.map((block, index) => {
+        const key = `${index}-${block.content}`
+        if (block.type === 'code') {
+          return <pre className="article-code-block" key={key}><code>{block.content}</code></pre>
+        }
+        const line = block.content
         const trimmed = line.trim()
         if (!trimmed) return null
         const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)

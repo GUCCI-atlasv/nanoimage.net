@@ -7365,6 +7365,23 @@ figcaption {
   box-shadow: 0 18px 38px rgba(48, 30, 98, 0.08);
 }
 
+.article-code-block {
+  overflow-x: auto;
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(125, 82, 255, 0.16);
+  border-radius: 0.9rem;
+  background: #141226;
+  color: #f8fafc;
+}
+
+.article-code-block code {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  white-space: pre;
+}
+
 .article-excerpt {
   margin: 0 0 1.25rem;
   color: var(--ink);

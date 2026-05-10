@@ -1,0 +1,18 @@
+{
+  "name": "nanoimage",
+  "version": "0.1.1",
+  "description": "Compress, resize, convert, and clean image files from the command line",
+  "keywords": ["image", "compress", "resize", "convert", "webp", "exif", "cli"],
+  "homepage": "https://nanoimage.net/cli",
+  "repository": { "type": "git", "url": "https://github.com/GUCCI-atlasv/nanoimage.net" },
+  "license": "MIT",
+  "type": "module",
+  "bin": { "nanoimage": "./bin/nanoimage.js" },
+  "files": ["bin", "src", "README.md"],
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "glob": "^11.0.0",
+    "sharp": "^0.33.5"
+  }
+}

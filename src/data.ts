@@ -158,6 +158,7 @@ export type BlogPost = {
   metaDescription?: string
   coverImage?: string
   body?: string
+  localizations?: Record<string, Partial<Omit<BlogPost, 'slug' | 'date' | 'coverImage' | 'localizations'>>>
 }
 
 export const categories: Category[] = [
@@ -1254,234 +1255,80 @@ Use NanoImage to resize your images online for free.
     readTime: '4 min read',
   },
   {
-    slug: 'introducing-nanoimage-cli',
-    category: 'Product',
-    title: 'Introducing NanoImage CLI: Optimize Images from Your Terminal',
-    excerpt: 'NanoImage CLI lets developers compress, resize, convert, and clean images locally from the command line — no browser needed.',
-    date: '2026-05-10',
-    readTime: '7 min read',
-    metaDescription: 'NanoImage CLI lets developers compress, resize, convert, and clean images locally from the command line. Learn how to use it for websites, blogs, and CI/CD workflows.',
-    body: `Images are one of the easiest ways to slow down a website. They are also one of the easiest things to fix.
-
-NanoImage started as a simple browser-based image toolset. Now we are adding a command-line workflow for developers and content teams who want to optimize images without opening a web page.
-
-With NanoImage CLI, you can compress, resize, convert, and clean image files directly from your terminal.
-
-\`\`\`bash
-nanoimage compress ./images --quality 75 --output ./compressed
-\`\`\`
-
-The first version focuses on five practical commands: \`compress\`, \`resize\`, \`convert\`, \`webp\`, and \`remove-exif\`. They are designed for local processing, batch workflows, and CI/CD automation.
-
-## Why we built NanoImage CLI
-
-Most image optimization tools fall into two categories: web apps that require a browser, or complex libraries that require writing code.
-
-NanoImage CLI sits in between. You install one package, run one command, and get optimized images. No browser, no account, no config files.
-
-The goal is the same as the web tools: make everyday image tasks simple and fast.
-
-## What you can do with it
-
-NanoImage CLI v1 includes five commands:
-
-- **compress** — Reduce image file size with quality control
-- **resize** — Change image dimensions by pixels, percentage, or max width
-- **convert** — Convert between JPG, PNG, and WebP
-- **webp** — Fast WebP conversion with optional resize and metadata removal
-- **remove-exif** — Strip metadata from images before publishing
-
-Each command works on single files or entire directories.
-
-## Install and quick start
-
-Install NanoImage CLI globally with npm:
-
-\`\`\`bash
-npm install -g nanoimage
-\`\`\`
-
-Or run without installing using npx:
-
-\`\`\`bash
-npx nanoimage compress photo.jpg --quality 75
-\`\`\`
-
-Requires Node.js 18 or later.
-
-Verify the install:
-
-\`\`\`bash
-nanoimage --version
-\`\`\`
-
-## Compress images from the terminal
-
-The \`compress\` command reduces image file size. Use the \`--quality\` flag to control output quality.
-
-\`\`\`bash
-nanoimage compress photo.jpg --quality 75 --output photo-compressed.jpg
-\`\`\`
-
-Compress an entire folder:
-
-\`\`\`bash
-nanoimage compress ./images --quality 75 --output ./compressed
-\`\`\`
-
-You can also set a target file size in KB:
-
-\`\`\`bash
-nanoimage compress photo.jpg --target-kb 100 --output photo-100kb.jpg
-\`\`\`
-
-Target size mode is best-effort. Some images may not reach the target without resizing or very low quality settings.
-
-JPG and WebP give the best results with quality control. PNG compression may have smaller savings in v1.
-
-## Resize images for websites
-
-The \`resize\` command changes image dimensions. Aspect ratio is kept by default.
-
-\`\`\`bash
-nanoimage resize photo.jpg --width 1200 --output photo-1200.jpg
-\`\`\`
-
-Resize a folder with a max-width limit:
-
-\`\`\`bash
-nanoimage resize ./blog-images --max-width 1200 --output ./blog-images-resized
-\`\`\`
-
-If you provide only width, height is calculated automatically. If you provide only height, width is calculated automatically.
-
-## Convert images to WebP
-
-WebP is one of the best formats for web performance. NanoImage CLI has a dedicated \`webp\` command to make conversion fast.
-
-\`\`\`bash
-nanoimage webp hero.jpg --quality 80 --output hero.webp
-\`\`\`
-
-Convert a folder and remove metadata at the same time:
-
-\`\`\`bash
-nanoimage webp ./public/images --quality 82 --remove-exif --output ./public/images-webp
-\`\`\`
-
-The \`webp\` command is a shortcut for \`convert --to webp\`. It deserves its own command because WebP conversion is one of the most common optimization tasks.
-
-## Remove EXIF metadata locally
-
-The \`remove-exif\` command strips image metadata before you publish or share photos. This includes camera model, date, settings, and sometimes GPS location.
-
-\`\`\`bash
-nanoimage remove-exif photo.jpg --output photo-clean.jpg
-\`\`\`
-
-Clean an entire uploads folder:
-
-\`\`\`bash
-nanoimage remove-exif ./uploads --output ./uploads-clean --recursive
-\`\`\`
-
-Re-encoding through the image pipeline strips most common metadata. This is described as removing common EXIF data, not a guarantee for every possible metadata field.
-
-## Batch process folders
-
-All commands accept a directory as input. Pass a folder path and an output folder.
-
-\`\`\`bash
-nanoimage compress ./images --quality 75 --output ./compressed
-nanoimage resize ./images --max-width 1200 --output ./resized
-nanoimage webp ./images --quality 80 --output ./webp
-\`\`\`
-
-Use \`--recursive\` to process subfolders:
-
-\`\`\`bash
-nanoimage compress ./images --quality 75 --output ./compressed --recursive
-\`\`\`
-
-If no output is specified, a suffix is added by default:
-
-\`\`\`
-photo.jpg → photo-compressed.jpg
-photo.jpg → photo.webp
-photo.jpg → photo-clean.jpg
-\`\`\`
-
-## Use NanoImage CLI in CI/CD
-
-NanoImage CLI works well in build scripts and CI workflows.
-
-Add it to your \`package.json\` scripts:
-
-\`\`\`json
-{
-  "scripts": {
-    "optimize-images": "nanoimage compress ./public/images --quality 75 --output ./public/images-optimized"
-  }
-}
-\`\`\`
-
-Use it in GitHub Actions:
-
-\`\`\`yaml
-name: Optimize Images
-
-on: [push]
-
-jobs:
-  optimize:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install -g nanoimage
-      - run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized
-\`\`\`
-
-Use the \`--json\` flag to get machine-readable output for logs and automation:
-
-\`\`\`bash
-nanoimage compress photo.jpg --quality 75 --json
-\`\`\`
-
-Output:
-
-\`\`\`json
-{
-  "success": true,
-  "command": "compress",
-  "input": "photo.jpg",
-  "output": "photo-compressed.jpg",
-  "originalSize": 2457600,
-  "outputSize": 524288,
-  "savedBytes": 1933312,
-  "savedPercent": 78.7
-}
-\`\`\`
-
-## What comes next
-
-CLI v1 is focused on five stable, automatable commands. Future versions may include:
-
-- More commands: crop, rotate, watermark, image-to-pdf
-- Better recursive folder support and JSON reports
-- A GitHub Action wrapper
-- An MCP server for AI agent workflows
-
-NanoImage CLI is designed to grow alongside the web tools.
-
-## Try it now
-
-\`\`\`bash
-npm install -g nanoimage
-\`\`\`
-
-Read the full documentation at [/docs/cli](/docs/cli).`,
+    slug: "introducing-nanoimage-cli",
+    category: "Product Updates / Developer Tools",
+    title: "Introducing NanoImage CLI: Optimize Images from Your Terminal",
+    excerpt: "NanoImage CLI lets developers compress, resize, convert, convert to WebP, and remove EXIF metadata from images locally from the command line.",
+    date: "2026-05-10",
+    readTime: "8 min read",
+    metaDescription: "NanoImage CLI lets developers compress, resize, convert, convert to WebP, and remove EXIF metadata from images locally from the command line.",
+    coverImage: "/assets/blog/introducing-nanoimage-cli-cover.png",
+    body: "Images are one of the easiest ways to slow down a website. They are also one of the easiest things to fix.\n\nNanoImage started as a simple browser-based image toolset. Now, NanoImage CLI brings the same practical image workflows to the terminal.\n\nWith NanoImage CLI, you can compress, resize, convert, convert to WebP, and remove EXIF metadata from local image files with simple commands.\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\nIt is built for developers, content teams, indie hackers, SEO teams, and anyone who wants to optimize images without opening a browser.\n\n## Why We Built NanoImage CLI\n\nThe NanoImage web tools are great when you want to quickly process one image in your browser.\n\nBut some workflows are better from the command line:\n\n- Optimizing a folder of blog images\n- Preparing product images for a website\n- Converting assets to WebP before deployment\n- Removing EXIF metadata before publishing\n- Running image optimization in CI/CD\n- Repeating the same settings across many files\n\nA CLI makes those workflows faster and easier to automate.\n\nInstead of opening each image manually, you can run one command and process an entire folder.\n\n## What You Can Do with NanoImage CLI\n\nThe first release focuses on five practical commands.\n\n### 1. Compress images\n\nReduce file size while keeping a good balance between quality and size.\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\nYou can also compress a whole folder:\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\n### 2. Resize images\n\nResize images by width, height, or fit mode.\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\nFor website images, this is useful when original photos are much larger than the display size.\n\n### 3. Convert image formats\n\nConvert between common image formats such as JPG, PNG, WebP, and AVIF.\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\nThis is helpful when you need a specific format for a website, email, CMS, or upload form.\n\n### 4. Convert to WebP\n\nWebP is a common choice for smaller web-ready images.\n\nNanoImage CLI includes a shortcut command for WebP conversion:\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\nYou can also convert an entire folder:\n\n```bash\nnanoimage webp ./public/images --quality 82 --output ./public/images-webp\n```\n\n### 5. Remove EXIF metadata\n\nImages can contain hidden metadata such as camera model, date, device settings, and sometimes location information.\n\nNanoImage CLI can remove common EXIF metadata before publishing or sharing images.\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\nFor folders:\n\n```bash\nnanoimage remove-exif ./uploads --output ./uploads-clean\n```\n\n## Install NanoImage CLI\n\nInstall globally with npm:\n\n```bash\nnpm install -g nanoimage\n```\n\nOr run it with npx:\n\n```bash\nnpx nanoimage --help\n```\n\nRequires Node.js 18 or later.\n\n## Quick Start\n\nHere are the five most useful commands:\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n```bash\nnanoimage resize photo.jpg --width 1200 --output ./resized\n```\n\n```bash\nnanoimage convert photo.png --to jpg --output ./converted\n```\n\n```bash\nnanoimage webp photo.jpg --quality 80 --output ./webp\n```\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## Batch Image Optimization\n\nOne of the best reasons to use a CLI is batch processing.\n\nFor example, you can compress every image in a folder:\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\nResize blog images to a practical width:\n\n```bash\nnanoimage resize ./blog-images --width 1200 --output ./blog-images-resized\n```\n\nConvert a folder to WebP:\n\n```bash\nnanoimage webp ./images --quality 80 --output ./webp\n```\n\n## Use It in CI/CD\n\nNanoImage CLI can be used in build scripts.\n\nExample package.json script:\n\n```json\n{\n  \"scripts\": {\n    \"optimize-images\": \"nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\"\n  }\n}\n```\n\nYou can also run it in GitHub Actions:\n\n```yaml\nname: Optimize Images\n\non: [push]\n\njobs:\n  optimize:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 20\n      - run: npm install -g nanoimage\n      - run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\nThis makes image optimization part of your normal development workflow.\n\n## JSON Output for Automation\n\nNanoImage CLI supports JSON output for scripts and automation.\n\n```bash\nnanoimage compress photo.jpg --quality 75 --json\n```\n\nExample output:\n\n```json\n[\n  {\n    \"input\": \"photo.jpg\",\n    \"output\": \"photo.jpg\",\n    \"inputSize\": 2457600,\n    \"outputSize\": 524288\n  }\n]\n```\n\nThis is useful for logs, CI/CD, custom build systems, and future AI agent workflows.\n\n## Local Image Processing\n\nNanoImage CLI is designed for local processing.\n\nThat means your files are processed on your machine from the terminal. You do not need to upload images to a website just to compress, resize, convert, or clean them.\n\nThis is especially useful for:\n\n- Website assets\n- Product photos\n- Blog images\n- Personal photos\n- Images with private metadata\n- Client projects\n\n## When Should You Use the Web App Instead?\n\nUse the NanoImage web app when you want a visual interface, preview, and quick manual editing.\n\nUse NanoImage CLI when you want automation, batch processing, scripts, and repeatable settings.\n\nA simple rule:\n\n```text\nOne image, visual editing -> use the web app\nMany images, repeatable workflow -> use the CLI\n```\n\n## What Comes Next\n\nThe first NanoImage CLI release focuses on five stable commands:\n\n```text\ncompress\nresize\nconvert\nwebp\nremove-exif\n```\n\nNext, we may explore:\n\n- Image to PDF\n- Rotate and flip\n- Watermarking\n- GitHub Action wrapper\n- More batch reports\n- MCP server for AI agents\n\nThe goal is not to make the CLI complicated. The goal is to keep it fast, practical, and easy to automate.\n\n## Try NanoImage CLI\n\nInstall it with npm:\n\n```bash\nnpm install -g nanoimage\n```\n\nRead the documentation:\n\n```text\nhttps://nanoimage.net/docs/cli\n```\n\nCLI landing page:\n\n```text\nhttps://nanoimage.net/cli\n```\n\nNanoImage CLI gives developers a simple way to optimize images locally, from the terminal, with commands that are easy to understand and easy to automate.",
+    localizations: {
+      'zh-CN': {
+        category: "产品更新 / 开发者工具",
+        title: "介绍 NanoImage CLI：在终端中优化图片",
+        excerpt: "NanoImage CLI 让开发者可以在本地通过命令行压缩、调整尺寸、转换格式、生成 WebP，并移除图片 EXIF 元数据。",
+        readTime: "7 分钟阅读",
+        metaDescription: "NanoImage CLI 让开发者可以在本地通过命令行压缩、调整尺寸、转换格式、生成 WebP，并移除图片 EXIF 元数据。",
+        body: "图片是拖慢网站速度最常见的原因之一，也是最容易优化的部分之一。\n\nNanoImage 最初是一个简单的浏览器图片工具集合。现在，NanoImage CLI 把同样实用的图片处理流程带到了终端。\n\n使用 NanoImage CLI，你可以用简单命令在本地压缩图片、调整尺寸、转换格式、转为 WebP，并移除 EXIF 元数据。\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\n它适合开发者、内容团队、独立开发者、SEO 团队，以及任何希望不用打开浏览器就能批量优化图片的人。\n\n## 为什么要做 NanoImage CLI\n\nNanoImage 网页工具很适合快速处理单张图片。\n\n但有些工作流更适合命令行：\n\n- 优化一整个博客图片文件夹\n- 为网站准备产品图\n- 部署前把资源转换为 WebP\n- 发布前移除 EXIF 元数据\n- 在 CI/CD 中自动优化图片\n- 对大量文件重复使用相同设置\n\nCLI 可以让这些流程更快，也更容易自动化。\n\n## NanoImage CLI 可以做什么\n\n首个版本聚焦 5 个实用命令。\n\n### 1. 压缩图片\n\n在保持较好视觉质量的同时减少文件体积。\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n也可以压缩整个文件夹：\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\n### 2. 调整图片尺寸\n\n按宽度、高度或适配模式调整图片。\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### 3. 转换图片格式\n\n在 JPG、PNG、WebP、AVIF 等常见格式之间转换。\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### 4. 转换为 WebP\n\nWebP 是常见的小体积网页图片格式。\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### 5. 移除 EXIF 元数据\n\n图片可能包含相机型号、拍摄时间、设备设置甚至位置信息等隐藏数据。\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## 安装 NanoImage CLI\n\n使用 npm 全局安装：\n\n```bash\nnpm install -g nanoimage\n```\n\n也可以用 npx 直接运行：\n\n```bash\nnpx nanoimage --help\n```\n\n需要 Node.js 18 或更高版本。\n\n## 批量图片优化\n\nCLI 最有价值的场景之一是批量处理。\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\nnanoimage resize ./blog-images --width 1200 --output ./blog-images-resized\nnanoimage webp ./images --quality 80 --output ./webp\n```\n\n## 用在 CI/CD 中\n\nNanoImage CLI 可以放进构建脚本或 GitHub Actions。\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## JSON 输出\n\n使用 `--json` 可以输出适合脚本读取的结果。\n\n```bash\nnanoimage compress photo.jpg --quality 75 --json\n```\n\n这对日志、CI/CD、自定义构建系统和未来 AI Agent 工作流都很有用。\n\n## 本地图片处理\n\nNanoImage CLI 在你的机器本地处理文件，不需要把图片上传到网站。\n\n## 什么时候使用网页应用\n\n如果你需要可视化预览和手动编辑，使用 NanoImage 网页版。\n\n如果你需要自动化、批量处理、脚本和可重复设置，使用 NanoImage CLI。\n\n## 立即尝试\n\n```bash\nnpm install -g nanoimage\n```\n\n文档地址：https://nanoimage.net/docs/cli\n\nCLI 页面：https://nanoimage.net/cli",
+      },
+      'zh-TW': {
+        category: "產品更新 / 開發者工具",
+        title: "介紹 NanoImage CLI：在終端機中最佳化圖片",
+        excerpt: "NanoImage CLI 讓開發者可以在本機透過命令列壓縮、調整尺寸、轉換格式、轉為 WebP，並移除圖片 EXIF 中繼資料。",
+        readTime: "7 分鐘閱讀",
+        metaDescription: "NanoImage CLI 讓開發者可以在本機透過命令列壓縮、調整尺寸、轉換格式、轉為 WebP，並移除圖片 EXIF 中繼資料。",
+        body: "圖片是拖慢網站速度最常見的原因之一，也是最容易改善的部分之一。\n\nNanoImage 原本是一組簡單的瀏覽器圖片工具。現在，NanoImage CLI 把同樣實用的圖片工作流程帶到終端機。\n\n你可以用簡單命令在本機壓縮圖片、調整尺寸、轉換格式、轉成 WebP，並移除 EXIF 中繼資料。\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\n它適合開發者、內容團隊、獨立開發者、SEO 團隊，以及想用命令列批次最佳化圖片的人。\n\n## 為什麼要做 NanoImage CLI\n\n網頁工具適合快速處理單張圖片，但有些流程更適合命令列：\n\n- 最佳化整個部落格圖片資料夾\n- 為網站準備產品圖\n- 部署前轉換成 WebP\n- 發布前移除 EXIF 中繼資料\n- 在 CI/CD 中自動處理圖片\n\nCLI 讓這些流程更快，也更容易自動化。\n\n## 主要命令\n\n### 壓縮圖片\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### 調整尺寸\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### 轉換格式\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### 轉成 WebP\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### 移除 EXIF\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## 安裝\n\n```bash\nnpm install -g nanoimage\n```\n\n或使用 npx：\n\n```bash\nnpx nanoimage --help\n```\n\n需要 Node.js 18 或更新版本。\n\n## 批次與自動化\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\nnanoimage webp ./images --quality 80 --output ./webp\n```\n\n也可以放進 GitHub Actions：\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## 立即嘗試\n\n文檔：https://nanoimage.net/docs/cli\n\nCLI 頁面：https://nanoimage.net/cli",
+      },
+      ja: {
+        category: "プロダクト更新 / 開発者ツール",
+        title: "NanoImage CLI の紹介：ターミナルで画像を最適化",
+        excerpt: "NanoImage CLI は、画像の圧縮、リサイズ、形式変換、WebP 変換、EXIF メタデータ削除をローカルのコマンドラインで実行できます。",
+        readTime: "7分で読めます",
+        metaDescription: "NanoImage CLI は、画像の圧縮、リサイズ、形式変換、WebP 変換、EXIF メタデータ削除をローカルのコマンドラインで実行できます。",
+        body: "画像は Web サイトを遅くする大きな要因のひとつですが、改善しやすい部分でもあります。\n\nNanoImage はブラウザベースの画像ツールとして始まりました。NanoImage CLI は、その実用的なワークフローをターミナルに持ち込みます。\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\n開発者、コンテンツチーム、SEO チームなど、ブラウザを開かずに画像を最適化したい人のためのツールです。\n\n## なぜ CLI を作ったのか\n\n単体の画像なら Web ツールが便利です。しかし、フォルダ単位の最適化、WebP 変換、EXIF 削除、CI/CD での自動化には CLI が向いています。\n\n## できること\n\n### 画像を圧縮\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### 画像をリサイズ\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### 形式を変換\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### WebP に変換\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### EXIF を削除\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## インストール\n\n```bash\nnpm install -g nanoimage\n```\n\nNode.js 18 以降が必要です。\n\n## 自動化\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## 試してみる\n\nドキュメント：https://nanoimage.net/docs/cli\n\nCLI ページ：https://nanoimage.net/cli",
+      },
+      ko: {
+        category: "제품 업데이트 / 개발자 도구",
+        title: "NanoImage CLI 소개: 터미널에서 이미지 최적화하기",
+        excerpt: "NanoImage CLI는 이미지 압축, 크기 조정, 포맷 변환, WebP 변환, EXIF 메타데이터 제거를 로컬 명령줄에서 실행할 수 있게 해줍니다.",
+        readTime: "7분 읽기",
+        metaDescription: "NanoImage CLI는 이미지 압축, 크기 조정, 포맷 변환, WebP 변환, EXIF 메타데이터 제거를 로컬 명령줄에서 실행할 수 있게 해줍니다.",
+        body: "이미지는 웹사이트를 느리게 만드는 가장 흔한 원인 중 하나이며, 동시에 가장 쉽게 개선할 수 있는 부분입니다.\n\nNanoImage는 브라우저 기반 이미지 도구로 시작했습니다. 이제 NanoImage CLI는 같은 작업 흐름을 터미널로 가져옵니다.\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\n개발자, 콘텐츠 팀, SEO 팀, 그리고 브라우저를 열지 않고 이미지를 최적화하고 싶은 사람들을 위한 도구입니다.\n\n## 왜 CLI를 만들었나요\n\n단일 이미지는 웹 도구가 편리합니다. 하지만 폴더 단위 최적화, WebP 변환, EXIF 제거, CI/CD 자동화에는 CLI가 더 잘 맞습니다.\n\n## 할 수 있는 작업\n\n### 이미지 압축\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### 이미지 크기 조정\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### 포맷 변환\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### WebP 변환\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### EXIF 제거\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## 설치\n\n```bash\nnpm install -g nanoimage\n```\n\nNode.js 18 이상이 필요합니다.\n\n## 자동화\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## 시작하기\n\n문서：https://nanoimage.net/docs/cli\n\nCLI 페이지：https://nanoimage.net/cli",
+      },
+      fr: {
+        category: "Actualités produit / Outils développeur",
+        title: "Présentation de NanoImage CLI : optimisez vos images depuis le terminal",
+        excerpt: "NanoImage CLI permet de compresser, redimensionner, convertir, générer du WebP et supprimer les métadonnées EXIF localement depuis la ligne de commande.",
+        readTime: "7 min de lecture",
+        metaDescription: "NanoImage CLI permet de compresser, redimensionner, convertir, générer du WebP et supprimer les métadonnées EXIF localement depuis la ligne de commande.",
+        body: "Les images sont l’une des causes les plus fréquentes d’un site lent. Elles sont aussi l’une des choses les plus simples à optimiser.\n\nNanoImage a commencé comme une suite d’outils d’image dans le navigateur. NanoImage CLI apporte maintenant ces mêmes workflows pratiques au terminal.\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\nL’outil s’adresse aux développeurs, équipes contenu, équipes SEO et à toutes les personnes qui veulent optimiser des images sans ouvrir de navigateur.\n\n## Pourquoi NanoImage CLI\n\nLes outils web sont parfaits pour une image unique. Mais certains workflows sont meilleurs en ligne de commande : optimiser un dossier, convertir en WebP, supprimer les EXIF ou automatiser en CI/CD.\n\n## Ce que vous pouvez faire\n\n### Compresser des images\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### Redimensionner\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### Convertir les formats\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### Convertir en WebP\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### Supprimer les EXIF\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## Installation\n\n```bash\nnpm install -g nanoimage\n```\n\nNode.js 18 ou plus récent est requis.\n\n## Automatisation\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## Essayer NanoImage CLI\n\nDocumentation : https://nanoimage.net/docs/cli\n\nPage CLI : https://nanoimage.net/cli",
+      },
+      es: {
+        category: "Actualizaciones / Herramientas para desarrolladores",
+        title: "Presentamos NanoImage CLI: optimiza imágenes desde tu terminal",
+        excerpt: "NanoImage CLI permite comprimir, redimensionar, convertir, crear WebP y eliminar metadatos EXIF localmente desde la línea de comandos.",
+        readTime: "7 min de lectura",
+        metaDescription: "NanoImage CLI permite comprimir, redimensionar, convertir, crear WebP y eliminar metadatos EXIF localmente desde la línea de comandos.",
+        body: "Las imágenes son una de las formas más comunes de ralentizar un sitio web. También son una de las cosas más fáciles de optimizar.\n\nNanoImage comenzó como un conjunto de herramientas de imagen en el navegador. Ahora NanoImage CLI lleva esos flujos de trabajo prácticos al terminal.\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\nEstá pensado para desarrolladores, equipos de contenido, SEO y cualquiera que quiera optimizar imágenes sin abrir el navegador.\n\n## Por qué creamos NanoImage CLI\n\nLa app web es ideal para una imagen. Pero optimizar carpetas, convertir a WebP, eliminar EXIF y automatizar en CI/CD funciona mejor desde la línea de comandos.\n\n## Qué puedes hacer\n\n### Comprimir imágenes\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### Redimensionar\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### Convertir formatos\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### Convertir a WebP\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### Eliminar EXIF\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## Instalación\n\n```bash\nnpm install -g nanoimage\n```\n\nRequiere Node.js 18 o superior.\n\n## Automatización\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## Probar NanoImage CLI\n\nDocumentación: https://nanoimage.net/docs/cli\n\nPágina CLI: https://nanoimage.net/cli",
+      },
+      pt: {
+        category: "Atualizações / Ferramentas para desenvolvedores",
+        title: "Apresentando o NanoImage CLI: otimize imagens pelo terminal",
+        excerpt: "NanoImage CLI permite comprimir, redimensionar, converter, gerar WebP e remover metadados EXIF localmente pela linha de comando.",
+        readTime: "7 min de leitura",
+        metaDescription: "NanoImage CLI permite comprimir, redimensionar, converter, gerar WebP e remover metadados EXIF localmente pela linha de comando.",
+        body: "Imagens estão entre os motivos mais comuns para um site ficar lento. Também são uma das partes mais fáceis de otimizar.\n\nO NanoImage começou como um conjunto de ferramentas no navegador. Agora o NanoImage CLI leva esses fluxos práticos para o terminal.\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\nEle foi feito para desenvolvedores, equipes de conteúdo, SEO e qualquer pessoa que queira otimizar imagens sem abrir o navegador.\n\n## Por que criamos o NanoImage CLI\n\nA versão web é ótima para uma imagem. Mas otimizar pastas, converter para WebP, remover EXIF e automatizar em CI/CD funciona melhor pela linha de comando.\n\n## O que você pode fazer\n\n### Comprimir imagens\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### Redimensionar\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### Converter formatos\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### Converter para WebP\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### Remover EXIF\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## Instalação\n\n```bash\nnpm install -g nanoimage\n```\n\nRequer Node.js 18 ou superior.\n\n## Automação\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## Teste o NanoImage CLI\n\nDocumentação: https://nanoimage.net/docs/cli\n\nPágina CLI: https://nanoimage.net/cli",
+      },
+      ru: {
+        category: "Обновления продукта / Инструменты разработчика",
+        title: "Представляем NanoImage CLI: оптимизация изображений из терминала",
+        excerpt: "NanoImage CLI позволяет локально сжимать, изменять размер, конвертировать изображения, создавать WebP и удалять EXIF-метаданные из командной строки.",
+        readTime: "7 мин чтения",
+        metaDescription: "NanoImage CLI позволяет локально сжимать, изменять размер, конвертировать изображения, создавать WebP и удалять EXIF-метаданные из командной строки.",
+        body: "Изображения часто замедляют сайт. При этом их обычно легко оптимизировать.\n\nNanoImage начинался как набор браузерных инструментов. Теперь NanoImage CLI переносит те же практичные сценарии в терминал.\n\n```bash\nnanoimage compress ./images --quality 75 --output ./compressed\n```\n\nИнструмент подходит разработчикам, контент-командам, SEO-специалистам и всем, кто хочет оптимизировать изображения без браузера.\n\n## Зачем мы сделали NanoImage CLI\n\nВеб-инструменты удобны для одной картинки. Но папки изображений, WebP-конвертация, удаление EXIF и CI/CD лучше автоматизировать через CLI.\n\n## Что можно делать\n\n### Сжимать изображения\n\n```bash\nnanoimage compress photo.jpg --quality 75 --output ./compressed\n```\n\n### Менять размер\n\n```bash\nnanoimage resize hero.jpg --width 1600 --output ./resized\n```\n\n### Конвертировать форматы\n\n```bash\nnanoimage convert logo.png --to jpg --background white --output ./converted\n```\n\n### Конвертировать в WebP\n\n```bash\nnanoimage webp hero.jpg --quality 80 --output ./webp\n```\n\n### Удалять EXIF\n\n```bash\nnanoimage remove-exif photo.jpg --output ./clean\n```\n\n## Установка\n\n```bash\nnpm install -g nanoimage\n```\n\nТребуется Node.js 18 или новее.\n\n## Автоматизация\n\n```yaml\n- run: npm install -g nanoimage\n- run: nanoimage compress ./public/images --quality 75 --output ./public/images-optimized\n```\n\n## Попробовать NanoImage CLI\n\nДокументация: https://nanoimage.net/docs/cli\n\nСтраница CLI: https://nanoimage.net/cli",
+      },
+    },
   },
 ]
