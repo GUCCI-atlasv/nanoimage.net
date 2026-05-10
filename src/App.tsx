@@ -7794,11 +7794,10 @@ export function CliPage({ navigate: _navigate }: { navigate: (to: string) => voi
         <p className="cli-hero-subtitle">Compress, resize, convert, and clean image files locally with a simple command-line tool.</p>
         <div className="cli-install-block">
           <code className="cli-install-cmd">npm install -g nanoimage</code>
-          <span className="cli-coming-soon-badge">Coming Soon</span>
         </div>
         <div className="cli-hero-actions">
           <a className="primary" href="/docs/cli">View CLI docs</a>
-          <a className="secondary" href="https://github.com/GUCCI-atlasv/nanoimage.net" target="_blank" rel="noopener noreferrer">Star on GitHub</a>
+          <a className="secondary" href="https://www.npmjs.com/package/nanoimage" target="_blank" rel="noopener noreferrer">View on npm</a>
         </div>
         <div className="cli-code-preview">
           <div className="cli-code-bar"><span /><span /><span /></div>
@@ -7857,7 +7856,7 @@ export function CliPage({ navigate: _navigate }: { navigate: (to: string) => voi
             <pre className="cli-command-example"><code>npx nanoimage compress input.jpg --quality 75</code></pre>
           </div>
         </div>
-        <p className="cli-install-note">Requires Node.js 18 or later. &nbsp;<span className="cli-coming-soon-inline">⚠️ The npm package is coming soon — <a href="https://github.com/GUCCI-atlasv/nanoimage.net" target="_blank" rel="noopener noreferrer">watch on GitHub</a> for updates.</span></p>
+        <p className="cli-install-note">Requires Node.js 18 or later. &nbsp;·&nbsp; <a href="https://www.npmjs.com/package/nanoimage" target="_blank" rel="noopener noreferrer">npm package</a></p>
         <div className="cli-install-cta">
           <a className="primary" href="/docs/cli">Read the full docs</a>
         </div>
