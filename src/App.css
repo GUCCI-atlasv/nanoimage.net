@@ -9218,6 +9218,38 @@ button.secondary.small {
   margin: 0 0 1.25rem;
 }
 
+.cli-coming-soon-badge {
+  display: inline-block;
+  margin-left: 0.75rem;
+  padding: 0.2em 0.65em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 999px;
+  vertical-align: middle;
+  border: 1px solid #fcd34d;
+}
+
+.cli-coming-soon-inline {
+  color: #b45309;
+}
+
+.cli-coming-soon-inline a {
+  color: #b45309;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.footer-contact {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: default;
+}
+
 .cli-install-cta {
   text-align: center;
 }

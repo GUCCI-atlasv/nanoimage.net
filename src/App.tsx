@@ -7794,10 +7794,11 @@ export function CliPage({ navigate: _navigate }: { navigate: (to: string) => voi
         <p className="cli-hero-subtitle">Compress, resize, convert, and clean image files locally with a simple command-line tool.</p>
         <div className="cli-install-block">
           <code className="cli-install-cmd">npm install -g nanoimage</code>
+          <span className="cli-coming-soon-badge">Coming Soon</span>
         </div>
         <div className="cli-hero-actions">
           <a className="primary" href="/docs/cli">View CLI docs</a>
-          <a className="secondary" href="/blog/introducing-nanoimage-cli">Read launch post</a>
+          <a className="secondary" href="https://github.com/GUCCI-atlasv/nanoimage.net" target="_blank" rel="noopener noreferrer">Star on GitHub</a>
         </div>
         <div className="cli-code-preview">
           <div className="cli-code-bar"><span /><span /><span /></div>
@@ -7856,7 +7857,7 @@ export function CliPage({ navigate: _navigate }: { navigate: (to: string) => voi
             <pre className="cli-command-example"><code>npx nanoimage compress input.jpg --quality 75</code></pre>
           </div>
         </div>
-        <p className="cli-install-note">Requires Node.js 18 or later.</p>
+        <p className="cli-install-note">Requires Node.js 18 or later. &nbsp;<span className="cli-coming-soon-inline">⚠️ The npm package is coming soon — <a href="https://github.com/GUCCI-atlasv/nanoimage.net" target="_blank" rel="noopener noreferrer">watch on GitHub</a> for updates.</span></p>
         <div className="cli-install-cta">
           <a className="primary" href="/docs/cli">Read the full docs</a>
         </div>
@@ -8594,14 +8595,14 @@ export function Footer({ navigate: _navigate }: { navigate: (to: string) => void
         <nav className="footer-center-nav">
           <a href="/cli">CLI</a>
           <span className="footer-sep">|</span>
-          <a href="https://github.com/nanoimage/nanoimage" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/GUCCI-atlasv/nanoimage.net" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
         <nav className="footer-right-nav">
           <a href="/privacy-policy">{t.footer.privacy}</a>
           <span className="footer-sep">|</span>
           <a href="/terms-of-use">{t.footer.terms}</a>
           <span className="footer-sep">|</span>
-          <a href="mailto:support@nanoimage.net">{t.footer.contact}</a>
+          <span className="footer-contact" title="support [at] nanoimage.net">{t.footer.contact}</span>
         </nav>
       </div>
       <div className="footer-bottom">
