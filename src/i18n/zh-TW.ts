@@ -18,6 +18,8 @@ export const zhTW: Translations = {
     orDragDrop: '或拖放到任意位置',
     fileTypes: 'JPG、PNG、WebP、GIF、BMP、TIFF · 最大 50MB',
     uploadBtn: '上傳圖片',
+    ctaPrimary: '開始壓縮 →',
+    ctaSecondary: '瀏覽全部 {count} 個工具',
   },
   trust: {
     free: '完全免費。',

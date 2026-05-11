@@ -13,6 +13,8 @@ export const es: Translations = {
     orDragDrop: 'o arrastra y suelta en cualquier lugar',
     fileTypes: 'JPG, PNG, WebP, GIF, BMP, TIFF · Tamaño máx. 50 MB',
     uploadBtn: 'Subir una imagen',
+    ctaPrimary: 'Empezar con Comprimir →',
+    ctaSecondary: 'Ver las {count} herramientas',
   },
   trust: {
     free: 'Gratis.', freeDesc: 'Sin registro.',

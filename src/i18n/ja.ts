@@ -13,6 +13,8 @@ export const ja: Translations = {
     orDragDrop: 'またはどこにでもドラッグ＆ドロップ',
     fileTypes: 'JPG、PNG、WebP、GIF、BMP、TIFF・最大50MB',
     uploadBtn: '画像をアップロード',
+    ctaPrimary: '圧縮を開始 →',
+    ctaSecondary: '{count} 個のツールをすべて表示',
   },
   trust: {
     free: '無料で使える。', freeDesc: '登録不要。',

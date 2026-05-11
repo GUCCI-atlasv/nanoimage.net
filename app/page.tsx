@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import AppShell from '@/components/AppShell'
 import { buildAlternates, buildOG, buildTwitter } from '@/lib/seo'
 
-const title = 'NanoImage - Free Online Image Tools'
+const title = 'NanoImage — 15 Image Tools. No AI. No Upload. No Account.'
 const description =
-  'Free online image tools to compress, resize, crop, convert, and edit images in your browser. No signup required.'
+  'Compress, resize, crop, convert images — 100% in your browser via Canvas API. Your files never leave your device. Free forever, no limits.'
 const url = 'https://nanoimage.net/'
 
 export const metadata: Metadata = {

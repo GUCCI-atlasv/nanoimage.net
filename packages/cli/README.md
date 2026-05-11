@@ -19,6 +19,7 @@ Requires Node.js 18+.
 ```bash
 nanoimage compress ./images --quality 80 --output ./out
 nanoimage compress hero.jpg --quality 75
+nanoimage compress hero.jpg --target-kb 100 --output hero-100kb.jpg
 ```
 
 ### `resize`

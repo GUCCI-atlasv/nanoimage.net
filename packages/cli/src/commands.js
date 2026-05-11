@@ -18,11 +18,46 @@ async function collectFiles(input) {
   return glob(input, { nodir: true })
 }
 
+function buildCompressPipeline(file, ext, quality) {
+  const img = sharp(file)
+  if (ext === '.jpg' || ext === '.jpeg') return img.jpeg({ quality, mozjpeg: true })
+  if (ext === '.png') return img.png({ quality, compressionLevel: 9, palette: true })
+  if (ext === '.webp') return img.webp({ quality })
+  if (ext === '.avif') return img.avif({ quality })
+  return img.jpeg({ quality, mozjpeg: true })
+}
+
+async function compressToTarget(file, ext, maxQuality, targetBytes) {
+  let low = 1
+  let high = maxQuality
+  let bestUnderTarget = null
+  let smallest = null
+
+  while (low <= high) {
+    const quality = Math.floor((low + high) / 2)
+    const buffer = await buildCompressPipeline(file, ext, quality).toBuffer()
+    const candidate = { buffer, quality, size: buffer.length }
+
+    if (!smallest || candidate.size < smallest.size) smallest = candidate
+
+    if (candidate.size <= targetBytes) {
+      bestUnderTarget = candidate
+      low = quality + 1
+    } else {
+      high = quality - 1
+    }
+  }
+
+  return bestUnderTarget ?? smallest
+}
+
 // ── compress ──────────────────────────────────────────────────────────────────
 export async function cmdCompress(input, opts) {
   const files = await collectFiles(input)
   if (!files.length) { console.error('No image files found.'); process.exit(1) }
   const quality = Math.min(100, Math.max(1, parseInt(opts.quality) || 80))
+  const targetKb = opts.targetKb ? parseInt(opts.targetKb) : 0
+  const targetBytes = Number.isFinite(targetKb) && targetKb > 0 ? targetKb * 1024 : 0
   const results = []
 
   for (const file of files) {
@@ -33,15 +68,14 @@ export async function cmdCompress(input, opts) {
     const inputSize = fs.statSync(file).size
     try {
       const ext = path.extname(file).toLowerCase()
-      const img = sharp(file)
-      if (ext === '.jpg' || ext === '.jpeg') img.jpeg({ quality, mozjpeg: true })
-      else if (ext === '.png') img.png({ quality, compressionLevel: 9 })
-      else if (ext === '.webp') img.webp({ quality })
-      else if (ext === '.avif') img.avif({ quality })
-      else img.jpeg({ quality, mozjpeg: true })
-      await img.toFile(outPath)
+      if (targetBytes) {
+        const result = await compressToTarget(file, ext, quality, targetBytes)
+        fs.writeFileSync(outPath, result.buffer)
+      } else {
+        await buildCompressPipeline(file, ext, quality).toFile(outPath)
+      }
       const outputSize = fs.statSync(outPath).size
-      results.push({ input: file, output: outPath, inputSize, outputSize })
+      results.push({ input: file, output: outPath, inputSize, outputSize, targetKb: targetBytes ? targetKb : undefined })
     } catch (e) {
       results.push({ input: file, error: e.message })
     }

@@ -43,6 +43,7 @@ Compress images:
 
 ```bash
 nanoimage compress ./images --quality 75 --output ./compressed
+nanoimage compress hero.jpg --target-kb 100 --output hero-100kb.jpg
 ```
 
 Resize images:

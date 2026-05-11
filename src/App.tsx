@@ -348,23 +348,25 @@ export function Header({ navigate: _navigate }: { navigate: (to: string) => void
 
 export function HomePage({
   navigate: _navigate,
-  onCompressUpload,
+  onCompressUpload: _onCompressUpload,
 }: {
   navigate: (to: string) => void
   onCompressUpload: (files: File[]) => void
 }) {
   const { t } = useI18n()
+  const toolCount = tools.length
   return (
     <>
       <section className="hero-section">
         <div className="hero-copy">
-          <h1>
-            {t.hero.headline1} <span>{t.hero.headline2}</span>
+          <h1 className="hero-h1-twoline">
+            <span>{t.hero.headline1}</span>
+            <span>{t.hero.headline2}</span>
           </h1>
-          <p>{t.hero.subtext}</p>
+          <p className="hero-desc">{t.hero.subtext}</p>
           <div className="hero-actions">
-            <UploadButton label={t.hero.uploadBtn} onFiles={onCompressUpload} />
-            <span>{t.hero.orDragDrop}</span>
+            <a className="hero-cta-primary" href="/compress-image">{t.hero.ctaPrimary}</a>
+            <a className="hero-cta-secondary" href="/#tools">{(t.hero.ctaSecondary ?? 'Browse all {count} tools').replace('{count}', String(toolCount))}</a>
           </div>
         </div>
         <a className="hero-dropzone" href="/compress-image">
@@ -381,7 +383,69 @@ export function HomePage({
         </a>
         <TrustPoints compact />
       </section>
-      <section className="category-grid">
+
+      <section className="why-nanoimage" id="why">
+        <div className="why-header">
+          <h2>Why NanoImage</h2>
+          <p className="why-subtitle">Pick the right tool for the job. Here&rsquo;s how we compare.</p>
+        </div>
+        <div className="why-table-wrap">
+          <table className="why-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th className="why-col-nano">NanoImage</th>
+                <th>TinyPNG</th>
+                <th>AI Image Sites</th>
+                <th>Desktop Software</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Upload required?</td>
+                <td className="why-col-nano why-no">✗</td>
+                <td className="why-yes">✓</td>
+                <td className="why-yes">✓</td>
+                <td className="why-no">✗</td>
+              </tr>
+              <tr>
+                <td>Account required?</td>
+                <td className="why-col-nano why-no">✗</td>
+                <td>Free tier limited</td>
+                <td className="why-yes">✓</td>
+                <td className="why-no">✗</td>
+              </tr>
+              <tr>
+                <td>Works offline?</td>
+                <td className="why-col-nano why-yes">✓</td>
+                <td className="why-no">✗</td>
+                <td className="why-no">✗</td>
+                <td className="why-yes">✓</td>
+              </tr>
+              <tr>
+                <td>Number of tools</td>
+                <td className="why-col-nano why-highlight"><strong>{toolCount}</strong></td>
+                <td>1</td>
+                <td>3–5</td>
+                <td>50+</td>
+              </tr>
+              <tr>
+                <td>Cost</td>
+                <td className="why-col-nano why-highlight"><strong>$0</strong></td>
+                <td>Freemium</td>
+                <td>$5–20/mo</td>
+                <td>$20–50/mo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="why-cta">
+          <p>Trusted by developers, designers, and anyone who&rsquo;d rather not upload their photos.</p>
+          <a href="/#tools" className="why-cta-link">See all {toolCount} tools →</a>
+        </div>
+      </section>
+
+      <section className="category-grid" id="tools">
         {categories.map((category) => {
           const categoryTools = tools.filter((tool) => tool.category === category.id)
           const isNewCategory = category.id === 'video-tools'
@@ -7973,6 +8037,7 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
           <pre className="docs-code-block"><code>nanoimage compress {'<input>'} [options]</code></pre>
           <h3>Examples</h3>
           <pre className="docs-code-block"><code>nanoimage compress photo.jpg --quality 75 --output photo-compressed.jpg</code></pre>
+          <pre className="docs-code-block"><code>nanoimage compress photo.jpg --target-kb 100 --output photo-100kb.jpg</code></pre>
           <pre className="docs-code-block"><code>nanoimage compress ./images --quality 75 --output ./compressed</code></pre>
           <h3>Options</h3>
           <div className="docs-table-wrap">
@@ -7980,12 +8045,13 @@ export function DocsCliPage({ navigate: _navigate }: { navigate: (to: string) =>
               <thead><tr><th>Option</th><th>Description</th></tr></thead>
               <tbody>
                 <tr><td><code>--quality, -q</code></td><td>Output quality from 1 to 100</td></tr>
+                <tr><td><code>--target-kb</code></td><td>Best-effort target output size in KB</td></tr>
                 <tr><td><code>--output, -o</code></td><td>Output file or directory</td></tr>
               </tbody>
             </table>
           </div>
           <div className="docs-note">
-            <strong>Notes:</strong> JPG and WebP give the best results with quality control. PNG compression may have smaller savings in v1.
+            <strong>Notes:</strong> <code>--target-kb</code> is best-effort. Some images may not reach the requested size without resizing or very low quality.
           </div>
         </section>
 
@@ -8617,6 +8683,7 @@ export function Footer({ navigate: _navigate }: { navigate: (to: string) => void
         </nav>
       </div>
       <div className="footer-bottom">
+        <em className="footer-manifesto">Built because image tools shouldn&rsquo;t need your email, your photo, or a $9.99/month subscription. — NanoImage</em>
         <span>{t.footer.copyright}</span>
       </div>
     </footer>

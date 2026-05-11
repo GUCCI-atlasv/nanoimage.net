@@ -17,6 +17,7 @@ program
   .command('compress <input>')
   .description('Compress images (JPEG, PNG, WebP, AVIF)')
   .option('-q, --quality <n>', 'Quality 1-100 (default: 80)', '80')
+  .option('--target-kb <n>', 'Best-effort target output size in KB')
   .option('-o, --output <dir>', 'Output directory (default: overwrite in place)')
   .option('--json', 'Output results as JSON')
   .action(async (input, opts) => {

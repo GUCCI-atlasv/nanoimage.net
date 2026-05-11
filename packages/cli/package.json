@@ -1,6 +1,6 @@
 {
   "name": "nanoimage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Compress, resize, convert, and clean image files from the command line",
   "keywords": ["image", "compress", "resize", "convert", "webp", "exif", "cli"],
   "homepage": "https://nanoimage.net/cli",

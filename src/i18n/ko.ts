@@ -13,6 +13,8 @@ export const ko: Translations = {
     orDragDrop: '또는 아무 곳에나 드래그 앤 드롭',
     fileTypes: 'JPG, PNG, WebP, GIF, BMP, TIFF · 최대 50MB',
     uploadBtn: '이미지 업로드',
+    ctaPrimary: '압축 시작 →',
+    ctaSecondary: '{count}개 도구 모두 보기',
   },
   trust: {
     free: '무료 사용.', freeDesc: '가입 불필요.',

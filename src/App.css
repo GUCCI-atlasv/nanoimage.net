@@ -298,6 +298,220 @@
   content: '';
 }
 
+/* Two-line hero H1 — must never merge into one line */
+.hero-h1-twoline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18em;
+}
+
+.hero-h1-twoline span {
+  display: block;
+  color: var(--ink);
+}
+
+.hero-h1-twoline span:last-child {
+  color: var(--purple);
+}
+
+/* Hero CTA buttons */
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.9rem;
+  padding: 0 1.35rem;
+  border-radius: 0.7rem;
+  color: white;
+  background: var(--purple);
+  box-shadow: 0 12px 28px rgba(125, 82, 255, 0.28);
+  font-weight: 800;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.hero-cta-primary:hover {
+  opacity: 0.88;
+}
+
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  padding: 0 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: white;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.hero-cta-secondary:hover {
+  border-color: var(--purple);
+  background: #f9f5ff;
+}
+
+/* ─── Why NanoImage Section ────────────────────────────────────────── */
+.why-nanoimage {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.why-header {
+  margin-bottom: 1.5rem;
+}
+
+.why-header h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--ink);
+  letter-spacing: -0.04em;
+}
+
+.why-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.why-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.9rem;
+  border: 1px solid var(--line);
+}
+
+.why-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 540px;
+}
+
+.why-table thead th {
+  padding: 0.7rem 1rem;
+  text-align: center;
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: #fafafa;
+  border-bottom: 1px solid var(--line);
+}
+
+.why-table thead th:first-child {
+  text-align: left;
+}
+
+.why-table tbody td {
+  padding: 0.65rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.why-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.why-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* NanoImage column highlight */
+.why-col-nano {
+  background: rgba(125, 82, 255, 0.05);
+  font-weight: 700;
+  color: var(--ink) !important;
+  border-left: 1px solid rgba(125, 82, 255, 0.15);
+  border-right: 1px solid rgba(125, 82, 255, 0.15);
+}
+
+.why-table thead .why-col-nano {
+  color: var(--purple) !important;
+  background: rgba(125, 82, 255, 0.08);
+}
+
+.why-yes {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.why-no {
+  color: #9ca3af;
+  font-weight: 700;
+}
+
+.why-highlight {
+  font-size: 1rem;
+}
+
+.why-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.why-cta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.why-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  background: var(--purple);
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.why-cta-link:hover {
+  opacity: 0.88;
+}
+
+/* Footer manifesto */
+.footer-manifesto {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .why-nanoimage {
+    padding: 2rem 1rem 1.5rem;
+  }
+  .why-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .hero-h1-twoline span {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+}
+
 .hero-copy > p,
 .tool-hero p,
 .content-page > p {

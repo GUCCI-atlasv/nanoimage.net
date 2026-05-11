@@ -13,6 +13,8 @@ export const ru: Translations = {
     orDragDrop: 'или перетащите в любое место',
     fileTypes: 'JPG, PNG, WebP, GIF, BMP, TIFF · Макс. размер 50 МБ',
     uploadBtn: 'Загрузить изображение',
+    ctaPrimary: 'Начать со сжатия →',
+    ctaSecondary: 'Смотреть все {count} инструментов',
   },
   trust: {
     free: 'Бесплатно.', freeDesc: 'Без регистрации.',
