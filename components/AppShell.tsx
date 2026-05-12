@@ -17,6 +17,7 @@ import {
 } from '@/src/App'
 import { tools, blogPosts } from '@/src/data'
 import { privacyPolicy, termsOfUse } from '@/src/legal'
+import { useLangPath } from '@/src/i18n'
 
 type PendingUpload = { id: number; files: File[] }
 
@@ -35,18 +36,22 @@ export type AppShellProps =
 
 export default function AppShell(props: AppShellProps) {
   const router = useRouter()
+  const lp = useLangPath()
   const [pendingCompressUpload, setPendingCompressUpload] = useState<PendingUpload | null>(null)
 
   const navigate = useCallback((to: string) => {
-    router.push(to)
+    // Prefix with the active language unless the path is already absolute or
+    // already contains a lang prefix (starts with /zh/, /ja/, etc.)
+    const dest = to.startsWith('http') ? to : lp(to)
+    router.push(dest)
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [router])
+  }, [router, lp])
 
   const openCompressWithFiles = useCallback((files: File[]) => {
     if (!files.length) return
     setPendingCompressUpload({ id: Date.now(), files })
-    router.push('/compress-image')
-  }, [router])
+    router.push(lp('/compress-image'))
+  }, [router, lp])
 
   const clearPendingUpload = useCallback(() => setPendingCompressUpload(null), [])
 

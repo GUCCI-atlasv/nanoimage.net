@@ -5,7 +5,8 @@ import JSZip from 'jszip'
 import { PDFDocument, PageSizes } from 'pdf-lib'
 import * as exifr from 'exifr'
 import { blogPosts, categories, tools, type BlogPost, type Tool } from './data'
-import { useI18n, LANGS, type LangCode } from './i18n'
+import { useI18n, useLangPath, LANGS, stripLangPrefix, type LangCode } from './i18n'
+import { langPath } from '@/lib/i18n-utils'
 
 
 type OutputFormat = 'image/png' | 'image/jpeg' | 'image/webp'
@@ -248,10 +249,22 @@ export function Header({ navigate: _navigate }: { navigate: (to: string) => void
   const [open, setOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const { t, lang, setLang } = useI18n()
+  const lp = useLangPath()
+
+  // Language switcher: navigate to the same logical page in the chosen language
+  const handleSwitchLang = useCallback((code: LangCode) => {
+    setLang(code)
+    setLangOpen(false)
+    if (typeof window !== 'undefined') {
+      const clean = stripLangPrefix(window.location.pathname)
+      const dest = langPath(code, clean || '/')
+      window.location.href = dest
+    }
+  }, [setLang])
 
   return (
     <header className="header">
-      <a className="logo" href="/" aria-label="NanoImage Home">
+      <a className="logo" href={lp('/')} aria-label="NanoImage Home">
         <img src="/assets/brand/logo/nanoimage-logo.svg" alt="NanoImage" width="170" height="32" />
       </a>
       <nav className="nav" aria-label="Primary navigation">
@@ -283,7 +296,7 @@ export function Header({ navigate: _navigate }: { navigate: (to: string) => void
                     <a
                       className="dropdown-tool"
                       key={tool.slug}
-                      href={`/${tool.slug}`}
+                      href={lp(`/${tool.slug}`)}
                       tabIndex={open ? 0 : -1}
                       onClick={() => setOpen(false)}
                     >
@@ -300,10 +313,10 @@ export function Header({ navigate: _navigate }: { navigate: (to: string) => void
             ))}
           </div>
         </div>
-        <a className="nav-link" href="/how-it-works">
+        <a className="nav-link" href={lp('/how-it-works')}>
           {t.nav.howItWorks}
         </a>
-        <a className="nav-link" href="/blog">
+        <a className="nav-link" href={lp('/blog')}>
           {t.nav.blog}
         </a>
       </nav>
@@ -330,10 +343,7 @@ export function Header({ navigate: _navigate }: { navigate: (to: string) => void
                   key={l.code}
                   type="button"
                   className={lang === l.code ? 'active' : ''}
-                  onClick={() => {
-                    setLang(l.code as LangCode)
-                    setLangOpen(false)
-                  }}
+                  onClick={() => handleSwitchLang(l.code as LangCode)}
                 >
                   <span>{l.flag}</span> {l.label}
                 </button>
@@ -354,6 +364,7 @@ export function HomePage({
   onCompressUpload: (files: File[]) => void
 }) {
   const { t } = useI18n()
+  const lp = useLangPath()
   const toolCount = tools.length
   return (
     <>
@@ -365,8 +376,8 @@ export function HomePage({
           </h1>
           <p className="hero-desc">{t.hero.subtext}</p>
           <div className="hero-actions">
-            <a className="hero-cta-primary" href="/compress-image">{t.hero.ctaPrimary}</a>
-            <a className="hero-cta-secondary" href="/#tools">{(t.hero.ctaSecondary ?? 'Browse all {count} tools').replace('{count}', String(toolCount))}</a>
+            <a className="hero-cta-primary" href={lp('/compress-image')}>{t.hero.ctaPrimary}</a>
+            <a className="hero-cta-secondary" href="#tools">{(t.hero.ctaSecondary ?? 'Browse all {count} tools').replace('{count}', String(toolCount))}</a>
           </div>
         </div>
         <a className="hero-dropzone" href="/compress-image">
@@ -441,7 +452,7 @@ export function HomePage({
         </div>
         <div className="why-cta">
           <p>Trusted by developers, designers, and anyone who&rsquo;d rather not upload their photos.</p>
-          <a href="/#tools" className="why-cta-link">See all {toolCount} tools →</a>
+          <a href="#tools" className="why-cta-link">See all {toolCount} tools →</a>
         </div>
       </section>
 
@@ -460,7 +471,7 @@ export function HomePage({
               <ul>
                 {categoryTools.map((tool) => (
                   <li key={tool.slug}>
-                    <a href={`/${tool.slug}`}>
+                    <a href={lp(`/${tool.slug}`)}>
                       {tool.badge && tool.badge !== 'NEW' ? (
                         <em className={`tool-type-tag tool-type-${tool.badge.toLowerCase()}`}>{tool.badge}</em>
                       ) : (
@@ -476,7 +487,7 @@ export function HomePage({
               </ul>
               <a
                 className={`view-all view-all-${category.tone}`}
-                href={`/tools/${category.id}`}
+                href={lp(`/tools/${category.id}`)}
               >
                 {t.categories[category.id]?.viewAllLabel ?? category.viewAllLabel} →
               </a>
@@ -8350,6 +8361,7 @@ export function HowItWorksPage({ navigate: _navigate }: { navigate: (to: string)
 
 export function BlogPage({ navigate }: { navigate: (to: string) => void }) {
   const { t, lang } = useI18n()
+  const lp = useLangPath()
   const postsPerPage = 3
   const [activeFilter, setActiveFilter] = useState(t.blog.filters[0])
   const [searchQuery, setSearchQuery] = useState('')
@@ -8398,15 +8410,15 @@ export function BlogPage({ navigate }: { navigate: (to: string) => void }) {
               const postIndex = localizedPosts.findIndex((item) => item.slug === post.slug)
               return (
               <article className="blog-list-item" key={post.slug}>
-                <a className="blog-thumb-button" href={`/blog/${post.slug}`} aria-label={`Open ${post.title}`}>
+                <a className="blog-thumb-button" href={lp(`/blog/${post.slug}`)} aria-label={`Open ${post.title}`}>
                   <BlogThumb imageSrc={post.coverImage} index={postIndex} />
                 </a>
                 <div>
                   {postIndex === 0 && <span className="blog-new-badge">{t.blog.newBadge}</span>}
-                  <h2><a className="blog-title-button" href={`/blog/${post.slug}`}>{post.title}</a></h2>
+                  <h2><a className="blog-title-button" href={lp(`/blog/${post.slug}`)}>{post.title}</a></h2>
                   <small>{post.date} · {post.category.split('/')[0].trim()}</small>
                   <p>{post.excerpt}</p>
-                  <a href={`/blog/${post.slug}`}>{t.blog.readMore}</a>
+                  <a href={lp(`/blog/${post.slug}`)}>{t.blog.readMore}</a>
                 </div>
               </article>
               )
@@ -8429,6 +8441,7 @@ export function BlogPage({ navigate }: { navigate: (to: string) => void }) {
 
 export function BlogPostPage({ navigate, slug }: { navigate: (to: string) => void; slug: string }) {
   const { t, lang } = useI18n()
+  const lp = useLangPath()
   const localizedPosts = useMemo(() => sortBlogPostsByDateDesc(blogPosts.map((item) => localizeBlogPost(item, lang))), [lang])
   const post = localizedPosts.find((item) => item.slug === slug)!
   const postIndex = Math.max(0, localizedPosts.findIndex((item) => item.slug === slug))
@@ -8462,8 +8475,8 @@ export function BlogPostPage({ navigate, slug }: { navigate: (to: string) => voi
             </div>
           )}
           <div className="article-nav">
-            <a href={`/blog/${previousPost.slug}`}>← {t.blog.prevPage}<small>{previousPost.title}</small></a>
-            <a href={`/blog/${nextPost.slug}`}>{t.blog.nextPage}<small>{nextPost.title}</small></a>
+            <a href={lp(`/blog/${previousPost.slug}`)}>← {t.blog.prevPage}<small>{previousPost.title}</small></a>
+            <a href={lp(`/blog/${nextPost.slug}`)}>{t.blog.nextPage}<small>{nextPost.title}</small></a>
           </div>
         </article>
         <BlogSidebar navigate={navigate} currentSlug={slug} />
@@ -8475,6 +8488,7 @@ export function BlogPostPage({ navigate, slug }: { navigate: (to: string) => voi
 
 export function BlogSidebar({ navigate: _navigate, currentSlug }: { navigate: (to: string) => void; currentSlug?: string }) {
   const { t, lang } = useI18n()
+  const lp = useLangPath()
   const popularPosts = sortBlogPostsByDateDesc(blogPosts.map((post) => localizeBlogPost(post, lang)))
     .filter((post) => post.slug !== currentSlug)
     .slice(0, 5)
@@ -8495,12 +8509,12 @@ export function BlogSidebar({ navigate: _navigate, currentSlug }: { navigate: (t
         <h2><HomeIcon name="sparkle" /> About NanoImage</h2>
         <p>{t.trust.tagBrowser}. {t.trust.noInstallDesc}</p>
         <p>{t.trust.privateDesc}</p>
-        <a href="/">{t.how.exploreAll} →</a>
+        <a href={lp('/')}>{t.how.exploreAll} →</a>
       </section>
       <section className="blog-side-card popular">
         <h2><HomeIcon name="sparkle" /> {t.blog.sidebarLatest}</h2>
         {popularPosts.map((post, index) => (
-          <a key={post.slug} href={`/blog/${post.slug}`}>
+          <a key={post.slug} href={lp(`/blog/${post.slug}`)}>
             <BlogThumb imageSrc={post.coverImage} index={index + 1} small />
             <span><strong>{post.title}</strong><small>{post.date}</small></span>
           </a>
@@ -8663,21 +8677,22 @@ export function TrustBar() {
 
 export function Footer({ navigate: _navigate }: { navigate: (to: string) => void }) {
   const { t } = useI18n()
+  const lp = useLangPath()
   return (
     <footer className="footer-wrap">
       <div className="footer-main">
-        <a href="/" className="footer-logo">
+        <a href={lp('/')} className="footer-logo">
           <img src="/assets/brand/logo/nanoimage-logo.svg" alt="NanoImage" width="120" height="24" />
         </a>
         <nav className="footer-center-nav">
-          <a href="/cli">CLI</a>
+          <a href={lp('/cli')}>CLI</a>
           <span className="footer-sep">|</span>
           <a href="https://github.com/GUCCI-atlasv/nanoimage.net" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
         <nav className="footer-right-nav">
-          <a href="/privacy-policy">{t.footer.privacy}</a>
+          <a href={lp('/privacy-policy')}>{t.footer.privacy}</a>
           <span className="footer-sep">|</span>
-          <a href="/terms-of-use">{t.footer.terms}</a>
+          <a href={lp('/terms-of-use')}>{t.footer.terms}</a>
           <span className="footer-sep">|</span>
           <span className="footer-contact" title="support [at] nanoimage.net">{t.footer.contact}</span>
         </nav>

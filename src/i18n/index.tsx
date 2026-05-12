@@ -1,5 +1,6 @@
 'use client'
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
+import { langPath, stripLangPrefix } from '@/lib/i18n-utils'
 import { en, type Translations } from './en'
 import { zhCN } from './zh-CN'
 import { zhTW } from './zh-TW'
@@ -102,17 +103,28 @@ const I18nContext = createContext<I18nContextType>({
   setLang: () => {},
 })
 
-export function I18nProvider({ children }: { children: ReactNode }) {
-  // Start with 'en' for SSR safety; detect correct language on client
-  const [lang, setLangState] = useState<LangCode>('en')
+export function I18nProvider({
+  children,
+  initialLang,
+}: {
+  children: ReactNode
+  initialLang?: LangCode
+}) {
+  // initialLang (from URL prefix) wins over any local detection
+  const [lang, setLangState] = useState<LangCode>(initialLang ?? 'en')
 
   const setLang = useCallback((code: LangCode) => {
     setLangState(code)
     storeLang(code)
   }, [])
 
-  // Detect language on client side only
   useEffect(() => {
+    // If a URL-derived lang is provided, trust it and persist
+    if (initialLang) {
+      setLangState(initialLang)
+      storeLang(initialLang)
+      return
+    }
     const stored = getStoredLang()
     if (stored) {
       setLangState(stored)
@@ -120,13 +132,20 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     }
     const detected = browserLocaleToLang(navigator.language ?? 'en')
     setLangState(detected)
-    // Refine with IP if no stored preference
     detectLangFromIp().then((ipDetected) => {
       if (ipDetected && !getStoredLang()) {
         setLangState(ipDetected)
       }
     })
-  }, [])
+  }, [initialLang])
+
+  // Keep <html lang="…"> in sync for accessibility and crawlers
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+    const htmlLang =
+      lang === 'zh-CN' ? 'zh-Hans' : lang === 'zh-TW' ? 'zh-Hant' : lang
+    document.documentElement.setAttribute('lang', htmlLang)
+  }, [lang])
 
   const t = translations[lang] ?? en
 
@@ -140,3 +159,18 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 export function useI18n() {
   return useContext(I18nContext)
 }
+
+/**
+ * Returns a helper that turns a root-relative path into a lang-prefixed path.
+ * Must be called inside a component that is a descendant of I18nProvider.
+ */
+export function useLangPath() {
+  const { lang } = useI18n()
+  return useCallback((path: string) => langPath(lang, path), [lang])
+}
+
+/**
+ * Strip the current URL's lang prefix so we can switch languages while
+ * staying on the same logical page.
+ */
+export { stripLangPrefix }
