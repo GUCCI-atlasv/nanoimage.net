@@ -4,6 +4,7 @@ import AppShell from '@/components/AppShell'
 import { tools } from '@/src/data'
 import { URL_LANG_CODES } from '@/lib/i18n-utils'
 import { buildAlternates, buildOG, buildTwitter, BASE } from '@/lib/seo'
+import { getToolMeta } from '@/lib/server-i18n'
 
 export function generateStaticParams() {
   return URL_LANG_CODES.flatMap((lang) =>
@@ -18,8 +19,7 @@ export async function generateMetadata(
   const tool = tools.find((t) => t.slug === slug)
   if (!tool) return { title: 'Not Found' }
 
-  const title = tool.title
-  const description = tool.subtitle
+  const { title, description } = getToolMeta(lang, slug)
   const basePath = `/${slug}`
   const canonicalUrl = `${BASE}/${lang}${basePath}`
 
@@ -27,8 +27,8 @@ export async function generateMetadata(
     title,
     description,
     alternates: buildAlternates(canonicalUrl, basePath),
-    openGraph: buildOG({ title: `${title} - NanoImage`, description, url: canonicalUrl }),
-    twitter: buildTwitter({ title: `${title} - NanoImage`, description }),
+    openGraph: buildOG({ title, description, url: canonicalUrl }),
+    twitter: buildTwitter({ title, description }),
   }
 }
 

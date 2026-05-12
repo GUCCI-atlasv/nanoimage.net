@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import AppShell from '@/components/AppShell'
 import { blogPosts } from '@/src/data'
-import { URL_LANG_CODES } from '@/lib/i18n-utils'
+import { URL_LANG_CODES, URL_TO_LANG } from '@/lib/i18n-utils'
 import { buildAlternates, buildOG, buildTwitter, BASE, OG_IMAGE } from '@/lib/seo'
 
 export function generateStaticParams() {
@@ -18,8 +18,12 @@ export async function generateMetadata(
   const post = blogPosts.find((p) => p.slug === slug)
   if (!post) return { title: 'Not Found' }
 
-  const title = `${post.title} - NanoImage Blog`
-  const description = post.metaDescription ?? post.excerpt
+  // Use localised data when available
+  const langCode = URL_TO_LANG[lang] ?? 'en'
+  const loc = post.localizations?.[langCode]
+  const title = `${loc?.title ?? post.title} - NanoImage Blog`
+  const description = loc?.metaDescription ?? loc?.excerpt ?? post.metaDescription ?? post.excerpt
+
   const basePath = `/blog/${slug}`
   const canonicalUrl = `${BASE}/${lang}${basePath}`
   const image = post.coverImage ? `${BASE}${post.coverImage}` : OG_IMAGE

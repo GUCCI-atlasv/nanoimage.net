@@ -4,6 +4,7 @@ import AppShell from '@/components/AppShell'
 import { categories } from '@/src/data'
 import { URL_LANG_CODES } from '@/lib/i18n-utils'
 import { buildAlternates, buildOG, buildTwitter, BASE } from '@/lib/seo'
+import { getTranslations } from '@/lib/server-i18n'
 
 export function generateStaticParams() {
   return URL_LANG_CODES.flatMap((lang) =>
@@ -18,8 +19,12 @@ export async function generateMetadata(
   const cat = categories.find((c) => c.id === slug)
   if (!cat) return { title: 'Not Found' }
 
-  const title = `${cat.title} - Free Online Tools`
-  const description = cat.description
+  const t = getTranslations(lang)
+  const cats = t.categories as Record<string, { title: string; description: string }>
+  const locCat = cats?.[slug]
+
+  const title = locCat ? `${locCat.title} - NanoImage` : `${cat.title} - NanoImage`
+  const description = locCat?.description ?? cat.description
   const basePath = `/tools/${slug}`
   const canonicalUrl = `${BASE}/${lang}${basePath}`
 
@@ -27,8 +32,8 @@ export async function generateMetadata(
     title,
     description,
     alternates: buildAlternates(canonicalUrl, basePath),
-    openGraph: buildOG({ title: `${title} - NanoImage`, description, url: canonicalUrl }),
-    twitter: buildTwitter({ title: `${title} - NanoImage`, description }),
+    openGraph: buildOG({ title, description, url: canonicalUrl }),
+    twitter: buildTwitter({ title, description }),
   }
 }
 
