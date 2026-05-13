@@ -1,2 +1,5 @@
 # Next.js static export generates individual HTML files per route.
 # No SPA redirect needed.
+
+# Legacy / external-link redirects (301 permanent)
+/blog/compress-images-for-email  /blog/how-to-compress-images-without-losing-quality  301
