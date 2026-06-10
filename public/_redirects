@@ -1,5 +1,301 @@
 # Next.js static export generates individual HTML files per route.
 # No SPA redirect needed.
 
-# Legacy / external-link redirects (301 permanent)
+# Favicon: redirect the legacy /favicon.ico path to the SVG favicon so that
+# audit tools and older browsers that only check /favicon.ico still resolve it.
+/favicon.ico  /favicon.svg  301
+
+# ── Wrong language prefix aliases (zh-CN → zh, pt-BR/pt-PT → pt) ────────────
+/zh-CN/*  /zh/:splat  301
+/zh-CN    /zh  301
+/pt-BR/*  /pt/:splat  301
+/pt-BR    /pt  301
+/pt-PT/*  /pt/:splat  301
+/pt-PT    /pt  301
+
+# ── Renamed / removed tool slug redirects ────────────────────────────────────
+/compress          /compress-image  301
+/bw                /  301
+/invert            /  301
+/black-and-white   /  301
+/watermark-image   /add-watermark  301
+/convert-to-jpg    /convert-image  301
+/merge-images      /  301
+/split-image       /  301
+/add-border-to-image  /  301
+/invert-image      /  301
+
+# Same redirects for all language prefixes
+/zh/black-and-white       /zh  301
+/zh-TW/black-and-white    /zh-TW  301
+/ja/black-and-white       /ja  301
+/fr/black-and-white       /fr  301
+/es/black-and-white       /es  301
+/pt/black-and-white       /pt  301
+/ru/black-and-white       /ru  301
+
+/zh/watermark-image       /zh/add-watermark  301
+/zh-TW/watermark-image    /zh-TW/add-watermark  301
+/ja/watermark-image       /ja/add-watermark  301
+/fr/watermark-image       /fr/add-watermark  301
+/es/watermark-image       /es/add-watermark  301
+/pt/watermark-image       /pt/add-watermark  301
+/ru/watermark-image       /ru/add-watermark  301
+
+/zh/convert-to-jpg        /zh/convert-image  301
+/zh-TW/convert-to-jpg     /zh-TW/convert-image  301
+/ja/convert-to-jpg        /ja/convert-image  301
+/fr/convert-to-jpg        /fr/convert-image  301
+/es/convert-to-jpg        /es/convert-image  301
+/pt/convert-to-jpg        /pt/convert-image  301
+/ru/convert-to-jpg        /ru/convert-image  301
+
+/zh/merge-images          /zh  301
+/zh-TW/merge-images       /zh-TW  301
+/ja/merge-images          /ja  301
+/fr/merge-images          /fr  301
+/es/merge-images          /es  301
+/pt/merge-images          /pt  301
+/ru/merge-images          /ru  301
+
+/zh/split-image           /zh  301
+/zh-TW/split-image        /zh-TW  301
+/ja/split-image           /ja  301
+/fr/split-image           /fr  301
+/es/split-image           /es  301
+/pt/split-image           /pt  301
+/ru/split-image           /ru  301
+
+/zh/add-border-to-image   /zh  301
+/zh-TW/add-border-to-image  /zh-TW  301
+/ja/add-border-to-image   /ja  301
+/fr/add-border-to-image   /fr  301
+/es/add-border-to-image   /es  301
+/pt/add-border-to-image   /pt  301
+/ru/add-border-to-image   /ru  301
+
+/zh/invert-image          /zh  301
+/zh-TW/invert-image       /zh-TW  301
+/ja/invert-image          /ja  301
+/fr/invert-image          /fr  301
+/es/invert-image          /es  301
+/pt/invert-image          /pt  301
+/ru/invert-image          /ru  301
+
+/zh/compress-image-to-100kb   /zh/compress-image  301
+/zh-TW/compress-image-to-100kb  /zh-TW/compress-image  301
+/ja/compress-image-to-100kb   /ja/compress-image  301
+/fr/compress-image-to-100kb   /fr/compress-image  301
+/es/compress-image-to-100kb   /es/compress-image  301
+/pt/compress-image-to-100kb   /pt/compress-image  301
+/ru/compress-image-to-100kb   /ru/compress-image  301
+
+# ── Removed /feedback page ───────────────────────────────────────────────────
+/feedback          /  301
+/zh/feedback       /zh  301
+/zh-TW/feedback    /zh-TW  301
+/ja/feedback       /ja  301
+/ko/feedback       /ko  301
+/fr/feedback       /fr  301
+/es/feedback       /es  301
+/pt/feedback       /pt  301
+/ru/feedback       /ru  301
+
+# ── Legacy blog slug redirects ───────────────────────────────────────────────
 /blog/compress-images-for-email  /blog/how-to-compress-images-without-losing-quality  301
+/blog/nanoimage-hub-comparison  /blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/blog/tinypng-vs-nanoimage  /blog/nanoimage-vs-tinypng  301
+/blog/compress-image-to-200kb  /blog/how-to-compress-images-without-losing-quality  301
+/blog/image-format-guide-jpg-png-webp-gif  /blog/jpg-png-webp-avif  301
+/blog/image-resolution-pixels-dpi-explained  /blog  301
+/blog/claude-mcp-image-editing-nanoimage  /blog  301
+/blog/how-to-crop-image-online  /blog  301
+/blog/how-to-convert-png-to-jpg-online  /blog  301
+/blog/merge-images-online-free  /blog  301
+/blog/image-privacy-online-tools  /blog  301
+/blog/convert-photo-black-and-white  /blog  301
+/blog/make-meme-online-no-signup  /blog  301
+/blog/social-media-image-sizes-2026  /blog  301
+/blog/add-white-border-instagram  /blog  301
+/blog/resize-photo-passport-visa  /blog  301
+/blog/split-image-online-free  /blog  301
+/blog/how-to-blur-photo-online  /blog  301
+/blog/how-to-add-watermark-to-photo-online  /blog  301
+/blog/invert-image-colors-online  /blog  301
+/blog/fix-sideways-photo  /blog  301
+/blog/resize-images-for-platforms  /blog  301
+/blog/how-to-resize-images-for-platforms  /blog  301
+
+# Same blog redirects for all language prefixes
+/zh/blog/nanoimage-hub-comparison  /zh/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/zh-TW/blog/nanoimage-hub-comparison  /zh-TW/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/ja/blog/nanoimage-hub-comparison  /ja/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/ko/blog/nanoimage-hub-comparison  /ko/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/fr/blog/nanoimage-hub-comparison  /fr/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/es/blog/nanoimage-hub-comparison  /es/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/pt/blog/nanoimage-hub-comparison  /pt/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+/ru/blog/nanoimage-hub-comparison  /ru/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea  301
+
+# Catch-all for removed blog posts across all language prefixes
+/zh/blog/compress-images-for-email  /zh/blog/how-to-compress-images-without-losing-quality  301
+/zh-TW/blog/compress-images-for-email  /zh-TW/blog/how-to-compress-images-without-losing-quality  301
+/ja/blog/compress-images-for-email  /ja/blog/how-to-compress-images-without-losing-quality  301
+/fr/blog/compress-images-for-email  /fr/blog/how-to-compress-images-without-losing-quality  301
+/es/blog/compress-images-for-email  /es/blog/how-to-compress-images-without-losing-quality  301
+/pt/blog/compress-images-for-email  /pt/blog/how-to-compress-images-without-losing-quality  301
+/ru/blog/compress-images-for-email  /ru/blog/how-to-compress-images-without-losing-quality  301
+
+/zh/blog/tinypng-vs-nanoimage  /zh/blog/nanoimage-vs-tinypng  301
+/zh-TW/blog/tinypng-vs-nanoimage  /zh-TW/blog/nanoimage-vs-tinypng  301
+/ja/blog/tinypng-vs-nanoimage  /ja/blog/nanoimage-vs-tinypng  301
+/fr/blog/tinypng-vs-nanoimage  /fr/blog/nanoimage-vs-tinypng  301
+/es/blog/tinypng-vs-nanoimage  /es/blog/nanoimage-vs-tinypng  301
+/pt/blog/tinypng-vs-nanoimage  /pt/blog/nanoimage-vs-tinypng  301
+/ru/blog/tinypng-vs-nanoimage  /ru/blog/nanoimage-vs-tinypng  301
+
+/zh/blog/image-format-guide-jpg-png-webp-gif  /zh/blog/jpg-png-webp-avif  301
+/zh-TW/blog/image-format-guide-jpg-png-webp-gif  /zh-TW/blog/jpg-png-webp-avif  301
+/ja/blog/image-format-guide-jpg-png-webp-gif  /ja/blog/jpg-png-webp-avif  301
+/fr/blog/image-format-guide-jpg-png-webp-gif  /fr/blog/jpg-png-webp-avif  301
+/es/blog/image-format-guide-jpg-png-webp-gif  /es/blog/jpg-png-webp-avif  301
+/pt/blog/image-format-guide-jpg-png-webp-gif  /pt/blog/jpg-png-webp-avif  301
+/ru/blog/image-format-guide-jpg-png-webp-gif  /ru/blog/jpg-png-webp-avif  301
+
+# Removed blog slugs → blog index (per valid language prefix)
+# These blog posts were removed; redirect to blog index for each language.
+# zh-CN, pt-BR, pt-PT are already handled by the splat redirects above.
+/zh/blog/compress-image-to-200kb        /zh/blog  301
+/zh-TW/blog/compress-image-to-200kb     /zh-TW/blog  301
+/ja/blog/compress-image-to-200kb        /ja/blog  301
+/fr/blog/compress-image-to-200kb        /fr/blog  301
+/es/blog/compress-image-to-200kb        /es/blog  301
+/pt/blog/compress-image-to-200kb        /pt/blog  301
+/ru/blog/compress-image-to-200kb        /ru/blog  301
+
+/zh/blog/claude-mcp-image-editing-nanoimage     /zh/blog  301
+/zh-TW/blog/claude-mcp-image-editing-nanoimage  /zh-TW/blog  301
+/ja/blog/claude-mcp-image-editing-nanoimage     /ja/blog  301
+/fr/blog/claude-mcp-image-editing-nanoimage     /fr/blog  301
+/es/blog/claude-mcp-image-editing-nanoimage     /es/blog  301
+/pt/blog/claude-mcp-image-editing-nanoimage     /pt/blog  301
+/ru/blog/claude-mcp-image-editing-nanoimage     /ru/blog  301
+
+/zh/blog/social-media-image-sizes-2026     /zh/blog  301
+/zh-TW/blog/social-media-image-sizes-2026  /zh-TW/blog  301
+/ja/blog/social-media-image-sizes-2026     /ja/blog  301
+/fr/blog/social-media-image-sizes-2026     /fr/blog  301
+/es/blog/social-media-image-sizes-2026     /es/blog  301
+/pt/blog/social-media-image-sizes-2026     /pt/blog  301
+/ru/blog/social-media-image-sizes-2026     /ru/blog  301
+
+/zh/blog/image-resolution-pixels-dpi-explained     /zh/blog  301
+/zh-TW/blog/image-resolution-pixels-dpi-explained  /zh-TW/blog  301
+/ja/blog/image-resolution-pixels-dpi-explained     /ja/blog  301
+/fr/blog/image-resolution-pixels-dpi-explained     /fr/blog  301
+/es/blog/image-resolution-pixels-dpi-explained     /es/blog  301
+/pt/blog/image-resolution-pixels-dpi-explained     /pt/blog  301
+/ru/blog/image-resolution-pixels-dpi-explained     /ru/blog  301
+
+/zh/blog/how-to-crop-image-online     /zh/blog  301
+/zh-TW/blog/how-to-crop-image-online  /zh-TW/blog  301
+/ja/blog/how-to-crop-image-online     /ja/blog  301
+/fr/blog/how-to-crop-image-online     /fr/blog  301
+/es/blog/how-to-crop-image-online     /es/blog  301
+/pt/blog/how-to-crop-image-online     /pt/blog  301
+/ru/blog/how-to-crop-image-online     /ru/blog  301
+
+/zh/blog/how-to-convert-png-to-jpg-online     /zh/blog  301
+/zh-TW/blog/how-to-convert-png-to-jpg-online  /zh-TW/blog  301
+/ja/blog/how-to-convert-png-to-jpg-online     /ja/blog  301
+/fr/blog/how-to-convert-png-to-jpg-online     /fr/blog  301
+/es/blog/how-to-convert-png-to-jpg-online     /es/blog  301
+/pt/blog/how-to-convert-png-to-jpg-online     /pt/blog  301
+/ru/blog/how-to-convert-png-to-jpg-online     /ru/blog  301
+
+/zh/blog/merge-images-online-free     /zh/blog  301
+/zh-TW/blog/merge-images-online-free  /zh-TW/blog  301
+/ja/blog/merge-images-online-free     /ja/blog  301
+/fr/blog/merge-images-online-free     /fr/blog  301
+/es/blog/merge-images-online-free     /es/blog  301
+/pt/blog/merge-images-online-free     /pt/blog  301
+/ru/blog/merge-images-online-free     /ru/blog  301
+
+/zh/blog/image-privacy-online-tools     /zh/blog  301
+/zh-TW/blog/image-privacy-online-tools  /zh-TW/blog  301
+/ja/blog/image-privacy-online-tools     /ja/blog  301
+/fr/blog/image-privacy-online-tools     /fr/blog  301
+/es/blog/image-privacy-online-tools     /es/blog  301
+/pt/blog/image-privacy-online-tools     /pt/blog  301
+/ru/blog/image-privacy-online-tools     /ru/blog  301
+
+/zh/blog/convert-photo-black-and-white     /zh/blog  301
+/zh-TW/blog/convert-photo-black-and-white  /zh-TW/blog  301
+/ja/blog/convert-photo-black-and-white     /ja/blog  301
+/fr/blog/convert-photo-black-and-white     /fr/blog  301
+/es/blog/convert-photo-black-and-white     /es/blog  301
+/pt/blog/convert-photo-black-and-white     /pt/blog  301
+/ru/blog/convert-photo-black-and-white     /ru/blog  301
+
+/zh/blog/make-meme-online-no-signup     /zh/blog  301
+/zh-TW/blog/make-meme-online-no-signup  /zh-TW/blog  301
+/ja/blog/make-meme-online-no-signup     /ja/blog  301
+/fr/blog/make-meme-online-no-signup     /fr/blog  301
+/es/blog/make-meme-online-no-signup     /es/blog  301
+/pt/blog/make-meme-online-no-signup     /pt/blog  301
+/ru/blog/make-meme-online-no-signup     /ru/blog  301
+
+/zh/blog/add-white-border-instagram     /zh/blog  301
+/zh-TW/blog/add-white-border-instagram  /zh-TW/blog  301
+/ja/blog/add-white-border-instagram     /ja/blog  301
+/fr/blog/add-white-border-instagram     /fr/blog  301
+/es/blog/add-white-border-instagram     /es/blog  301
+/pt/blog/add-white-border-instagram     /pt/blog  301
+/ru/blog/add-white-border-instagram     /ru/blog  301
+
+/zh/blog/resize-photo-passport-visa     /zh/blog  301
+/zh-TW/blog/resize-photo-passport-visa  /zh-TW/blog  301
+/ja/blog/resize-photo-passport-visa     /ja/blog  301
+/fr/blog/resize-photo-passport-visa     /fr/blog  301
+/es/blog/resize-photo-passport-visa     /es/blog  301
+/pt/blog/resize-photo-passport-visa     /pt/blog  301
+/ru/blog/resize-photo-passport-visa     /ru/blog  301
+
+/zh/blog/split-image-online-free     /zh/blog  301
+/zh-TW/blog/split-image-online-free  /zh-TW/blog  301
+/ja/blog/split-image-online-free     /ja/blog  301
+/fr/blog/split-image-online-free     /fr/blog  301
+/es/blog/split-image-online-free     /es/blog  301
+/pt/blog/split-image-online-free     /pt/blog  301
+/ru/blog/split-image-online-free     /ru/blog  301
+
+/zh/blog/how-to-blur-photo-online     /zh/blog  301
+/zh-TW/blog/how-to-blur-photo-online  /zh-TW/blog  301
+/ja/blog/how-to-blur-photo-online     /ja/blog  301
+/fr/blog/how-to-blur-photo-online     /fr/blog  301
+/es/blog/how-to-blur-photo-online     /es/blog  301
+/pt/blog/how-to-blur-photo-online     /pt/blog  301
+/ru/blog/how-to-blur-photo-online     /ru/blog  301
+
+/zh/blog/how-to-add-watermark-to-photo-online     /zh/blog  301
+/zh-TW/blog/how-to-add-watermark-to-photo-online  /zh-TW/blog  301
+/ja/blog/how-to-add-watermark-to-photo-online     /ja/blog  301
+/fr/blog/how-to-add-watermark-to-photo-online     /fr/blog  301
+/es/blog/how-to-add-watermark-to-photo-online     /es/blog  301
+/pt/blog/how-to-add-watermark-to-photo-online     /pt/blog  301
+/ru/blog/how-to-add-watermark-to-photo-online     /ru/blog  301
+
+/zh/blog/invert-image-colors-online     /zh/blog  301
+/zh-TW/blog/invert-image-colors-online  /zh-TW/blog  301
+/ja/blog/invert-image-colors-online     /ja/blog  301
+/fr/blog/invert-image-colors-online     /fr/blog  301
+/es/blog/invert-image-colors-online     /es/blog  301
+/pt/blog/invert-image-colors-online     /pt/blog  301
+/ru/blog/invert-image-colors-online     /ru/blog  301
+
+/zh/blog/fix-sideways-photo     /zh/blog  301
+/zh-TW/blog/fix-sideways-photo  /zh-TW/blog  301
+/ja/blog/fix-sideways-photo     /ja/blog  301
+/fr/blog/fix-sideways-photo     /fr/blog  301
+/es/blog/fix-sideways-photo     /es/blog  301
+/pt/blog/fix-sideways-photo     /pt/blog  301
+/ru/blog/fix-sideways-photo     /ru/blog  301
