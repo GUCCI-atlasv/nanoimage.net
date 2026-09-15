@@ -26,3 +26,7 @@ out
 *.njsproj
 *.sln
 *.sw?
+
+# Mirrored production deploy artifact (do not rebuild-overwrite blindly)
+prod-out/
+
