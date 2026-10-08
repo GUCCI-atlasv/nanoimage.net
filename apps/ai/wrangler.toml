@@ -1,0 +1,8 @@
+name = "ai-nanoimage-net"
+
+# Cloudflare Pages 项目配置（独立于主站 nanoimage-net）
+# 子站使用 Next.js static export (output: 'export')，构建产物位于 out/ 目录。
+pages_build_output_dir = "out"
+
+# 部署：cd apps/ai && npm run deploy
+# 自定义域名 ai.nanoimage.net 在 Cloudflare Pages → Custom domains 绑定。

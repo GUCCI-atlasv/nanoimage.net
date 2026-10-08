@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://nanoimage.net/sitemap.xml
+
+# LLM / AI search context (GEO)
+# https://nanoimage.net/llms.txt

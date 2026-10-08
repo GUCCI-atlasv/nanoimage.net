@@ -2,12 +2,15 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import AppShell from '@/components/AppShell'
 import { blogPosts } from '@/src/data'
-import { URL_LANG_CODES, URL_TO_LANG } from '@/lib/i18n-utils'
-import { buildAlternates, buildOG, buildTwitter, BASE, OG_IMAGE } from '@/lib/seo'
+import { URL_TO_LANG } from '@/lib/i18n-utils'
+import { blogLangsFor, isBlogLangAvailable } from '@/lib/blog-langs'
+import { buildAlternates, buildBlogPostingJsonLd, buildOG, buildTwitter, BASE, OG_IMAGE, URL_TO_BCP47, fitTitle } from '@/lib/seo'
 
 export function generateStaticParams() {
-  return URL_LANG_CODES.flatMap((lang) =>
-    blogPosts.map((p) => ({ lang, slug: p.slug })),
+  // Only emit localized blog pages that have a real translation.
+  // Untranslated combinations 301 to the English article via _redirects.
+  return blogPosts.flatMap((p) =>
+    blogLangsFor(p.slug).map((lang) => ({ lang, slug: p.slug })),
   )
 }
 
@@ -16,12 +19,12 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { lang, slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
-  if (!post) return { title: 'Not Found' }
+  if (!post || !isBlogLangAvailable(lang, slug)) return { title: 'Not Found' }
 
   // Use localised data when available
   const langCode = URL_TO_LANG[lang] ?? 'en'
-  const loc = post.localizations?.[langCode]
-  const title = `${loc?.title ?? post.title} - NanoImage Blog`
+  const loc = post.localizations?.[langCode] ?? (langCode !== 'zh-CN' ? post.localizations?.en : undefined)
+  const title = fitTitle(loc?.title ?? post.title, ' - NanoImage Blog')
   const description = loc?.metaDescription ?? loc?.excerpt ?? post.metaDescription ?? post.excerpt
 
   const basePath = `/blog/${slug}`
@@ -31,18 +34,37 @@ export async function generateMetadata(
   return {
     title,
     description,
-    alternates: buildAlternates(canonicalUrl, basePath),
-    openGraph: buildOG({ title, description, url: canonicalUrl, image }),
+    alternates: buildAlternates(canonicalUrl, basePath, blogLangsFor(slug)),
+    openGraph: buildOG({ title, description, url: canonicalUrl, image, urlLang: lang }),
     twitter: buildTwitter({ title, description, image }),
   }
 }
 
 export default async function LangBlogPostPage(
-  { params }: { params: Promise<{ slug: string }> },
+  { params }: { params: Promise<{ lang: string; slug: string }> },
 ) {
-  const { slug } = await params
+  const { lang, slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
-  if (!post) notFound()
+  if (!post || !isBlogLangAvailable(lang, slug)) notFound()
 
-  return <AppShell page="blog-post" blogSlug={slug} />
+  const langCode = URL_TO_LANG[lang] ?? 'en'
+  const loc = post.localizations?.[langCode] ?? (langCode !== 'zh-CN' ? post.localizations?.en : undefined)
+  const jsonLd = buildBlogPostingJsonLd({
+    url: `${BASE}/${lang}/blog/${slug}`,
+    title: loc?.title ?? post.title,
+    description: loc?.metaDescription ?? loc?.excerpt ?? post.metaDescription ?? post.excerpt,
+    datePublished: post.date,
+    image: post.coverImage ? `${BASE}${post.coverImage}` : undefined,
+    bcp47: URL_TO_BCP47[lang] ?? lang,
+  })
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AppShell page="blog-post" blogSlug={slug} />
+    </>
+  )
 }

@@ -1,0 +1,287 @@
+/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/OG/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/banner/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600
+
+
+# Deprecated tools (PRD Phase 1 observation): force noindex at edge
+/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/zh/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/zh/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/zh-TW/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/zh-TW/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/ja/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/ja/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/ko/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/ko/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/fr/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/fr/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/es/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/es/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/pt/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/pt/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/ru/video-to-mp3
+  X-Robots-Tag: noindex, follow
+/ru/video-to-mp3/
+  X-Robots-Tag: noindex, follow
+/meme-generator
+  X-Robots-Tag: noindex, follow
+/meme-generator/
+  X-Robots-Tag: noindex, follow
+/zh/meme-generator
+  X-Robots-Tag: noindex, follow
+/zh/meme-generator/
+  X-Robots-Tag: noindex, follow
+/zh-TW/meme-generator
+  X-Robots-Tag: noindex, follow
+/zh-TW/meme-generator/
+  X-Robots-Tag: noindex, follow
+/ja/meme-generator
+  X-Robots-Tag: noindex, follow
+/ja/meme-generator/
+  X-Robots-Tag: noindex, follow
+/ko/meme-generator
+  X-Robots-Tag: noindex, follow
+/ko/meme-generator/
+  X-Robots-Tag: noindex, follow
+/fr/meme-generator
+  X-Robots-Tag: noindex, follow
+/fr/meme-generator/
+  X-Robots-Tag: noindex, follow
+/es/meme-generator
+  X-Robots-Tag: noindex, follow
+/es/meme-generator/
+  X-Robots-Tag: noindex, follow
+/pt/meme-generator
+  X-Robots-Tag: noindex, follow
+/pt/meme-generator/
+  X-Robots-Tag: noindex, follow
+/ru/meme-generator
+  X-Robots-Tag: noindex, follow
+/ru/meme-generator/
+  X-Robots-Tag: noindex, follow
+/photo-grid
+  X-Robots-Tag: noindex, follow
+/photo-grid/
+  X-Robots-Tag: noindex, follow
+/zh/photo-grid
+  X-Robots-Tag: noindex, follow
+/zh/photo-grid/
+  X-Robots-Tag: noindex, follow
+/zh-TW/photo-grid
+  X-Robots-Tag: noindex, follow
+/zh-TW/photo-grid/
+  X-Robots-Tag: noindex, follow
+/ja/photo-grid
+  X-Robots-Tag: noindex, follow
+/ja/photo-grid/
+  X-Robots-Tag: noindex, follow
+/ko/photo-grid
+  X-Robots-Tag: noindex, follow
+/ko/photo-grid/
+  X-Robots-Tag: noindex, follow
+/fr/photo-grid
+  X-Robots-Tag: noindex, follow
+/fr/photo-grid/
+  X-Robots-Tag: noindex, follow
+/es/photo-grid
+  X-Robots-Tag: noindex, follow
+/es/photo-grid/
+  X-Robots-Tag: noindex, follow
+/pt/photo-grid
+  X-Robots-Tag: noindex, follow
+/pt/photo-grid/
+  X-Robots-Tag: noindex, follow
+/ru/photo-grid
+  X-Robots-Tag: noindex, follow
+/ru/photo-grid/
+  X-Robots-Tag: noindex, follow
+/smart-crop
+  X-Robots-Tag: noindex, follow
+/smart-crop/
+  X-Robots-Tag: noindex, follow
+/zh/smart-crop
+  X-Robots-Tag: noindex, follow
+/zh/smart-crop/
+  X-Robots-Tag: noindex, follow
+/zh-TW/smart-crop
+  X-Robots-Tag: noindex, follow
+/zh-TW/smart-crop/
+  X-Robots-Tag: noindex, follow
+/ja/smart-crop
+  X-Robots-Tag: noindex, follow
+/ja/smart-crop/
+  X-Robots-Tag: noindex, follow
+/ko/smart-crop
+  X-Robots-Tag: noindex, follow
+/ko/smart-crop/
+  X-Robots-Tag: noindex, follow
+/fr/smart-crop
+  X-Robots-Tag: noindex, follow
+/fr/smart-crop/
+  X-Robots-Tag: noindex, follow
+/es/smart-crop
+  X-Robots-Tag: noindex, follow
+/es/smart-crop/
+  X-Robots-Tag: noindex, follow
+/pt/smart-crop
+  X-Robots-Tag: noindex, follow
+/pt/smart-crop/
+  X-Robots-Tag: noindex, follow
+/ru/smart-crop
+  X-Robots-Tag: noindex, follow
+/ru/smart-crop/
+  X-Robots-Tag: noindex, follow
+/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/zh/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/zh/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/zh-TW/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/zh-TW/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/ja/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/ja/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/ko/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/ko/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/fr/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/fr/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/es/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/es/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/pt/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/pt/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/ru/compress-image-to-200kb
+  X-Robots-Tag: noindex, follow
+/ru/compress-image-to-200kb/
+  X-Robots-Tag: noindex, follow
+/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/zh/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/zh/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/zh-TW/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/zh-TW/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/ja/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/ja/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/ko/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/ko/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/fr/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/fr/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/es/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/es/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/pt/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/pt/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/ru/compress-image-to-500kb
+  X-Robots-Tag: noindex, follow
+/ru/compress-image-to-500kb/
+  X-Robots-Tag: noindex, follow
+/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/zh/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/zh/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/zh-TW/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/zh-TW/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/ja/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/ja/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/ko/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/ko/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/fr/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/fr/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/es/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/es/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/pt/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/pt/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow
+/ru/compress-image-to-1mb
+  X-Robots-Tag: noindex, follow
+/ru/compress-image-to-1mb/
+  X-Robots-Tag: noindex, follow

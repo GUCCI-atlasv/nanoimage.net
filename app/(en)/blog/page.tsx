@@ -8,10 +8,10 @@ const description =
 const url = 'https://nanoimage.net/blog'
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: buildAlternates(url),
-  openGraph: buildOG({ title, description, url }),
+  openGraph: buildOG({ title, description, url, urlLang: 'en' }),
   twitter: buildTwitter({ title, description }),
 }
 

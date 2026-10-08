@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { categories, tools } from '@/src/data'
-import { buildAlternates, buildOG, buildTwitter, BASE } from '@/lib/seo'
+import { getCategoryHub, TOOL_MENU_EXCLUDED_SLUGS } from '@/lib/category-hub'
+import { buildAlternates, buildCategoryHubJsonLd, buildOG, buildTwitter, withBrandTitle, BASE } from '@/lib/seo'
 import AppShell from '@/components/AppShell'
 
 export function generateStaticParams() {
@@ -12,46 +13,47 @@ export async function generateMetadata(
   { params }: { params: Promise<{ category: string }> }
 ): Promise<Metadata> {
   const { category: slug } = await params
+  const hub = getCategoryHub('en', slug)
   const cat = categories.find((c) => c.id === slug)
-  if (!cat) return { title: 'Not Found' }
+  if (!cat || !hub) return { title: 'Not Found' }
 
-  const title = `${cat.title} - Free Online Tools`
-  const description = cat.description
+  const pageTitle = hub.seo.title
+  const brandedTitle = withBrandTitle(pageTitle)
+  const description = hub.seo.description
   const url = `${BASE}/tools/${slug}`
 
   return {
-    title,
+    title: pageTitle,
     description,
     alternates: buildAlternates(url),
-    openGraph: buildOG({ title: `${title} - NanoImage`, description, url }),
-    twitter: buildTwitter({ title: `${title} - NanoImage`, description }),
+    openGraph: buildOG({ title: brandedTitle, description, url, urlLang: 'en' }),
+    twitter: buildTwitter({ title: brandedTitle, description }),
   }
 }
 
-export default async function CategoryPage(
+export default async function CategoryPageRoute(
   { params }: { params: Promise<{ category: string }> }
 ) {
   const { category: slug } = await params
+  const hub = getCategoryHub('en', slug)
   const cat = categories.find((c) => c.id === slug)
-  if (!cat) notFound()
+  if (!cat || !hub) notFound()
 
-  const catTools = tools.filter((t) => t.category === slug)
+  const catTools = tools.filter(
+    (t) => t.category === slug && !TOOL_MENU_EXCLUDED_SLUGS.has(t.slug) && !t.deprecated,
+  )
   const url = `${BASE}/tools/${slug}`
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: cat.title,
-    description: cat.description,
+  const jsonLd = buildCategoryHubJsonLd({
     url,
-    hasPart: catTools.map((t) => ({
-      '@type': 'SoftwareApplication',
-      name: t.title,
+    name: hub.seo.h1,
+    description: hub.seo.description,
+    tools: catTools.map((t) => ({
+      name: t.name,
       url: `${BASE}/${t.slug}`,
-      applicationCategory: 'MultimediaApplication',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     })),
-  }
+    faqs: hub.faqs,
+  })
 
   return (
     <>

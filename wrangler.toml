@@ -1,0 +1,14 @@
+name = "nanoimage-net"
+
+# Cloudflare Pages 项目配置
+# 项目使用 Next.js static export (output: 'export')，构建产物位于 out/ 目录
+pages_build_output_dir = "out"
+
+# 注意：
+# - 不要在这里放 [build] command，因为直接用 wrangler pages deploy 时会触发验证错误。
+# - 构建由 package.json 中的 deploy 脚本负责（npm run build && wrangler pages deploy ...）
+# - 如果以后改用 Git 集成自动部署，Dashboard 里可以配置 Build command 和 Output directory。
+
+# 可选：未来如果需要环境变量、兼容性标志等可以在这里添加
+# [vars]
+# EXAMPLE_VAR = "value"

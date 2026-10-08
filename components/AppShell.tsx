@@ -1,11 +1,11 @@
 'use client'
 import { useCallback, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/navigation'
 import {
   Header,
   Footer,
   HomePage,
-  ToolPage,
   HowItWorksPage,
   BlogPage,
   BlogPostPage,
@@ -19,7 +19,15 @@ import { tools, blogPosts } from '@/src/data'
 import { privacyPolicy, termsOfUse } from '@/src/legal'
 import { useLangPath } from '@/src/i18n'
 
+const ToolPage = dynamic(
+  () => import('@/src/app-pages/tool-page').then((m) => ({ default: m.ToolPage })),
+  { ssr: true, loading: () => <div className="tool-loading" aria-busy="true" /> },
+)
+
 type PendingUpload = { id: number; files: File[] }
+
+// Keep local File objects across AppShell remounts during client navigation.
+let queuedCompressUpload: PendingUpload | null = null
 
 export type AppShellProps =
   | { page: 'home' }
@@ -37,7 +45,7 @@ export type AppShellProps =
 export default function AppShell(props: AppShellProps) {
   const router = useRouter()
   const lp = useLangPath()
-  const [pendingCompressUpload, setPendingCompressUpload] = useState<PendingUpload | null>(null)
+  const [pendingCompressUpload, setPendingCompressUpload] = useState<PendingUpload | null>(() => queuedCompressUpload)
 
   const navigate = useCallback((to: string) => {
     // Prefix with the active language unless the path is already absolute or
@@ -49,11 +57,15 @@ export default function AppShell(props: AppShellProps) {
 
   const openCompressWithFiles = useCallback((files: File[]) => {
     if (!files.length) return
-    setPendingCompressUpload({ id: Date.now(), files })
+    queuedCompressUpload = { id: Date.now(), files }
+    setPendingCompressUpload(queuedCompressUpload)
     router.push(lp('/compress-image'))
   }, [router, lp])
 
-  const clearPendingUpload = useCallback(() => setPendingCompressUpload(null), [])
+  const clearPendingUpload = useCallback(() => {
+    queuedCompressUpload = null
+    setPendingCompressUpload(null)
+  }, [])
 
   const activeTool = props.page === 'tool'
     ? tools.find(t => t.slug === props.toolSlug)

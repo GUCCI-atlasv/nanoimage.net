@@ -30,3 +30,6 @@ out
 # Mirrored production deploy artifact (do not rebuild-overwrite blindly)
 prod-out/
 
+
+# TypeScript incremental build cache
+*.tsbuildinfo

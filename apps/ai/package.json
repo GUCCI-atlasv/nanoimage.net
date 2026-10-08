@@ -1,0 +1,31 @@
+{
+  "name": "ai-nanoimage-net",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ai.nanoimage.net — on-device AI image tools. Still no upload.",
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "lint": "next lint",
+    "deploy": "wrangler pages deploy redirects-only --project-name ai-nanoimage-net --commit-dirty=true",
+    "deploy:legacy-site": "npm run build && wrangler pages deploy out --project-name ai-nanoimage-net --commit-dirty=true"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.6",
+    "@mediapipe/tasks-vision": "^0.10.35",
+    "next": "^15.5.16",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.9",
+    "typescript": "~5.9.2",
+    "wrangler": "^4.88.0"
+  }
+}

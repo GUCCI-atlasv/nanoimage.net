@@ -1,7 +1,10 @@
-# Deploy from mirrored production out/
+# Historical mirrored deployment workflow
+
+The production source gap was recovered on 2026-10-08. Use the root project source build and deploy workflow:
 
 ```bash
-npx wrangler pages deploy prod-out --project-name nanoimage-net --commit-dirty=true --commit-message "..."
+npm ci
+npm run deploy
 ```
 
-See `docs/PRODUCTION_SOURCE_GAP.md`.
+Mirrored `prod-out/` deployment was a temporary workaround for missing source and is no longer the current workflow. See `docs/PRODUCTION_SOURCE_GAP.md` for the recovery and validation record.

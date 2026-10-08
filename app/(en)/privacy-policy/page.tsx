@@ -3,8 +3,8 @@ import AppShell from '@/components/AppShell'
 import { buildAlternates } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - NanoImage',
-  robots: { index: false },
+  title: { absolute: 'Privacy Policy - NanoImage' },
+  description: 'Read the NanoImage privacy policy. We do not upload, store, or share your images. All processing happens locally in your browser.',
   alternates: buildAlternates('https://nanoimage.net/privacy-policy'),
 }
 

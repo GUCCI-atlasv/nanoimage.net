@@ -18,7 +18,7 @@ export async function generateMetadata(
     title,
     description,
     alternates: buildAlternates(canonicalUrl, '/cli'),
-    openGraph: buildOG({ title, description, url: canonicalUrl }),
+    openGraph: buildOG({ title, description, url: canonicalUrl, urlLang: lang }),
     twitter: buildTwitter({ title, description }),
   }
 }

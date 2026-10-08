@@ -1,0 +1,71 @@
+/*
+ * Styles for the "static" tools (GIF Compressor, PNG/JPG to WebP, JPG to BMP).
+ * Ported from the production static pages; the DOM ids (#gc-*, #wc-*) are bound by
+ * the vanilla scripts in /public/assets/{gif-compressor,webp-convert,bmp-convert}.
+ * Shared pieces (.privacy-card, .breadcrumbs) are re-scoped under the wrappers so
+ * they do not clash with the app-wide rules in App.css.
+ */
+
+/* The .gc-wrap / .wc-wrap containers carry their own padding. */
+.tool-page.static-tool-page{padding:1rem 0.5rem 0}
+
+/* ── GIF compressor (.gc-*) ── */
+.gc-wrap{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+.gc-hero h1{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 12px}
+.gc-hero p{font-size:1.05rem;line-height:1.55;max-width:70ch}
+.gc-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:20px}
+@media(max-width:860px){.gc-grid{grid-template-columns:1fr}}
+.gc-card{background:#fff;border:1px solid #e6e8ef;border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(20,24,40,.04)}
+.gc-drop{border:2px dashed #b7bed3;border-radius:14px;padding:36px 16px;text-align:center;cursor:pointer;background:#f7f8fc}
+.gc-drop.drag{border-color:#5b7cfa;background:#eef2ff}
+.gc-previews{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.gc-previews figure{margin:0;background:#0f1220;border-radius:12px;min-height:160px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.gc-previews img{max-width:100%;max-height:220px}
+.gc-previews figcaption{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:2px 8px;border-radius:999px}
+.gc-actions label{display:block;margin:10px 0;font-size:14px}
+.gc-actions select,.gc-actions input[type=number]{width:100%;padding:8px 10px;border-radius:10px;border:1px solid #d5d9e6}
+.gc-actions input[type=range]{width:100%}
+.gc-actions button,.gc-actions a.download{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;padding:12px 16px;border-radius:999px;border:0;background:#111827;color:#fff;font-weight:600;text-decoration:none;cursor:pointer;width:100%}
+.gc-actions a.download{background:#2563eb}
+#gc-status{min-height:1.4em;margin-top:10px;font-size:14px}
+#gc-status.gc-error{color:#b91c1c}
+.gc-seo-block{margin:28px 0}
+.gc-seo-block h2{font-size:1.25rem;margin:0 0 8px}
+.gc-related a{margin-right:12px}
+
+/* ── PNG/JPG → WebP and JPG → BMP (.wc-*) ── */
+.wc-wrap{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+.wc-hero h1{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 12px}
+.wc-hero p{font-size:1.05rem;line-height:1.55;max-width:70ch}
+.wc-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:20px}
+@media(max-width:860px){.wc-grid{grid-template-columns:1fr}}
+.wc-card{background:#fff;border:1px solid #e6e8ef;border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(20,24,40,.04)}
+.wc-drop{border:2px dashed #b7bed3;border-radius:14px;padding:36px 16px;text-align:center;cursor:pointer;background:#f7f8fc}
+.wc-drop.drag{border-color:#5b7cfa;background:#eef2ff}
+.wc-previews{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.wc-previews figure{margin:0;background:#0f1220;border-radius:12px;min-height:140px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.wc-previews img{max-width:100%;max-height:200px}
+.wc-previews figcaption{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:2px 8px;border-radius:999px}
+.wc-actions label{display:block;margin:10px 0;font-size:14px}
+.wc-actions input[type=range]{width:100%}
+.wc-actions button,.wc-actions a.download{display:inline-flex;align-items:center;justify-content:center;margin-top:10px;padding:12px 16px;border-radius:999px;border:0;background:#111827;color:#fff;font-weight:600;text-decoration:none;cursor:pointer;width:100%}
+.wc-actions a.download{background:#2563eb}
+.wc-actions a.download.secondary{background:#0f766e;margin-top:8px}
+#wc-status{min-height:1.4em;margin-top:10px;font-size:14px}
+#wc-status.wc-error{color:#b91c1c}
+.wc-row{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid #eef0f5;font-size:13px}
+.wc-row .wc-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wc-row .wc-remove{border:0;background:transparent;cursor:pointer;font-size:18px;line-height:1}
+.wc-seo-block{margin:28px 0}
+.wc-seo-block h2{font-size:1.25rem;margin:0 0 8px}
+.wc-related a{margin-right:12px}
+
+/* ── Shared ── */
+/* Author `display` rules above (label / a.download) would otherwise beat the UA [hidden] rule. */
+.gc-wrap [hidden],.wc-wrap [hidden]{display:none !important}
+.gc-wrap .st-badges,.wc-wrap .st-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;font-size:13px}
+.gc-wrap .st-badges span,.wc-wrap .st-badges span{background:#f3f4f8;border-radius:999px;padding:6px 10px}
+.gc-wrap .gc-drop-meta,.wc-wrap .wc-drop-meta{margin-top:8px;opacity:.7}
+.gc-wrap .gc-drop-count,.wc-wrap .wc-drop-count{margin-top:4px;opacity:.7}
+.wc-wrap .wc-bmp-note{font-size:13px;opacity:.8;margin:0 0 8px}
+.gc-seo-block p,.wc-seo-block p{line-height:1.55}

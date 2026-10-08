@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Step 3: EXIF options">
+  <rect width="1200" height="630" fill="#fffdf8"/>
+  <text x="600" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="700" fill="#3b2d5c">Step 3  Options</text>
+  <rect x="320" y="220" width="560" height="72" rx="12" fill="#f3ecff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="600" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" fill="#3b2d5c">Keep metadata (EXIF)</text>
+</svg>

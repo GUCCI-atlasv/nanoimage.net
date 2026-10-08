@@ -1,0 +1,15 @@
+# ai.nanoimage.net — merged into nanoimage.net (2026-07).
+# This deploy contains ONLY redirects: every URL 301s to the main domain.
+# Cloudflare Pages rules: static redirects FIRST, splat LAST.
+
+/background-remover  https://nanoimage.net/background-remover  301
+/object-remover      https://nanoimage.net/object-remover      301
+/photo-restore       https://nanoimage.net/photo-restore       301
+/smart-crop          https://nanoimage.net/smart-crop          301
+/image-upscaler      https://nanoimage.net/upscale-image       301
+/tools               https://nanoimage.net/tools/ai-tools      301
+/favicon.ico         https://nanoimage.net/favicon.svg         301
+/                    https://nanoimage.net/tools/ai-tools      301
+
+# Catch-all: anything else goes to the AI tools hub
+/*  https://nanoimage.net/tools/ai-tools  301

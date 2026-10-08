@@ -3,8 +3,8 @@ import AppShell from '@/components/AppShell'
 import { buildAlternates } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Terms of Use - NanoImage',
-  robots: { index: false },
+  title: { absolute: 'Terms of Use - NanoImage' },
+  description: 'Read the NanoImage terms of use. Our free browser-based image tools are provided as-is with no data collection, no account required.',
   alternates: buildAlternates('https://nanoimage.net/terms-of-use'),
 }
 

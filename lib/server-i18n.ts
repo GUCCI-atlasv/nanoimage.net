@@ -1,5 +1,5 @@
 /**
- * Server-side i18n helper for generateMetadata.
+ * Server-side i18n helper for generateMetadata and JSON-LD generation.
  * Imports plain translation objects directly (no React, safe for Server Components).
  */
 import { en } from '@/src/i18n/en'
@@ -12,6 +12,8 @@ import { es } from '@/src/i18n/es'
 import { pt } from '@/src/i18n/pt'
 import { ru } from '@/src/i18n/ru'
 import { URL_TO_LANG } from './i18n-utils'
+import { tools } from '@/src/data'
+import { TOOL_SEO_EXTRAS, buildToolsCategoryUrl, buildToolsIndexUrl, fitTitle, TITLE_MAX_LENGTH, type ToolSeoExtras } from './seo'
 
 type Translations = typeof en
 
@@ -33,16 +35,106 @@ export function getTranslations(urlLang: string): Translations {
   return TRANSLATIONS[langCode] ?? en
 }
 
+// ─── Tool meta-description suffix per LangCode ──────────────────────────────
+// Appended to each tool's short description to create an SEO-friendly,
+// keyword-rich meta description (~80–120 chars total in Chinese, 120–160 in Latin).
+const META_DESC_SUFFIX: Record<string, string> = {
+  'zh-CN': '支持 JPG、PNG、WebP，100% 在浏览器中运行，无需上传，无需账号，永久免费。',
+  'zh-TW': '支援 JPG、PNG、WebP，100% 在瀏覽器中運行，無需上傳，無需帳號，永久免費。',
+  ja:      'JPG・PNG・WebP対応。ブラウザで完結、アップロード不要、アカウント不要、完全無料。',
+  ko:      'JPG, PNG, WebP 지원. 브라우저에서 100% 처리. 업로드·계정 불필요, 영원히 무료.',
+  fr:      'Compatible JPG, PNG, WebP. Traitement 100% dans le navigateur. Sans upload, sans compte, gratuitement.',
+  es:      'Compatible con JPG, PNG, WebP. Procesamiento 100% en el navegador. Sin subida, sin cuenta, gratis para siempre.',
+  pt:      'Suporta JPG, PNG, WebP. Processamento 100% no navegador. Sem upload, sem conta, gratuito para sempre.',
+  ru:      'Поддержка JPG, PNG, WebP. 100% в браузере. Без загрузки, без аккаунта, бесплатно навсегда.',
+}
+
 // ─── Tool-page suffix per LangCode ──────────────────────────────────────────
-const TOOL_SUFFIX: Record<string, string> = {
-  'zh-CN': '在线免费 - NanoImage',
-  'zh-TW': '線上免費 - NanoImage',
-  ja:      'オンライン無料 - NanoImage',
-  ko:      '무료 온라인 - NanoImage',
-  fr:      'en ligne gratuit - NanoImage',
-  es:      'online gratis - NanoImage',
-  pt:      'online grátis - NanoImage',
-  ru:      'онлайн бесплатно - NanoImage',
+// The suffix used to be a fixed string appended to every tool name, which produced
+// duplicated keywords in 21/41 zh titles ("在线模糊图片 – 免费局部模糊工具 在线免费 - NanoImage").
+// Duplicated tokens waste the ~32-char title budget Bing renders and read as spam.
+// We now drop any modifier token the tool name already contains.
+const BRAND_SUFFIX = '- NanoImage'
+
+const TOOL_SUFFIX_TOKENS: Record<string, string[]> = {
+  'zh-CN': ['在线', '免费'],
+  'zh-TW': ['線上', '免費'],
+  ja:      ['オンライン', '無料'],
+  // ko: keep the natural "무료 온라인" order — Korean is space-separated, not CJK-joined.
+  ko:      ['무료', '온라인'],
+  fr:      ['en ligne', 'gratuit'],
+  es:      ['online', 'gratis'],
+  pt:      ['online', 'grátis'],
+  ru:      ['онлайн', 'бесплатно'],
+}
+
+/** Languages whose modifier tokens join without a separator. Korean is excluded — it is space-separated. */
+const CJK_LANGS = new Set(['zh-CN', 'zh-TW', 'ja'])
+
+/**
+ * Build "<name> [missing modifier tokens] - NanoImage".
+ * Tokens already present in `name` are omitted so the keyword never repeats.
+ */
+function buildToolTitle(name: string, langCode: string): string {
+  const tokens = TOOL_SUFFIX_TOKENS[langCode]
+  if (!tokens) return fitTitle(name, ` Online ${BRAND_SUFFIX}`)
+
+  const haystack = name.toLowerCase()
+  // ru: "бесплатно" vs "бесплатный" — compare on a truncated stem.
+  const missing = tokens.filter((tok) => {
+    const stem = langCode === 'ru' ? tok.slice(0, 7) : tok
+    return !haystack.includes(stem.toLowerCase())
+  })
+
+  if (missing.length === 0) return fitTitle(name, ` ${BRAND_SUFFIX}`)
+  const modifier = CJK_LANGS.has(langCode) ? missing.join('') : missing.join(' ')
+  // Budget order: full suffix → brand only → bare name. Keyword modifiers are
+  // the first thing dropped because the tool name already carries the keyword.
+  const full = `${name} ${modifier} ${BRAND_SUFFIX}`
+  if (full.length <= TITLE_MAX_LENGTH) return full
+  return fitTitle(name, ` ${BRAND_SUFFIX}`)
+}
+
+// ─── Static tools synced from production (2026-10) ─────────────────────────
+// Exact production <title>/<meta description> for the vanilla-script tools. Only
+// en and zh-CN were authored upstream; other locales use the generic toolsData path.
+const STATIC_TOOL_META: Record<string, Record<string, { title: string; description: string }>> = {
+  en: {
+    'gif-compressor': {
+      title: 'GIF Compressor — Compress GIF to 10MB Locally | NanoImage',
+      description: 'Compress GIF to 10MB (or Discord ~8MB, 5MB, 512KB, 256KB) in your browser. Quality, frame, and palette controls. Free, no upload, no signup.',
+    },
+    'png-to-webp': {
+      title: 'PNG to WebP Converter — Free, Local, No Upload | NanoImage',
+      description: 'Convert PNG to WebP in your browser. Batch files, quality control, ZIP download. Free, no upload, no signup — private WebP conversion on NanoImage.',
+    },
+    'jpg-to-webp': {
+      title: 'JPG to WebP Converter — Free Local JPEG→WebP | NanoImage',
+      description: 'Convert JPG/JPEG to WebP in your browser. Batch convert, quality control, no upload. Free WebP converter for photos on NanoImage.',
+    },
+    'jpg-to-bmp': {
+      title: 'JPG to BMP Converter — Free, Local, No Upload | NanoImage',
+      description: 'Convert JPG or JPEG to BMP in your browser. Free, no upload, no signup — private local conversion on NanoImage.',
+    },
+  },
+  'zh-CN': {
+    'gif-compressor': {
+      title: 'GIF 压缩到 10MB — 本地缩小动图体积，无需上传 | NanoImage',
+      description: '把 GIF 压缩到 10MB（或 Discord 约 8MB、5MB、512KB、256KB）。浏览器本地处理，可调质量、抽帧与色板。免费、不上传、无需注册。',
+    },
+    'png-to-webp': {
+      title: 'PNG 转 WebP — 本地免费转换，无需上传 | NanoImage',
+      description: '在浏览器中将 PNG 转为 WebP，支持批量、质量控制与 ZIP 下载。免费、不上传、无需注册。',
+    },
+    'jpg-to-webp': {
+      title: 'JPG 转 WebP — 本地 JPEG 转 WebP，无需上传 | NanoImage',
+      description: '浏览器内将 JPG/JPEG 转为 WebP，支持批量与质量控制。免费、不上传。',
+    },
+    'jpg-to-bmp': {
+      title: 'JPG 转 BMP — 本地免费转换，无需上传 | NanoImage',
+      description: '在浏览器中将 JPG 或 JPEG 转为 BMP。免费、无需上传、无需注册 — NanoImage 本地私密转换。',
+    },
+  },
 }
 
 /** Build localised title + description for a tool page. */
@@ -52,13 +144,69 @@ export function getToolMeta(
 ): { title: string; description: string } {
   const langCode = URL_TO_LANG[urlLang] ?? 'en'
   const t = TRANSLATIONS[langCode] ?? en
+
+  const staticMeta = STATIC_TOOL_META[langCode]?.[slug]
+  if (staticMeta) return staticMeta
+
+  if (slug === 'passport-photo' && langCode === 'en') {
+    return {
+      title: 'Free Passport Photo Maker Online | No Uploads - NanoImage',
+      description:
+        'Create passport, visa, and ID photos online for free with exact size, background, DPI, and file size settings. No uploads, no signup, no watermark.',
+    }
+  }
+
+  // Target-size compressor landing pages (English per PRD)
+  if (langCode === 'en') {
+    if (slug === 'grid-maker') {
+      return {
+        title: 'Free Online Grid Maker for Drawing | NanoImage',
+        description: 'Create a free drawing grid online. Upload a reference photo or make a blank printable grid, customize rows, columns, labels, colors, and opacity, then export PNG, JPG, or PDF. No signup, no upload.',
+      }
+    }
+    if (slug === 'compress-image') {
+      // Per compress-image SEO optimization PRD: generic hub positioning, no exact-size terms in title/meta
+      return {
+        title: 'Compress Image Online – Free, Private Image Compressor | NanoImage',
+        description: 'Compress JPG, PNG, WebP, and GIF images online for free. Reduce image file size in your browser with no upload, no signup, and full privacy.',
+      }
+    }
+    if (slug === 'compress-image-to-100kb') {
+      return {
+        title: 'Compress Image to 100KB Online – Free, No Upload | NanoImage',
+        description: 'Compress JPG, PNG, or WebP images to under 100KB automatically. Your files are processed in your browser — no upload, no signup, free.',
+      }
+    }
+    if (slug === 'compress-image-to-200kb') {
+      return {
+        title: 'Compress Image to 200KB Online – Free & Private | NanoImage',
+        description: 'Compress JPG, PNG, or WebP photos to under 200KB in your browser. Ideal for visa, passport, ID, and document uploads. Free, private, no upload.',
+      }
+    }
+    if (slug === 'compress-image-to-500kb') {
+      return {
+        title: 'Compress Image to 500KB Online – Free, No Signup | NanoImage',
+        description: 'Reduce JPG, PNG, or WebP images to under 500KB in your browser. Perfect for email attachments, blog images, CMS uploads, and product photos.',
+      }
+    }
+    if (slug === 'compress-image-to-1mb') {
+      return {
+        title: 'Compress Image to 1MB Online – Free, In Browser | NanoImage',
+        description: 'Compress JPG, PNG, or WebP photos to under 1MB instantly in your browser. Great for phone photos, email, social sharing, and upload limits.',
+      }
+    }
+  }
+
   const toolEntry = (t.toolsData as Record<string, { name: string; description: string }>)?.[slug]
 
   if (toolEntry) {
-    const suffix = TOOL_SUFFIX[langCode] ?? 'Online - NanoImage'
+    const descSuffix = META_DESC_SUFFIX[langCode]
+    const description = descSuffix
+      ? `${toolEntry.description} ${descSuffix}`
+      : toolEntry.description
     return {
-      title: `${toolEntry.name} ${suffix}`,
-      description: toolEntry.description,
+      title: buildToolTitle(toolEntry.name, langCode),
+      description,
     }
   }
 
@@ -67,7 +215,15 @@ export function getToolMeta(
   if (enEntry) {
     return {
       title: `${enEntry.name} Online - NanoImage`,
-      description: enEntry.description,
+      description: `${enEntry.description} Supports JPG, PNG, WebP — 100% in your browser. No upload, no account, free forever.`,
+    }
+  }
+
+  const tool = tools.find((item) => item.slug === slug)
+  if (tool) {
+    return {
+      title: `${tool.title} | NanoImage`,
+      description: tool.subtitle,
     }
   }
 
@@ -79,40 +235,40 @@ type PageMeta = { title: string; description: string }
 
 export const HOME_META: Record<string, PageMeta> = {
   en: {
-    title: "NanoImage — 15 Image Tools. No AI. No Upload. No Account.",
-    description: "Compress, resize, crop, convert images — 100% in your browser. Your files never leave your device. Free forever.",
+    title: "NanoImage — 30 Free Image Tools. No Upload. No Account.",
+    description: "Compress, resize, crop, convert, and AI-edit images — 100% in your browser, including on-device AI. Your files never leave your device. Free forever.",
   },
   'zh-CN': {
-    title: "NanoImage — 15 款图片工具。无需AI。无需上传。无需账号。",
-    description: "在线压缩、调整大小、裁剪、转换图片——100% 在浏览器中运行，文件从不离开您的设备。永久免费。",
+    title: "NanoImage — 30 款免费图片工具，无需上传，无需账号",
+    description: "在线压缩、调整大小、裁剪、转换、AI 编辑图片——30 款工具（含端侧 AI），100% 在浏览器中运行，文件从不离开您的设备。永久免费。",
   },
   'zh-TW': {
-    title: "NanoImage — 15 款圖片工具。無需AI。無需上傳。無需帳號。",
-    description: "線上壓縮、調整大小、裁切、轉換圖片——100% 在瀏覽器中運行，檔案永不離開您的裝置。永久免費。",
+    title: "NanoImage — 30 款免費圖片工具，無需上傳，無需帳號",
+    description: "線上壓縮、調整大小、裁切、轉換、AI 編輯圖片——30 款工具（含裝置端 AI），100% 在瀏覽器中運行，檔案永不離開您的裝置。永久免費。",
   },
   ja: {
-    title: "NanoImage — 15の画像ツール。AI不要。アップロード不要。アカウント不要。",
-    description: "画像の圧縮・リサイズ・トリミング・変換をブラウザで完結。ファイルはデバイスから出ません。完全無料。",
+    title: "NanoImage — 無料の画像ツール30種。アップロード不要。アカウント不要。",
+    description: "画像の圧縮・リサイズ・トリミング・変換・AI編集をブラウザで完結（オンデバイスAI搭載）。ファイルはデバイスから出ません。完全無料。",
   },
   ko: {
-    title: "NanoImage — 15가지 이미지 도구. AI 없음. 업로드 없음. 계정 없음.",
-    description: "브라우저에서 이미지 압축, 크기 조정, 자르기, 변환. 파일이 기기를 벗어나지 않습니다. 영원히 무료.",
+    title: "NanoImage — 무료 이미지 도구 30가지. 업로드 없음. 계정 없음.",
+    description: "브라우저에서 이미지 압축, 크기 조정, 자르기, 변환, AI 편집(온디바이스 AI). 파일이 기기를 벗어나지 않습니다. 영원히 무료.",
   },
   fr: {
-    title: "NanoImage — 15 outils image. Sans IA. Sans upload. Sans compte.",
-    description: "Compressez, redimensionnez, recadrez, convertissez vos images dans le navigateur. Vos fichiers restent sur votre appareil. Gratuit à vie.",
+    title: "NanoImage — 30 outils image gratuits. Sans upload. Sans compte.",
+    description: "Compressez, redimensionnez, recadrez, convertissez et retouchez vos images par IA embarquée, dans le navigateur. Vos fichiers restent sur votre appareil. Gratuit à vie.",
   },
   es: {
-    title: "NanoImage — 15 herramientas de imagen. Sin IA. Sin subida. Sin cuenta.",
-    description: "Comprime, redimensiona, recorta y convierte imágenes en el navegador. Tus archivos nunca salen de tu dispositivo. Gratis para siempre.",
+    title: "NanoImage — 30 herramientas de imagen gratuitas. Sin subida. Sin cuenta.",
+    description: "Comprime, redimensiona, recorta, convierte y edita con IA en el dispositivo, todo en el navegador. Tus archivos nunca salen de tu dispositivo. Gratis para siempre.",
   },
   pt: {
-    title: "NanoImage — 15 ferramentas de imagem. Sem IA. Sem upload. Sem conta.",
-    description: "Comprima, redimensione, corte e converta imagens no navegador. Seus arquivos nunca saem do seu dispositivo. Gratuito para sempre.",
+    title: "NanoImage — 30 ferramentas de imagem gratuitas. Sem upload. Sem conta.",
+    description: "Comprima, redimensione, corte, converta e edite com IA no dispositivo, tudo no navegador. Seus arquivos nunca saem do seu dispositivo. Gratuito para sempre.",
   },
   ru: {
-    title: "NanoImage — 15 инструментов для изображений. Без ИИ. Без загрузки. Без аккаунта.",
-    description: "Сжимайте, изменяйте размер, обрезайте и конвертируйте изображения в браузере. Ваши файлы никогда не покидают устройство. Бесплатно навсегда.",
+    title: "NanoImage — 30 бесплатных инструментов для изображений. Без загрузки. Без аккаунта.",
+    description: "Сжимайте, изменяйте размер, обрезайте, конвертируйте и редактируйте изображения с ИИ на устройстве — всё в браузере. Ваши файлы никогда не покидают устройство. Бесплатно навсегда.",
   },
 }
 
@@ -294,6 +450,56 @@ export const TERMS_META: Record<string, PageMeta> = {
   es: { title: "Términos de uso - NanoImage", description: "Términos de uso de las herramientas de procesamiento de imágenes NanoImage." },
   pt: { title: "Termos de uso - NanoImage", description: "Termos de uso das ferramentas de processamento de imagens NanoImage." },
   ru: { title: "Условия использования - NanoImage", description: "Условия использования инструментов обработки изображений NanoImage." },
+}
+
+/**
+ * Get FAQ items, HowTo section, and breadcrumb home label for a tool page.
+ * Used by page.tsx files to build FAQPage + HowTo JSON-LD.
+ */
+export function getToolSchemaData(
+  urlLang: string,
+  slug: string,
+): {
+  faqs: { q: string; a: string }[]
+  toolSection?: { howToTitle: string; howTo: string[]; howToStepNames?: string[] }
+  /** Long-form copy for SoftwareApplication schema (falls back to meta description). */
+  appDescription?: string
+  homeLabel: string
+  toolsLabel: string
+  toolsUrl: string
+  breadcrumbName: string
+  toolSeo?: ToolSeoExtras
+} {
+  const t = getTranslations(urlLang)
+  const faqs = (t.faqs.items as Record<string, { q: string; a: string }[]>)[slug] ?? []
+  const toolSection = t.faqs.toolSections?.[slug]
+  const homeLabel = t.breadcrumbs.home ?? 'Home'
+  const toolsLabel = t.breadcrumbs.tools ?? 'Tools'
+  const extras = TOOL_SEO_EXTRAS[slug]
+  const toolEntry = (t.toolsData as Record<string, { name: string; description: string; breadcrumbName?: string }>)?.[slug]
+  const enEntry = (en.toolsData as Record<string, { name: string; description: string; breadcrumbName?: string }>)?.[slug]
+  const breadcrumbName = toolEntry?.breadcrumbName ?? toolEntry?.name ?? enEntry?.breadcrumbName ?? enEntry?.name ?? slug
+  const categoryId = tools.find((t) => t.slug === slug)?.category
+  const toolsUrl = categoryId
+    ? buildToolsCategoryUrl(urlLang, categoryId)
+    : buildToolsIndexUrl(urlLang)
+
+  return {
+    faqs,
+    toolSection: toolSection
+      ? {
+          howToTitle: toolSection.howToTitle,
+          howTo: toolSection.howTo,
+          howToStepNames: toolSection.howToStepNames,
+        }
+      : undefined,
+    appDescription: toolSection?.desc,
+    homeLabel,
+    toolsLabel,
+    toolsUrl,
+    breadcrumbName,
+    toolSeo: extras,
+  }
 }
 
 /**
