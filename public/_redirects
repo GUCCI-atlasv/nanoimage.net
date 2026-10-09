@@ -46,6 +46,8 @@
 /convert-jpg/  /convert-image  301
 /jpeg-to-webp  /jpg-to-webp  301
 /jpeg-to-webp/  /jpg-to-webp  301
+/es/jpeg-to-webp  /es/jpg-to-webp  301
+/es/jpeg-to-webp/  /es/jpg-to-webp  301
 /jpeg-to-bmp  /jpg-to-bmp  301
 /jpeg-to-bmp/  /jpg-to-bmp  301
 # Retired tools → closest surviving tool (NOT the homepage). A 301 to / reads as a

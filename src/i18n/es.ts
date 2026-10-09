@@ -1,5 +1,5 @@
 import type { Translations } from './en'
-import { staticToolFaqItems } from '../app-pages/static-tools/content'
+import { staticToolFaqItems, staticToolLocaleFaqItems } from '../app-pages/static-tools/content'
 
 export const es: Translations = {
   lang: 'Español',
@@ -1487,6 +1487,7 @@ export const es: Translations = {
     items: {
       // Static tools synced from production (2026-10)
       ...staticToolFaqItems('en'),
+      ...staticToolLocaleFaqItems('es'),
       'passport-photo': [
         { q: '¿Es gratis?', a: 'Sí. Es gratis, sin cuenta y sin marca de agua.' },
         { q: '¿Se sube mi foto?', a: 'No. La foto se procesa en tu navegador.' },
