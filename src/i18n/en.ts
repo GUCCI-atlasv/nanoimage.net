@@ -1,4 +1,5 @@
 import { staticToolFaqItems } from '../app-pages/static-tools/content'
+import { EN_TOOL_FAQS_2026_10, EN_TOOL_SEO_2026_10, type RichFaq, type RichSeoSection } from './en-tool-content-2026-10'
 
 export const en = {
   lang: 'English',
@@ -938,9 +939,9 @@ export const en = {
     downloadWebp: 'Download WebP',
   },
   blurImagePage: {
-    heroTitle: 'Blur Any Part of an Image in Seconds',
+    heroTitle: 'Blur faces, backgrounds or any part',
     heroIntro:
-      'Use our free image blurring tool to blur parts of an image, hide faces, cover license plates, redact sensitive text, or apply background blur effects — all directly in your browser. No upload to servers, no account needed.',
+      'Brush over faces, plates or backgrounds, pick a blur type and strength, click Blur Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to paint the area to blur.',
@@ -950,9 +951,9 @@ export const en = {
     ],
   },
   pixelateImagePage: {
-    heroTitle: 'How to Pixelate an Image Online',
+    heroTitle: 'Hide faces, text and plates',
     heroIntro:
-      'Use this free pixelate image tool to blur or mosaic any area of your photo directly in your browser. Select a region with the brush, adjust the pixel size, and download the result — no upload to any server, no account required. Works with JPG, PNG, WebP, and GIF files up to 20MB.',
+      'Brush over faces, names or plates, pick a pixel size, click Pixelate Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to select the area to pixelate.',
@@ -1094,14 +1095,14 @@ export const en = {
         'Free online crop image tool. Crop by pixels, aspect ratio, or multiple areas. PNG, JPG, WebP. No signup, runs in your browser.',
     },
     'rotate-image': {
-      name: 'Rotate Image Online — Free, Fast & Private',
+      name: 'Rotate Image – Turn or Straighten Any Photo',
       description:
-        'Rotate images online for free — 90°, 180°, or custom angle. Flip and download in your browser. No signup, 100% private.',
+        'To rotate an image, upload it, click 90° Left, 90° Right or 180°, or drag the Angle slider for an exact degree, then click Download Rotated Image.',
     },
     'flip-image': {
-      name: 'Flip Image Online for Free',
+      name: 'Flip Image – Mirror a Photo Horizontally or Vertically',
       description:
-        'Flip images online for free. Mirror JPG, PNG, WebP, or GIF files horizontally, vertically, or both in seconds. No signup, no watermark, processed privately in your browser.',
+        'To flip an image, upload it, choose Flip Horizontal, Flip Vertical or Flip Both, and download the result.',
     },
     'add-text': {
       name: 'Add Text to Image Online — Free & Instant',
@@ -1119,21 +1120,21 @@ export const en = {
         'Adjust brightness, contrast, saturation, sharpness, and more — all in your browser. Free image enhancer with no sign up and instant results.',
     },
     'change-color': {
-      name: 'Image Color Changer – Change Image Color Online Free',
+      name: 'Image Color Changer – Recolor Any Part of a Photo',
       description:
-        'Free image color changer. Replace, tint, or swap any color in a photo — no signup. Change object or background colors in your browser. JPG, PNG, WebP supported.',
+        'An image color changer swaps one color in a photo for another without redrawing it.',
     },
     'black-and-white-image': {
-      name: 'Black and White Image Converter – Free Online',
+      name: 'Black and White Image Converter – Turn Any Photo B&W',
       breadcrumbName: 'Black & White',
       description:
-        'Make any image black and white online — free, instant, no signup. Convert color photos to grayscale in your browser; files never leave your device.',
+        'To make an image black and white, upload it, choose an output format, click Apply and download.',
     },
     'invert-image-colors': {
-      name: 'Invert Image Colors Online – Free Color Inverter',
+      name: 'Invert Image Colors – Turn a Photo into a Negative',
       breadcrumbName: 'Invert Colors',
       description:
-        'Invert colors of any image online — free, one click, no signup. Create a photo negative effect in your browser; files never leave your device.',
+        'To invert the colors of an image, upload it, choose an output format, click Apply and download.',
     },
     'convert-image': {
       name: 'Free Image Converter – Convert JPG, PNG, WebP & More Online',
@@ -1203,16 +1204,16 @@ export const en = {
         'Strip EXIF metadata — GPS location, camera model, device settings — from JPG, PNG, WebP images. Free, instant, and processed entirely in your browser.',
     },
     'blur-image': {
-      name: 'Blur Image Online Free – Blur Faces & Backgrounds in Seconds',
+      name: 'Blur Image – Blur Faces, Backgrounds or Any Part of a Photo',
       breadcrumbName: 'Blur Image',
       description:
-        'Blur faces, license plates, or backgrounds in seconds — free, no upload, no signup. Your photo never leaves your browser, so private images stay private.',
+        'To blur an image, upload it, brush over the area you want to soften, choose a blur type and strength, click Blur Area and download.',
     },
     'pixelate-image': {
-      name: 'Pixelate Image Online Free — Fast Image Pixelator',
+      name: 'Pixelate Image – Hide Faces, Text and Details with a Mosaic',
       breadcrumbName: 'Pixelate Image',
       description:
-        'Pixelate any part of your image for free — right in your browser. No upload, no signup. Hide faces, license plates, or sensitive info in seconds.',
+        'To pixelate an image, upload it, brush over the area you want to hide, pick a pixel size and click Pixelate Area, then download.',
     },
     'add-watermark': {
       name: 'Add Watermark to Image',
@@ -1283,17 +1284,6 @@ export const en = {
         'crop-image': 'Crop to a clean composition',
         'convert-image': 'Convert the resized image format',
       },
-      'rotate-image': {
-        'flip-image': 'Mirror without changing angle',
-        'crop-image': 'Trim empty corners after rotation',
-        'resize-image': 'Change dimensions after rotating',
-        'compress-image': 'Shrink file size after export',
-      },
-      'flip-image': {
-        'rotate-image': 'Fix sideways photos or custom angles',
-        'crop-image': 'Trim edges after flipping',
-        'compress-image': 'Shrink file size after export',
-      },
       'change-background': {
         'crop-image': 'Crop subject before swapping background',
         'enhance-image': 'Brighten photo after background change',
@@ -1305,22 +1295,6 @@ export const en = {
         'crop-image': 'Crop before enhancing brightness',
         'upscale-image': 'Upscale for larger print-ready files',
         'change-color': 'Fine-tune colors in selected areas',
-      },
-      'change-color': {
-        'change-background': 'Change image background color online',
-        'black-and-white-image': 'Convert a photo to black and white',
-        'invert-image-colors': 'Invert image colors for a negative effect',
-        'enhance-image': 'Adjust brightness and contrast after recolor',
-      },
-      'black-and-white-image': {
-        'change-color': 'Replace or tint specific colors instead',
-        'invert-image-colors': 'Invert colors for a negative effect',
-        'enhance-image': 'Fine-tune contrast after converting to B&W',
-      },
-      'invert-image-colors': {
-        'change-color': 'Replace or tint specific colors instead',
-        'black-and-white-image': 'Convert a photo to black and white',
-        'enhance-image': 'Adjust the inverted result',
       },
       'convert-image': {
         'image-to-pdf': 'Merge converted images into one PDF',
@@ -1343,16 +1317,6 @@ export const en = {
         'blur-image': 'Want to hide faces or sensitive areas? Try Blur Image',
         'pixelate-image': 'Or Pixelate Image for stronger privacy protection',
         'compress-image': 'After removing EXIF, reduce file size with Compress Image',
-      },
-      'blur-image': {
-        'pixelate-image': 'Need stronger privacy masking? Try Pixelate Image',
-        'remove-exif': 'Strip GPS and camera metadata with Remove EXIF',
-        'compress-image': 'Shrink file size after blurring with Compress Image',
-      },
-      'pixelate-image': {
-        'blur-image': 'Prefer soft blur instead of mosaic blocks? Try Blur Image',
-        'enhance-image': 'Adjust brightness and clarity on photos you own',
-        'remove-exif': 'Remove hidden GPS and camera metadata before sharing',
       },
       'upscale-image': {
         'enhance-image': 'Fine-tune brightness and contrast after upscaling',
@@ -1445,7 +1409,7 @@ export const en = {
         ],
       },
       'gif-maker': {
-        introTitle: 'Free Online GIF Maker — Images to Animated GIF',
+        introTitle: 'How do I make a GIF from images for free?',
         desc:
           'NanoImage is a free GIF maker that turns multiple images into animated GIFs in your browser on Mac, Windows, and mobile — no signup, no watermark, and no server upload. Adjust frame duration, canvas size, loop settings, and color optimization, then download a share-ready GIF in seconds.',
         blocks: [
@@ -1454,11 +1418,11 @@ export const en = {
             body: 'Upload JPG, PNG, WebP, or existing GIF frames, reorder them with the arrow controls, set frame duration and canvas size, choose loop behavior, then click Create GIF to generate and download. Works on Mac, Windows, and mobile browsers — everything runs locally with no app install.',
           },
           {
-            title: 'GIF Maker Settings Explained',
+            title: 'How do I control GIF speed, size, and loops?',
             body: 'Canvas Size presets cover 16:9, square, 4:5, and 9:16 layouts. Fit controls how frames fill the canvas (Contain, Cover, or Stretch). Frame Duration sets seconds per frame; Loop chooses forever, once, or three times. Quality/Colors and Optimize for smaller file size help control palette and compression.',
           },
           {
-            title: 'How to Make a GIF Smaller',
+            title: 'How do I make a GIF smaller after creating it?',
             body: 'GIF file size grows with frame count, resolution, color count, and FPS. To make a GIF smaller: reduce canvas dimensions, increase frame duration (lower FPS), lower Quality/Colors to 64 or 32, use fewer frames, resize sources first, and enable Optimize for smaller file size. You can also compress still images before animating.',
           },
         ],
@@ -1586,84 +1550,8 @@ export const en = {
           'Export your drawing grid as PNG, JPG, or PDF, then print the grid or use it digitally as a reference.',
         ],
       },
-      'rotate-image': {
-        introTitle: 'Free Online Image Rotator — Any Angle',
-        desc:
-          "NanoImage's free online image rotator lets you rotate any image by 90°, 180°, or a precise custom angle — all directly in your browser. Fix a sideways phone photo, straighten a scanned document, or adjust product shots in seconds. No file is uploaded to a server. Flip horizontally or vertically, set canvas options, and download instantly — no account required.",
-        blocks: [
-          {
-            title: 'Why use a free online image rotator?',
-            body: 'Rotate image online without watermarks, paywalls, or desktop software. Ideal when you need a quick free rotate image workflow for social posts, PDF scans, listings, or homework — private because processing stays on your device.',
-          },
-          {
-            title: 'Rotate vs. flip',
-            body: 'Rotate turns pixels around an angle (90°, 180°, or custom). Flip mirrors left-right or top-bottom. Use both here before you compress or crop the final export.',
-          },
-          {
-            title: 'Supported formats: JPG, PNG, WebP & GIF',
-            body: 'Upload common web formats, preview before/after, and export a rotated file ready to share. Transparent PNG edges can use a custom background color.',
-          },
-          {
-            title: 'Common use cases',
-            body: 'Fix sideways phone photos, straighten scanned homework or receipts, correct product listing angles, and adjust social thumbnails — all without installing software or creating an account.',
-          },
-          {
-            title: 'Format tips when rotating',
-            body: 'JPG is best for photos; repeated lossy re-saves can soften detail, so export once. PNG keeps transparency — set a background color for empty corners after a custom angle. WebP balances size and quality for web. GIF supports static and animated uploads; preview before download.',
-          },
-        ],
-        howToTitle: 'How to Rotate an Image Online',
-        howTo: [
-          'Upload a JPG, PNG, WebP, or GIF file using the upload zone or drag and drop.',
-          'Tap 90° Left, 90° Right, or 180°, or drag the angle slider for a custom degree.',
-          'Optional: flip horizontal/vertical and set canvas fit or background color.',
-          'Click download to save the rotated image to your device.',
-        ],
-        refs: [
-          { label: 'WebP image format — Google Developers', url: 'https://developers.google.com/speed/webp' },
-          { label: 'GIF specification — W3C', url: 'https://www.w3.org/Graphics/GIF/spec-gif89a.txt' },
-          { label: 'Canvas API — MDN', url: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API' },
-        ],
-      },
-      'flip-image': {
-        introTitle: 'Flip Image Online for Free — Horizontal, Vertical, or Both',
-        desc:
-          "NanoImage's free image flipper lets you flip image online in seconds. Mirror photos horizontally, vertically, or both directly in your browser, then download instantly with no signup and no watermark. Your file stays on your device for private processing.",
-        blocks: [
-          {
-            title: 'Why flip or mirror an image online?',
-            body: 'Flipping mirrors an image across an axis to fix mirrored selfies, adjust product photo direction, and create reflection effects. It also helps correct backwards text in photos and prepare print transfer layouts without extra editing apps.',
-          },
-          {
-            title: 'Flip image horizontally, vertically, or both',
-            body: 'Use Flip Horizontal to mirror left-to-right, Flip Vertical to mirror top-to-bottom, or Flip Both to apply both directions at once. This covers the most common mirror image workflows in one click.',
-          },
-          {
-            title: 'Flip vs rotate',
-            body: 'Flipping mirrors pixels across an axis, while rotating changes the angle (90°, 180°, or custom). Use Flip Image when you need a mirror effect, and use Rotate Image when orientation is tilted.',
-          },
-          {
-            title: 'Supported formats: JPG, PNG, WebP & GIF',
-            body: 'Upload JPG, PNG, WebP, or GIF files, preview before and after, and download your flipped result in seconds. PNG transparency is preserved where browser export support allows.',
-          },
-          {
-            title: 'Common use cases',
-            body: 'Popular uses include fixing mirror selfies, correcting reversed text, preparing ecommerce product shots, and creating symmetric graphics for social posts or design mockups.',
-          },
-        ],
-        howToTitle: 'How to Flip an Image Online',
-        howTo: [
-          'Upload a JPG, PNG, WebP, or GIF image using the upload zone or drag and drop.',
-          'Choose Flip Horizontal, Flip Vertical, or Flip Both based on your goal.',
-          'Preview the mirrored result and adjust the flip mode if needed.',
-          'Click download to save your flipped image instantly with no watermark.',
-        ],
-        refs: [
-          { label: 'WebP image format — Google Developers', url: 'https://developers.google.com/speed/webp' },
-          { label: 'GIF specification — W3C', url: 'https://www.w3.org/Graphics/GIF/spec-gif89a.txt' },
-          { label: 'Canvas API — MDN', url: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API' },
-        ],
-      },
+      'rotate-image': EN_TOOL_SEO_2026_10['rotate-image'],
+      'flip-image': EN_TOOL_SEO_2026_10['flip-image'],
       'add-text': {
         introTitle: 'Add Text to Image Online — Free Photo Text Editor',
         desc:
@@ -1781,44 +1669,7 @@ export const en = {
           { label: 'WebP image format — Google Developers', url: 'https://developers.google.com/speed/webp' },
         ],
       },
-      'change-color': {
-        introTitle: 'About This Color Changer Tool',
-        desc:
-          "NanoImage's image color changer lets you change color in any image directly in your browser — no signup, no download. Whether you want to change the background color of an image, replace a specific object color, or apply a tint, our free tool handles it instantly. Supports JPG, PNG, WebP, and GIF with private, local processing.",
-        blocks: [
-          {
-            title: 'How to Change Image Color Online',
-            body: 'Upload a photo, paint the area to recolor, pick a new color, and download. Use brush size and tolerance for clean edges — a simple color change image online free workflow.',
-          },
-          {
-            title: 'Change Background Color of Image',
-            body: 'Select the background with the brush or Select All, choose white or any color, and export. Pair with our Change Background tool for gradients, transparency, or image backdrops.',
-          },
-          {
-            title: 'Replace Any Color in Your Photo',
-            body: 'Swap object colors, clothing, logos, or accents. Popular palette and hex picker make it easy to match brand colors without Photoshop.',
-          },
-          {
-            title: 'Hair, objects & local edits',
-            body: 'Paint over hair, shirts, or product areas for quick recoloring. Complex hair edges may need a smaller brush and eraser — results vary by photo.',
-          },
-          {
-            title: 'Make a Photo Black and White',
-            body: 'Want a black and white image? Apply a gray tint with Select All for a custom monochrome look, or use the one-click B&W preset in our Enhance Image tool for classic black and white conversion.',
-          },
-          {
-            title: 'Free & private',
-            body: 'No account required. All edits run locally in your browser so images never upload to our servers.',
-          },
-        ],
-        howToTitle: 'How to Change Image Color Online',
-        howTo: [
-          'Upload a JPG, PNG, WebP, or GIF using the upload zone or drag and drop.',
-          'Use the brush to select an area (or Select All), then pick a new color from the palette or picker.',
-          'Adjust brush size and tolerance; use the eraser to refine edges.',
-          'Click Download Image to save your recolored photo.',
-        ],
-      },
+      'change-color': EN_TOOL_SEO_2026_10['change-color'],
       'convert-image': {
         introTitle: 'About This Image Converter',
         desc:
@@ -1912,70 +1763,8 @@ export const en = {
           'Click Remove EXIF, preview the comparison, and download your clean image.',
         ],
       },
-      'blur-image': {
-        introTitle: 'Free Online Image Blurring Tool',
-        desc:
-          'NanoImage is a free image blurring tool that lets you blur images online — blur part of an image, hide faces, cover license plates, redact sensitive text, or apply a background blur effect. Everything runs in your browser with no server upload and no account required, so you can blur photos privately before sharing.',
-        blocks: [
-          {
-            title: 'What Can You Blur?',
-            body: 'Common targets include faces, license plates, street addresses, usernames, chat screenshots, IDs, and other private details. Use the brush to blur only the regions you need while keeping the rest of the photo sharp. Adjust Gaussian blur, soft blur, or background blur strength until sensitive information is unreadable.',
-          },
-          {
-            title: 'When to Use an Image Blur Tool',
-            body: 'Protect identity in screenshots before posting on social media, redact personal information in legal or HR documents, hide confidential data in bug reports and support tickets, or blur backgrounds for a cleaner professional portrait. A browser-based image blur effect is faster than desktop software when you only need selective blur online — no install, no signup.',
-          },
-          {
-            title: 'Blur Images Online vs. Other Privacy Tools',
-            body: 'Blur softens details with a smooth image blurring effect; pixelate uses blocky mosaic for stronger anonymization. For hidden metadata (GPS, camera model), remove EXIF before publishing. Many users combine blur faces or blur license plates with EXIF removal for safer sharing.',
-          },
-          {
-            title: 'Looking to Protect Privacy Further?',
-            body: 'For stronger anonymization, try our Pixelate Image tool. To remove hidden GPS and camera metadata before sharing, use Remove EXIF Data — both run locally in your browser like this blur tool.',
-          },
-        ],
-        howToTitle: 'How to Blur Part of an Image',
-        howToStepNames: [
-          'Upload your image',
-          'Paint the area to blur',
-          'Download your blurred image',
-        ],
-        howTo: [
-          'Upload your JPG, PNG, WebP, or GIF image using the upload zone or drag and drop.',
-          'Select the brush tool and paint over the area you want to blur (faces, plates, text, or edges).',
-          'Adjust blur strength and blur type, then click Download to save your edited image.',
-        ],
-      },
-      'pixelate-image': {
-        introTitle: 'Free Online Pixelate Image Tool',
-        desc:
-          'NanoImage is a free pixelate image tool that turns any region into a mosaic — pixelate image online for privacy, redaction, or creative effects. Select areas with the brush, adjust pixel block size, and download in your browser with no server upload and no account required.',
-        blocks: [
-          {
-            title: 'How to Pixelate an Image Online',
-            body: 'Use this free pixelate image tool to mosaic any area of your photo directly in your browser. Select a region with the brush, adjust the pixel size, and download the result — no upload to any server, no account required. Works with JPG, PNG, WebP, and GIF files up to 20MB.',
-          },
-          {
-            title: 'When to Use Pixelate vs. Blur',
-            body: 'Pixelate image free workflows are ideal for hiding text, IDs, license plates, and QR codes where blocky mosaic is unmistakable. Blur Image offers a softer image blur effect for faces and backgrounds. Many users pixelate sensitive regions, then remove EXIF metadata before posting.',
-          },
-          {
-            title: 'Un-Pixelate, De-Pixelate & Fixing Pixelated Photos',
-            body: 'This tool adds pixelation — it does not restore detail from an already pixelated export. Keep your original file. If you need to make images less pixelated after export, you must re-edit from the source. For accidental softness, try Enhance Image; for smooth hiding, try Blur Image.',
-          },
-        ],
-        howToTitle: 'How to Pixelate Part of an Image',
-        howToStepNames: [
-          'Upload your image',
-          'Select the area to pixelate',
-          'Download your pixelated image',
-        ],
-        howTo: [
-          'Upload your JPG, PNG, WebP, or GIF using the upload zone or drag and drop.',
-          'Use the brush to select the area you want to pixelate, then adjust pixel size or presets.',
-          'Click Download to save your edited image — processing stays on your device.',
-        ],
-      },
+      'blur-image': EN_TOOL_SEO_2026_10['blur-image'],
+      'pixelate-image': EN_TOOL_SEO_2026_10['pixelate-image'],
       'crop-image': {
         introTitle: 'Free Online Image Cropper — Pixel-Perfect',
         desc:
@@ -2135,16 +1924,19 @@ export const en = {
           'Download the image once it is under 1MB.',
         ],
       },
+      'batch-compress': EN_TOOL_SEO_2026_10['batch-compress'],
+      'black-and-white-image': EN_TOOL_SEO_2026_10['black-and-white-image'],
+      'invert-image-colors': EN_TOOL_SEO_2026_10['invert-image-colors'],
     } as Record<string, {
       introTitle?: string
-      desc: string
+      desc?: string
       blocks?: { title: string; body: string }[]
       paragraphs?: string[]
-      howToTitle: string
-      howTo: string[]
+      howToTitle?: string
+      howTo?: string[]
       howToStepNames?: string[]
       refs?: { label: string; url: string }[]
-    }>,
+    } & RichSeoSection>,
     items: {
       // Static tools synced from production (2026-10)
       ...staticToolFaqItems('en'),
@@ -2242,18 +2034,7 @@ export const en = {
         { q: 'What is the best free online image resizer?', a: 'NanoImage runs entirely in your browser — no file uploads, no account, and no limits. It supports JPG, PNG, WebP, and GIF, and lets you resize by exact pixels, percentage, or one-click presets like HD (1280×720) and Full HD (1920×1080). Pair with Compress Image when you need an exact KB or MB output.' },
         { q: 'Does resizing an image reduce its file size?', a: 'Usually yes. Smaller pixel dimensions generally produce a smaller file. However, the final file size also depends on the output format and quality setting. Use JPG or WebP for the smallest output; use PNG when you need to keep transparency.' },
       ],
-      'batch-compress': [
-        { q: 'What is batch image compression?', a: 'Batch image compression means reducing the file size of multiple images at the same time instead of compressing them one by one. It helps you optimize image folders faster, especially when preparing website assets, blog images, product photos, or social media graphics.' },
-        { q: 'Why should I batch compress images before uploading them to my website?', a: 'Images are often among the heaviest resources on a webpage. Compressing them can reduce page weight, improve loading speed, and create a smoother browsing experience for visitors. This is especially important for image-heavy pages such as ecommerce product listings, portfolios, blogs, and landing pages.' },
-        { q: 'Can image compression improve website performance?', a: 'Yes. Optimized images usually load faster because they use less data. Smaller image files can help improve page speed, reduce bandwidth usage, and make your website feel faster on both desktop and mobile devices.' },
-        { q: 'Does image compression help Core Web Vitals?', a: 'Image optimization can help improve Core Web Vitals, especially Largest Contentful Paint (LCP), because large images are often the biggest visible elements on a page. Compressing and properly sizing images can help important page content appear faster to users.' },
-        { q: 'Will compressed images still look good?', a: 'In most cases, yes. A good image compressor reduces unnecessary file size while keeping the image visually clear. The best compression result is not always the smallest file; it is the smallest file that still looks good for your website, product page, blog, or design project.' },
-        { q: 'Is batch compression useful for mobile users?', a: 'Yes. Mobile users often browse on smaller screens, slower networks, or limited data plans. Smaller images can load more quickly and use less data, improving the experience across phones, tablets, laptops, and desktop screens.' },
-        { q: 'When should I use batch image compression?', a: 'You should use batch compression whenever you need to optimize multiple images at once. Common use cases include compressing product photos, blog images, website banners, portfolio images, screenshots, thumbnails, and marketing assets before publishing them online.' },
-        { q: 'What image formats can I batch compress?', a: 'NanoImage supports common web image formats including JPG, PNG, WebP, and other widely used image types. The best format depends on your use case: JPG is common for photos, PNG is useful for transparency and screenshots, and WebP is a strong choice for modern web performance.' },
-        { q: 'Is it better to compress images one by one or in batches?', a: 'If you only have one image, single-image compression is fine. But if you have several files, batch compression is much faster. It saves time, keeps your workflow consistent, and helps you prepare multiple optimized images for your website or project in one step.' },
-        { q: 'Can I compress batches of images online for free?', a: 'Yes. With NanoImage, you can compress batches of images online for free directly in your browser. Upload multiple images, compress them together, and download optimized files for faster websites, better performance, and smoother viewing across different devices.' },
-      ],
+      'batch-compress': EN_TOOL_FAQS_2026_10['batch-compress'],
       'upscale-image': [
         { q: 'Can I upscale images for free without signing up?', a: 'Yes. NanoImage is a free image upscaler with no account required. Upload JPG, PNG, WebP, or GIF, choose 2x–4x scale, and download — all processing runs in your browser with no server upload.' },
         { q: 'What is the best free image upscaler online?', a: 'NanoImage offers a free browser-based image upscaler with Smooth and Sharp resampling plus a sharpen slider — no credits, no watermarks, and your files never leave your device.' },
@@ -2274,26 +2055,8 @@ export const en = {
         { q: 'How do I crop a PNG image without losing quality?', a: 'Select PNG as the output format and keep quality at 100%. Cropping does not re-compress PNG the way JPG does, so edges and flat colors stay sharp.' },
         { q: 'Do I need an account like Canva or Photoshop?', a: 'No. NanoImage runs in your browser with no signup. Your image is processed locally and is not uploaded to our servers.' },
       ],
-      'rotate-image': [
-        { q: 'Can I rotate by any angle?', a: 'Yes. Rotate image online with 90°, 180°, or any custom angle between -180° and 180°. Use the slider for precise orientation fixes.' },
-        { q: 'Why do I see empty corners after rotation?', a: 'Custom rotation can create empty areas around the image. Choose Expand Canvas to keep the full result, pick a background color, or crop afterward with our Crop Image tool.' },
-        { q: 'What is the difference between rotate and flip?', a: 'Rotate turns the image by an angle (for example 90°). Flip mirrors it horizontally or vertically without changing the angle. This tool supports both in one workflow.' },
-        { q: 'Is this image rotator free to use?', a: 'Yes. NanoImage is a free rotate image online tool with no watermarks, no limits, and no hidden fees.' },
-        { q: 'Do I need to create an account?', a: 'No signup is required. Open the page, upload an image, rotate, and download — no email or account.' },
-        { q: 'Is my image uploaded to your servers?', a: 'No. All processing happens in your browser. Your file never leaves your device, so photos stay private.' },
-        { q: 'What image formats are supported?', a: 'You can rotate JPG, PNG, WebP, and GIF images. Export keeps a web-friendly format based on your settings.' },
-        { q: 'Can I rotate a GIF image?', a: 'Yes. Static GIFs rotate like other images. For animated GIFs, upload and rotate; preview the result before downloading.' },
-      ],
-      'flip-image': [
-        { q: 'Can I flip an image online for free?', a: 'Yes. Upload your image, choose horizontal or vertical flip, and download for free in seconds.' },
-        { q: 'Can I flip an image horizontally?', a: 'Yes. Use Flip Horizontal to mirror the image from left to right.' },
-        { q: 'Can I flip an image vertically?', a: 'Yes. Use Flip Vertical to mirror the image from top to bottom.' },
-        { q: 'What is the difference between flipping and rotating an image?', a: 'Flipping mirrors the image across an axis. Rotating changes the angle, such as 90° or 180°.' },
-        { q: 'Does flipping reduce image quality?', a: 'No. Flipping changes orientation and does not inherently reduce quality.' },
-        { q: 'Do I need to sign up to use this image flipper?', a: 'No signup is required. Open the page, upload your image, flip it, and download.' },
-        { q: 'Is my image uploaded to your servers?', a: 'No. Images are processed in your browser and stay on your device.' },
-        { q: 'What image formats are supported?', a: 'You can flip JPG, PNG, WebP, and GIF files. PNG transparency is preserved where supported.' },
-      ],
+      'rotate-image': EN_TOOL_FAQS_2026_10['rotate-image'],
+      'flip-image': EN_TOOL_FAQS_2026_10['flip-image'],
       'add-text': [
         { q: 'How do I add text to a photo online for free?', a: 'Upload your photo, type your text, choose font and color, then download. No signup required.' },
         { q: 'Can I add multiple text boxes on one image?', a: 'Yes. Use Add Layer for multiple text layers, each with its own position and style.' },
@@ -2314,34 +2077,9 @@ export const en = {
         { q: 'What image formats are supported?', a: 'JPG, PNG, WebP, and GIF. Export as PNG for transparency or with your chosen background color or image.' },
         { q: 'Can I change a passport photo background?', a: 'Yes. Upload your portrait, sample the old background area, set white or another solid color, and download — useful for passport-style photos.' },
       ],
-      'change-color': [
-        { q: 'How do I change the background color of an image?', a: 'Use Select All or paint the background area, pick a new color, and download. For full background swaps, also try our Change Background tool.' },
-        { q: 'Can I change image color online for free?', a: 'Yes — 100% free, no signup, and all editing runs in your browser. Your files never upload to our servers.' },
-        { q: 'Can I change the whole image color?', a: 'Yes. Use Select All for global tinting or the brush to replace color in specific areas.' },
-        { q: 'Does this work as an AI color changer?', a: 'NanoImage uses browser-based color replacement with tolerance and brush selection — not generative AI, but fast and private for everyday edits.' },
-        { q: 'Can I change the color of my hair in a photo?', a: 'You can paint over hair regions and pick a new color. Complex hair edges may need careful brushing; results vary by photo.' },
-        { q: 'Is color replacement always perfect?', a: 'No. Complex edges, hair, shadows, or reflections may need smaller brushes, lower tolerance, or the eraser to refine.' },
-        { q: 'What image formats are supported?', a: 'JPG, PNG, WebP, and GIF up to 20MB. Download your recolored image in your chosen format.' },
-        { q: 'What settings are useful?', a: 'New color picker, tolerance, brush size, Select All, eraser, undo, and before/after preview.' },
-        { q: 'How do I make an image black and white?', a: 'Use the B&W preset in our Enhance Image tool for a one-click black and white conversion, or apply a gray tint here with Select All for a custom monochrome look.' },
-        { q: 'Can I change the color of clothes or an object in a photo?', a: 'Yes. Paint over the shirt, product, or object with the brush, pick the new color, and adjust tolerance for clean edges. Great for product photos and mockups.' },
-        { q: 'Can I change a specific color to another color?', a: 'Yes. Brush over the areas containing the color you want to replace, then choose the target color from the palette or hex picker. Tolerance controls how similar shades are matched.' },
-      ],
-      'black-and-white-image': [
-        { q: 'How do I make an image black and white online?', a: 'Upload your photo, and it converts to black and white instantly. Choose PNG or JPG output and download — free, no signup, all in your browser.' },
-        { q: 'Is this black and white image converter free?', a: 'Yes. No account, no watermark, no limits. Your image is processed locally in your browser and never uploaded to a server.' },
-        { q: 'Will converting to black and white reduce image quality?', a: 'No. The conversion keeps the original resolution. Export as PNG for lossless output or JPG/WebP for smaller files.' },
-        { q: 'Can I convert a JPG, PNG, or WebP photo to black and white?', a: 'Yes. JPG, PNG, WebP, and GIF are supported up to 20MB.' },
-        { q: 'Can I adjust contrast after converting?', a: 'Yes. Open the result in our Enhance Image tool to fine-tune brightness, contrast, and sharpness for a classic monochrome look.' },
-        { q: 'What is the difference between black and white and grayscale?', a: 'In everyday use they mean the same thing: an image made of gray tones. This tool applies a standard grayscale conversion that preserves natural tonal range.' },
-      ],
-      'invert-image-colors': [
-        { q: 'How do I invert the colors of an image?', a: 'Upload your image and the colors invert instantly — like a photo negative. Download as PNG, JPG, or WebP. Free, no signup.' },
-        { q: 'What does inverting colors do?', a: 'Every color is replaced by its opposite: black becomes white, blue becomes orange. Inverting twice restores the original image.' },
-        { q: 'Can I turn a film negative into a normal photo?', a: 'Yes. Upload a scanned negative and inversion recovers the positive image. Fine-tune the result with our Enhance Image tool.' },
-        { q: 'Is this color inverter free and private?', a: 'Yes. 100% free, no account, and all processing happens in your browser — your image never leaves your device.' },
-        { q: 'What formats are supported?', a: 'JPG, PNG, WebP, and GIF up to 20MB. Export in your chosen format.' },
-      ],
+      'change-color': EN_TOOL_FAQS_2026_10['change-color'],
+      'black-and-white-image': EN_TOOL_FAQS_2026_10['black-and-white-image'],
+      'invert-image-colors': EN_TOOL_FAQS_2026_10['invert-image-colors'],
       'enhance-image': [
         { q: 'Is this a free AI image enhancer?', a: 'NanoImage offers free browser-based enhancement with brightness, contrast, saturation, sharpness, and presets. Advanced AI upscaling is a separate tool.' },
         { q: 'Do I need to sign up or create an account?', a: 'No sign up required. Open the page, upload your image, adjust sliders or presets, and download instantly.' },
@@ -2441,26 +2179,8 @@ export const en = {
         { q: 'Does it remove all metadata?', a: 'NanoImage removes common EXIF data through browser re-export. For highly sensitive files, preview the result and verify GPS and camera fields are cleared before sharing.' },
         { q: 'What EXIF data can be removed?', a: 'You can strip GPS location, camera and lens information, capture date and time, and related device settings. Removing all EXIF is recommended before posting to social media, marketplaces, or news sites.' },
       ],
-      'blur-image': [
-        { q: 'How do I blur only part of an image?', a: 'Upload your photo, select the brush tool, paint over the area you want to blur, adjust blur strength, and click Download. You can blur any specific region, object, or person in your image.' },
-        { q: 'Can I blur a face in an image for free?', a: 'Yes. Upload your photo, use the brush to paint over the face, adjust strength, and download. It is completely free with no signup required — processed in your browser.' },
-        { q: 'What is the best free image blurring tool online?', a: 'NanoImage lets you blur any area of an image online for free — no app download or account needed. Your image is processed locally and never uploaded to a server.' },
-        { q: 'Can I blur the edges of an image?', a: 'Yes. Use the brush near the edges of your photo and apply the blur effect. Adjust hardness and strength for a soft or strong edge blur.' },
-        { q: 'How do I clear or remove blur from an image?', a: 'Before downloading, use Undo to reverse recent blur strokes. Once you export the file, blurred areas generally cannot be restored — always keep a copy of the original.' },
-        { q: 'What should I blur in a photo?', a: 'Common targets include faces, license plates, street addresses, usernames, chat screenshots, IDs, and other private details before sharing online.' },
-        { q: 'Does blurring an image reduce quality?', a: 'Only in the areas you blur. The rest of the image stays sharp. Increase blur strength until sensitive details are unreadable.' },
-        { q: 'Is this blur tool private and free?', a: 'Yes. NanoImage is 100% free with no watermarks. All editing runs in your browser — your files never leave your device.' },
-      ],
-      'pixelate-image': [
-        { q: 'How do I un-pixelate an image?', a: 'This tool adds mosaic pixelation to selected areas — it cannot restore original detail from an already pixelated photo. Always keep your unedited original. To hide details with soft edges instead of blocks, try Blur Image. For brightness and clarity tweaks on photos you own, try Enhance Image.' },
-        { q: 'Can I de-pixelate an image with this tool?', a: 'No. NanoImage pixelates regions you paint with the brush; it does not reverse existing pixelation. Use Undo before downloading if you are still editing. For privacy masking, see Blur Image or Remove EXIF.' },
-        { q: 'How do I fix a pixelated image?', a: 'If a photo was pixelated on purpose, you generally cannot recover sharp detail from the exported file. Re-open your original if you have one. To avoid accidental whole-image pixelation, use the brush to select only the area you need.' },
-        { q: 'How can I make an image less pixelated?', a: 'Exported pixelated areas cannot be smoothed back to full quality. While editing, use Undo or Clear Selection. For future edits, use smaller pixel blocks or try Blur Image for a softer hide effect.' },
-        { q: 'Can I pixelate an image for free?', a: 'Yes. NanoImage is 100% free with no signup. Upload JPG, PNG, WebP, or GIF, paint the area, adjust pixel size, and download — all in your browser with no server upload.' },
-        { q: 'What is the difference between pixelate and blur?', a: 'Pixelate uses mosaic blocks. Blur softens details. Both can hide sensitive information — pixelate is stronger for IDs and text; blur looks more natural for faces and backgrounds.' },
-        { q: 'Can I adjust pixel size?', a: 'Yes. Use the Pixel Size slider or presets (Light, Medium, Strong, Extreme). Larger blocks hide details more strongly.' },
-        { q: 'When should I use pixelate?', a: 'Use it for faces, license plates, addresses, account names, QR codes, or document numbers before sharing screenshots or documents online.' },
-      ],
+      'blur-image': EN_TOOL_FAQS_2026_10['blur-image'],
+      'pixelate-image': EN_TOOL_FAQS_2026_10['pixelate-image'],
       'add-watermark': [
         { q: 'What image formats does Add Watermark support?', a: 'You can upload JPG, PNG, WebP, and GIF images. The watermarked result is downloaded as a PNG or JPG depending on the original format.' },
         { q: 'How do I add a logo or image watermark?', a: 'Switch to the "Image Watermark" tab in the settings panel, then upload your logo or any image file. You can resize, reposition, and adjust its opacity just like a text watermark.' },
@@ -2483,7 +2203,7 @@ export const en = {
         { q: 'Can I trim the audio?', a: 'Yes. Select a start and end time to export only part of the audio.' },
         { q: 'Which MP3 quality should I choose?', a: '128 kbps for smaller files, 192 kbps for most uses, and 320 kbps for higher quality.' },
       ],
-    } as Record<string, { q: string; a: string }[]>,
+    } as Record<string, RichFaq[]>,
   },
 }
 

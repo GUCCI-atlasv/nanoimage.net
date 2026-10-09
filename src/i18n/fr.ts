@@ -1004,9 +1004,9 @@ export const fr: Translations = {
     downloadWebp: 'Télécharger WebP',
   },
   blurImagePage: {
-    heroTitle: 'Blur Any Part of an Image in Seconds',
+    heroTitle: 'Blur faces, backgrounds or any part',
     heroIntro:
-      'Use our free image blurring tool to blur parts of an image, hide faces, cover license plates, redact sensitive text, or apply background blur effects — all directly in your browser. No upload to servers, no account needed.',
+      'Brush over faces, plates or backgrounds, pick a blur type and strength, click Blur Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to paint the area to blur.',

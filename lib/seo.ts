@@ -593,9 +593,9 @@ export const TOOL_SEO_EXTRAS: Partial<Record<string, ToolSeoExtras>> = {
       `${BASE}/assets/tools/rotate-image/howto-step-3.svg`,
       `${BASE}/assets/tools/rotate-image/howto-step-4.svg`,
     ],
-    ogTitle: 'Free Online Image Rotator – Rotate, Flip & Download Instantly',
+    ogTitle: 'Rotate Image Online Free – Image Rotator for Any Angle',
     ogDescription:
-      'Rotate your photos or images online for free. No signup, no upload. 90°, 180°, or custom angle. Works in any browser.',
+      'Rotate an image 90°, 180° or any angle, straighten crooked photos, and download. Free online image rotator with no signup, no watermark and no upload.',
     featureList: [
       'Rotate 90°, 180°, or any custom angle',
       'Flip horizontal and vertical',
@@ -617,9 +617,9 @@ export const TOOL_SEO_EXTRAS: Partial<Record<string, ToolSeoExtras>> = {
       `${BASE}/assets/tools/flip-image/howto-step-3.svg`,
       `${BASE}/assets/tools/flip-image/howto-step-4.svg`,
     ],
-    ogTitle: 'Flip Image Online Free – Image Flipper & Mirror Tool',
+    ogTitle: 'Flip Image Online Free – Mirror Image Horizontally or Vertically',
     ogDescription:
-      'Flip images online for free. Mirror JPG, PNG, WebP, or GIF files horizontally, vertically, or both in seconds. No signup, no watermark, private browser processing.',
+      'Flip an image or make a mirror image online. Flip horizontally, vertically or both, then download. Free, no signup, no watermark, and it all runs in your browser.',
     featureList: [
       'Mirror horizontally, vertically, or both',
       'Preview before and after flipping',
@@ -720,9 +720,9 @@ export const TOOL_SEO_EXTRAS: Partial<Record<string, ToolSeoExtras>> = {
       `${BASE}/assets/tools/change-color/howto-step-3.svg`,
       `${BASE}/assets/tools/change-color/howto-step-4.svg`,
     ],
-    ogTitle: 'Image Color Changer – Change Image Color Online Free',
+    ogTitle: 'Image Color Changer – Change the Color of an Image Free',
     ogDescription:
-      'Free color changer — replace, tint, or swap colors in photos. No signup, private browser processing. JPG, PNG, WebP & GIF.',
+      'Free image color changer that runs in your browser. Brush over a shirt, logo or background, pick any color or hex code, and download. No signup, no upload.',
     featureList: [
       'Change color in any image area',
       'Brush, eraser, and Select All',
@@ -867,9 +867,9 @@ export const TOOL_SEO_EXTRAS: Partial<Record<string, ToolSeoExtras>> = {
   'blur-image': {
     ogImage: `${BASE}/OG/blur-image.png`,
     screenshot: `${BASE}/OG/blur-image.png`,
-    ogTitle: 'Blur Image Online Free – Blur Parts, Faces & Backgrounds',
+    ogTitle: 'Blur Image Online Free – Blur Faces, Backgrounds & Text',
     ogDescription:
-      'Free online image blurring tool. Blur faces, license plates, or any part of an image in your browser — no signup, private processing.',
+      'Blur part of a photo in your browser. Brush over a face, license plate, name or background, choose the blur type and strength, and download. Free, no signup, nothing uploaded.',
     featureList: [
       'Blur faces',
       'Blur license plates',
@@ -890,9 +890,9 @@ export const TOOL_SEO_EXTRAS: Partial<Record<string, ToolSeoExtras>> = {
   'pixelate-image': {
     ogImage: `${BASE}/OG/pixelate-image.png`,
     screenshot: `${BASE}/OG/pixelate-image.png`,
-    ogTitle: 'Pixelate Image Free Online — No Upload, No Account',
+    ogTitle: 'Pixelate Image Online Free – Pixelate Faces, Text & Plates',
     ogDescription:
-      'Pixelate any part of your image for free in your browser. No upload, no signup. Hide faces, license plates, or sensitive info in seconds.',
+      'Pixelate part of an image in your browser. Brush over a face, name or license plate, choose the pixel size and download. Free, no signup, and your photo never leaves your device.',
     featureList: [
       'Pixelate part of an image with brush',
       'Adjustable pixel block size',
@@ -938,7 +938,7 @@ export const TOOL_SEO_EXTRAS: Partial<Record<string, ToolSeoExtras>> = {
     screenshot: `${BASE}/OG/gif-maker.png`,
     ogTitle: 'Free GIF Maker — Create Animated GIFs Online',
     ogDescription:
-      'Free online GIF maker. Turn multiple images into animated GIFs in seconds. Adjust speed, size, and loops — no signup, works on Mac, Windows, and mobile.',
+      'Make a GIF free in your browser: drop images, set speed and size, download with no watermark. Local processing — no upload, no signup.',
     featureList: [
       'Create GIF from multiple images',
       'Adjust frame duration and speed',
@@ -1089,10 +1089,19 @@ export function getToolOgImage(slug: string): string {
   return TOOL_SEO_EXTRAS[slug]?.ogImage ?? OG_IMAGE
 }
 
+/** Social-only title/description overrides for tools without a TOOL_SEO_EXTRAS entry. */
+const TOOL_SOCIAL_OVERRIDES: Record<string, { ogTitle?: string; ogDescription?: string }> = {
+  'batch-compress': { ogTitle: 'Bulk Image Compressor – Batch Compress Free' },
+}
+
 export function getToolSocialMeta(slug: string): { ogTitle?: string; ogDescription?: string } {
   const extras = TOOL_SEO_EXTRAS[slug]
-  if (!extras) return {}
-  return { ogTitle: extras.ogTitle, ogDescription: extras.ogDescription }
+  const override = TOOL_SOCIAL_OVERRIDES[slug]
+  if (!extras && !override) return {}
+  return {
+    ogTitle: override?.ogTitle ?? extras?.ogTitle,
+    ogDescription: override?.ogDescription ?? extras?.ogDescription,
+  }
 }
 
 /** Homepage tools section anchor (legacy / fallback). */

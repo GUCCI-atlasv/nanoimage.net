@@ -486,9 +486,9 @@ export function getToolSchemaData(
 
   return {
     faqs,
-    toolSection: toolSection
+    toolSection: toolSection?.howTo?.length
       ? {
-          howToTitle: toolSection.howToTitle,
+          howToTitle: toolSection.howToTitle ?? 'How to Use This Tool',
           howTo: toolSection.howTo,
           howToStepNames: toolSection.howToStepNames,
         }
