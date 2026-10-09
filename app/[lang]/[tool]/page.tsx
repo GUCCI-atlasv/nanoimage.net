@@ -5,10 +5,14 @@ import { tools } from '@/src/data'
 import { URL_LANG_CODES } from '@/lib/i18n-utils'
 import { buildAlternates, buildOG, buildTwitter, buildToolJsonLd, getToolOgImage, getToolOpenGraphType, getToolSocialMeta, URL_TO_BCP47, BASE } from '@/lib/seo'
 import { getToolMeta, getToolSchemaData } from '@/lib/server-i18n'
+import { thinNoindexRobots, MERGED_100KB_LANGS } from '@/lib/thin-cleanup'
 
 export function generateStaticParams() {
   return URL_LANG_CODES.flatMap((lang) =>
-    tools.map((t) => ({ lang, tool: t.slug })),
+    tools
+      // Thin-page cleanup SHOT 2: merged locales 301 to /{lang}/compress-image (public/_redirects)
+      .filter((t) => !(t.slug === 'compress-image-to-100kb' && MERGED_100KB_LANGS.has(lang)))
+      .map((t) => ({ lang, tool: t.slug })),
   )
 }
 
@@ -46,7 +50,8 @@ export async function generateMetadata(
     description: metaDescription,
     // PRD Phase 1 站点瘦身:deprecated 工具 noindex(全语种),观察期后 301
     ...(tool.deprecated ? { robots: { index: false, follow: true } } : {}),
-    alternates: buildAlternates(canonicalUrl, basePath),
+    alternates: buildAlternates(canonicalUrl, basePath, slug === 'compress-image-to-100kb' ? URL_LANG_CODES.filter((l) => !MERGED_100KB_LANGS.has(l)) : undefined),
+    ...thinNoindexRobots(`/${lang}/${slug}`),
     openGraph: buildOG({ title: ogTitle, description: ogDescription, url: canonicalUrl, image: ogImage, urlLang: lang, type: getToolOpenGraphType(slug) }),
     twitter: buildTwitter({ title: ogTitle, description: ogDescription, image: ogImage, imageAlt: title }),
   }

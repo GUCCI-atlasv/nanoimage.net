@@ -2,6 +2,7 @@
  * URL ↔ LangCode utilities shared between server and client.
  * No imports from src/i18n to avoid circular dependencies.
  */
+import { remapThinPath } from './thin-cleanup'
 
 /** URL slug codes used as path prefixes (English has no prefix) */
 export const URL_LANG_CODES = ['zh', 'zh-TW', 'ja', 'ko', 'fr', 'es', 'pt', 'ru'] as const
@@ -38,7 +39,8 @@ export const LANG_TO_URL: Record<string, string | null> = {
  */
 export function langPath(lang: string, path: string): string {
   const prefix = LANG_TO_URL[lang]
-  return prefix ? `/${prefix}${path}` : path
+  // Thin-page cleanup SHOT 2: merged locales link straight to /{lang}/compress-image (no 301 hop)
+  return prefix ? `/${prefix}${remapThinPath(prefix, path)}` : path
 }
 
 /**
