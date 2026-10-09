@@ -450,7 +450,7 @@ export const zhCN: Translations = {
     'video-tools': { title: '视频工具', description: '快速轻松地转换您的视频。', viewAllLabel: '查看所有视频工具' },
   },
   toolsData: {
-    'background-remover': { name: 'AI 抠图（去背景）', description: '端侧 AI 一键去除背景，下载透明 PNG。图片不上传，无需注册，无水印。' },
+    'background-remover': { name: 'AI 抠图（去背景）', h1: 'AI 抠图（去背景） 在线免费', description: '端侧 AI 一键去除背景，下载透明 PNG。图片不上传，无需注册，无水印。' },
     'object-remover': { name: '物体擦除', description: '涂抹想删除的人物、物体或水印，智能边缘填充还原背景。端侧处理，不上传。' },
     'photo-restore': { name: '老照片修复', description: '修复老旧或褪色照片，为黑白照片上色。全部在设备端完成，不上传。' },
     'smart-crop': { name: '智能裁剪与虚化', description: '自动裁剪保持主体在画面中，或添加景深背景虚化。端侧处理，不上传。' },

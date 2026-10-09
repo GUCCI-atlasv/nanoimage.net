@@ -546,7 +546,7 @@ export const ko: Translations = {
       description: 'NanoImage로 여권, 비자, 신분증 사진을 무료로 만드세요. 자르기, 크기, 배경, DPI, 파일 크기를 조정하고 바로 다운로드할 수 있습니다.',
     },
     'video-to-gif': { name: '비디오를 GIF로', description: '동영상 클립을 애니메이션 GIF로 변환합니다.' },
-    'background-remover': { name: 'AI 배경 제거', description: '온디바이스 AI로 배경을 제거하고 투명 PNG를 내려받으세요. 사진은 브라우저를 벗어나지 않습니다. 업로드·가입·워터마크 없음.' },
+    'background-remover': { name: 'AI 배경 제거', h1: 'AI 배경 제거 무료 온라인', description: '온디바이스 AI로 배경을 제거하고 투명 PNG를 내려받으세요. 사진은 브라우저를 벗어나지 않습니다. 업로드·가입·워터마크 없음.' },
     'object-remover': { name: '객체 지우개', description: '지우고 싶은 사람, 사물, 워터마크를 칠하면 스마트 채우기가 배경을 복원합니다. 기기 내 처리, 업로드 없음.' },
     'photo-restore': { name: '사진 복원', description: '오래되거나 빛바랜 사진을 개선하고 흑백 사진에 색을 입힙니다. 모두 기기 내에서 처리, 업로드 없음.' },
     'video-to-mp3': { name: '비디오를 MP3로', description: '동영상에서 MP3 오디오를 추출합니다.' },

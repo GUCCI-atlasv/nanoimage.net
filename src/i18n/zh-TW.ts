@@ -563,7 +563,7 @@ export const zhTW: Translations = {
       description: '使用 NanoImage 免費線上製作護照、簽證和 ID 證件照。支援裁切、尺寸調整、背景設定、DPI、檔案大小限制，並可即時下載。',
     },
     'video-to-gif': { name: '影片轉 GIF', description: '將影片片段轉換為動態 GIF。' },
-    'background-remover': { name: 'AI 去背（摳圖）', description: '端側 AI 一鍵去除背景，下載透明 PNG。圖片不上傳，無需註冊，無浮水印。' },
+    'background-remover': { name: 'AI 去背（摳圖）', h1: 'AI 去背（摳圖） 線上免費', description: '端側 AI 一鍵去除背景，下載透明 PNG。圖片不上傳，無需註冊，無浮水印。' },
     'object-remover': { name: '物件擦除', description: '塗抹想刪除的人物、物件或浮水印，智慧邊緣填補還原背景。端側處理，不上傳。' },
     'photo-restore': { name: '老照片修復', description: '修復老舊或褪色照片，為黑白照片上色。全部在裝置端完成，不上傳。' },
     'video-to-mp3': { name: '影片轉 MP3', description: '從影片中擷取 MP3 音訊。' },

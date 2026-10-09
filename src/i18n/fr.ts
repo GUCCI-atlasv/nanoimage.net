@@ -538,7 +538,7 @@ export const fr: Translations = {
       description: 'Créez gratuitement des photos de passeport, visa et ID avec NanoImage. Recadrez, redimensionnez, choisissez le fond, le DPI et la taille du fichier, puis téléchargez instantanément.',
     },
     'video-to-gif': { name: 'Vidéo en GIF', description: 'Convertissez un clip vidéo en GIF animé.' },
-    'background-remover': { name: 'Suppresseur d\'arrière-plan IA', description: 'Supprimez l\'arrière-plan avec l\'IA embarquée et téléchargez un PNG transparent. Votre photo ne quitte jamais le navigateur : sans upload, sans compte, sans filigrane.' },
+    'background-remover': { name: 'Suppresseur d\'arrière-plan IA', h1: 'Suppresseur d\'arrière-plan IA en ligne gratuit', description: 'Supprimez l\'arrière-plan avec l\'IA embarquée et téléchargez un PNG transparent. Votre photo ne quitte jamais le navigateur : sans upload, sans compte, sans filigrane.' },
     'object-remover': { name: 'Gomme à objets', description: 'Peignez sur des personnes, objets ou filigranes et laissez le remplissage intelligent restaurer l\'arrière-plan. En local, sans upload.' },
     'photo-restore': { name: 'Restauration de photos', description: 'Améliorez les photos anciennes ou passées et colorisez les images en noir et blanc, entièrement en local, sans upload.' },
     'video-to-mp3': { name: 'Vidéo en MP3', description: 'Extrayez l\'audio MP3 de vos fichiers vidéo.' },

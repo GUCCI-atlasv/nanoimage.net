@@ -535,7 +535,7 @@ export const pt: Translations = {
       description: 'Crie fotos de passaporte, visto e documento grátis com NanoImage. Corte, ajuste tamanho, fundo, DPI e tamanho do arquivo, e baixe instantaneamente.',
     },
     'video-to-gif': { name: 'Vídeo para GIF', description: 'Converta um clipe de vídeo em GIF animado.' },
-    'background-remover': { name: 'Removedor de fundo com IA', description: 'Remova o fundo com IA no dispositivo e baixe um PNG transparente. Sua foto nunca sai do navegador: sem upload, sem cadastro, sem marca d\'água.' },
+    'background-remover': { name: 'Removedor de fundo com IA', h1: 'Removedor de fundo com IA online grátis', description: 'Remova o fundo com IA no dispositivo e baixe um PNG transparente. Sua foto nunca sai do navegador: sem upload, sem cadastro, sem marca d\'água.' },
     'object-remover': { name: 'Removedor de objetos', description: 'Pinte sobre pessoas, objetos ou marcas d\'água e deixe o preenchimento inteligente restaurar o fundo. No dispositivo, sem upload.' },
     'photo-restore': { name: 'Restaurar fotos', description: 'Melhore fotos antigas ou desbotadas e colorize imagens em preto e branco, tudo no dispositivo, sem upload.' },
     'video-to-mp3': { name: 'Vídeo para MP3', description: 'Extraia áudio MP3 dos seus arquivos de vídeo.' },

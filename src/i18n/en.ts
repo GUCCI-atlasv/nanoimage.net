@@ -1227,7 +1227,7 @@ export const en = {
     },
     'video-to-gif': { name: 'Video to GIF', description: 'Convert a video clip to an animated GIF.' },
     'video-to-mp3': { name: 'Video to MP3', description: 'Extract MP3 audio from your video files.' },
-  } as Record<string, { name: string; description: string; breadcrumbName?: string }>,
+  } as Record<string, { name: string; description: string; breadcrumbName?: string; h1?: string }>,
   faqs: {
     title: 'Frequently Asked Questions',
     sectionTitles: {
