@@ -538,7 +538,7 @@ export const fr: Translations = {
       description: 'Créez gratuitement des photos de passeport, visa et ID avec NanoImage. Recadrez, redimensionnez, choisissez le fond, le DPI et la taille du fichier, puis téléchargez instantanément.',
     },
     'video-to-gif': { name: 'Vidéo en GIF', description: 'Convertissez un clip vidéo en GIF animé.' },
-    'background-remover': { name: 'Suppresseur d\'arrière-plan IA', description: 'Supprimez l\'arrière-plan avec l\'IA embarquée et téléchargez un PNG transparent. Votre photo ne quitte jamais le navigateur : sans upload, sans compte, sans filigrane.' },
+    'background-remover': { name: 'Suppresseur d\'arrière-plan IA', h1: 'Suppresseur d\'arrière-plan IA en ligne gratuit', description: 'Supprimez l\'arrière-plan avec l\'IA embarquée et téléchargez un PNG transparent. Votre photo ne quitte jamais le navigateur : sans upload, sans compte, sans filigrane.' },
     'object-remover': { name: 'Gomme à objets', description: 'Peignez sur des personnes, objets ou filigranes et laissez le remplissage intelligent restaurer l\'arrière-plan. En local, sans upload.' },
     'photo-restore': { name: 'Restauration de photos', description: 'Améliorez les photos anciennes ou passées et colorisez les images en noir et blanc, entièrement en local, sans upload.' },
     'video-to-mp3': { name: 'Vidéo en MP3', description: 'Extrayez l\'audio MP3 de vos fichiers vidéo.' },
@@ -1004,9 +1004,9 @@ export const fr: Translations = {
     downloadWebp: 'Télécharger WebP',
   },
   blurImagePage: {
-    heroTitle: 'Blur Any Part of an Image in Seconds',
+    heroTitle: 'Blur faces, backgrounds or any part',
     heroIntro:
-      'Use our free image blurring tool to blur parts of an image, hide faces, cover license plates, redact sensitive text, or apply background blur effects — all directly in your browser. No upload to servers, no account needed.',
+      'Brush over faces, plates or backgrounds, pick a blur type and strength, click Blur Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to paint the area to blur.',

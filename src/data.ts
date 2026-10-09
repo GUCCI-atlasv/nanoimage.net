@@ -428,8 +428,8 @@ export const tools: Tool[] = [
     description: 'Compress multiple images and download a ZIP.',
     keywords: ['batch', 'compress', 'zip', 'multiple'],
     mvp: true,
-    title: 'Batch Compress Images',
-    subtitle: 'Compress up to 20 images at a time and download the results as a ZIP.',
+    title: 'Bulk Image Compressor – Batch Compress Free',
+    subtitle: 'Free bulk image compressor for JPG, PNG, WebP & GIF. Compress up to 20 images at once in your browser. No upload. Download a ZIP of smaller files.',
     tips: ['Max 20 images per batch.', 'Each image should be 20MB or smaller.'],
   },
   {
@@ -499,9 +499,9 @@ export const tools: Tool[] = [
     description: 'Rotate photos left, right, or by a custom angle.',
     keywords: ['rotate', 'angle', 'turn', 'flip', '90', 'free', 'online'],
     mvp: true,
-    title: 'Free Rotate Image Online – Any Angle, No Signup',
+    title: 'Rotate Image Online Free – Image Rotator for Any Angle',
     subtitle:
-      'Rotate images online for free — 90°, 180°, or any custom angle. Flip, crop, and download instantly. No signup, no upload to servers. Works in your browser.',
+      'Rotate an image 90°, 180° or any angle, straighten crooked photos, and download. Free online image rotator with no signup, no watermark and no upload.',
     tips: [
       'Use 90° buttons for quick rotation.',
       'Use the angle slider for precise custom rotation.',
@@ -516,9 +516,9 @@ export const tools: Tool[] = [
     description: 'Flip images horizontally, vertically, or both.',
     keywords: ['flip', 'mirror', 'horizontal', 'vertical', 'free', 'online'],
     mvp: true,
-    title: 'Flip Image Online Free – Image Flipper & Mirror Tool',
+    title: 'Flip Image Online Free – Mirror Image Horizontally or Vertically',
     subtitle:
-      'Flip images online for free. Mirror JPG, PNG, WebP, or GIF files horizontally, vertically, or both in seconds. No signup, no watermark, private browser processing.',
+      'Flip an image or make a mirror image online. Flip horizontally, vertically or both, then download. Free, no signup, no watermark, and it all runs in your browser.',
     tips: [
       'Use horizontal flip to fix mirror selfies and front-camera photos.',
       'Use vertical flip for upside-down scans or design layouts.',
@@ -585,9 +585,9 @@ export const tools: Tool[] = [
     description: 'Replace, tint, or swap any color in an image.',
     keywords: ['image color changer', 'change image color', 'image colour changer', 'change color of image', 'color changer', 'replace color', 'tint', 'online', 'free'],
     mvp: true,
-    title: 'Image Color Changer – Change Image Color Online Free',
+    title: 'Image Color Changer – Change the Color of an Image Free',
     subtitle:
-      'Free image color changer — replace, tint, or swap any color in a photo online. Change object or background colors, no signup, 100% in your browser.',
+      'Free image color changer that runs in your browser. Brush over a shirt, logo or background, pick any color or hex code, and download. No signup, no upload.',
     tips: [
       'Use high-resolution images for cleaner edges.',
       'Select areas carefully for accurate color replacement.',
@@ -603,9 +603,9 @@ export const tools: Tool[] = [
     description: 'Convert any photo to black and white online.',
     keywords: ['black and white image converter', 'make image black and white', 'convert image to black and white', 'grayscale image', 'black and white photo', 'free', 'online'],
     mvp: true,
-    title: 'Black and White Image Converter – Make a Photo B&W Free',
+    title: 'Black and White Image Converter – Make Any Photo B&W Free',
     subtitle:
-      'Make any image black and white online — free, instant, no signup. Convert color photos to classic grayscale in your browser; files never leave your device.',
+      'Convert a color photo to black and white online. Upload, choose PNG, JPG or WebP, click Apply, compare with the original and download. Free, no signup, and your image never leaves your browser.',
     tips: [
       'High-contrast photos convert best to black and white.',
       'Export as PNG for lossless quality or JPG for smaller files.',
@@ -621,9 +621,9 @@ export const tools: Tool[] = [
     description: 'Invert the colors of any image to create a negative.',
     keywords: ['invert image colors', 'invert colors online', 'color inverter', 'negative image', 'invert photo', 'free', 'online'],
     mvp: true,
-    title: 'Invert Image Colors Online Free – Photo Negative Maker',
+    title: 'Invert Colors of an Image Online Free – Photo Negative Maker',
     subtitle:
-      'Invert colors of any image online — free, one click, no signup. Create a photo negative effect in your browser; files never leave your device.',
+      'Invert image colors and turn any photo into a negative. Upload, pick PNG, JPG or WebP, click Apply and download. Free, no signup, and your image never leaves your browser.',
     tips: [
       'Inverting twice restores the original image.',
       'Great for checking scanned film negatives and creating art effects.',
@@ -746,7 +746,7 @@ export const tools: Tool[] = [
     ],
     mvp: true,
     // PRD Phase 3: gif maker free Bing 74 展示 0 点击 (pos 9.5), 加 No Watermark 钩子
-    title: 'Free GIF Maker — No Watermark, Create Animated GIFs Online',
+    title: 'GIF Maker Free — Images to Animated GIF, No Upload',
     subtitle:
       'Free GIF maker with no watermark and no signup. Turn images into animated GIFs in seconds — adjust speed, size, and loops. Works on Mac, Windows, and mobile.',
     tips: ['Use fewer frames and smaller canvas size for lighter GIFs.', 'Enable Optimize and lower colors (64 or 32) to shrink file size.', 'Reorder frames with the arrow controls before exporting.'],
@@ -890,9 +890,9 @@ export const tools: Tool[] = [
     ],
     mvp: true,
     // PRD Phase 3: Bing 110 展示 0 点击 (pos ~8), CTR 钩子: 秒级 + 隐私
-    title: 'Blur Image Online Free – Blur Faces & Backgrounds in Seconds',
+    title: 'Blur Image Online Free – Blur Faces, Backgrounds & Text',
     subtitle:
-      'Blur faces, license plates, or backgrounds in seconds — free, no upload, no signup. Your photo never leaves your browser, so private images stay private.',
+      'Blur part of a photo in your browser. Brush over a face, license plate, name or background, choose the blur type and strength, and download. Free, no signup, nothing uploaded.',
     tips: ['Use the brush to blur only the areas you need.', 'Increase blur strength until sensitive details are unreadable.', 'Keep a copy of the original before downloading.'],
   },
   {
@@ -914,9 +914,9 @@ export const tools: Tool[] = [
     ],
     mvp: true,
     // PRD Phase 3: 覆盖 image pixelator (Bing 22 展示) 词形
-    title: 'Pixelate Image Online Free — Fast Image Pixelator, No Upload',
+    title: 'Pixelate Image Online Free – Pixelate Faces, Text & Plates',
     subtitle:
-      'Free image pixelator — censor faces, license plates, or sensitive info with a pixelated mosaic in seconds. No upload, no signup, works in your browser.',
+      'Pixelate part of an image in your browser. Brush over a face, name or license plate, choose the pixel size and download. Free, no signup, and your photo never leaves your device.',
     tips: ['Use the brush to pixelate only the areas you need.', 'Larger pixel blocks hide text and IDs more strongly.', 'Keep a copy of the original before downloading.'],
   },
   {

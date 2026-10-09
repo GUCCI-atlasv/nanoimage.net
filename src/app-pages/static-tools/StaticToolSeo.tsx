@@ -1,13 +1,13 @@
 'use client'
 import { useI18n, useLangPath } from '@/src/i18n'
-import { STATIC_TOOL_COPY, staticCopyLang, type StaticToolCopy, type StaticToolSlug } from './content'
+import { getStaticToolCopy, staticCopyLang, type StaticToolCopy, type StaticToolSlug } from './content'
 import { renderRichText } from './rich-text'
 
-/** Resolve the (en | zh) copy for a static tool in the current UI language. */
+/** Resolve the copy for a static tool in the current UI language (locale override, else en | zh). */
 export function useStaticToolCopy(slug: StaticToolSlug): { copy: StaticToolCopy; zh: boolean } {
   const { lang } = useI18n()
   const copyLang = staticCopyLang(lang)
-  return { copy: STATIC_TOOL_COPY[copyLang][slug], zh: copyLang === 'zh' }
+  return { copy: getStaticToolCopy(lang, slug), zh: copyLang === 'zh' }
 }
 
 /** Hero heading + intro + badges, shared by all static tools. */

@@ -1,6 +1,7 @@
 'use client'
 import { tools } from '@/src/data'
 import { useI18n, useLangPath } from '@/src/i18n'
+import type { RichSeoSection } from '@/src/i18n/en-tool-content-2026-10'
 
 export function ToolFaqSection({ slug }: { slug: string }) {
   const { t } = useI18n()
@@ -13,7 +14,9 @@ export function ToolFaqSection({ slug }: { slug: string }) {
         {faqs.map((item, i) => (
           <div key={i} className="tool-faq-item">
             <dt className="tool-faq-question">{item.q}</dt>
-            <dd className="tool-faq-answer"><p>{item.a}</p></dd>
+            <dd className="tool-faq-answer">
+              {item.aHtml ? <p dangerouslySetInnerHTML={{ __html: item.aHtml }} /> : <p>{item.a}</p>}
+            </dd>
           </div>
         ))}
       </dl>
@@ -35,7 +38,7 @@ export function ToolSeoContent({ slug }: { slug: string }) {
       howToTitle?: string
       howTo?: string[]
       refs?: { label: string; url: string }[]
-    }>
+    } & RichSeoSection>
     relatedToolsTitle?: string
     relatedToolsHints?: Record<string, string>
     relatedToolsHintsByPage?: Record<string, Record<string, string>>
@@ -52,17 +55,24 @@ export function ToolSeoContent({ slug }: { slug: string }) {
   const relatedEntries = relatedByPage ? Object.entries(relatedByPage) : []
   const toolsData = t.toolsData as Record<string, { name?: string; breadcrumbName?: string; description?: string }>
   const hasContent = Boolean(
-    section?.desc || section?.blocks?.length || section?.howTo?.length || relatedEntries.length || categoryId,
+    section?.desc || section?.leadHtml || section?.blocks?.length || section?.richBlocks?.length || section?.howTo?.length || relatedEntries.length || categoryId,
   )
   if (!hasContent) return null
   return (
     <section className="tool-seo-content" aria-label={`${toolsData[slug]?.breadcrumbName ?? toolsData[slug]?.name ?? slug} guide`}>
       {section?.introTitle ? <h2>{section.introTitle}</h2> : null}
       {section?.desc ? <p className="tool-seo-lead">{section.desc}</p> : null}
+      {section?.leadHtml ? <p className="tool-seo-lead" dangerouslySetInnerHTML={{ __html: section.leadHtml }} /> : null}
       {section?.blocks?.map((block) => (
         <article className="tool-seo-block" key={block.title}>
           <h2>{block.title}</h2>
           <p>{block.body}</p>
+        </article>
+      ))}
+      {section?.richBlocks?.map((block, index) => (
+        <article className="tool-seo-block" key={block.title ?? `rich-${index}`}>
+          {block.title ? <h2>{block.title}</h2> : null}
+          <p dangerouslySetInnerHTML={{ __html: block.html }} />
         </article>
       ))}
       {section?.howTo?.length ? (
@@ -104,6 +114,11 @@ export function ToolSeoContent({ slug }: { slug: string }) {
           </p>
         </article>
       ) : null}
+      {section?.afterCategoryHtml?.map((html, index) => (
+        <article className="tool-seo-block" key={`after-${index}`}>
+          <p dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
+      ))}
     </section>
   )
 }

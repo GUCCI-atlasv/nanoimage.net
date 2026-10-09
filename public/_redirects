@@ -13,6 +13,22 @@
 /pt-PT  /pt  301
 /pt-PT/  /pt  301
 
+# ── Static: thin-page cleanup 2026-10-07 (SHOT 2) — merged locale 100KB pages → locale compress-image ──
+/zh-TW/compress-image-to-100kb  /zh-TW/compress-image  301
+/zh-TW/compress-image-to-100kb/  /zh-TW/compress-image  301
+/ja/compress-image-to-100kb  /ja/compress-image  301
+/ja/compress-image-to-100kb/  /ja/compress-image  301
+/fr/compress-image-to-100kb  /fr/compress-image  301
+/fr/compress-image-to-100kb/  /fr/compress-image  301
+/es/compress-image-to-100kb  /es/compress-image  301
+/es/compress-image-to-100kb/  /es/compress-image  301
+/pt/compress-image-to-100kb  /pt/compress-image  301
+/pt/compress-image-to-100kb/  /pt/compress-image  301
+/ru/compress-image-to-100kb  /ru/compress-image  301
+/ru/compress-image-to-100kb/  /ru/compress-image  301
+/pt-BR/compress-image-to-100kb  /pt/compress-image  301
+/pt-PT/compress-image-to-100kb  /pt/compress-image  301
+
 # ── Static: renamed/removed root tool pages ──
 /compress  /compress-image  301
 /compress/  /compress-image  301
@@ -30,6 +46,8 @@
 /convert-jpg/  /convert-image  301
 /jpeg-to-webp  /jpg-to-webp  301
 /jpeg-to-webp/  /jpg-to-webp  301
+/es/jpeg-to-webp  /es/jpg-to-webp  301
+/es/jpeg-to-webp/  /es/jpg-to-webp  301
 /jpeg-to-bmp  /jpg-to-bmp  301
 /jpeg-to-bmp/  /jpg-to-bmp  301
 # Retired tools → closest surviving tool (NOT the homepage). A 301 to / reads as a
@@ -510,7 +528,7 @@
 /pt-BR/change-color/  /pt/change-color  301
 /pt-BR/cli/  /pt/cli  301
 /pt-BR/compress-image/  /pt/compress-image  301
-/pt-BR/compress-image-to-100kb/  /pt/compress-image-to-100kb  301
+/pt-BR/compress-image-to-100kb/  /pt/compress-image  301
 /pt-BR/compress-image-to-1mb/  /pt/compress-image-to-1mb  301
 /pt-BR/compress-image-to-200kb/  /pt/compress-image-to-200kb  301
 /pt-BR/compress-image-to-500kb/  /pt/compress-image-to-500kb  301
@@ -552,7 +570,7 @@
 /pt-PT/change-color/  /pt/change-color  301
 /pt-PT/cli/  /pt/cli  301
 /pt-PT/compress-image/  /pt/compress-image  301
-/pt-PT/compress-image-to-100kb/  /pt/compress-image-to-100kb  301
+/pt-PT/compress-image-to-100kb/  /pt/compress-image  301
 /pt-PT/compress-image-to-1mb/  /pt/compress-image-to-1mb  301
 /pt-PT/compress-image-to-200kb/  /pt/compress-image-to-200kb  301
 /pt-PT/compress-image-to-500kb/  /pt/compress-image-to-500kb  301

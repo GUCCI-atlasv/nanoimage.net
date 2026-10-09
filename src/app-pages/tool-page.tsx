@@ -9,6 +9,7 @@ import { upscaleToCanvasSync } from '@/src/ai/lib/imageUpscaler'
 import { Breadcrumbs } from '@/src/shared/breadcrumbs'
 import { HomeIcon, toolIconMap } from '@/src/shared/tool-icons'
 import { isStaticToolSlug } from '@/src/app-pages/static-tools/content'
+import { EN_TOOL_PAGE_HERO_2026_10 } from '@/src/i18n/en-tool-content-2026-10'
 
 const ToolSeoContent = dynamic(() => import('@/src/components/tool-seo').then((m) => ({ default: m.ToolSeoContent })), { ssr: true })
 const ToolFaqSection = dynamic(() => import('@/src/components/tool-seo').then((m) => ({ default: m.ToolFaqSection })), { ssr: true })
@@ -584,6 +585,10 @@ const PASSPORT_BACKGROUND_OPTIONS = [
 const VIDEO_TOOL_SLUGS = new Set(['video-to-gif', 'video-to-mp3'])
 
 const AI_TOOL_SLUGS = new Set(['background-remover', 'object-remover', 'photo-restore', 'smart-crop'])
+/** Visual label style for tool-UI headings that are not part of the page outline. */
+const UI_LABEL_STYLE: CSSProperties = { margin: '0 0 .75rem', color: 'var(--ink)', fontSize: '1rem', fontWeight: 800 }
+/** EN pages whose settings panel uses a plain "Settings" label instead of an H2. */
+const PLAIN_SETTINGS_LABEL_SLUGS = new Set(['black-and-white-image', 'invert-image-colors'])
 
 function getToolBreadcrumbLabel(
   toolsData: Record<string, { name: string; breadcrumbName?: string }> | undefined,
@@ -704,6 +709,7 @@ export function ImageToolWorkspace({
   const currentLang = lang as LangCode
   const localName = t.toolsData[tool.slug]?.name ?? tool.name
   const localSubtitle = t.toolsData[tool.slug]?.description ?? tool.subtitle
+  const enHero = currentLang === 'en' ? EN_TOOL_PAGE_HERO_2026_10[tool.slug] : undefined
   const [files, setFiles] = useState<File[]>([])
   const [previewUrl, setPreviewUrl] = useState('')
   const [status, setStatus] = useState('')
@@ -2530,7 +2536,6 @@ export function ImageToolWorkspace({
       <div className="workspace change-color-workspace">
         <div className="pixelate-top-grid">
           <section className="pixelate-title-card">
-            <Breadcrumbs current={localName} navigate={(to) => window.history.pushState({}, '', to)} />
             <span className="title-doodle"><HomeIcon name="palette" /></span>
             <h1>{localName}</h1>
             <p>{localSubtitle}</p>
@@ -2543,7 +2548,7 @@ export function ImageToolWorkspace({
           </section>
           <UploadDropzone multiple={false} onFiles={handleFiles} />
           <aside className="pixelate-help-card">
-            <h2 className="change-color-tips-title">💡 {cc.tipsTitle}</h2>
+            <p className="change-color-tips-title" style={UI_LABEL_STYLE}>💡 {cc.tipsTitle}</p>
             <p>✓ {cc.tip1}</p>
             <p>✓ {cc.tip2}</p>
             <p>✓ {cc.tip3}</p>
@@ -3399,7 +3404,7 @@ export function ImageToolWorkspace({
           </section>
           <UploadDropzone multiple={false} onFiles={handleFiles} />
           <aside className="compress-tips-card">
-            <h2 className="flip-tips-title"><HomeIcon name="sparkle" /> {fp.whatIsTitle}</h2>
+            <p className="flip-tips-title" style={{ display: 'flex', alignItems: 'center', gap: '.55rem', color: '#24315f' }}><HomeIcon name="sparkle" /> {fp.whatIsTitle}</p>
             <p>{fp.whatIsLead}</p>
             <p>✓ {fp.useCase1}</p>
             <p>✓ {fp.useCase2}</p>
@@ -3493,7 +3498,7 @@ export function ImageToolWorkspace({
 
           <aside className="flip-side-card">
             <section>
-              <h2 className="flip-formats-title">{fp.formatsTitle}</h2>
+              <p className="flip-formats-title" style={{ margin: 0 }}>{fp.formatsTitle}</p>
               {[
                 [fp.formatJpg, fp.formatJpgNote, 'JPG'],
                 [fp.formatPng, fp.formatPngNote, 'PNG'],
@@ -3830,8 +3835,8 @@ export function ImageToolWorkspace({
           <section className="compress-title-card">
             <Breadcrumbs current={breadcrumbLabel ?? localName} navigate={(to) => window.history.pushState({}, '', to)} />
             <span className="title-doodle"><HomeIcon name="image" /></span>
-            <h1>{localName}</h1>
-            <p>{localSubtitle}</p>
+            <h1>{enHero?.h1 ?? localName}</h1>
+            {enHero?.lineHtml ? <p dangerouslySetInnerHTML={{ __html: enHero.lineHtml }} /> : <p>{localSubtitle}</p>}
             <h3 className="pixelate-help-intro-title">{gm.heroTitle}</h3>
             <p className="pixelate-help-intro">{gm.heroIntro}</p>
             <div className="privacy-card">
@@ -5099,8 +5104,8 @@ export function ImageToolWorkspace({
         <div className="compress-top">
           <section className="compress-title-card">
             <span className="title-doodle"><HomeIcon name="stack" /></span>
-            <h1>{localName}</h1>
-            <p>{localSubtitle}</p>
+            <h1>{enHero?.h1 ?? localName}</h1>
+            <p>{enHero?.line ?? localSubtitle}</p>
             <div className="privacy-card">
               <span><HomeIcon name="lock" /> {t.tool.staysPrivate}</span>
               <span><HomeIcon name="lock" /> {t.tool.noSignup}</span>
@@ -5433,9 +5438,9 @@ export function ImageToolWorkspace({
           </section>
           <UploadDropzone multiple={false} onFiles={handleFiles} />
           <aside className="pixelate-help-card">
-            <h2 className="pixelate-help-intro-title">{pp.heroTitle}</h2>
+            {currentLang === 'en' ? <p className="pixelate-help-intro-title" style={UI_LABEL_STYLE}>{pp.heroTitle}</p> : <h2 className="pixelate-help-intro-title">{pp.heroTitle}</h2>}
             <p className="pixelate-help-intro">{pp.heroIntro}</p>
-            <h2 className="convert-tips-title">💡 {pp.quickHelpTitle}</h2>
+            <p className="convert-tips-title" style={UI_LABEL_STYLE}>💡 {pp.quickHelpTitle}</p>
             {pp.quickHelpSteps.map((line) => (
               <p key={line}>✓ {line}</p>
             ))}
@@ -5458,7 +5463,7 @@ export function ImageToolWorkspace({
               </div>
             </section>
             <section>
-              <h2>Pixelate Settings</h2>
+              <p style={UI_LABEL_STYLE}>Pixelate Settings</p>
               <label>Pixel Size <span>{settings.pixelSize}px</span><input min="10" max="80" type="range" value={settings.pixelSize} onChange={(event) => updatePixelSelection({ pixelSize: Number(event.target.value) })} /></label>
               <label>Pixelate Strength <span>100%</span><input min="30" max="100" type="range" value={100} readOnly /></label>
             </section>
@@ -5497,7 +5502,7 @@ export function ImageToolWorkspace({
 
           <aside className="pixelate-side-card">
             <section>
-              <h2>Presets</h2>
+              <p style={UI_LABEL_STYLE}>Presets</p>
               <div className="pixelate-preset-grid">
                 {[['Light', 10], ['Medium', 20], ['Strong', 40], ['Extreme', 80]].map(([label, size]) => (
                   <button className={settings.pixelSize === size ? 'active' : ''} key={label} type="button" onClick={() => updatePixelSelection({ pixelSize: Number(size) })}>
@@ -5507,7 +5512,7 @@ export function ImageToolWorkspace({
               </div>
             </section>
             <section>
-              <div className="areas-heading"><h2>Recent Edits</h2><button type="button" onClick={() => setPixelateHistory(['Original'])}>Clear</button></div>
+              <div className="areas-heading"><p style={UI_LABEL_STYLE}>Recent Edits</p><button type="button" onClick={() => setPixelateHistory(['Original'])}>Clear</button></div>
               {pixelateHistory.map((item, index) => (
                 <div className="history-item" key={`${item}-${index}`}>
                   <span>{item === 'Original' ? <HomeIcon name="image" /> : '▦'}</span>
@@ -5688,7 +5693,7 @@ export function ImageToolWorkspace({
             <span className="title-doodle"><HomeIcon name="sun" /></span>
             <h1>{localName}</h1>
             <p>{localSubtitle}</p>
-            <h2 className="tool-hero-subtitle">{bp.heroTitle}</h2>
+            <p className="tool-hero-subtitle" style={UI_LABEL_STYLE}>{bp.heroTitle}</p>
             <p className="tool-hero-intro">{bp.heroIntro}</p>
             <div className="privacy-card">
               <span><HomeIcon name="smile" /> {t.tool.free100}</span>
@@ -5699,7 +5704,7 @@ export function ImageToolWorkspace({
           </section>
           <UploadDropzone multiple={false} onFiles={handleFiles} />
           <aside className="pixelate-help-card">
-            <h2 className="convert-tips-title">💡 {bp.quickHelpTitle}</h2>
+            <p className="convert-tips-title" style={UI_LABEL_STYLE}>💡 {bp.quickHelpTitle}</p>
             {bp.quickHelpSteps.map((line) => (
               <p key={line}>✓ {line}</p>
             ))}
@@ -5722,7 +5727,7 @@ export function ImageToolWorkspace({
               </div>
             </section>
             <section>
-              <h2>Blur Settings</h2>
+              <p style={UI_LABEL_STYLE}>Blur Settings</p>
               <label>Blur Strength <span>{Math.round((settings.blur / 30) * 100)}%</span><input min="1" max="30" type="range" value={settings.blur} onChange={(event) => updateBlurSelection({ blur: Number(event.target.value) })} /></label>
               <label>Blur Type<select><option>Gaussian Blur</option><option>Soft Blur</option><option>Background Blur</option></select></label>
             </section>
@@ -5762,7 +5767,7 @@ export function ImageToolWorkspace({
 
           <aside className="pixelate-side-card">
             <section>
-              <div className="areas-heading"><h2>History</h2><button type="button" disabled={!blurAreas.length} onClick={undoLastBlurAction}>Undo</button><button type="button" onClick={clearAllBlurActions}>Clear</button></div>
+              <div className="areas-heading"><p style={UI_LABEL_STYLE}>History</p><button type="button" disabled={!blurAreas.length} onClick={undoLastBlurAction}>Undo</button><button type="button" onClick={clearAllBlurActions}>Clear</button></div>
               {blurHistory.map((item, index) => (
                 <div className="history-item" key={`${item}-${index}`}>
                   <span>{item === 'Original' ? <HomeIcon name="image" /> : 'Tt'}</span>
@@ -5934,6 +5939,8 @@ export function ImageToolWorkspace({
         <aside className="settings-panel">
           {tool.slug === 'resize-image' ? (
             <h3>{settingsTitle(tool, t)}</h3>
+          ) : currentLang === 'en' && PLAIN_SETTINGS_LABEL_SLUGS.has(tool.slug) ? (
+            <p className="settings-panel-label" style={{ margin: 0, color: 'var(--ink)', fontSize: '1rem', fontWeight: 800 }}>Settings</p>
           ) : (
             <h2>{settingsTitle(tool, t)}</h2>
           )}

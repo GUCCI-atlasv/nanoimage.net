@@ -4,6 +4,8 @@ import AppShell from '@/components/AppShell'
 import { tools } from '@/src/data'
 import { buildAlternates, buildOG, buildTwitter, buildToolJsonLd, getToolOgImage, getToolOpenGraphType, getToolSocialMeta, stripBrandSuffix, URL_TO_BCP47, withBrandTitle, BASE } from '@/lib/seo'
 import { getToolSchemaData } from '@/lib/server-i18n'
+import { URL_LANG_CODES } from '@/lib/i18n-utils'
+import { MERGED_100KB_LANGS } from '@/lib/thin-cleanup'
 
 export function generateStaticParams() {
   return tools.map((t) => ({ tool: t.slug }))
@@ -41,7 +43,7 @@ export async function generateMetadata(
     // PRD Phase 1 站点瘦身:deprecated 工具进入下线观察期,noindex 但保持可访问。
     // 观察 2 周后启用 _redirects 中预置的 301 并删除页面。
     ...(tool.deprecated ? { robots: { index: false, follow: true } } : {}),
-    alternates: buildAlternates(url),
+    alternates: buildAlternates(url, undefined, slug === 'compress-image-to-100kb' ? URL_LANG_CODES.filter((l) => !MERGED_100KB_LANGS.has(l)) : undefined),
     openGraph: buildOG({ title: ogTitle, description: ogDescription, url, image: ogImage, urlLang: 'en', type: getToolOpenGraphType(slug) }),
     twitter: buildTwitter({ title: ogTitle, description: ogDescription, image: ogImage, imageAlt: pageTitle }),
   }

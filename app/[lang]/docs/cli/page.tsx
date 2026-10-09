@@ -3,6 +3,7 @@ import AppShell from '@/components/AppShell'
 import { URL_LANG_CODES } from '@/lib/i18n-utils'
 import { buildAlternates, buildOG, buildTwitter, BASE } from '@/lib/seo'
 import { getPageMeta, DOCS_CLI_META } from '@/lib/server-i18n'
+import { thinNoindexRobots } from '@/lib/thin-cleanup'
 
 export function generateStaticParams() {
   return URL_LANG_CODES.map((lang) => ({ lang }))
@@ -18,6 +19,7 @@ export async function generateMetadata(
     title,
     description,
     alternates: buildAlternates(canonicalUrl, '/docs/cli'),
+    ...thinNoindexRobots(`/${lang}/docs/cli`),
     openGraph: buildOG({ title, description, url: canonicalUrl, urlLang: lang }),
     twitter: buildTwitter({ title, description }),
   }

@@ -535,7 +535,7 @@ export const ru: Translations = {
       description: 'Создавайте фото на паспорт, визу и удостоверение бесплатно в NanoImage. Обрезайте, задавайте размер, фон, DPI и размер файла, затем скачивайте результат.',
     },
     'video-to-gif': { name: 'Видео в GIF', description: 'Конвертируйте видеоклип в анимированный GIF.' },
-    'background-remover': { name: 'ИИ-удаление фона', description: 'Удалите фон с помощью ИИ на устройстве и скачайте прозрачный PNG. Фото не покидает браузер: без загрузки, без регистрации, без водяных знаков.' },
+    'background-remover': { name: 'ИИ-удаление фона', h1: 'ИИ-удаление фона онлайн бесплатно', description: 'Удалите фон с помощью ИИ на устройстве и скачайте прозрачный PNG. Фото не покидает браузер: без загрузки, без регистрации, без водяных знаков.' },
     'object-remover': { name: 'Удаление объектов', description: 'Закрасьте людей, объекты или водяные знаки — умное заполнение восстановит фон. Обработка на устройстве, без загрузки.' },
     'photo-restore': { name: 'Реставрация фото', description: 'Улучшайте старые или выцветшие снимки и раскрашивайте чёрно-белые фото — всё на устройстве, без загрузки.' },
     'video-to-mp3': { name: 'Видео в MP3', description: 'Извлекайте аудио MP3 из видеофайлов.' },
@@ -1001,9 +1001,9 @@ export const ru: Translations = {
     downloadWebp: 'Скачать WebP',
   },
   blurImagePage: {
-    heroTitle: 'Blur Any Part of an Image in Seconds',
+    heroTitle: 'Blur faces, backgrounds or any part',
     heroIntro:
-      'Use our free image blurring tool to blur parts of an image, hide faces, cover license plates, redact sensitive text, or apply background blur effects — all directly in your browser. No upload to servers, no account needed.',
+      'Brush over faces, plates or backgrounds, pick a blur type and strength, click Blur Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to paint the area to blur.',

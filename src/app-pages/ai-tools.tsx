@@ -25,13 +25,15 @@ function AiToolShell({
   children: React.ReactNode
 }) {
   const { t } = useI18n()
-  const toolsData = t.toolsData as Record<string, { name?: string; description?: string }>
+  const toolsData = t.toolsData as Record<string, { name?: string; description?: string; h1?: string }>
   const name = toolsData?.[tool.slug]?.name ?? tool.name
+  // Localized pages may carry their own hero H1; English keeps tool.title.
+  const heading = toolsData?.[tool.slug]?.h1 ?? tool.title
   return (
     <>
       <Breadcrumbs current={name} categoryId={tool.category} navigate={navigate} />
       <header className="ai-tool-hero">
-        <h1>{tool.title}</h1>
+        <h1>{heading}</h1>
         <p>{tool.subtitle}</p>
       </header>
       <div className="tool-wrap">{children}</div>

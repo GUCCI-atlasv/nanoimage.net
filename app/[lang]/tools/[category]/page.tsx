@@ -7,6 +7,7 @@ import { getCategoryHub, TOOL_MENU_EXCLUDED_SLUGS } from '@/lib/category-hub'
 import { buildAlternates, buildCategoryHubJsonLd, buildOG, buildTwitter, BASE } from '@/lib/seo'
 import { getTranslations } from '@/lib/server-i18n'
 import type { LangCode } from '@/src/i18n'
+import { thinNoindexRobots } from '@/lib/thin-cleanup'
 
 export function generateStaticParams() {
   return URL_LANG_CODES.flatMap((lang) =>
@@ -32,6 +33,7 @@ export async function generateMetadata(
     title,
     description,
     alternates: buildAlternates(canonicalUrl, basePath),
+    ...thinNoindexRobots(`/${lang}/tools/${slug}`),
     openGraph: buildOG({ title, description, url: canonicalUrl, urlLang: lang }),
     twitter: buildTwitter({ title, description }),
   }

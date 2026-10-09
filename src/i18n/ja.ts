@@ -546,7 +546,7 @@ export const ja: Translations = {
       description: 'NanoImageでパスポート、ビザ、ID写真を無料で作成。切り抜き、サイズ、背景、DPI、ファイルサイズを調整してすぐにダウンロードできます。',
     },
     'video-to-gif': { name: 'ビデオ→GIF', description: '動画の一部をアニメーションGIFに変換します。' },
-    'background-remover': { name: 'AI背景除去', description: '端末上のAIで背景を除去し、透過PNGをダウンロード。画像はブラウザから出ません。アップロード不要、登録不要、透かしなし。' },
+    'background-remover': { name: 'AI背景除去', h1: 'AI背景除去 オンライン無料', description: '端末上のAIで背景を除去し、透過PNGをダウンロード。画像はブラウザから出ません。アップロード不要、登録不要、透かしなし。' },
     'object-remover': { name: 'オブジェクト消去', description: '消したい人物・物体・透かしを塗るだけで、スマート補完が背景を復元。端末内処理でアップロード不要。' },
     'photo-restore': { name: '写真補正・復元', description: '古い写真や色あせた写真を補正し、白黒写真に着色。すべて端末内で処理、アップロード不要。' },
     'video-to-mp3': { name: 'ビデオ→MP3', description: '動画からMP3音声を抽出します。' },
@@ -1012,9 +1012,9 @@ export const ja: Translations = {
     downloadWebp: 'WebP をダウンロード',
   },
   blurImagePage: {
-    heroTitle: 'Blur Any Part of an Image in Seconds',
+    heroTitle: 'Blur faces, backgrounds or any part',
     heroIntro:
-      'Use our free image blurring tool to blur parts of an image, hide faces, cover license plates, redact sensitive text, or apply background blur effects — all directly in your browser. No upload to servers, no account needed.',
+      'Brush over faces, plates or backgrounds, pick a blur type and strength, click Blur Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to paint the area to blur.',

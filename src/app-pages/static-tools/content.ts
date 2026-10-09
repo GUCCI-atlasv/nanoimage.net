@@ -334,6 +334,88 @@ export const STATIC_TOOL_COPY: Record<StaticCopyLang, Record<StaticToolSlug, Sta
   },
 }
 
+// ─── Spanish copy for the WebP satellites (accepted live 2026-10-07, deploy e5349c13) ──
+const BADGES_ES: StaticToolCopy['badges'] = ['100 % gratis', 'Sin registro', 'Sin subir', 'Local en el navegador']
+
+/** Per-locale copy that overrides the en/zh fallback for individual static tools. */
+export const STATIC_TOOL_COPY_LOCALE: Partial<Record<string, Partial<Record<StaticToolSlug, StaticToolCopy>>>> = {
+  es: {
+    'png-to-webp': {
+      h1: 'Convertidor PNG a WebP — Gratis y local',
+      intro:
+        '**PNG a WebP** reduce PNG transparentes o fotográficos a archivos WebP más pequeños para la web. NanoImage convierte PNG→WebP **localmente en tu navegador**: lotes, control de calidad y descarga de archivos o ZIP. **Nada se sube.** ¿También JPG? Usa [JPG a WebP](/jpg-to-webp) o el hub [Convertir a WebP](/convert-to-webp).',
+      badges: BADGES_ES,
+      faqs: [
+        {
+          q: '¿Cómo convierto PNG a WebP sin subir archivos?',
+          a: 'Elige PNG en la herramienta de arriba. La conversión usa la API Canvas en tu navegador: no se sube nada a un servidor. Puedes comprobarlo en DevTools → Red.',
+        },
+        {
+          q: '¿PNG a WebP conserva la transparencia?',
+          a: 'Sí. WebP admite canal alfa. Los PNG transparentes suelen conservar la transparencia al codificar a WebP en un navegador moderno. Previsualiza si necesitas bordes pixel-perfect en UI.',
+        },
+        {
+          q: 'PNG a WebP vs JPG a WebP — ¿cuál debo usar?',
+          a: 'Usa [PNG a WebP](/png-to-webp) para gráficos con transparencia o UI plana. Usa [JPG a WebP](/jpg-to-webp) para fotos. ¿Formatos mezclados? El hub [Convertir a WebP](/convert-to-webp).',
+        },
+        {
+          q: '¿Cómo convierto varios PNG a WebP a la vez?',
+          a: 'Añade hasta 20 PNG, ajusta la calidad (a menudo 80–90 % para fotos; más alta para UI nítida) y convierte. Descarga cada WebP o un ZIP del lote.',
+        },
+        {
+          q: '¿Un convertidor PNG a WebP local es más seguro que CloudConvert u otras herramientas online?',
+          a: 'Los convertidores con subida envían tus archivos a un servidor remoto. NanoImage procesa PNG→WebP en local, elimina metadatos al redibujar en canvas y no exige cuenta: mejor para capturas y assets privados.',
+        },
+      ],
+      relatedTitle: 'Herramientas relacionadas',
+      related: [
+        { path: '/convert-to-webp', label: 'Convertir a WebP' },
+        { path: '/jpg-to-webp', label: 'JPG a WebP' },
+        { path: '/remove-exif', label: 'Quitar EXIF' },
+      ],
+    },
+    'jpg-to-webp': {
+      h1: 'Convertidor JPG a WebP — Gratis y local',
+      intro:
+        '**JPG a WebP** (JPEG→WebP) reduce el peso de las fotos manteniendo buena calidad visual para sitios y apps. NanoImage convierte **en el dispositivo**: lotes de JPG, calidad ajustable, descarga WebP o ZIP. **Sin subir.** Para PNG con transparencia usa [PNG a WebP](/png-to-webp); para formatos mezclados, [Convertir a WebP](/convert-to-webp).',
+      badges: BADGES_ES,
+      faqs: [
+        {
+          q: '¿Cómo convierto JPG a WebP online sin subir archivos?',
+          a: 'Suelta JPG o JPEG en la herramienta. La codificación ocurre en el navegador con Canvas — sin subida a servidor. Revisa Red en DevTools si quieres verificarlo.',
+        },
+        {
+          q: '¿JPG a WebP reduce demasiado la calidad?',
+          a: 'No si eliges una calidad razonable (a menudo 80–90 %). WebP suele ganar a JPEG en tamaño con calidad visual similar. Previsualiza antes de publicar.',
+        },
+        {
+          q: 'JPG vs JPEG a WebP — ¿hay diferencia?',
+          a: 'No hay diferencia relevante. JPG y JPEG son el mismo formato. Esta página acepta ambos; `/es/jpeg-to-webp` redirige aquí.',
+        },
+        {
+          q: '¿Cómo convierto muchos JPEG a WebP a la vez?',
+          a: 'Añade hasta 20 JPEG, ajusta la calidad, convierte y descarga uno a uno o en un ZIP.',
+        },
+        {
+          q: 'JPG a WebP vs PNG a WebP — ¿cuándo elegir cada uno?',
+          a: 'Fotos → [JPG a WebP](/jpg-to-webp). Transparencia / PNG de UI → [PNG a WebP](/png-to-webp). Ambos → hub [Convertir a WebP](/convert-to-webp).',
+        },
+      ],
+      relatedTitle: 'Herramientas relacionadas',
+      related: [
+        { path: '/convert-to-webp', label: 'Convertir a WebP' },
+        { path: '/png-to-webp', label: 'PNG a WebP' },
+        { path: '/remove-exif', label: 'Quitar EXIF' },
+      ],
+    },
+  },
+}
+
+/** Copy for a static tool in a UI language: locale override first, then en/zh. */
+export function getStaticToolCopy(langCode: string, slug: StaticToolSlug): StaticToolCopy {
+  return STATIC_TOOL_COPY_LOCALE[langCode]?.[slug] ?? STATIC_TOOL_COPY[staticCopyLang(langCode)][slug]
+}
+
 /** Resolve the copy language for a UI language code (zh-CN → zh, everything else → en). */
 export function staticCopyLang(langCode: string): StaticCopyLang {
   return langCode === 'zh-CN' ? 'zh' : 'en'
@@ -354,6 +436,15 @@ export function staticToolFaqItems(lang: StaticCopyLang): Record<string, StaticT
   for (const slug of STATIC_TOOL_SLUGS) {
     const copy = STATIC_TOOL_COPY[lang][slug as StaticToolSlug]
     out[slug] = copy.faqs.map((f) => ({ q: plainRichText(f.q), a: plainRichText(f.a) }))
+  }
+  return out
+}
+
+/** Plain-text FAQ items for the locale-specific overrides (spread after staticToolFaqItems). */
+export function staticToolLocaleFaqItems(langCode: string): Record<string, StaticToolFaq[]> {
+  const out: Record<string, StaticToolFaq[]> = {}
+  for (const [slug, copy] of Object.entries(STATIC_TOOL_COPY_LOCALE[langCode] ?? {})) {
+    if (copy) out[slug] = copy.faqs.map((f) => ({ q: plainRichText(f.q), a: plainRichText(f.a) }))
   }
   return out
 }

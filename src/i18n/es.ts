@@ -1,5 +1,5 @@
 import type { Translations } from './en'
-import { staticToolFaqItems } from '../app-pages/static-tools/content'
+import { staticToolFaqItems, staticToolLocaleFaqItems } from '../app-pages/static-tools/content'
 
 export const es: Translations = {
   lang: 'Español',
@@ -538,7 +538,7 @@ export const es: Translations = {
       description: 'Crea fotos de pasaporte, visa e ID gratis con NanoImage. Recorta, ajusta tamaño, fondo, DPI y peso del archivo, y descarga al instante.',
     },
     'video-to-gif': { name: 'Vídeo a GIF', description: 'Convierte un clip de vídeo en un GIF animado.' },
-    'background-remover': { name: 'Eliminador de fondo con IA', description: 'Elimina el fondo con IA en el dispositivo y descarga un PNG transparente. Tu foto nunca sale del navegador: sin subida, sin registro, sin marca de agua.' },
+    'background-remover': { name: 'Eliminador de fondo con IA', h1: 'Eliminador de fondo con IA online gratis', description: 'Elimina el fondo con IA en el dispositivo y descarga un PNG transparente. Tu foto nunca sale del navegador: sin subida, sin registro, sin marca de agua.' },
     'object-remover': { name: 'Borrador de objetos', description: 'Pinta sobre personas, objetos o marcas de agua y deja que el relleno inteligente restaure el fondo. En el dispositivo, sin subida.' },
     'photo-restore': { name: 'Restaurar fotos', description: 'Mejora fotos antiguas o descoloridas y colorea imágenes en blanco y negro, todo en el dispositivo, sin subida.' },
     'video-to-mp3': { name: 'Vídeo a MP3', description: 'Extrae audio MP3 de tus archivos de vídeo.' },
@@ -1004,9 +1004,9 @@ export const es: Translations = {
     downloadWebp: 'Descargar WebP',
   },
   blurImagePage: {
-    heroTitle: 'Blur Any Part of an Image in Seconds',
+    heroTitle: 'Blur faces, backgrounds or any part',
     heroIntro:
-      'Use our free image blurring tool to blur parts of an image, hide faces, cover license plates, redact sensitive text, or apply background blur effects — all directly in your browser. No upload to servers, no account needed.',
+      'Brush over faces, plates or backgrounds, pick a blur type and strength, click Blur Area and download. Everything runs in your browser — free, no signup, no watermark. JPG, PNG, WebP and GIF up to 20MB.',
     quickHelpTitle: 'Quick Help',
     quickHelpSteps: [
       'Use the brush to paint the area to blur.',
@@ -1487,6 +1487,7 @@ export const es: Translations = {
     items: {
       // Static tools synced from production (2026-10)
       ...staticToolFaqItems('en'),
+      ...staticToolLocaleFaqItems('es'),
       'passport-photo': [
         { q: '¿Es gratis?', a: 'Sí. Es gratis, sin cuenta y sin marca de agua.' },
         { q: '¿Se sube mi foto?', a: 'No. La foto se procesa en tu navegador.' },

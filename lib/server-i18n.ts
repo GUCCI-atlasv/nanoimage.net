@@ -96,8 +96,9 @@ function buildToolTitle(name: string, langCode: string): string {
 }
 
 // ─── Static tools synced from production (2026-10) ─────────────────────────
-// Exact production <title>/<meta description> for the vanilla-script tools. Only
-// en and zh-CN were authored upstream; other locales use the generic toolsData path.
+// Exact production <title>/<meta description> for the vanilla-script tools. en and
+// zh-CN were authored upstream; es has the two WebP satellites (accepted live
+// 2026-10-07); other locales use the generic toolsData path.
 const STATIC_TOOL_META: Record<string, Record<string, { title: string; description: string }>> = {
   en: {
     'gif-compressor': {
@@ -115,6 +116,16 @@ const STATIC_TOOL_META: Record<string, Record<string, { title: string; descripti
     'jpg-to-bmp': {
       title: 'JPG to BMP Converter — Free, Local, No Upload | NanoImage',
       description: 'Convert JPG or JPEG to BMP in your browser. Free, no upload, no signup — private local conversion on NanoImage.',
+    },
+  },
+  es: {
+    'png-to-webp': {
+      title: 'Convertidor PNG a WebP — Gratis, local, sin subir | NanoImage',
+      description: 'Convierte PNG a WebP en tu navegador. Lotes, control de calidad y descarga ZIP. Gratis, sin subir archivos, sin registro — conversión WebP privada en NanoImage.',
+    },
+    'jpg-to-webp': {
+      title: 'Convertidor JPG a WebP — JPEG→WebP gratis y local | NanoImage',
+      description: 'Convierte JPG/JPEG a WebP en tu navegador. Conversión por lotes, control de calidad, sin subir. Convertidor WebP gratis para fotos en NanoImage.',
     },
   },
   'zh-CN': {
@@ -486,9 +497,9 @@ export function getToolSchemaData(
 
   return {
     faqs,
-    toolSection: toolSection
+    toolSection: toolSection?.howTo?.length
       ? {
-          howToTitle: toolSection.howToTitle,
+          howToTitle: toolSection.howToTitle ?? 'How to Use This Tool',
           howTo: toolSection.howTo,
           howToStepNames: toolSection.howToStepNames,
         }

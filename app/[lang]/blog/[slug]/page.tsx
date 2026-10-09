@@ -5,6 +5,7 @@ import { blogPosts } from '@/src/data'
 import { URL_TO_LANG } from '@/lib/i18n-utils'
 import { blogLangsFor, isBlogLangAvailable } from '@/lib/blog-langs'
 import { buildAlternates, buildBlogPostingJsonLd, buildOG, buildTwitter, BASE, OG_IMAGE, URL_TO_BCP47, fitTitle } from '@/lib/seo'
+import { thinNoindexRobots } from '@/lib/thin-cleanup'
 
 export function generateStaticParams() {
   // Only emit localized blog pages that have a real translation.
@@ -35,6 +36,7 @@ export async function generateMetadata(
     title,
     description,
     alternates: buildAlternates(canonicalUrl, basePath, blogLangsFor(slug)),
+    ...thinNoindexRobots(`/${lang}/blog/${slug}`),
     openGraph: buildOG({ title, description, url: canonicalUrl, image, urlLang: lang }),
     twitter: buildTwitter({ title, description, image }),
   }
