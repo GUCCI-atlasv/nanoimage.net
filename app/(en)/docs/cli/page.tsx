@@ -10,7 +10,7 @@ const url = `${BASE}/docs/cli`
 export const metadata: Metadata = {
   title,
   description,
-  alternates: buildAlternates(url),
+  alternates: buildAlternates(url, undefined, []),
   openGraph: buildOG({ title, description, url, urlLang: 'en' }),
   twitter: buildTwitter({ title, description }),
 }

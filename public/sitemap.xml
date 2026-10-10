@@ -13,32 +13,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -58,32 +33,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/how-it-works</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/how-it-works</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/how-it-works</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/how-it-works</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/how-it-works</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/how-it-works</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -103,32 +53,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -143,87 +68,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/zh-TW/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ko/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ru/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/zh/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/zh-TW/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ko/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/docs/cli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ru/docs/cli</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -233,87 +78,7 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/zh-TW/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ko/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ru/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/zh/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/zh-TW/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ko/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/terms-of-use</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ru/terms-of-use</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -330,32 +95,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/compress-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/compress-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/compress-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/compress-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/compress-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/compress-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -378,32 +118,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/compress-image-to-100kb</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/compress-image-to-100kb</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/compress-image-to-100kb</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/compress-image-to-100kb</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/compress-image-to-100kb</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/compress-image-to-100kb</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -412,8 +127,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-
 
   <url>
     <loc>https://nanoimage.net/resize-image</loc>
@@ -426,32 +139,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/resize-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/resize-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/resize-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/resize-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/resize-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/resize-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -471,32 +159,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/batch-compress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/batch-compress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/batch-compress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/batch-compress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/batch-compress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/batch-compress</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -516,32 +179,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/upscale-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/upscale-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/upscale-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/upscale-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/upscale-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/upscale-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -561,32 +199,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/crop-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/crop-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/crop-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/crop-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/crop-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/crop-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -606,32 +219,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/passport-photo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/passport-photo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/passport-photo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/passport-photo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/passport-photo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/passport-photo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -651,32 +239,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/rotate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/rotate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/rotate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/rotate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/rotate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/rotate-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -696,32 +259,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/flip-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/flip-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/flip-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/flip-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/flip-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/flip-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -741,32 +279,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/add-text</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/add-text</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/add-text</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/add-text</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/add-text</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/add-text</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -786,32 +299,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/change-background</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/change-background</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/change-background</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/change-background</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/change-background</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/change-background</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -831,32 +319,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/enhance-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/enhance-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/enhance-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/enhance-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/enhance-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/enhance-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -876,32 +339,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/change-color</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/change-color</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/change-color</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/change-color</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/change-color</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/change-color</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -921,32 +359,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/black-and-white-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/black-and-white-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/black-and-white-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/black-and-white-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/black-and-white-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/black-and-white-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -966,32 +379,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/invert-image-colors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/invert-image-colors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/invert-image-colors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/invert-image-colors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/invert-image-colors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/invert-image-colors</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1011,32 +399,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/convert-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/convert-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/convert-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/convert-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/convert-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/convert-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1056,32 +419,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/convert-to-webp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/convert-to-webp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/convert-to-webp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/convert-to-webp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/convert-to-webp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/convert-to-webp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1101,32 +439,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/image-to-pdf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/image-to-pdf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/image-to-pdf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/image-to-pdf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/image-to-pdf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/image-to-pdf</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1146,32 +459,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/gif-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/gif-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/gif-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/gif-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/gif-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/gif-maker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1191,32 +479,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/image-collage</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/image-collage</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/image-collage</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/image-collage</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/image-collage</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/image-collage</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1236,32 +499,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/grid-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/grid-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/grid-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/grid-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/grid-maker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/grid-maker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1281,32 +519,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/remove-exif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/remove-exif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/remove-exif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/remove-exif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/remove-exif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/remove-exif</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1326,32 +539,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blur-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blur-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blur-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blur-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blur-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blur-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1371,32 +559,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/pixelate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/pixelate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/pixelate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/pixelate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/pixelate-image</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/pixelate-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1416,32 +579,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/add-watermark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/add-watermark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/add-watermark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/add-watermark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/add-watermark</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/add-watermark</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1461,32 +599,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/video-to-gif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/video-to-gif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/video-to-gif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/video-to-gif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/video-to-gif</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/video-to-gif</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1508,32 +621,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/optimize-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/optimize-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/optimize-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/optimize-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/optimize-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/optimize-images</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1553,32 +641,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/edit-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/edit-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/edit-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/edit-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/edit-images</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/edit-images</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1598,32 +661,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/convert-formats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/convert-formats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/convert-formats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/convert-formats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/convert-formats</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/convert-formats</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1643,32 +681,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/create-more</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/create-more</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/create-more</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/create-more</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/create-more</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/create-more</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1688,32 +701,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/privacy-protection</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/privacy-protection</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/privacy-protection</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/privacy-protection</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/privacy-protection</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/privacy-protection</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1733,32 +721,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/video-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/video-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/video-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/video-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/video-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/video-tools</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1800,37 +763,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/introducing-nanoimage-cli</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/introducing-nanoimage-cli</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/introducing-nanoimage-cli</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/introducing-nanoimage-cli</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/introducing-nanoimage-cli</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/introducing-nanoimage-cli</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1902,37 +835,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/jpg-png-webp-avif</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/jpg-png-webp-avif</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/jpg-png-webp-avif</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/jpg-png-webp-avif</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/jpg-png-webp-avif</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/jpg-png-webp-avif</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1956,37 +859,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/how-to-make-passport-photo-online-for-free</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/how-to-make-passport-photo-online-for-free</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/how-to-make-passport-photo-online-for-free</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/how-to-make-passport-photo-online-for-free</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/how-to-make-passport-photo-online-for-free</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/how-to-make-passport-photo-online-for-free</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2012,37 +885,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/what-is-grid-maker</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/what-is-grid-maker</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/what-is-grid-maker</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/what-is-grid-maker</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/what-is-grid-maker</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/what-is-grid-maker</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2060,37 +903,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/how-to-compress-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/how-to-compress-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/how-to-compress-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/how-to-compress-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/how-to-compress-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/how-to-compress-images-without-losing-quality</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2108,37 +921,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/how-to-resize-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/how-to-resize-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/how-to-resize-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/how-to-resize-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/how-to-resize-images-without-losing-quality</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/how-to-resize-images-without-losing-quality</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2156,37 +939,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/what-is-exif-data</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/what-is-exif-data</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/what-is-exif-data</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/what-is-exif-data</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/what-is-exif-data</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/what-is-exif-data</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2198,37 +951,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/nanoimage-vs-tinypng</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/nanoimage-vs-tinypng</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/nanoimage-vs-tinypng</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/nanoimage-vs-tinypng</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/nanoimage-vs-tinypng</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/nanoimage-vs-tinypng</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2240,37 +963,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/nanoimage-vs-tinypng-vs-squoosh-vs-photopea</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2281,7 +974,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
 
   <url>
     <loc>https://nanoimage.net/blog/how-to-crop-image-online</loc>
@@ -2344,37 +1036,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/optimize-images-for-web</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/optimize-images-for-web</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/optimize-images-for-web</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/optimize-images-for-web</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/optimize-images-for-web</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/optimize-images-for-web</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2398,37 +1060,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/quick-image-edits-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/quick-image-edits-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/quick-image-edits-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/quick-image-edits-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/quick-image-edits-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/quick-image-edits-online</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2452,37 +1084,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/image-format-guide</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/image-format-guide</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/image-format-guide</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/image-format-guide</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/image-format-guide</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/image-format-guide</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2506,37 +1108,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/blog/protect-photos-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/blog/protect-photos-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/blog/protect-photos-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/blog/protect-photos-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/blog/protect-photos-online</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/blog/protect-photos-online</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2560,32 +1132,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/background-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/background-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/background-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/background-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/background-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/background-remover</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2605,32 +1152,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/object-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/object-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/object-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/object-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/object-remover</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/object-remover</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2650,32 +1172,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/photo-restore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/photo-restore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/photo-restore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/photo-restore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/photo-restore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/photo-restore</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2695,32 +1192,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nanoimage.net/zh-TW/tools/ai-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/ja/tools/ai-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://nanoimage.net/ko/tools/ai-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/fr/tools/ai-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/tools/ai-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/pt/tools/ai-tools</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2760,18 +1232,6 @@
   </url>
   <url>
     <loc>https://nanoimage.net/zh/jpg-to-webp</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/png-to-webp</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nanoimage.net/es/jpg-to-webp</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

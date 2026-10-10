@@ -5,7 +5,7 @@ import { buildAlternates } from '@/lib/seo'
 export const metadata: Metadata = {
   title: { absolute: 'Privacy Policy - NanoImage' },
   description: 'Read the NanoImage privacy policy. We do not upload, store, or share your images. All processing happens locally in your browser.',
-  alternates: buildAlternates('https://nanoimage.net/privacy-policy'),
+  alternates: buildAlternates('https://nanoimage.net/privacy-policy', undefined, []),
 }
 
 export default function PrivacyPolicyPage() {

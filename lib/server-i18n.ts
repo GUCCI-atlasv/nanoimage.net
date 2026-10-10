@@ -49,6 +49,21 @@ const META_DESC_SUFFIX: Record<string, string> = {
   ru:      'Поддержка JPG, PNG, WebP. 100% в браузере. Без загрузки, без аккаунта, бесплатно навсегда.',
 }
 
+const META_DESC_MAX: Record<string, number> = { 'zh-CN': 120, 'zh-TW': 120, ja: 120 }
+
+/**
+ * Append the selling-point suffix only when it adds something. Most translated
+ * descriptions already list formats / "no signup / private", so the unconditional
+ * suffix repeated them ("…JPG、PNG、WebP、GIF。登録不要… JPG・PNG・WebP対応。…アカウント不要…")
+ * and pushed descriptions past the snippet budget.
+ */
+function withMetaDescSuffix(description: string, langCode: string): string {
+  const suffix = META_DESC_SUFFIX[langCode]
+  if (!suffix || /JPG|WebP/i.test(description)) return description
+  const full = `${description} ${suffix}`
+  return full.length <= (META_DESC_MAX[langCode] ?? 160) ? full : description
+}
+
 // ─── Tool-page suffix per LangCode ──────────────────────────────────────────
 // The suffix used to be a fixed string appended to every tool name, which produced
 // duplicated keywords in 21/41 zh titles ("在线模糊图片 – 免费局部模糊工具 在线免费 - NanoImage").
@@ -200,10 +215,7 @@ export function getToolMeta(
   const toolEntry = (t.toolsData as Record<string, { name: string; description: string }>)?.[slug]
 
   if (toolEntry) {
-    const descSuffix = META_DESC_SUFFIX[langCode]
-    const description = descSuffix
-      ? `${toolEntry.description} ${descSuffix}`
-      : toolEntry.description
+    const description = withMetaDescSuffix(toolEntry.description, langCode)
     return {
       title: buildToolTitle(toolEntry.name, langCode),
       description,
