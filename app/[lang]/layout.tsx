@@ -81,6 +81,12 @@ export default async function LangLayout({
               "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C7T1VX8N82');",
           }}
         />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8028325929767359"
+          crossOrigin="anonymous"
+        />
         <meta name="theme-color" content="#fffdf8" />
         <link
           rel="preload"
